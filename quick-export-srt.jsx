@@ -44,7 +44,7 @@
 				\
 				orientation:'row',\
 				alignment:['fill','fill'],\
-				minimumSize:[200, 200],\
+				minimumSize:[420, 400],\
 				\
 				leftPart:Group{\
 					\
@@ -170,30 +170,108 @@
 								text:'</font>'\
 							}\
 						},\
-						REbt:Group{\
+						\
+						\
+						\
+						\
+						poGroup:Group:{\
 							\
 							\
-							orientation:'row',\
-							alignment:['fill','bottom'],\
+							orientation:'column',\
+							alignChildren:['fill','fill'],\
 							\
 							\
-							fsButton:Button{\
-								text:'"+ es_str.refresh +"',\
-								alignment:['fill','fill']\
+							upbt:Group{\
+								\
+								\
+								margins:[0,20,0,0],\
+								orientation:'row',\
+								alignment:['left','top'],\
+								\
+								\
+								ulButton:Button{\
+									text:'↖',\
+									preferredSize:[30,30],\
+									alignment:['fill','fill']\
+								},\
+								ucButton:Button{\
+									text:'⇡',\
+									preferredSize:[30,30]\
+								},\
+								urButton:Button{\
+									text:'↗',\
+									preferredSize:[30,30]\
+								}\
 							},\
-							fcButton:Button{\
-								text:'"+ es_str.export +"',\
-								alignment:['fill','fill']\
+							mdbt:Group{\
+								\
+								\
+								orientation:'row',\
+								alignment:['left','top'],\
+								\
+								\
+								mlButton:Button{\
+									text:'⇠',\
+									preferredSize:[30,30],\
+									alignment:['fill','fill']\
+								},\
+								mdButton:Button{\
+									text:'●',\
+									preferredSize:[30,30]\
+								},\
+								mrButton:Button{\
+									text:'⇢',\
+									preferredSize:[30,30]\
+								}\
 							},\
-						},\
+							bobt:Group{\
+								\
+								\
+								orientation:'row',\
+								alignment:['left','top'],\
+								\
+								\
+								blButton:Button{\
+									text:'↙',\
+									preferredSize:[30,30],\
+									alignment:['fill','fill']\
+								},\
+								bmButton:Button{\
+									text:'☻',\
+									preferredSize:[30,30]\
+								},\
+								brButton:Button{\
+									text:'↘',\
+									preferredSize:[30,30]\
+								}\
+							},\
+							\
+							\
+							\
+							REbt:Group{\
+								\
+								\
+								orientation:'row',\
+								alignment:['fill','bottom'],\
+								\
+								\
+								fsButton:Button{\
+									text:'"+ es_str.refresh +"',\
+									alignment:['fill','fill']\
+								},\
+								fcButton:Button{\
+									text:'"+ es_str.export +"',\
+									alignment:['fill','fill']\
+								},\
+							},\
+						}\
+						\
+						\
+						\
 					}\
-					\
-					\
-					\
-				}\
-			}";
+				}";
 
-			pal.grp = pal.add(res);
+				pal.grp = pal.add(res);
 
 
 
