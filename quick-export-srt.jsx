@@ -74,7 +74,7 @@
 					\
 					\
 					orientation:'column',\
-					alignment:['center','fill'],\
+					alignment:['fill','fill'],\
 					margins:[0,20,0,0],\
 					minimumSize:[100, 100],\
 					\
@@ -174,11 +174,11 @@
 						\
 						\
 						\
-						poGroup:Group:{\
+						poGroup:Group{\
 							\
 							\
 							orientation:'column',\
-							alignChildren:['fill','fill'],\
+							alignment:['left','fill'],\
 							\
 							\
 							upbt:Group{\
@@ -192,7 +192,6 @@
 								ulButton:Button{\
 									text:'↖',\
 									preferredSize:[30,30],\
-									alignment:['fill','fill']\
 								},\
 								ucButton:Button{\
 									text:'⇡',\
@@ -213,7 +212,6 @@
 								mlButton:Button{\
 									text:'⇠',\
 									preferredSize:[30,30],\
-									alignment:['fill','fill']\
 								},\
 								mdButton:Button{\
 									text:'●',\
@@ -234,7 +232,6 @@
 								blButton:Button{\
 									text:'↙',\
 									preferredSize:[30,30],\
-									alignment:['fill','fill']\
 								},\
 								bmButton:Button{\
 									text:'☻',\
@@ -248,23 +245,23 @@
 							\
 							\
 							\
-							REbt:Group{\
-								\
-								\
-								orientation:'row',\
-								alignment:['fill','bottom'],\
-								\
-								\
-								fsButton:Button{\
-									text:'"+ es_str.refresh +"',\
-									alignment:['fill','fill']\
-								},\
-								fcButton:Button{\
-									text:'"+ es_str.export +"',\
-									alignment:['fill','fill']\
-								},\
-							},\
 						}\
+						REbt:Group{\
+							\
+							\
+							orientation:'row',\
+							alignment:['fill','bottom'],\
+							\
+							\
+							reButton:Button{\
+								text:'"+ es_str.refresh +"',\
+								alignment:['fill','fill']\
+							},\
+							epButton:Button{\
+								text:'"+ es_str.export +"',\
+								alignment:['fill','fill']\
+							},\
+						},\
 						\
 						\
 						\
