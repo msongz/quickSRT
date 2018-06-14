@@ -38,32 +38,168 @@
 		if (pal !== null) {
 
 			
-			var res = "group{\
-							orientation:'row',\
-							alignment:['fill','fill'],\
+			var res = "group\
+			{\
+				\
+				\
+				orientation:'row',\
+				alignment:['fill','fill'],\
+				minimumSize:[200, 200],\
+				\
+				leftPart:Group{\
+					\
+					\
+					orientation:'row',\
+					alignment:['fill','fill'],\
+					\
+					\
+					listArea:ListBox{\
+						\
+						\
+						alignment:['fill','fill'],\
+						minimumSize:[100, 100],\
+						\
+						\
+						properties:{\
+							numberOfColumns:3,\
+							columnTitles:['#', '"+ es_str.time +"', '"+ es_str.content +"'],\
+							showHeaders:true,\
+							multiselect:true\
+						}\
+					}\
+				},\
+				\
+				\
+				rightPart:Group{\
+					\
+					\
+					orientation:'column',\
+					alignment:['center','fill'],\
+					margins:[0,20,0,0],\
+					minimumSize:[100, 100],\
+					\
+					\
+					editText:EditText{\
+						text:'',\
+						alignment:['fill','top'],\
+						minimumSize:[0,0]\
+						properties:{\
+							multiline:false,\
+						}\
+						\
+					},\
+					\
+					\
+					\
+					btGroup:Group:{\
+						\
+						\
+						orientation:'column',\
+						alignment:['fill','fill'],\
+						\
+						\
+						bbt:Group{\
 							\
-							leftPart:Group{\
-								orientation:'row',\
-								alignment:['fill','fill'],\
-								\
-								listArea:ListBox{\
-									properties:{\
-										items:[1,2,3],\
-										numberOfColumns:3,\
-										showHeaders:true,\
-										columnTitles:['#', '"+ es_str.time +"', '"+ es_str.content +"'],\
-										multiselect:true},\
-									alignment:['fill','fill'],\
-									visible:true\
-								}\
+							\
+							orientation:'row',\
+							alignment:['fill','top'],\
+							\
+							\
+							bButton:Button{\
+								text:'<b>',\
+								alignment:['fill','fill']\
+							},\
+							bsButton:Button{\
+								text:'</b>'\
+							},\
+							bbButton:Button{\
+								text:'<b> </b>'\
 							}\
-						}";
+						},\
+						ibt:Group{\
+							\
+							\
+							orientation:'row',\
+							alignment:['fill','top'],\
+							\
+							\
+							iButton:Button{\
+								text:'<i>',\
+								alignment:['fill','fill']\
+							},\
+							isButton:Button{\
+								text:'</i>',\
+							},\
+							iiButton:Button{\
+								text:'<i>   </i>'\
+							}\
+						},\
+						ubt:Group{\
+							\
+							\
+							orientation:'row',\
+							alignment:['fill','top'],\
+							\
+							\
+							uButton:Button{\
+								text:'<u>',\
+								alignment:['fill','fill']\
+							},\
+							usButton:Button{\
+								text:'</u>'\
+							},\
+							uuButton:Button{\
+								text:'<u> </u>'\
+							}\
+						},\
+						fbt:Group{\
+							\
+							\
+							orientation:'row',\
+							alignment:['fill','top'],\
+							\
+							\
+							fsButton:Button{\
+								text:'<font size>',\
+								alignment:['fill','fill']\
+							},\
+							fcButton:Button{\
+								text:'<font color>'\
+							},\
+							fsButton:Button{\
+								text:'</font>'\
+							}\
+						},\
+						REbt:Group{\
+							\
+							\
+							orientation:'row',\
+							alignment:['fill','bottom'],\
+							\
+							\
+							fsButton:Button{\
+								text:'"+ es_str.refresh +"',\
+								alignment:['fill','fill']\
+							},\
+							fcButton:Button{\
+								text:'"+ es_str.export +"',\
+								alignment:['fill','fill']\
+							},\
+						},\
+					}\
+					\
+					\
+					\
+				}\
+			}";
 
 			pal.grp = pal.add(res);
-			
-			
 
-			// pal.grp.leftPart.listArea.add("item");
+
+
+			// pal.grp.leftPart.listArea.add("item",["1"])
+			// pal.grp.leftPart.listArea.items[0].subItems[0].text="00:00:00 --> 00:00:00"
+			// pal.grp.leftPart.listArea.items[0].subItems[1].text="world"
 
 
 
