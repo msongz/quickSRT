@@ -85,6 +85,7 @@
 						minimumSize:[0,0]\
 						properties:{\
 							multiline:false,\
+							readonly:false,\
 						}\
 						\
 					},\
@@ -177,7 +178,8 @@
 							\
 							\
 							orientation:'row',\
-							alignment:['fill','bottom'],\
+							alignment:['fill','fill'],\
+							margins:[0,20,0,0],\
 							\
 							\
 							poGroup:Group{\
@@ -190,7 +192,6 @@
 								upbt:Group{\
 									\
 									\
-									margins:[0,20,0,0],\
 									orientation:'row',\
 									alignment:['left','top'],\
 									\
@@ -253,37 +254,38 @@
 								\
 							}\
 							\
-							\
 							stGroup:Group{\
-							alignment:['center','fill'],\
-							\
-							helpTip:StaticText{\
-								text:'hhh'}\
+								alignment:['fill','fill'],\
+								margins:[0,-8,0,0],\
+								\
+								helpTip:Panel{\
+									alignment:['fill','fill'],\
+									text:'HelpTip'}\
+								}\
 							}\
+							REbt:Group{\
+								\
+								\
+								orientation:'row',\
+								alignment:['fill','bottom'],\
+								\
+								\
+								reButton:Button{\
+									text:'"+ es_str.refresh +"',\
+									alignment:['fill','fill']\
+								},\
+								epButton:Button{\
+									text:'"+ es_str.export +"',\
+									alignment:['fill','fill']\
+								},\
+							},\
+							\
+							\
+							\
 						}\
-						REbt:Group{\
-							\
-							\
-							orientation:'row',\
-							alignment:['fill','bottom'],\
-							\
-							\
-							reButton:Button{\
-								text:'"+ es_str.refresh +"',\
-								alignment:['fill','fill']\
-							},\
-							epButton:Button{\
-								text:'"+ es_str.export +"',\
-								alignment:['fill','fill']\
-							},\
-						},\
-						\
-						\
-						\
-					}\
-				}";
+					}";
 
-				pal.grp = pal.add(res);
+					pal.grp = pal.add(res);
 
 
 
