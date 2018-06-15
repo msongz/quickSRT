@@ -33,7 +33,7 @@
 
 
 	function es_buildUI(thisObj) {
-		var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {resizeable: true});
+		var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {closeOnKey:'OSCmnd+W',resizeable: true});
 
 		if (pal !== null) {
 
@@ -173,78 +173,93 @@
 						\
 						\
 						\
-						\
-						poGroup:Group{\
+						midGroup:Group{\
 							\
 							\
-							orientation:'column',\
-							alignment:['left','fill'],\
+							orientation:'row',\
+							alignment:['fill','bottom'],\
 							\
 							\
-							upbt:Group{\
+							poGroup:Group{\
 								\
 								\
-								margins:[0,20,0,0],\
-								orientation:'row',\
-								alignment:['left','top'],\
+								orientation:'column',\
+								alignment:['left','fill'],\
 								\
 								\
-								ulButton:Button{\
-									text:'↖',\
-									preferredSize:[30,30],\
+								upbt:Group{\
+									\
+									\
+									margins:[0,20,0,0],\
+									orientation:'row',\
+									alignment:['left','top'],\
+									\
+									\
+									ulButton:Button{\
+										text:'↖',\
+										preferredSize:[30,30],\
+									},\
+									ucButton:Button{\
+										text:'⇡',\
+										preferredSize:[30,30]\
+									},\
+									urButton:Button{\
+										text:'↗',\
+										preferredSize:[30,30]\
+									}\
 								},\
-								ucButton:Button{\
-									text:'⇡',\
-									preferredSize:[30,30]\
+								mdbt:Group{\
+									\
+									\
+									orientation:'row',\
+									alignment:['left','top'],\
+									\
+									\
+									mlButton:Button{\
+										text:'⇠',\
+										preferredSize:[30,30],\
+									},\
+									mdButton:Button{\
+										text:'●',\
+										preferredSize:[30,30]\
+									},\
+									mrButton:Button{\
+										text:'⇢',\
+										preferredSize:[30,30]\
+									}\
 								},\
-								urButton:Button{\
-									text:'↗',\
-									preferredSize:[30,30]\
-								}\
-							},\
-							mdbt:Group{\
-								\
-								\
-								orientation:'row',\
-								alignment:['left','top'],\
-								\
-								\
-								mlButton:Button{\
-									text:'⇠',\
-									preferredSize:[30,30],\
+								bobt:Group{\
+									\
+									\
+									orientation:'row',\
+									alignment:['left','top'],\
+									\
+									\
+									blButton:Button{\
+										text:'↙',\
+										preferredSize:[30,30],\
+									},\
+									bmButton:Button{\
+										text:'☻',\
+										preferredSize:[30,30]\
+									},\
+									brButton:Button{\
+										text:'↘',\
+										preferredSize:[30,30]\
+									}\
 								},\
-								mdButton:Button{\
-									text:'●',\
-									preferredSize:[30,30]\
-								},\
-								mrButton:Button{\
-									text:'⇢',\
-									preferredSize:[30,30]\
-								}\
-							},\
-							bobt:Group{\
 								\
 								\
-								orientation:'row',\
-								alignment:['left','top'],\
 								\
-								\
-								blButton:Button{\
-									text:'↙',\
-									preferredSize:[30,30],\
-								},\
-								bmButton:Button{\
-									text:'☻',\
-									preferredSize:[30,30]\
-								},\
-								brButton:Button{\
-									text:'↘',\
-									preferredSize:[30,30]\
-								}\
-							},\
+							}\
 							\
 							\
+							stGroup:Group{\
+							alignment:['center','fill'],\
 							\
+							helpTip:StaticText{\
+								text:'hhh'}\
+							}\
 						}\
 						REbt:Group{\
 							\
