@@ -308,6 +308,7 @@
 
 	function sortLayers (layers) {
 		// by inPoint
+		// in background
 		return layers.sort(function(a,b){return a.inPoint-b.inPoint})
 	}
 
@@ -315,7 +316,7 @@
 		// body...
 		var result = false;
 
-		for (var i = 1; i < inPoints.length-1; i++) {
+		for (var i = 1; i < inPoints.length; i++) {
 			if ( inPoints[i] < outPoints[i-1] ){
 				result = true ;
 			}
@@ -323,6 +324,34 @@
 
 		return result;
 	}
+
+	var comp = app.project.activeItem;
+
+	var sl = comp?comp.selectedLayers:null;
+
+	var ips=[];
+
+	var ops=[];
+
+	for (var x = 0; x < sl.length; x++){
+		ips.push(sl[x].inPoint);
+		ops.push(sl[x].outPoint);
+	}
+
+
+	function validSel (arr) {
+		if ( arr.length != 0 ) {
+			for (var i = 0; i < arr.length; i++) {
+				arr[i]
+			};
+			return true;
+		}else{
+			alert("please select some layers");
+			return false;
+		}
+	}
+
+
 
 	var ui = es_buildUI();
 
