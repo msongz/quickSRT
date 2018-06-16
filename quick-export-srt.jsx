@@ -14,7 +14,7 @@
 	es_str.mail = {en:"songzmeng@gmail.com",cn:"msongz@qq.com"};
 	es_str.time = {en:"time",cn:"时间"};
 	es_str.content = {en:"content",cn:"内容"};
-	// es_str.version = {en:"",cn:""};
+	es_str.helptip = {en:"HelpTip",cn:"帮助"};
 	// es_str.version = {en:"",cn:""};
 	// es_str.version = {en:"",cn:""};
 	// es_str.version = {en:"",cn:""};
@@ -32,7 +32,7 @@
 
 
 
-	function es_buildUI(thisObj) {
+	function es_buildUI (thisObj) {
 		var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {closeOnKey:'OSCmnd+W',resizeable: true});
 
 		if (pal !== null) {
@@ -305,6 +305,24 @@
 		}
 	}
 
+
+	function sortLayers (layers) {
+		// by inPoint
+		return layers.sort(function(a,b){return a.inPoint-b.inPoint})
+	}
+
+	function overlap (inPoints,outPoints) {
+		// body...
+		var result = false;
+
+		for (var i = 1; i < inPoints.length-1; i++) {
+			if ( inPoints[i] < outPoints[i-1] ){
+				result = true ;
+			}
+		};
+
+		return result;
+	}
 
 	var ui = es_buildUI();
 
