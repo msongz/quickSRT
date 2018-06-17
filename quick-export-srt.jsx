@@ -5,23 +5,53 @@
 	// body...
 
 	var es_str = {};
-	es_str.title = {en:"quick export srt",cn:"快捷导出字幕"};
-	es_str.version = {en:" v0.01",cn:" v0.01"};
-	es_str.export = {en:"export",cn:"导出"};
-	es_str.refresh = {en:"refresh",cn:"刷新"};
-	es_str.noLayer = {en:"no layer selected",cn:"没有选择图层"};
-	es_str.website = {en:"https://github.com/msongz",cn:"https://github.com/msongz"};
-	es_str.mail = {en:"songzmeng@gmail.com",cn:"msongz@qq.com"};
-	es_str.time = {en:"time",cn:"时间"};
-	es_str.content = {en:"content",cn:"内容"};
-	es_str.helptip = {en:"HelpTip",cn:"帮助"};
+	es_str.title = {
+		en: "quick export srt",
+		cn: "快捷导出字幕"
+	};
+	es_str.version = {
+		en: " v0.01",
+		cn: " v0.01"
+	};
+	es_str.export = {
+		en: "export",
+		cn: "导出"
+	};
+	es_str.refresh = {
+		en: "refresh",
+		cn: "刷新"
+	};
+	es_str.noLayer = {
+		en: "no layer selected",
+		cn: "没有选择图层"
+	};
+	es_str.website = {
+		en: "https://github.com/msongz",
+		cn: "https://github.com/msongz"
+	};
+	es_str.mail = {
+		en: "songzmeng@gmail.com",
+		cn: "msongz@qq.com"
+	};
+	es_str.time = {
+		en: "time",
+		cn: "时间"
+	};
+	es_str.content = {
+		en: "content",
+		cn: "内容"
+	};
+	es_str.helptip = {
+		en: "HelpTip",
+		cn: "帮助"
+	};
 	// es_str.version = {en:"",cn:""};
 	// es_str.version = {en:"",cn:""};
 	// es_str.version = {en:"",cn:""};
 	// es_str.version = {en:"",cn:""};
 
 	if (true) {
-		for(var i in es_str ){
+		for (var i in es_str) {
 			es_str[i] = es_str[i]["en"];
 		};
 	};
@@ -32,12 +62,15 @@
 
 
 
-	function es_buildUI (thisObj) {
-		var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {closeOnKey:'OSCmnd+W',resizeable: true});
+	function es_buildUI(thisObj) {
+		var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {
+			closeOnKey: 'OSCmnd+W',
+			resizeable: true
+		});
 
 		if (pal !== null) {
 
-			
+
 			var res = "group\
 			{\
 				\
@@ -62,7 +95,7 @@
 						\
 						properties:{\
 							numberOfColumns:3,\
-							columnTitles:['#', '"+ es_str.time +"', '"+ es_str.content +"'],\
+							columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],\
 							showHeaders:true,\
 							multiselect:true\
 						}\
@@ -271,11 +304,11 @@
 								\
 								\
 								reButton:Button{\
-									text:'"+ es_str.refresh +"',\
+									text:'" + es_str.refresh + "',\
 									alignment:['fill','fill']\
 								},\
 								epButton:Button{\
-									text:'"+ es_str.export +"',\
+									text:'" + es_str.export+"',\
 									alignment:['fill','fill']\
 								},\
 							},\
@@ -285,20 +318,13 @@
 						}\
 					}";
 
-					pal.grp = pal.add(res);
-
-
-
-			// pal.grp.leftPart.listArea.add("item",["1"])
-			// pal.grp.leftPart.listArea.items[0].subItems[0].text="00:00:00 --> 00:00:00"
-			// pal.grp.leftPart.listArea.items[0].subItems[1].text="world"
-
+			pal.grp = pal.add(res);
 
 
 
 
 			// pal.layout.layout(true);
-			pal.onResizing = pal.onResize = function() {
+			pal.onResizing = pal.onResize = function () {
 				this.layout.resize()
 			}
 			return pal
@@ -306,71 +332,85 @@
 	}
 
 
-	function sortLayers (layers) {
+	function sortLayers(layers) {
 		// by inPoint
 		// in background
-		return layers.sort(function(a,b){return a.inPoint-b.inPoint})
+		return layers.sort(function (a, b) {
+			return a.inPoint - b.inPoint
+		})
 	}
 
-	function overlap (inPoints,outPoints) {
+	function overlap(inPoints, outPoints) {
 		// wait for add output the overlap position...
 		var result = false;
 
 		for (var i = 1; i < inPoints.length; i++) {
-			if ( inPoints[i] < outPoints[i-1] ){
-				result = true ;
+			if (inPoints[i] < outPoints[i - 1]) {
+				result = true;
 			}
 		};
 
 		return result;
 	}
 
-	var comp = app.project.activeItem;
-
-	var sl = comp?comp.selectedLayers:[];
-
-	var ips=[];
-
-	var ops=[];
-
-	for (var x = 0; x < sl.length; x++){
-		ips.push(sl[x].inPoint);
-		ops.push(sl[x].outPoint);
-	}
+	function validSel(arr) {
+		if (arr != null && arr.length != 0) {
 
 
-	function validSel (arr) {
-		if ( arr != null && arr.length != 0 ) {
-			
-			
 			for (var i = 0; i < arr.length; i++) {
-				if (!(arr[i] instanceof TextLayer)){
+				if (!(arr[i] instanceof TextLayer)) {
 					alert("please only selected Text Layer");
 					return false
 					break;
 				}
 			};
 			return true
-			
-		}else{
+
+		} else {
 			alert("please select some layers");
 			return false;
 		}
 	}
 
-
-
-
 	var ui = es_buildUI();
+	var comp = app.project.activeItem;
+	var sl = comp ? comp.selectedLayers : [];
+
+	var ips = [];
+
+	var ops = [];
+
+	for (var x = 0; x < sl.length; x++) {
+		ips.push(sl[x].inPoint);
+		ops.push(sl[x].outPoint);
+	}
+
+
+
+
+
+
+
+
+	for (var t = 0; t < 10; t++) {
+
+		with(ui.grp.leftPart.listArea) {
+			add("item", t + 1)
+			items[t].subItems[0].text = "00:00:00 --> 00:00:00"
+			items[t].subItems[1].text = " Window"
+		}
+
+	}
+
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
 			ui.center();
 			ui.show()
 		} else {
-            // ui.layout.layout(true)
-        }
-    }
+			// ui.layout.layout(true)
+		}
+	}
 
 
 
