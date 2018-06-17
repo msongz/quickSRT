@@ -313,7 +313,7 @@
 	}
 
 	function overlap (inPoints,outPoints) {
-		// body...
+		// wait for add output the overlap position...
 		var result = false;
 
 		for (var i = 1; i < inPoints.length; i++) {
@@ -327,7 +327,7 @@
 
 	var comp = app.project.activeItem;
 
-	var sl = comp?comp.selectedLayers:null;
+	var sl = comp?comp.selectedLayers:[];
 
 	var ips=[];
 
@@ -340,16 +340,24 @@
 
 
 	function validSel (arr) {
-		if ( arr.length != 0 ) {
+		if ( arr != null && arr.length != 0 ) {
+			
+			
 			for (var i = 0; i < arr.length; i++) {
-				arr[i]
+				if (!(arr[i] instanceof TextLayer)){
+					alert("please only selected Text Layer");
+					return false
+					break;
+				}
 			};
-			return true;
+			return true
+			
 		}else{
 			alert("please select some layers");
 			return false;
 		}
 	}
+
 
 
 
