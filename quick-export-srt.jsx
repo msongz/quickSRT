@@ -318,7 +318,7 @@
 						}\
 					}";
 
-			pal.grp = pal.add(res);
+					pal.grp = pal.add(res);
 
 
 
@@ -373,21 +373,17 @@
 	}
 
 	function frame2time(frames, fps) {
-		var hh = frames / fps / 60 / 60; // hour:    
 
-		var mm = frames % (fps * 60 * 60) / fps / 60; // min
+		var timeTpye = app.project.timeDisplayType
 
-		var ss = frames % (fps * 60) / fps //sec
+		app.project.timeDisplayType = 2012
 
-		var ms = Math.floor(frames % fps * 1000 / fps / 10) * 10
+		var timecode = timeToCurrentFormat(frames, fps);
 
+		var ms = Math.floor(timecode.substr(-2) / fps * 1000 / 10) * 10
 
-		function validTime(num) {
-			num = Math.floor(num);
-			return num < 10 ? "0" + num : num;
-		}
-
-		return validTime(hh) + ":" + validTime(mm) + ":" + validTime(ss) + "," + ms
+		app.project.timeDisplayType = timeTpye
+		return timecode.substr(0, timecode.length - 3) + "," + ms
 	}
 
 	var ui = es_buildUI();
