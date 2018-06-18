@@ -372,18 +372,25 @@
 		}
 	}
 
-	function frame2time(frames, fps) {
+	function time2code(frames, fps) {
 
 		var timeTpye = app.project.timeDisplayType
 
 		app.project.timeDisplayType = 2012
 
+		frames=frames<0?0:frames;
+
 		var timecode = timeToCurrentFormat(frames, fps);
 
-		var ms = Math.floor(timecode.substr(-2) / fps * 1000 / 10) * 10
+		var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000 ) 
+
+		ms=ms<100&&ms>=10?"0"+ms:ms
+
+		ms=ms<10?"00"+ms:ms
 
 		app.project.timeDisplayType = timeTpye
-		return timecode.substr(0, timecode.length - 3) + "," + ms
+
+		return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms
 	}
 
 	var ui = es_buildUI();
@@ -406,15 +413,19 @@
 
 
 
-	for (var t = 0; t < 10; t++) {
+	for (var t = 0; t < sl.length; t++) {
 
 		with(ui.grp.leftPart.listArea) {
-			add("item", t + 1)
-			items[t].subItems[0].text = "00:00:00 --> 00:00:00"
-			items[t].subItems[1].text = " Window"
+
+			add("item", t + 1) //index #
+
+			items[t].subItems[0].text = time2code(sl[t].inPoint,comp.frameRate)+" --> "+time2code(sl[t].outPoint,comp.frameRate) // time
+
+			items[t].subItems[1].text = " Window" //content
 		}
 
 	}
+	
 
 
 	if (ui !== null) {
