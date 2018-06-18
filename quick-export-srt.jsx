@@ -379,13 +379,15 @@
 
 		var ss = frames % (fps * 60) / fps //sec
 
+		var ms = Math.floor(frames % fps * 1000 / fps / 10) * 10
+
 
 		function validTime(num) {
 			num = Math.floor(num);
 			return num < 10 ? "0" + num : num;
 		}
 
-		return validTime(hh) + ":" + validTime(mm) + ":" + validTime(ss)
+		return validTime(hh) + ":" + validTime(mm) + ":" + validTime(ss) + "," + ms
 	}
 
 	var ui = es_buildUI();
