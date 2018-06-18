@@ -372,6 +372,22 @@
 		}
 	}
 
+	function frame2time(frames, fps) {
+		var hh = frames / fps / 60 / 60; // hour:    
+
+		var mm = frames % (fps * 60 * 60) / fps / 60; // min
+
+		var ss = frames % (fps * 60) / fps //sec
+
+
+		function validTime(num) {
+			num = Math.floor(num);
+			return num < 10 ? "0" + num : num;
+		}
+
+		return validTime(hh) + ":" + validTime(mm) + ":" + validTime(ss)
+	}
+
 	var ui = es_buildUI();
 	var comp = app.project.activeItem;
 	var sl = comp ? comp.selectedLayers : [];
