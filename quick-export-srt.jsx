@@ -396,6 +396,7 @@
 	var ui = es_buildUI();
 	var comp = app.project.activeItem;
 	var sl = comp ? comp.selectedLayers : [];
+	var markerIndex;
 
 	var ips = [];
 
@@ -408,6 +409,34 @@
 
 
 
+	function validMarker(layer) {
+		function checkMarker(layer) {
+
+			var markerProp = layer.property("Marker")
+			var esMarkTime = layer.outPoint - 1 / comp.frameRate
+
+			if (markerProp.numKeys != undefined) {
+				for (var n = 1; n <= markerProp.numKeys; n++) {
+					if (markerProp.keyTime(n) == esMarkTime) {
+						markerIndex = n
+						return true
+					}
+				};
+				return false
+			}
+
+		}
+
+
+		if (checkMarker(layer)) {
+
+		} else {
+			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - 1 / comp.frameRate, false)
+			var esMarkValue = new MarkerValue(layerText);
+			layer.property("Marker").setValueAtTime(layer.outPoint - 1 / comp.frameRate, esMarkValue);
+
+		}
+	}
 
 
 
