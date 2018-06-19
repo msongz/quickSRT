@@ -239,18 +239,23 @@ var res = "group{\
 
 	function validMarker(layer) {
 		function checkMarker(layer) {
+			var timeTpye=app.project.timeDisplayType
+			app.project.timeDisplayType = 2013
 
 			var markerProp = layer.property("Marker")
-			var esMarkTime = layer.outPoint - 1 / comp.frameRate
+			var esMarkTime = timeToCurrentFormat(layer.outPoint,comp.frameRate)- 1
 
 			if (markerProp.numKeys != undefined) {
 				for (var n = 1; n <= markerProp.numKeys; n++) {
-					if (markerProp.keyTime(n) == esMarkTime) {
+					if (timeToCurrentFormat(markerProp.keyTime(n),comp.frameRate) == esMarkTime) {
 						// this.markerIndex = n
+						app.project.timeDisplayType=timeTpye
 						return true
 					}
 				};
+				app.project.timeDisplayType=timeTpye
 				return false
+
 			}
 
 		}
@@ -266,15 +271,20 @@ var res = "group{\
 		}
 	}
 
-
+function fixList (control) {
+var wh = control.size;
+control.size = [1+wh[0], 1+wh[1]]; control.size = [wh[0], wh[1]];
+}
 
 
 	// var markerIndex=1;
 	// function refreshButton(pal,arr) {
 	// body...
 function refreshButton (pal) {
+	var comp = app.project.activeItem;
+	var sl = comp ? sortLayers(comp.selectedLayers) : [];
 
-					
+	pal.grp.leftPart.listArea.removeAll()
 	app.beginUndoGroup("refresh")
 
 	for (var t = 0; t < sl.length; t++) {
@@ -291,6 +301,7 @@ function refreshButton (pal) {
 	}
 
 	app.endUndoGroup();
+	fixList(pal.grp.leftPart.listArea)
 }
 
 	if (ui !== null) {
