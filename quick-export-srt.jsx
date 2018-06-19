@@ -1,7 +1,7 @@
 //songz meng
 //export srt 
 //v0.01 
-(function () {
+(function es_srt(thisObj) {
 	// body...
 
 	var es_str = {};
@@ -207,7 +207,7 @@
 						\
 						\
 						\
-						midGroup:Group{\
+						lowGroup:Group{\
 							\
 							\
 							orientation:'row',\
@@ -281,12 +281,11 @@
 										text:'↘',\
 										preferredSize:[30,30]\
 									}\
-								},\
+								}\
 								\
 								\
 								\
-							}\
-							\
+							},\
 							stGroup:Group{\
 								alignment:['fill','fill'],\
 								margins:[0,-8,0,0],\
@@ -295,15 +294,15 @@
 									alignment:['fill','fill'],\
 									text:'HelpTip'}\
 								}\
-							}\
-							REbt:Group{\
+							},\
+							rebt:Group{\
 								\
 								\
 								orientation:'row',\
 								alignment:['fill','bottom'],\
 								\
 								\
-								reButton:Button{\
+								rfButton:Button{\
 									text:'" + es_str.refresh + "',\
 									alignment:['fill','fill']\
 								},\
@@ -318,17 +317,17 @@
 						}\
 					}";
 
-					pal.grp = pal.add(res);
-
-
-
-
+			pal.grp = pal.add(res);
 			// pal.layout.layout(true);
 			pal.onResizing = pal.onResize = function () {
-				this.layout.resize()
-			}
-			return pal
+					this.layout.resize()
+				}
+				// pal.grp.rightPart.btGroup.bbt.bButton.onClick= function() {
+				// refreshButton(this.parent.parent.parent.parent.parent.parent)
+				// alert(1)
+				// }
 		}
+		return pal
 	}
 
 
@@ -378,15 +377,15 @@
 
 		app.project.timeDisplayType = 2012
 
-		frames=frames<0?0:frames;
+		frames = frames < 0 ? 0 : frames;
 
 		var timecode = timeToCurrentFormat(frames, fps);
 
-		var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000 ) 
+		var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000)
 
-		ms=ms<100&&ms>=10?"0"+ms:ms
+		ms = ms < 100 && ms >= 10 ? "0" + ms : ms
 
-		ms=ms<10?"00"+ms:ms
+		ms = ms < 10 ? "00" + ms : ms
 
 		app.project.timeDisplayType = timeTpye
 
@@ -395,8 +394,7 @@
 
 	var ui = es_buildUI();
 	var comp = app.project.activeItem;
-	var sl = comp ? comp.selectedLayers : [];
-	var markerIndex;
+	var sl = comp ? sortLayers(comp.selectedLayers) : [];
 
 	var ips = [];
 
@@ -418,7 +416,7 @@
 			if (markerProp.numKeys != undefined) {
 				for (var n = 1; n <= markerProp.numKeys; n++) {
 					if (markerProp.keyTime(n) == esMarkTime) {
-						markerIndex = n
+						// this.markerIndex = n
 						return true
 					}
 				};
@@ -441,31 +439,32 @@
 
 
 
+	// var markerIndex=1;
+	// function refreshButton(pal,arr) {
+	// body...
 
 	for (var t = 0; t < sl.length; t++) {
 
+		validMarker(sl[t]);
 		with(ui.grp.leftPart.listArea) {
-
 			add("item", t + 1) //index #
-
-			items[t].subItems[0].text = time2code(sl[t].inPoint,comp.frameRate)+" --> "+time2code(sl[t].outPoint,comp.frameRate) // time
-
-			items[t].subItems[1].text = " Window" //content
+			items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
+			items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment //content
 		}
 
-	}
-	
 
+
+	}
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
 			ui.center();
 			ui.show()
 		} else {
-			// ui.layout.layout(true)
+			ui.layout.layout(true)
 		}
 	}
 
 
 
-})()
+})(this)
