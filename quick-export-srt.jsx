@@ -70,90 +70,91 @@
 
 		if (pal !== null) {
 
-var res = "group{\
-                orientation:'row',alignment:['fill','fill'],minimumSize:[420, 400],\
-                leftPart:Group{\
-                    orientation:'row',alignment:['fill','fill'],\
-                    listArea:ListBox{\
-                        alignment:['fill','fill'],minimumSize:[200, 100],properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],showHeaders:true,multiselect:true}\
-                    }\
-                },\
-                rightPart:Group{\
-                    orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
-                    editText:EditText{\
-                        text:'',alignment:['fill','top'],minimumSize:[0,0]properties:{multiline:false,readonly:false,}\
-                    },\
-                    btGroup:Group{\
-                        orientation:'column',alignment:['fill','fill'],\
-                        bbt:Group{\
-                            orientation:'row',alignment:['fill','top'],\
-                            bButton:Button{text:'<b>',alignment:['fill','fill']},\
-                            bsButton:Button{text:'</b>'},\
-                            bbButton:Button{text:'<b> </b>'}\
-                        },\
-                        ibt:Group{\
-                            orientation:'row',alignment:['fill','top'],\
-                            iButton:Button{text:'<i>',alignment:['fill','fill']},\
-                            isButton:Button{text:'</i>'},\
-                            iiButton:Button{text:'<i>   </i>'}\
-                        },\
-                        ubt:Group{\
-                            orientation:'row',alignment:['fill','top'],\
-                            uButton:Button{text:'<u>',alignment:['fill','fill']},\
-                            usButton:Button{text:'</u>'},\
-                            uuButton:Button{text:'<u> </u>'}\
-                        },\
-                        fbt:Group{\
-                            orientation:'row',alignment:['fill','top'],\
-                            fsButton:Button{text:'<font size>',alignment:['fill','fill']},\
-                            fcButton:Button{text:'<font color>'},\
-                            fsButton:Button{text:'</font>'}\
-                        },\
-                        lowGroup:Group{\
-                            orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
-                            poGroup:Group{\
-                                orientation:'column',alignment:['left','fill'],\
-                                upbt:Group{\
-                                    orientation:'row',alignment:['left','top'],\
-                                    ulButton:Button{text:'↖',preferredSize:[30,30]},\
-                                    ucButton:Button{text:'⇡',preferredSize:[30,30]},\
-                                    urButton:Button{text:'↗',preferredSize:[30,30]}\
-                                },\
-                                mdbt:Group{\
-                                    orientation:'row',alignment:['left','top'],\
-                                    mlButton:Button{text:'⇠',preferredSize:[30,30]},\
-                                    mdButton:Button{text:'●',preferredSize:[30,30]},\
-                                    mrButton:Button{text:'⇢',preferredSize:[30,30]}\
-                                },\
-                                bobt:Group{\
-                                    orientation:'row',alignment:['left','top'],\
-                                    blButton:Button{text:'↙',preferredSize:[30,30]},\
-                                    bmButton:Button{text:'☻',preferredSize:[30,30]},\
-                                    brButton:Button{text:'↘',preferredSize:[30,30]}\
-                                }\
-                            },\
-                            stGroup:Group{\
-                                alignment:['fill','fill'],margins:[0,-8,0,0],\
-                                helpTip:Panel{alignment:['fill','fill'],text:'HelpTip'}\
-                            }\
-                        },\
-                        rebt:Group{\
-                            orientation:'row',alignment:['fill','bottom'],\
-                            rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
-                            epButton:Button{text:'" + es_str.export + "',alignment:['fill','fill']}\
-                        }\
-                    }\
-                }\
-            }";
+			var res = "group{\
+				orientation:'row',alignment:['fill','fill'],minimumSize:[420, 400],\
+				leftPart:Group{\
+					orientation:'row',alignment:['fill','fill'],\
+					listArea:ListBox{\
+						alignment:['fill','fill'],minimumSize:[200, 100],properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],showHeaders:true,multiselect:true}\
+					}\
+				},\
+				rightPart:Group{\
+					orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
+					editText:EditText{\
+						text:'',alignment:['fill','top'],minimumSize:[0,0]properties:{multiline:false,readonly:false,}\
+					},\
+					btGroup:Group{\
+						orientation:'column',alignment:['fill','fill'],\
+						bbt:Group{\
+							orientation:'row',alignment:['fill','top'],\
+							bButton:Button{text:'<b>',alignment:['fill','fill']},\
+							bsButton:Button{text:'</b>'},\
+							bbButton:Button{text:'<b> </b>'}\
+						},\
+						ibt:Group{\
+							orientation:'row',alignment:['fill','top'],\
+							iButton:Button{text:'<i>',alignment:['fill','fill']},\
+							isButton:Button{text:'</i>'},\
+							iiButton:Button{text:'<i>   </i>'}\
+						},\
+						ubt:Group{\
+							orientation:'row',alignment:['fill','top'],\
+							uButton:Button{text:'<u>',alignment:['fill','fill']},\
+							usButton:Button{text:'</u>'},\
+							uuButton:Button{text:'<u> </u>'}\
+						},\
+						fbt:Group{\
+							orientation:'row',alignment:['fill','top'],\
+							fsButton:Button{text:'<font size>',alignment:['fill','fill']},\
+							fcButton:Button{text:'<font color>'},\
+							fsButton:Button{text:'</font>'}\
+						},\
+						lowGroup:Group{\
+							orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
+							poGroup:Group{\
+								orientation:'column',alignment:['left','fill'],\
+								upbt:Group{\
+									orientation:'row',alignment:['left','top'],\
+									ulButton:Button{text:'↖',preferredSize:[30,30]},\
+									ucButton:Button{text:'⇡',preferredSize:[30,30]},\
+									urButton:Button{text:'↗',preferredSize:[30,30]}\
+								},\
+								mdbt:Group{\
+									orientation:'row',alignment:['left','top'],\
+									mlButton:Button{text:'⇠',preferredSize:[30,30]},\
+									mdButton:Button{text:'●',preferredSize:[30,30]},\
+									mrButton:Button{text:'⇢',preferredSize:[30,30]}\
+								},\
+								bobt:Group{\
+									orientation:'row',alignment:['left','top'],\
+									blButton:Button{text:'↙',preferredSize:[30,30]},\
+									bmButton:Button{text:'☻',preferredSize:[30,30]},\
+									brButton:Button{text:'↘',preferredSize:[30,30]}\
+								}\
+							},\
+							stGroup:Group{\
+								alignment:['fill','fill'],margins:[0,-8,0,0],\
+								helpTip:Panel{alignment:['fill','fill'],text:'HelpTip'}\
+							}\
+						},\
+						rebt:Group{\
+							orientation:'row',alignment:['fill','bottom'],\
+							rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
+							epButton:Button{text:'" + es_str.export+"',alignment:['fill','fill']}\
+						}\
+					}\
+				}\
+			}";
 
 			pal.grp = pal.add(res);
 			// pal.layout.layout(true);
 			pal.onResizing = pal.onResize = function () {
-					this.layout.resize()
-				}
+				this.layout.resize()
+			}
 			pal.grp.rightPart.btGroup.rebt.rfButton.onClick = function () {
 				// alert(1)
-				refreshButton(this.parent.parent.parent.parent.parent)
+				refreshButton(pal)
+				fixList(pal.grp.leftPart.listArea)
 
 			}
 		}
@@ -239,21 +240,21 @@ var res = "group{\
 
 	function validMarker(layer) {
 		function checkMarker(layer) {
-			var timeTpye=app.project.timeDisplayType
+			var timeTpye = app.project.timeDisplayType
 			app.project.timeDisplayType = 2013
 
 			var markerProp = layer.property("Marker")
-			var esMarkTime = timeToCurrentFormat(layer.outPoint,comp.frameRate)- 1
+			var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - 1
 
 			if (markerProp.numKeys != undefined) {
 				for (var n = 1; n <= markerProp.numKeys; n++) {
-					if (timeToCurrentFormat(markerProp.keyTime(n),comp.frameRate) == esMarkTime) {
+					if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
 						// this.markerIndex = n
-						app.project.timeDisplayType=timeTpye
+						app.project.timeDisplayType = timeTpye
 						return true
 					}
 				};
-				app.project.timeDisplayType=timeTpye
+				app.project.timeDisplayType = timeTpye
 				return false
 
 			}
@@ -271,38 +272,40 @@ var res = "group{\
 		}
 	}
 
-function fixList (control) {
-var wh = control.size;
-control.size = [1+wh[0], 1+wh[1]]; control.size = [wh[0], wh[1]];
-}
+	function fixList(control) {
+		var wh = control.size;
+		control.size = [1 + wh[0], 1 + wh[1]];
+		control.size = [wh[0], wh[1]];
+	}
 
 
 	// var markerIndex=1;
 	// function refreshButton(pal,arr) {
 	// body...
-function refreshButton (pal) {
-	var comp = app.project.activeItem;
-	var sl = comp ? sortLayers(comp.selectedLayers) : [];
+	function refreshButton(pal) {
+		var comp = app.project.activeItem;
+		var sl = comp ? sortLayers(comp.selectedLayers) : [];
 
-	pal.grp.leftPart.listArea.removeAll()
-	app.beginUndoGroup("refresh")
+		pal.grp.leftPart.listArea.removeAll()
+		app.beginUndoGroup("refresh")
 
-	for (var t = 0; t < sl.length; t++) {
+		for (var t = 0; t < sl.length; t++) {
 
-		validMarker(sl[t]);
-		with(pal.grp.leftPart.listArea) {
-			add("item", t + 1) //index #
-			items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-			items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment //content
+			validMarker(sl[t]);
+			with(pal.grp.leftPart.listArea) {
+				add("item", t + 1) //index #
+				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
+				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment //content
+			}
+
+
+
 		}
 
-
-
+		app.endUndoGroup();
+		
 	}
-
-	app.endUndoGroup();
-	fixList(pal.grp.leftPart.listArea)
-}
+	refreshButton(ui)
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
