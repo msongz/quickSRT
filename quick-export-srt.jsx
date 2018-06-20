@@ -162,8 +162,8 @@
 
 			}
 			pal.grp.leftPart.listArea.onChange = function () {
-				var comp = app.project.activeItem;
-				var sl = comp ? sortLayers(comp.selectedLayers) : [];
+				// var comp = app.project.activeItem;
+				// var sl = comp ? sortLayers(comp.selectedLayers) : [];
 				var listIndex = parseInt(this.selection);
 				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint-1/comp.frameRate;
 				// alert(slIndex)
@@ -234,10 +234,10 @@
 		return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms
 	}
 
-	var ui = es_buildUI();
+	var ui = es_buildUI(),comp,sl,slIndex;
 	// var comp = app.project.activeItem;
 	// var sl = comp ? sortLayers(comp.selectedLayers) : [];
-	var slIndex = []
+	// var slIndex = []
 		// var ips = [];
 
 	// var ops = [];
@@ -294,8 +294,8 @@
 	// function refreshButton(pal,arr) {
 	// body...
 	function refreshButton(pal) {
-		var comp = app.project.activeItem;
-		var sl = comp ? sortLayers(comp.selectedLayers) : [];
+		comp = app.project.activeItem;
+		sl = comp ? sortLayers(comp.selectedLayers) : [];
 		slIndex=[]
 
 		pal.grp.leftPart.listArea.removeAll()
