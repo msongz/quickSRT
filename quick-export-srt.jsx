@@ -150,6 +150,11 @@
 				pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
 					// alert(slIndex)
 			}
+			pal.grp.rightPart.editText.onChanging = function () {
+				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text
+				fixList(pal.grp.leftPart.listArea)
+
+			}
 		}
 		return pal
 	}
