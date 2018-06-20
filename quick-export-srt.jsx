@@ -153,10 +153,20 @@
 			}
 			pal.grp.rightPart.btGroup.rebt.rfButton.onClick = function () {
 				// alert(1)
-				try{
-				refreshButton(this.parent.parent.parent.parent.parent)
-				fixList(pal.grp.leftPart.listArea)}catch (e){alert(e)}
+				try {
+					refreshButton(this.parent.parent.parent.parent.parent)
+					fixList(pal.grp.leftPart.listArea)
+				} catch (e) {
+					alert(e)
+				}
 
+			}
+			pal.grp.leftPart.listArea.onChange = function () {
+				var comp = app.project.activeItem;
+				var sl = comp ? sortLayers(comp.selectedLayers) : [];
+				var listIndex = parseInt(this.selection);
+				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint-1/comp.frameRate;
+				// alert(slIndex)
 			}
 		}
 		return pal
@@ -227,8 +237,8 @@
 	var ui = es_buildUI();
 	// var comp = app.project.activeItem;
 	// var sl = comp ? sortLayers(comp.selectedLayers) : [];
-
-	// var ips = [];
+	var slIndex = []
+		// var ips = [];
 
 	// var ops = [];
 
@@ -239,7 +249,7 @@
 
 
 
-	function validMarker(layer,comp) {
+	function validMarker(layer, comp) {
 		function checkMarker(layer) {
 			var timeTpye = app.project.timeDisplayType
 			app.project.timeDisplayType = 2013
@@ -286,13 +296,15 @@
 	function refreshButton(pal) {
 		var comp = app.project.activeItem;
 		var sl = comp ? sortLayers(comp.selectedLayers) : [];
+		slIndex=[]
 
 		pal.grp.leftPart.listArea.removeAll()
 		app.beginUndoGroup("refresh")
 
 		for (var t = 0; t < sl.length; t++) {
+			slIndex.push(sl[t].index)
 
-			validMarker(sl[t],comp);
+			validMarker(sl[t], comp);
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
@@ -304,7 +316,8 @@
 		}
 
 		app.endUndoGroup();
-		
+
+
 	}
 	refreshButton(ui)
 
