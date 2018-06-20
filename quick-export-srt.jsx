@@ -153,8 +153,9 @@
 			}
 			pal.grp.rightPart.btGroup.rebt.rfButton.onClick = function () {
 				// alert(1)
-				refreshButton(pal)
-				fixList(pal.grp.leftPart.listArea)
+				try{
+				refreshButton(this.parent.parent.parent.parent.parent)
+				fixList(pal.grp.leftPart.listArea)}catch (e){alert(e)}
 
 			}
 		}
@@ -224,21 +225,21 @@
 	}
 
 	var ui = es_buildUI();
-	var comp = app.project.activeItem;
-	var sl = comp ? sortLayers(comp.selectedLayers) : [];
+	// var comp = app.project.activeItem;
+	// var sl = comp ? sortLayers(comp.selectedLayers) : [];
 
-	var ips = [];
+	// var ips = [];
 
-	var ops = [];
+	// var ops = [];
 
-	for (var x = 0; x < sl.length; x++) {
-		ips.push(sl[x].inPoint);
-		ops.push(sl[x].outPoint);
-	}
+	// for (var x = 0; x < sl.length; x++) {
+	// 	ips.push(sl[x].inPoint);
+	// 	ops.push(sl[x].outPoint);
+	// }
 
 
 
-	function validMarker(layer) {
+	function validMarker(layer,comp) {
 		function checkMarker(layer) {
 			var timeTpye = app.project.timeDisplayType
 			app.project.timeDisplayType = 2013
@@ -291,7 +292,7 @@
 
 		for (var t = 0; t < sl.length; t++) {
 
-			validMarker(sl[t]);
+			validMarker(sl[t],comp);
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
