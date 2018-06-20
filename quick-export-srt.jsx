@@ -70,103 +70,85 @@
 
 		if (pal !== null) {
 
-			var res = "group{\
-				orientation:'row',alignment:['fill','fill'],minimumSize:[420, 400],\
-				leftPart:Group{\
-					orientation:'row',alignment:['fill','fill'],\
-					listArea:ListBox{\
-						alignment:['fill','fill'],minimumSize:[200, 100],properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],showHeaders:true,multiselect:true}\
-					}\
-				},\
-				rightPart:Group{\
-					orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
-					editText:EditText{\
-						text:'',alignment:['fill','top'],minimumSize:[0,0]properties:{multiline:false,readonly:false,}\
-					},\
-					btGroup:Group{\
-						orientation:'column',alignment:['fill','fill'],\
-						bbt:Group{\
-							orientation:'row',alignment:['fill','top'],\
-							bButton:Button{text:'<b>',alignment:['fill','fill']},\
-							bsButton:Button{text:'</b>'},\
-							bbButton:Button{text:'<b> </b>'}\
-						},\
-						ibt:Group{\
-							orientation:'row',alignment:['fill','top'],\
-							iButton:Button{text:'<i>',alignment:['fill','fill']},\
-							isButton:Button{text:'</i>'},\
-							iiButton:Button{text:'<i>   </i>'}\
-						},\
-						ubt:Group{\
-							orientation:'row',alignment:['fill','top'],\
-							uButton:Button{text:'<u>',alignment:['fill','fill']},\
-							usButton:Button{text:'</u>'},\
-							uuButton:Button{text:'<u> </u>'}\
-						},\
-						fbt:Group{\
-							orientation:'row',alignment:['fill','top'],\
-							fsButton:Button{text:'<font size>',alignment:['fill','fill']},\
-							fcButton:Button{text:'<font color>'},\
-							fsButton:Button{text:'</font>'}\
-						},\
-						lowGroup:Group{\
-							orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
-							poGroup:Group{\
-								orientation:'column',alignment:['left','fill'],\
-								upbt:Group{\
-									orientation:'row',alignment:['left','top'],\
-									ulButton:Button{text:'↖',preferredSize:[30,30]},\
-									ucButton:Button{text:'⇡',preferredSize:[30,30]},\
-									urButton:Button{text:'↗',preferredSize:[30,30]}\
-								},\
-								mdbt:Group{\
-									orientation:'row',alignment:['left','top'],\
-									mlButton:Button{text:'⇠',preferredSize:[30,30]},\
-									mdButton:Button{text:'●',preferredSize:[30,30]},\
-									mrButton:Button{text:'⇢',preferredSize:[30,30]}\
-								},\
-								bobt:Group{\
-									orientation:'row',alignment:['left','top'],\
-									blButton:Button{text:'↙',preferredSize:[30,30]},\
-									bmButton:Button{text:'☻',preferredSize:[30,30]},\
-									brButton:Button{text:'↘',preferredSize:[30,30]}\
+			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[420, 400],\
+							leftPart:Group{orientation:'row',alignment:['fill','fill'],\
+								listArea:ListBox{\
+									alignment:['fill','fill'],minimumSize:[200, 100],\
+									properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],\
+									showHeaders:true,multiselect:true}\
 								}\
 							},\
-							stGroup:Group{\
-								alignment:['fill','fill'],margins:[0,-8,0,0],\
-								helpTip:Panel{alignment:['fill','fill'],text:'HelpTip'}\
+							rightPart:Group{orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
+								editText:EditText{\
+									text:'',alignment:['fill','top'],minimumSize:[0,0]properties:{multiline:false,readonly:false,}\
+								},\
+								btGroup:Group{orientation:'column',alignment:['fill','fill'],\
+									bbt:Group{orientation:'row',alignment:['fill','top'],\
+										bButton:Button{text:'<b>',alignment:['fill','fill']},\
+										bsButton:Button{text:'</b>'},\
+										bbButton:Button{text:'<b> </b>'}\
+									},\
+									ibt:Group{orientation:'row',alignment:['fill','top'],\
+										iButton:Button{text:'<i>',alignment:['fill','fill']},\
+										isButton:Button{text:'</i>'},\
+										iiButton:Button{text:'<i>   </i>'}\
+									},\
+									ubt:Group{orientation:'row',alignment:['fill','top'],\
+										uButton:Button{text:'<u>',alignment:['fill','fill']},\
+										usButton:Button{text:'</u>'},\
+										uuButton:Button{text:'<u> </u>'}\
+									},\
+									fbt:Group{orientation:'row',alignment:['fill','top'],\
+										fsButton:Button{text:'<font size>',alignment:['fill','fill']},\
+										fcButton:Button{text:'<font color>'},\
+										fsButton:Button{text:'</font>'}\
+									},\
+									midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
+										poGroup:Group{orientation:'column',alignment:['left','fill'],\
+											upbt:Group{orientation:'row',alignment:['left','top'],\
+												ulButton:Button{text:'↖',preferredSize:[30,30]},\
+												ucButton:Button{text:'⇡',preferredSize:[30,30]},\
+												urButton:Button{text:'↗',preferredSize:[30,30]}\
+											},\
+											mdbt:Group{orientation:'row',alignment:['left','top'],\
+												mlButton:Button{text:'⇠',preferredSize:[30,30]},\
+												mdButton:Button{text:'●',preferredSize:[30,30]},\
+												mrButton:Button{text:'⇢',preferredSize:[30,30]}\
+											},\
+											bobt:Group{orientation:'row',alignment:['left','top'],\
+												blButton:Button{text:'↙',preferredSize:[30,30]},\
+												bmButton:Button{text:'☻',preferredSize:[30,30]},\
+												brButton:Button{text:'↘',preferredSize:[30,30]}\
+											}\
+										},\
+										stGroup:Group{alignment:['fill','fill'],margins:[0,-8,0,0],\
+											helpTip:Panel{alignment:['fill','fill'],text:'HelpTip'}\
+										}\
+									},\
+									rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
+										rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
+										epButton:Button{text:'" + es_str.export+"',alignment:['fill','fill']}\
+									}\
+								}\
 							}\
-						},\
-						rebt:Group{\
-							orientation:'row',alignment:['fill','bottom'],\
-							rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
-							epButton:Button{text:'" + es_str.export+"',alignment:['fill','fill']}\
-						}\
-					}\
-				}\
-			}";
+						}";
+
 
 			pal.grp = pal.add(res);
 			// pal.layout.layout(true);
 			pal.onResizing = pal.onResize = function () {
 				this.layout.resize()
 			}
-			pal.grp.rightPart.btGroup.rebt.rfButton.onClick = function () {
-				// alert(1)
-				try {
-					refreshButton(this.parent.parent.parent.parent.parent)
-					fixList(pal.grp.leftPart.listArea)
-				} catch (e) {
-					alert(e)
-				}
-
+			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
+				pal.grp.rightPart.editText.text = ""
+				refreshButton(this.parent.parent.parent.parent.parent)
+				fixList(pal.grp.leftPart.listArea)
 			}
 			pal.grp.leftPart.listArea.onChange = function () {
-				// var comp = app.project.activeItem;
-				// var sl = comp ? sortLayers(comp.selectedLayers) : [];
 				var listIndex = parseInt(this.selection);
-				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint-1/comp.frameRate;
-				// alert(slIndex)
+				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate;
+				pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
+					// alert(slIndex)
 			}
 		}
 		return pal
@@ -234,11 +216,12 @@
 		return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms
 	}
 
-	var ui = es_buildUI(),comp,sl,slIndex;
+	var ui = es_buildUI(),
+		comp, sl, slIndex;
 	// var comp = app.project.activeItem;
 	// var sl = comp ? sortLayers(comp.selectedLayers) : [];
 	// var slIndex = []
-		// var ips = [];
+	// var ips = [];
 
 	// var ops = [];
 
@@ -296,7 +279,7 @@
 	function refreshButton(pal) {
 		comp = app.project.activeItem;
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
-		slIndex=[]
+		slIndex = []
 
 		pal.grp.leftPart.listArea.removeAll()
 		app.beginUndoGroup("refresh")
