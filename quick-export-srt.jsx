@@ -151,7 +151,12 @@
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
+				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
 				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text
+
+				var textValue = new MarkerValue(this.text)
+				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
+
 				fixList(pal.grp.leftPart.listArea)
 
 			}
