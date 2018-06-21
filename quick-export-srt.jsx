@@ -80,7 +80,7 @@
 							},\
 							rightPart:Group{orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
 								editText:EditText{\
-									text:'',alignment:['fill','top'],minimumSize:[0,0]properties:{multiline:false,readonly:false,}\
+									text:'',alignment:['fill','top'],minimumSize:[0,45],properties:{multiline:true,readonly:false,}\
 								},\
 								btGroup:Group{orientation:'column',alignment:['fill','fill'],\
 									bbt:Group{orientation:'row',alignment:['fill','top'],\
@@ -151,10 +151,12 @@
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
+				// this.text = this.text.replace(/\r/gm, "\\r")
 				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
 				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text
-
-				var textValue = new MarkerValue(this.text)
+				// var qqd = this.text
+				var noNewlineText = String(this.text).replace(/\n/gm, "\\r")
+				var textValue = new MarkerValue(noNewlineText)
 				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
 
 				fixList(pal.grp.leftPart.listArea)
@@ -363,6 +365,7 @@
 
 		} else {
 			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - 1 / comp.frameRate, false)
+			layerText = String(layerText).replace(/\r/gm, "\\r")
 			var esMarkValue = new MarkerValue(layerText);
 			layer.property("Marker").setValueAtTime(layer.outPoint - 1 / comp.frameRate, esMarkValue);
 
@@ -394,13 +397,10 @@
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment //content
+				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/\\r/gm, "\r") //content
 			}
 
-
-
 		}
-
 		app.endUndoGroup();
 
 
