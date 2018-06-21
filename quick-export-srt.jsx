@@ -139,22 +139,29 @@
 			pal.onResizing = pal.onResize = function () {
 				this.layout.resize()
 			}
+
+
+
+
+
+
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
 				pal.grp.rightPart.editText.text = ""
-				refreshButton(this.parent.parent.parent.parent.parent)
+				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
 			}
 			pal.grp.leftPart.listArea.onChange = function () {
 				var listIndex = parseInt(this.selection);
 				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate;
-				pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
+				// pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
+				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).comment.replace(/\\r/gm, "\r")
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
 				// this.text = this.text.replace(/\r/gm, "\\r")
 				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
 				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text
-				// var qqd = this.text
+					// var qqd = this.text
 				var noNewlineText = String(this.text).replace(/\n/gm, "\\r")
 				var textValue = new MarkerValue(noNewlineText)
 				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
@@ -241,6 +248,41 @@
 
 
 				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+
+			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ulButton.onClick = function () {
+
+				// pal.grp.rightPart.editText.text += "{\\an7}"
+
+				////////////////////////////////////////// text onchanging function 
+				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
+				var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
+				var poValue = "{\\an7}"
+				var textValue = new MarkerValue(noNewlineText,poValue)
+				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
+
+				pal.grp.leftPart.listArea.selection[0].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).chapter
+				fixList(pal.grp.leftPart.listArea)
+				/////////////////////////////////////////
+
+
+			}
+			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.urButton.onClick = function () {
+
+				// pal.grp.rightPart.editText.text += "{\\an7}"
+
+				////////////////////////////////////////// text onchanging function 
+				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
+				var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
+				var poValue = "{\\an9}"
+				var textValue = new MarkerValue(noNewlineText,poValue)
+				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
+
+				pal.grp.leftPart.listArea.selection[0].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).chapter
+				fixList(pal.grp.leftPart.listArea)
+				/////////////////////////////////////////
+
+
 			}
 		}
 		return pal
@@ -340,7 +382,7 @@
 	function validMarker(layer, comp) {
 		function checkMarker(layer) {
 			var timeTpye = app.project.timeDisplayType
-			app.project.timeDisplayType = 2013
+			app.project.timeDisplayType = 2013 //frame
 
 			var markerProp = layer.property("Marker")
 			var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - 1
@@ -397,7 +439,7 @@
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/\\r/gm, "\r") //content
+				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/\\r/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter  //content
 			}
 
 		}
