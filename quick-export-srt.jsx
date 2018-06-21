@@ -160,10 +160,103 @@
 				fixList(pal.grp.leftPart.listArea)
 
 			}
+
+
+
+
+
+			pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '<br>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+			pal.grp.rightPart.btGroup.bbt.bsButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '</br>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+
+
+
+
+
+			pal.grp.rightPart.btGroup.ibt.iButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '<i>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+			pal.grp.rightPart.btGroup.ibt.isButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '</i>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+
+
+
+
+
+			pal.grp.rightPart.btGroup.ubt.uButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '<u>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+			pal.grp.rightPart.btGroup.ubt.usButton.onClick = function () {
+				var cmds = "";
+				cmds += "printf '</u>'|pbcopy";
+				system.callSystem(cmds);
+				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+
+
+
+				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
 		}
 		return pal
 	}
 
+	function mouseEventHandler() {
+		// alert(1);	
+		// w.txt.active = false;
+		// w.txt.active = true;
+		var cmdd = "";
+		cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+		// cmdd +="open http://baidu.com"
+		// cmdd += "open http://baidu.com"
+		system.callSystem(cmdd);
+		// alert(cmdd);
+		this.removeEventListener("mouseout", mouseEventHandler);
+
+	}
 
 	function sortLayers(layers) {
 		// by inPoint
