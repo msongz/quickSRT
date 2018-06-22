@@ -170,7 +170,12 @@
 				this.backupSelection = this.textselection
 			});
 
-
+			// pal.addEventListener("keydown", function () {
+			// 	// for (var qq in pal.grp.leftPart.listArea.selection) {
+			// 	// 	alert(pal.grp.leftPart.listArea.selection[qq])
+			// 	// }
+			// 	alert(pal.grp.leftPart.listArea.selection[0])
+			// })
 
 
 			pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
@@ -379,17 +384,21 @@
 
 	function triggerMarker(pal, povar) {
 		// body...
+		app.beginUndoGroup("triggerMarker");
 
-		var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
-		var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
-		var poValue = (povar == null) ? comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).chapter : povar
+		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
+			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
+			var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
+			var poValue = (povar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter : povar
 
 
-		var textValue = new MarkerValue(noNewlineText, poValue)
-			//modify marker
-		comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
-			//modify listbox
-		pal.grp.leftPart.listArea.selection[0].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).chapter
+			var textValue = new MarkerValue(noNewlineText, poValue)
+				//modify marker
+			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, textValue)
+				//modify listbox
+			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+		}
+		app.endUndoGroup();
 
 		fixList(pal.grp.leftPart.listArea)
 
