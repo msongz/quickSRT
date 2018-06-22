@@ -353,14 +353,25 @@
 		var result = false;
 
 		for (var y = 1; y < layers.length; y++) {
-			layers[y].selected = false
+			layers[y].selected = true
 
 			if (layers[y].inPoint < layers[y - 1].outPoint) {
 				result = true
-				layers[y].selected = true
+				layers[y].selected = false
 			}
+
 		};
-		layers[0].selected = false
+		try {
+			layers[0].selected = true
+		} catch (e) {}
+
+		if(result){
+			for (var i = 0; i < layers.length; i++) {
+				layers[i].selected=!layers[i].selected
+			};
+		}
+
+
 		return result
 	}
 
@@ -485,27 +496,36 @@
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
 		slIndex = []
 
+		if (overlap(sl)) {
+			alert("overlap!\rcheck the highlight layer")
 
+		} else {
 
-		pal.grp.leftPart.listArea.removeAll()
-		app.beginUndoGroup("refresh")
+			pal.grp.leftPart.listArea.removeAll()
+			app.beginUndoGroup("refresh")
 
-		for (var t = 0; t < sl.length; t++) {
-			slIndex.push(sl[t].index)
+			for (var t = 0; t < sl.length; t++) {
+				slIndex.push(sl[t].index)
 
-			validMarker(sl[t]);
-			with(pal.grp.leftPart.listArea) {
-				add("item", t + 1) //index #
-				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter //content
+				validMarker(sl[t]);
+				with(pal.grp.leftPart.listArea) {
+					add("item", t + 1) //index #
+					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
+					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter //content
+				}
+
 			}
-
+			app.endUndoGroup();
 		}
-		app.endUndoGroup();
+		// return sl
 
 
 	}
 	refreshButton(ui)
+
+	// if (overlap(sl)) {
+	// 	alert("overlap!check the highlight layer")
+	// }
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
