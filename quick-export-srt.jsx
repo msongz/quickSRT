@@ -2,7 +2,6 @@
 //export srt 
 //v0.01 
 (function es_subtitle(thisObj) {
-	// body...
 
 	var es_str = {};
 	es_str.title = {
@@ -348,17 +347,21 @@
 		})
 	}
 
-	function overlap(inPoints, outPoints) {
-		// wait for add output the overlap position...
+
+	function overlap(layers) {
+
 		var result = false;
 
-		for (var i = 1; i < inPoints.length; i++) {
-			if (inPoints[i] < outPoints[i - 1]) {
-				result = true;
+		for (var y = 1; y < layers.length; y++) {
+			layers[y].selected = false
+
+			if (layers[y].inPoint < layers[y - 1].outPoint) {
+				result = true
+				layers[y].selected = true
 			}
 		};
-
-		return result;
+		layers[0].selected = false
+		return result
 	}
 
 	function validSel(arr) {
@@ -433,18 +436,6 @@
 
 	var ui = es_buildUI(),
 		comp, sl, slIndex;
-	// var comp = app.project.activeItem;
-	// var sl = comp ? sortLayers(comp.selectedLayers) : [];
-	// var slIndex = []
-	// var ips = [];
-
-	// var ops = [];
-
-	// for (var x = 0; x < sl.length; x++) {
-	// 	ips.push(sl[x].inPoint);
-	// 	ops.push(sl[x].outPoint);
-	// }
-
 
 
 	function validMarker(layer) {
@@ -489,9 +480,6 @@
 	}
 
 
-	// var markerIndex=1;
-	// function refreshButton(pal,arr) {
-	// body...
 	function refreshButton(pal) {
 		comp = app.project.activeItem;
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
