@@ -158,17 +158,24 @@
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
-				editText2marker(pal)
+				triggerMarker(pal)
 
 			}
 
 
 
 
+			pal.grp.rightPart.editText.addEventListener('mouseout', function ( /*ev*/ ) {
+				// alert(1)
+				this.backupSelection = this.textselection
+			});
+
+
+
 
 			pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
 				var cmds = "";
-				cmds += "printf '<br>'|pbcopy";
+				cmds += "printf '<b>'|pbcopy";
 				system.callSystem(cmds);
 				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
@@ -179,7 +186,7 @@
 			}
 			pal.grp.rightPart.btGroup.bbt.bsButton.onClick = function () {
 				var cmds = "";
-				cmds += "printf '</br>'|pbcopy";
+				cmds += "printf '</b>'|pbcopy";
 				system.callSystem(cmds);
 				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
@@ -187,6 +194,12 @@
 
 
 				// w.txt.addEventListener("keyup", mouseEventHandler);
+			}
+			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
+
+				pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "b")
+				triggerMarker(pal)
+
 			}
 
 
@@ -216,6 +229,12 @@
 				// w.txt.addEventListener("keyup", mouseEventHandler);
 			}
 
+			pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
+
+				pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "i")
+				triggerMarker(pal)
+
+			}
 
 
 
@@ -242,52 +261,60 @@
 				// w.txt.addEventListener("keyup", mouseEventHandler);
 			}
 
+			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
+
+				pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "u")
+				triggerMarker(pal)
+
+			}
+
+
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.blButton.onClick = function () {
 
 
-				editText2marker(pal, "{\\an1}")
+				triggerMarker(pal, "{\\an1}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.bcButton.onClick = function () {
 
-				editText2marker(pal, "")
+				triggerMarker(pal, "")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.brButton.onClick = function () {
 
-				editText2marker(pal, "{\\an3}")
+				triggerMarker(pal, "{\\an3}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mlButton.onClick = function () {
 
 
-				editText2marker(pal, "{\\an4}")
+				triggerMarker(pal, "{\\an4}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mcButton.onClick = function () {
 
-				editText2marker(pal, "{\\an5}")
+				triggerMarker(pal, "{\\an5}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mrButton.onClick = function () {
 
-				editText2marker(pal, "{\\an6}")
+				triggerMarker(pal, "{\\an6}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ulButton.onClick = function () {
 
 
-				editText2marker(pal, "{\\an7}")
+				triggerMarker(pal, "{\\an7}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ucButton.onClick = function () {
 
-				editText2marker(pal, "{\\an8}")
+				triggerMarker(pal, "{\\an8}")
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.urButton.onClick = function () {
 
-				editText2marker(pal, "{\\an9}")
+				triggerMarker(pal, "{\\an9}")
 
 			}
 		}
@@ -350,7 +377,7 @@
 
 
 
-	function editText2marker(pal, povar) {
+	function triggerMarker(pal, povar) {
 		// body...
 
 		var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
@@ -366,6 +393,12 @@
 
 		fixList(pal.grp.leftPart.listArea)
 
+	}
+
+	function quoteText(origin, textSel, key) {
+		return textSel.length != 0 ?
+			origin.replace(textSel, "<" + key + ">" + textSel + "<" + "/" + key + ">") :
+			origin.replace(origin, "<" + key + ">" + origin + "<" + "/" + key + ">")
 	}
 
 	function time2code(frames, fps) {
@@ -454,6 +487,8 @@
 		comp = app.project.activeItem;
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
 		slIndex = []
+
+
 
 		pal.grp.leftPart.listArea.removeAll()
 		app.beginUndoGroup("refresh")
