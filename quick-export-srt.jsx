@@ -160,10 +160,12 @@
 			pal.grp.rightPart.editText.onChanging = function () {
 				// this.text = this.text.replace(/\r/gm, "\\r")
 				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
-				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text
+				pal.grp.leftPart.listArea.selection[0].subItems[1].text = this.text + comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).chapter
 					// var qqd = this.text
 				var noNewlineText = String(this.text).replace(/\n/gm, "\\r")
-				var textValue = new MarkerValue(noNewlineText)
+				var poValue = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).chapter
+				var textValue = new MarkerValue(noNewlineText,poValue)
+				// comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).comment=noNewlineText
 				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
 
 				fixList(pal.grp.leftPart.listArea)
@@ -256,7 +258,8 @@
 
 				////////////////////////////////////////// text onchanging function 
 				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
-				var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
+				var noNewlineText = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).comment
+				// var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
 				var poValue = "{\\an7}"
 				var textValue = new MarkerValue(noNewlineText,poValue)
 				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
@@ -273,7 +276,8 @@
 
 				////////////////////////////////////////// text onchanging function 
 				var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
-				var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
+				var noNewlineText = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate,true).comment
+				// var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n/gm, "\\r")
 				var poValue = "{\\an9}"
 				var textValue = new MarkerValue(noNewlineText,poValue)
 				comp.layer(slIndex[listIndex - 1]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, textValue)
