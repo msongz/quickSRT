@@ -154,7 +154,7 @@
 				var listIndex = parseInt(this.selection);
 				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate;
 				// pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
-				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).comment.replace(/\\r/gm, "\r")
+				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
@@ -354,7 +354,7 @@
 		// body...
 
 		var listIndex = parseInt(pal.grp.leftPart.listArea.selection);
-		var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "\\r")
+		var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
 		var poValue = (povar == null) ? comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).chapter : povar
 
 
@@ -433,7 +433,7 @@
 
 		} else {
 			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - 1 / comp.frameRate, false)
-			layerText = String(layerText).replace(/\r/gm, "\\r")
+			layerText = String(layerText).replace(/\r/gm, "↵")
 			var esMarkValue = new MarkerValue(layerText);
 			layer.property("Marker").setValueAtTime(layer.outPoint - 1 / comp.frameRate, esMarkValue);
 
@@ -465,7 +465,7 @@
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/\\r/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter //content
+				items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter //content
 			}
 
 		}
