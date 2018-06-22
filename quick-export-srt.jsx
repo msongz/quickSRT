@@ -438,7 +438,7 @@
 
 
 
-	function validMarker(layer, comp) {
+	function validMarker(layer) {
 		function checkMarker(layer) {
 			var timeTpye = app.project.timeDisplayType
 			app.project.timeDisplayType = 2013 //frame
@@ -496,7 +496,7 @@
 		for (var t = 0; t < sl.length; t++) {
 			slIndex.push(sl[t].index)
 
-			validMarker(sl[t], comp);
+			validMarker(sl[t]);
 			with(pal.grp.leftPart.listArea) {
 				add("item", t + 1) //index #
 				items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
