@@ -166,7 +166,7 @@
 
 			pal.grp.rightPart.editText.addEventListener('mouseout', function ( /*ev*/ ) {
 				// alert(1)
-				this.backupSelection = (this.textselection == null) ? "" : this.textselection
+				this.backupSelection = this.textselection
 			});
 
 			// pal.addEventListener("keydown", function () {
@@ -267,8 +267,8 @@
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
-				// pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "u")
 				triggerMarker(pal, null, "u")
+				// pal.grp.rightPart.editText.text = 
 
 			}
 
@@ -428,6 +428,8 @@
 			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, textValue)
 				//modify listbox
 			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r") + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+
+			pal.grp.rightPart.editText.text=comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 		}
 		app.endUndoGroup();
 
@@ -522,11 +524,12 @@
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
 		slIndex = []
 
+
 		if (overlap(sl)) {
 			alert("overlap!\rcheck the highlight layer")
 
 		} else {
-
+			pal.grp.rightPart.editText.backupSelection=""
 			pal.grp.leftPart.listArea.removeAll()
 			app.beginUndoGroup("refresh")
 
