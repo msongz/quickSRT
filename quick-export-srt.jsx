@@ -157,7 +157,7 @@
 					// alert(slIndex)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
-				triggerMarker(pal, null, null)
+				triggerMarker(pal)
 
 			}
 
@@ -166,7 +166,7 @@
 
 			pal.grp.rightPart.editText.addEventListener('mouseout', function ( /*ev*/ ) {
 				// alert(1)
-				this.backupSelection = this.textselection
+				this.backupSelection = (this.textselection == null) ? "" : this.textselection
 			});
 
 			// pal.addEventListener("keydown", function () {
@@ -418,9 +418,9 @@
 			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
 			// }
 
-			var noNewlineText = !(key ==null || povar == null)?String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵"):quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"),pal.grp.rightPart.editText.backupSelection,key)
-			// if (key !=)
-			var poValue = (povar == null /*&& key !=null*/) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter : povar
+			var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
+				// if (key !=)
+			var poValue = (povar == null /*&& key !=null*/ ) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter : povar
 
 			// noNewlineText=quoteText(noNewlineText,pal.grp.rightPart.editText.backupSelection,key)
 			var textValue = new MarkerValue(noNewlineText, poValue)
@@ -437,10 +437,10 @@
 
 	function quoteText(origin, textSel, key) {
 		// return textSel.length != 0 ?
-		if(key!==null){
+		if (key !== null) {
 			var quotesel = "<" + key + ">" + textSel + "</" + key + ">"
 			var originsel = "<" + key + ">" + origin + "</" + key + ">"
-		}else{
+		} else {
 			var quotesel = textSel
 			var originsel = origin
 		}
