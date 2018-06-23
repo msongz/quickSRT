@@ -402,7 +402,7 @@
 
 		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
-			var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
+			var noNewlineText = (povar == null)?String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵"):comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵")
 			var poValue = (povar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter : povar
 
 
@@ -410,7 +410,8 @@
 				//modify marker
 			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, textValue)
 				//modify listbox
-			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r") + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+			// pal.grp.leftPart.listArea.selection[qq].subItems[1].text = pal.grp.rightPart.editText.text + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
 		}
 		app.endUndoGroup();
 
