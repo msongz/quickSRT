@@ -69,21 +69,21 @@
 
 		if (pal !== null) {
 
-			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[420, 400],\
+			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[400, 400],\
 							leftPart:Group{orientation:'column',alignment:['fill','fill'],\
 								listArea:ListBox{\
-									alignment:['fill','fill'],minimumSize:[200, 350],\
+									alignment:['fill','fill'],preferredSize:[300, 350],\
 									properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],\
 									showHeaders:true,multiselect:true}\
 								},\
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-									cleanButton:Button{text:'★',alignment:['left','fill'],preferredSize:[30, 30]},\
-									cleanAButton:Button{text:'clean format',alignment:['right','fill'],preferredSize:[30, 30]}\
+									cleanButton:Button{text:'⌧',alignment:['left','fill'],preferredSize:[30, 30],helpTip:'batch remove tags'},\
+									rmMarker:Button{text:'✕',alignment:['right','fill'],preferredSize:[30, 30]}\
 								}\
 							},\
-							rightPart:Group{orientation:'column',alignment:['fill','fill'],margins:[0,20,0,0],minimumSize:[100, 100],\
+							rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],preferredSize:[100, 100],\
 								editText:EditText{\
-									text:'',alignment:['fill','top'],minimumSize:[0,45],properties:{multiline:true,readonly:false,}\
+									text:'',alignment:['fill','top'],minimumSize:[0,35],properties:{multiline:true,readonly:false,}\
 								},\
 								btGroup:Group{orientation:'column',alignment:['fill','fill'],\
 									bbt:Group{orientation:'row',alignment:['fill','top'],\
@@ -124,8 +124,10 @@
 												brButton:Button{text:'↘',preferredSize:[30,30]}\
 											}\
 										},\
-										stGroup:Group{alignment:['fill','fill'],margins:[0,-8,0,0],\
-											helpTip:Panel{alignment:['fill','fill'],text:'HelpTip'}\
+										helpTipArea:Group{alignment:['fill','fill'],margins:[0,-8,0,0],\
+											stGroup:Panel{alignment:['fill','fill'],text:'HelpTip',\
+												content:StaticText{text:'',characters:20,justify:'center',alignment:['center','center'],properties:{multiline:true}}\
+												}\
 										}\
 									},\
 									rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
@@ -162,12 +164,47 @@
 			}
 
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-				triggerMarker(pal,null,"",true)
+				triggerMarker(pal, null, "", true)
+			}
+			pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
+				sl = comp.selectedLayers;
+				removeESmarker(sl)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
 				triggerMarker(pal)
 
 			}
+
+
+
+
+
+			pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseover', function () {
+				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
+				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+			})
+			pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseout', function () {
+				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
+				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+
+			})
+
+
+
+
+			pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseover', function () {
+				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "read selected\rlayers marker";
+				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+
+			})
+			pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseout', function () {
+				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
+				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+
+			})
+
+
+
 
 
 
@@ -357,7 +394,7 @@
 	}
 
 
-	function overlap(layers) {
+	function checkOverlap(layers) {
 
 		var result = false;
 
@@ -384,13 +421,14 @@
 		return result
 	}
 
-	function validSel(arr) {
-		if (arr != null && arr.length != 0) {
 
 
-			for (var i = 0; i < arr.length; i++) {
-				if (!(arr[i] instanceof TextLayer)) {
-					alert("please only selected Text Layer");
+	function checkTextLayer(layers) {
+		if (layers.length != 0) {
+
+
+			for (var i = 0; i < layers.length; i++) {
+				if (!(layers[i] instanceof TextLayer)) {
 					return false
 					break;
 				}
@@ -398,15 +436,26 @@
 			return true
 
 		} else {
-			alert("please select some layers");
-			return false;
+			return true;
 		}
 	}
 
-
+	function removeESmarker(layers) {
+		app.beginUndoGroup("removeESmarker")
+		for (var i = 0; i < layers.length; i++) {
+			if (checkMarker(layers[i])) {
+				var markerIndex = layers[i].property("Marker").nearestKeyIndex(layers[i].outPoint - 1 / comp.frameRate)
+				layers[i].property("Marker").removeKey(markerIndex)
+			}
+		}
+		app.endUndoGroup()
+	}
 
 	function triggerMarker(pal, povar, key, remove) {
-		// body...
+		// pal => UI , dont change
+		// povar => string 
+		// key => string
+		// remove => boolean
 		app.beginUndoGroup("triggerMarker");
 
 		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
@@ -440,7 +489,7 @@
 				//modify marker
 			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, textValue)
 				//modify listbox
-			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r") + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 				//modify edittext
 			pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 		}
@@ -504,28 +553,29 @@
 		comp, sl, slIndex;
 
 
-	function validMarker(layer) {
-		function checkMarker(layer) {
-			var timeTpye = app.project.timeDisplayType
-			app.project.timeDisplayType = 2013 //frame
+	function checkMarker(layer) {
+		var timeTpye = app.project.timeDisplayType
+		app.project.timeDisplayType = 2013 //frame
 
-			var markerProp = layer.property("Marker")
-			var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - 1
+		var markerProp = layer.property("Marker")
+		var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - 1
 
-			if (markerProp.numKeys != undefined) {
-				for (var n = 1; n <= markerProp.numKeys; n++) {
-					if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
-						// this.markerIndex = n
-						app.project.timeDisplayType = timeTpye
-						return true
-					}
-				};
-				app.project.timeDisplayType = timeTpye
-				return false
-
-			}
+		if (markerProp.numKeys != undefined) {
+			for (var n = 1; n <= markerProp.numKeys; n++) {
+				if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
+					// this.markerIndex = n
+					app.project.timeDisplayType = timeTpye
+					return true
+				}
+			};
+			app.project.timeDisplayType = timeTpye
+			return false
 
 		}
+
+	}
+
+	function validMarker(layer) {
 
 
 		if (checkMarker(layer)) {
@@ -550,9 +600,11 @@
 		comp = app.project.activeItem;
 		sl = comp ? sortLayers(comp.selectedLayers) : [];
 		slIndex = []
+		pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = " \r \r \r \r \r "
 
-
-		if (overlap(sl)) {
+		if (!checkTextLayer(sl)) {
+			alert("please select text layer only")
+		} else if (checkOverlap(sl)) {
 			alert("overlap!\rcheck the highlight layer")
 
 		} else {
@@ -567,7 +619,7 @@
 				with(pal.grp.leftPart.listArea) {
 					add("item", t + 1) //index #
 					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter //content
+					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
 				}
 
 			}
