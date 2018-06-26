@@ -77,9 +77,9 @@
 									showHeaders:true,multiselect:true}\
 								},\
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-									info:Button{text:'?',alignment:['left','fill'],preferredSize:[30, 30]}\
-									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[30, 30],helpTip:'batch remove tags'},\
-									rmMarker:Button{text:'✕',alignment:['right','fill'],preferredSize:[30, 30]}\
+									info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]}\
+									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
+									rmMarker:Button{text:'✕',alignment:['right','fill'],preferredSize:[28, 28]}\
 								}\
 							},\
 							rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],preferredSize:[100, 100],\
@@ -156,6 +156,13 @@
 				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
 			}
+			pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
+				writeFile(pal.grp.leftPart.listArea.items)
+			}
+
+
+
+
 			pal.grp.leftPart.listArea.onChange = function () {
 				var listIndex = parseInt(this.selection);
 				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - markerTimeOffset / comp.frameRate;
@@ -220,7 +227,7 @@
 			// 	// for (var qq in pal.grp.leftPart.listArea.selection) {
 			// 	// 	alert(pal.grp.leftPart.listArea.selection[qq])
 			// 	// }
-			// 	alert(pal.grp.leftPart.listArea.selection[0])
+			// 	alert(pal.grp.leftPart.listArea.items[0].subItems[1].text)
 			// })
 
 
@@ -425,6 +432,35 @@
 
 
 
+	function writeFile(list) {
+
+		//~     fileObj = (fileObj instanceof File) ? fileObj : new File(fileObj);  
+
+
+		//~     var parentFolder = fileObj.parent;  
+		//~     if (!parentFolder.exists && !parentFolder.create())  
+		//~         throw new Error("Cannot create file in path " + fileObj.fsName);  
+		//~   
+		var fileObj = File.saveDialog("lalala")
+		fileObj.encoding = "utf-8";
+		fileObj.open("w");
+
+		for (var i = 0; i < list.length; i++) {
+			fileObj.write(list[i].text+"\r"+list[i].subItems[0].text+"\r"+list[i].subItems[1].text+"\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
+		};
+
+
+		// fileObj.write(list);
+
+
+
+
+		fileObj.close();
+
+
+		return fileObj;
+	}
+
 	function checkTextLayer(layers) {
 		if (layers.length != 0) {
 
@@ -552,7 +588,7 @@
 	}
 
 	var ui = es_buildUI(),
-		comp, sl, slIndex, 
+		comp, sl, slIndex,
 		markerTimeOffset = 1;
 
 
