@@ -77,7 +77,8 @@
 									showHeaders:true,multiselect:true}\
 								},\
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-									cleanButton:Button{text:'⌧',alignment:['left','fill'],preferredSize:[30, 30],helpTip:'batch remove tags'},\
+									info:Button{text:'?',alignment:['left','fill'],preferredSize:[30, 30]}\
+									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[30, 30],helpTip:'batch remove tags'},\
 									rmMarker:Button{text:'✕',alignment:['right','fill'],preferredSize:[30, 30]}\
 								}\
 							},\
@@ -157,9 +158,9 @@
 			}
 			pal.grp.leftPart.listArea.onChange = function () {
 				var listIndex = parseInt(this.selection);
-				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate;
+				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - markerTimeOffset / comp.frameRate;
 				// pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
-				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
+				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 					// alert(slIndex)
 			}
 
@@ -168,6 +169,7 @@
 			}
 			pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
 				sl = comp.selectedLayers;
+				pal.grp.leftPart.listArea.removeAll()
 				removeESmarker(sl)
 			}
 			pal.grp.rightPart.editText.onChanging = function () {
@@ -444,7 +446,7 @@
 		app.beginUndoGroup("removeESmarker")
 		for (var i = 0; i < layers.length; i++) {
 			if (checkMarker(layers[i])) {
-				var markerIndex = layers[i].property("Marker").nearestKeyIndex(layers[i].outPoint - 1 / comp.frameRate)
+				var markerIndex = layers[i].property("Marker").nearestKeyIndex(layers[i].outPoint - markerTimeOffset / comp.frameRate)
 				layers[i].property("Marker").removeKey(markerIndex)
 			}
 		}
@@ -462,36 +464,36 @@
 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
 			// if (povar == null && key == null) {
 			// 	var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
-			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter
 			// }
 			// if (povar != null) {
-			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
+			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
 			// 	var poValue = povar
 
 
 			// }
 			// if (key != null) {
 
-			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
-			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter
+			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
+			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter
 			// }
 
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
 			} else {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
 			}
 			// if (key !=)
-			var poValue = (povar == null /*&& key !=null*/ ) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter : povar
+			var poValue = (povar == null /*&& key !=null*/ ) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : povar
 
 			// noNewlineText=quoteText(noNewlineText,pal.grp.rightPart.editText.backupSelection,key)
 			var textValue = new MarkerValue(noNewlineText, poValue)
 				//modify marker
-			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, textValue)
+			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, textValue)
 				//modify listbox
-			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
+			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 				//modify edittext
-			pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - 1 / comp.frameRate, true).comment.replace(/↵/gm, "\r")
+			pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 		}
 		app.endUndoGroup();
 
@@ -550,7 +552,8 @@
 	}
 
 	var ui = es_buildUI(),
-		comp, sl, slIndex;
+		comp, sl, slIndex, 
+		markerTimeOffset = 1;
 
 
 	function checkMarker(layer) {
@@ -558,7 +561,7 @@
 		app.project.timeDisplayType = 2013 //frame
 
 		var markerProp = layer.property("Marker")
-		var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - 1
+		var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset
 
 		if (markerProp.numKeys != undefined) {
 			for (var n = 1; n <= markerProp.numKeys; n++) {
@@ -581,10 +584,10 @@
 		if (checkMarker(layer)) {
 
 		} else {
-			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - 1 / comp.frameRate, false)
+			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, false)
 			layerText = String(layerText).replace(/\r/gm, "↵")
 			var esMarkValue = new MarkerValue(layerText);
-			layer.property("Marker").setValueAtTime(layer.outPoint - 1 / comp.frameRate, esMarkValue);
+			layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
 		}
 	}
@@ -619,7 +622,7 @@
 				with(pal.grp.leftPart.listArea) {
 					add("item", t + 1) //index #
 					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - 1 / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
+					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
 				}
 
 			}
