@@ -69,7 +69,7 @@
 
 		if (pal !== null) {
 
-			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[400, 400],\
+			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[450, 400],\
 							leftPart:Group{orientation:'column',alignment:['fill','fill'],\
 								listArea:ListBox{\
 									alignment:['fill','fill'],preferredSize:[300, 350],\
@@ -77,9 +77,10 @@
 									showHeaders:true,multiselect:true}\
 								},\
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-									info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]}\
+									info:Button{text:'ʔ',alignment:['left','fill'],preferredSize:[28, 28]},\
+									olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
 									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
-									rmMarker:Button{text:'✕',alignment:['right','fill'],preferredSize:[28, 28]}\
+									rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
 								}\
 							},\
 							rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],preferredSize:[100, 100],\
@@ -446,7 +447,7 @@
 		fileObj.open("w");
 
 		for (var i = 0; i < list.length; i++) {
-			fileObj.write(list[i].text+"\r"+list[i].subItems[0].text+"\r"+list[i].subItems[1].text+"\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
+			fileObj.write(list[i].text+"\r"+list[i].subItems[0].text+"\r"+list[i].subItems[1].text+"\r\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
 		};
 
 
@@ -643,7 +644,7 @@
 
 		if (!checkTextLayer(sl)) {
 			alert("please select text layer only")
-		} else if (checkOverlap(sl)) {
+		} else if (pal.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) {
 			alert("overlap!\rcheck the highlight layer")
 
 		} else {
@@ -679,7 +680,7 @@
 			ui.center();
 			ui.show()
 		} else {
-			ui.layout.layout(true)
+			// ui.layout.layout(true)
 		}
 	}
 
