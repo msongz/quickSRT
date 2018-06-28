@@ -72,7 +72,7 @@
 			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[450, 400],\
 							leftPart:Group{orientation:'column',alignment:['fill','fill'],\
 								listArea:ListBox{\
-									alignment:['fill','fill'],preferredSize:[300, 350],\
+									alignment:['fill','fill'],\
 									properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],\
 									showHeaders:true,multiselect:true}\
 								},\
@@ -142,7 +142,7 @@
 
 
 			pal.grp = pal.add(res);
-			// pal.layout.layout(true);
+			// pal.layout.layout(false);
 			pal.onResizing = pal.onResize = function () {
 				this.layout.resize()
 			}
@@ -156,6 +156,7 @@
 				pal.grp.rightPart.editText.text = ""
 				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
+
 			}
 			pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
 				writeFile(pal.grp.leftPart.listArea.items)
@@ -661,11 +662,14 @@
 					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
 					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
 				}
+				sl[t].selected=false
 
 			}
 			app.endUndoGroup();
 		}
 		// return sl
+		// ui.layout.layout( true );
+
 
 
 	}
@@ -680,7 +684,8 @@
 			ui.center();
 			ui.show()
 		} else {
-			// ui.layout.layout(true)
+			// ui.layout.resize()(true)
+			ui.layout.layout(true)
 		}
 	}
 
