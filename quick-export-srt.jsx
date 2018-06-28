@@ -77,7 +77,8 @@
 									showHeaders:true,multiselect:true}\
 								},\
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-									info:Button{text:'ʔ',alignment:['left','fill'],preferredSize:[28, 28]},\
+									info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
+									resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
 									olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
 									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
 									rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
@@ -175,6 +176,11 @@
 
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
 				triggerMarker(pal, null, "", true)
+			}
+			pal.grp.leftPart.buttonArea.resel.onClick = function () {
+				for (var i = 0; i < sl.length; i++) {
+					sl[i].selected=true
+				};
 			}
 			pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
 				sl = comp.selectedLayers;
