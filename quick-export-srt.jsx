@@ -1,6 +1,20 @@
 //songz meng
 //export srt 
 //v0.01 
+
+
+
+
+// var stringToGoIntoTheRegex = "abc";
+// var regex = new RegExp("#" + stringToGoIntoTheRegex + "#", "g");
+// // at this point, the line above is the same as: var regex = /#abc#/g;
+
+// var input = "Hello this is #abc# some #abc# stuff.";
+// var output = input.replace(regex, "!!");
+// alert(output); // Hello this is !! some !! stuff.
+
+
+
 (function es_subtitle(thisObj) {
 
 	var es_str = {};
@@ -167,10 +181,10 @@
 
 
 			pal.grp.leftPart.listArea.onChange = function () {
-				var listIndex = parseInt(this.selection);
-				comp.time = comp.layer(slIndex[listIndex - 1]).outPoint - markerTimeOffset / comp.frameRate;
-				// pal.grp.rightPart.editText.text = this.items[listIndex - 1].subItems[1].text
-				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex - 1]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex - 1]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
+				var listIndex = this.selection[0].index;
+				comp.time = comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate;
+				// pal.grp.rightPart.editText.text = this.items[listIndex].subItems[1].text
+				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
 					// alert(slIndex)
 			}
 
@@ -235,7 +249,7 @@
 			// 	// for (var qq in pal.grp.leftPart.listArea.selection) {
 			// 	// 	alert(pal.grp.leftPart.listArea.selection[qq])
 			// 	// }
-			// 	alert(pal.grp.leftPart.listArea.items[0].subItems[1].text)
+			// 	alert(pal.grp.leftPart.listArea.selection[0].index)
 			// })
 
 
