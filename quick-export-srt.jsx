@@ -169,10 +169,26 @@
 
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
 				pal.grp.rightPart.editText.text = ""
+					// ui.size = [0,0]
+				// ui.close()
 				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
+				// pal.onResizing = ui.onResize = function () {
+					// pal.layout.resize()
+				// }
 
+				// pal.grp.leftPart.listArea.remove()
+				ui.layout.layout(true)
+				// ui.center();
+
+				// pal.size=[pal.layout.resize()[0],pal.preferredSize[1]]
+				// ui.hide()
+				// ui.show()
 			}
+
+
+
+
 			pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
 				writeFile(pal.grp.leftPart.listArea.items)
 			}
@@ -193,7 +209,7 @@
 			}
 			pal.grp.leftPart.buttonArea.resel.onClick = function () {
 				for (var i = 0; i < sl.length; i++) {
-					sl[i].selected=true
+					sl[i].selected = true
 				};
 			}
 			pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
@@ -249,7 +265,8 @@
 			// 	// for (var qq in pal.grp.leftPart.listArea.selection) {
 			// 	// 	alert(pal.grp.leftPart.listArea.selection[qq])
 			// 	// }
-			// 	alert(pal.grp.leftPart.listArea.selection[0].index)
+			// 	try{
+			// 	alert(pal.grp.leftPart.listArea.toSource())/*items[0].subItems[1].text.length)*/}catch(e){}
 			// })
 
 
@@ -468,7 +485,7 @@
 		fileObj.open("w");
 
 		for (var i = 0; i < list.length; i++) {
-			fileObj.write(list[i].text+"\r"+list[i].subItems[0].text+"\r"+list[i].subItems[1].text+"\r\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
+			fileObj.write(list[i].text + "\r" + list[i].subItems[0].text + "\r" + list[i].subItems[1].text + "\r\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
 		};
 
 
@@ -609,9 +626,7 @@
 		return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms
 	}
 
-	var ui = es_buildUI(),
-		comp, sl, slIndex,
-		markerTimeOffset = 1;
+
 
 
 	function checkMarker(layer) {
@@ -682,7 +697,7 @@
 					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
 					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
 				}
-				sl[t].selected=false
+				sl[t].selected = false
 
 			}
 			app.endUndoGroup();
@@ -693,11 +708,14 @@
 
 
 	}
-	refreshButton(ui)
 
 	// if (overlap(sl)) {
 	// 	alert("overlap!check the highlight layer")
 	// }
+	var ui = es_buildUI(),
+		comp, sl, slIndex,
+		markerTimeOffset = 1;
+	refreshButton(ui)
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
