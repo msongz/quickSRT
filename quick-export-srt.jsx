@@ -157,7 +157,7 @@
 
 
 			pal.grp = pal.add(res);
-			// pal.layout.layout(false);
+
 			pal.onResizing = pal.onResize = function () {
 				this.layout.resize()
 			}
@@ -169,21 +169,12 @@
 
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
 				pal.grp.rightPart.editText.text = ""
-					// ui.size = [0,0]
-					// ui.close()
+
 				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
-					// pal.onResizing = ui.onResize = function () {
-					// pal.layout.resize()
-					// }
 
-				// pal.grp.leftPart.listArea.remove()
 				ui.layout.layout(true)
-					// ui.center();
 
-				// pal.size=[pal.layout.resize()[0],pal.preferredSize[1]]
-				// ui.hide()
-				// ui.show()
 			}
 
 
@@ -199,9 +190,9 @@
 			pal.grp.leftPart.listArea.onChange = function () {
 				var listIndex = this.selection[0].index;
 				comp.time = comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate;
-				// pal.grp.rightPart.editText.text = this.items[listIndex].subItems[1].text
-				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
-					// alert(slIndex)
+
+				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
+
 			}
 
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
@@ -228,25 +219,22 @@
 
 			pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseover', function () {
 				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
-				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+
 			})
 			pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseout', function () {
 				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
-				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
+
 
 			})
-
 
 
 
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseover', function () {
 				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "read selected\rlayers marker";
-				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
 
 			})
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseout', function () {
 				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
-				// fixList(pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content)
 
 			})
 
@@ -256,17 +244,16 @@
 
 
 
-			pal.grp.rightPart.editText.addEventListener('mouseout', function ( /*ev*/ ) {
-				// alert(1)
+			pal.grp.rightPart.editText.addEventListener('mouseout', function () {
+
 				this.backupSelection = this.textselection
 			});
 
 			// pal.addEventListener("keydown", function () {
-			// 	// for (var qq in pal.grp.leftPart.listArea.selection) {
-			// 	// 	alert(pal.grp.leftPart.listArea.selection[qq])
-			// 	// }
-			// 	try{
-			// 	alert(pal.grp.leftPart.listArea.toSource())/*items[0].subItems[1].text.length)*/}catch(e){}
+
+			// 	try {
+			// 		alert(pal.grp.leftPart.listArea.toSource())
+			// 	} catch (e) {}
 			// })
 
 
@@ -274,27 +261,27 @@
 				var cmds = "";
 				cmds += "printf '<b>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
+
 			}
 			pal.grp.rightPart.btGroup.bbt.bsButton.onClick = function () {
 				var cmds = "";
 				cmds += "printf '</b>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
+
 			}
 			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 
-				// pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "b")
+
 				triggerMarker(pal, null, "b", "", false)
 
 			}
@@ -330,25 +317,25 @@
 
 
 			pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
-				// body...
+
 				var size = prompt("please input the text size", "55")
 				var keyString = " size=" + size
 
-				size!==null?triggerMarker(pal, null, "font", keyString, false):null
+				size !== null ? triggerMarker(pal, null, "font", keyString, false) : null
 
 			}
 			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
-				// body...
+
 				var color = $.colorPicker()
 				var colorString = color.toString(16).toUpperCase()
-					// alert(colorString)
+
 				var keyString = " color=" + colorString
 				triggerMarker(pal, null, "font", keyString, false)
 
 
 			}
 			pal.grp.rightPart.btGroup.fbt.ffButton.onClick = function () {
-				// body...
+
 
 			}
 
@@ -356,28 +343,26 @@
 				var cmds = "";
 				cmds += "printf '<u>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
 			}
 			pal.grp.rightPart.btGroup.ubt.usButton.onClick = function () {
 				var cmds = "";
 				cmds += "printf '</u>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
+
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
+
 			}
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
 				triggerMarker(pal, null, "u", "", false)
-					// pal.grp.rightPart.editText.text = 
+
 
 			}
 
@@ -436,22 +421,18 @@
 	}
 
 	function mouseEventHandler() {
-		// alert(1);	
-		// w.txt.active = false;
-		// w.txt.active = true;
+
 		var cmdd = "";
 		cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
-		// cmdd +="open http://baidu.com"
-		// cmdd += "open http://baidu.com"
+
 		system.callSystem(cmdd);
-		// alert(cmdd);
+
 		this.removeEventListener("mouseout", mouseEventHandler);
 
 	}
 
 	function sortLayers(layers) {
-		// by inPoint
-		// in background
+
 		return layers.sort(function (a, b) {
 			return a.inPoint - b.inPoint
 		})
@@ -489,25 +470,14 @@
 
 	function writeFile(list) {
 
-		//~     fileObj = (fileObj instanceof File) ? fileObj : new File(fileObj);  
 
-
-		//~     var parentFolder = fileObj.parent;  
-		//~     if (!parentFolder.exists && !parentFolder.create())  
-		//~         throw new Error("Cannot create file in path " + fileObj.fsName);  
-		//~   
 		var fileObj = File.saveDialog("lalala")
 		fileObj.encoding = "utf-8";
 		fileObj.open("w");
 
 		for (var i = 0; i < list.length; i++) {
-			fileObj.write(list[i].text + "\r" + list[i].subItems[0].text + "\r" + list[i].subItems[1].text + "\r\r") //+ fileObj.write("\r") + fileObj.write(list[i].subItems[0].text) + fileObj.write("\r") + fileObj.write(list[i].subItems[1].text) + fileObj.write("\r")
+			fileObj.write(list[i].text + "\r" + list[i].subItems[0].text + "\r" + list[i].subItems[1].text + "\r\r")
 		};
-
-
-		// fileObj.write(list);
-
-
 
 
 		fileObj.close();
@@ -545,10 +515,7 @@
 	}
 
 	function triggerMarker(pal, povar, key, arg, remove) {
-		// pal => UI , dont change
-		// povar => string 
-		// key => string
-		// remove => boolean
+
 		app.beginUndoGroup("triggerMarker");
 
 		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
@@ -556,21 +523,21 @@
 
 
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key, arg)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), pal.grp.rightPart.editText.backupSelection, key, arg)
 			} else {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
 			}
-			// if (key !=)
-			var poValue = (povar == null /*&& key !=null*/ ) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : povar
 
-			// noNewlineText=quoteText(noNewlineText,pal.grp.rightPart.editText.backupSelection,key)
+			var poValue = (povar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : povar
+
+
 			var textValue = new MarkerValue(noNewlineText, poValue)
-				//modify marker
+
 			comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, textValue)
-				//modify listbox
-			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
-				//modify edittext
-			pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/↵/gm, "\r")
+
+			pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
+
+			pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 		}
 		app.endUndoGroup();
 
@@ -581,7 +548,7 @@
 
 
 	function quoteText(origin, textSel, key, arg) {
-		// return textSel.length != 0 ?
+
 		if (key !== null) {
 			var quotesel = "<" + key + arg + ">" + textSel + "</" + key + ">"
 			var originsel = "<" + key + arg + ">" + origin + "</" + key + ">"
@@ -627,7 +594,7 @@
 
 	function checkMarker(layer) {
 		var timeTpye = app.project.timeDisplayType
-		app.project.timeDisplayType = 2013 //frame
+		app.project.timeDisplayType = 2013
 
 		var markerProp = layer.property("Marker")
 		var esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset
@@ -635,7 +602,7 @@
 		if (markerProp.numKeys != undefined) {
 			for (var n = 1; n <= markerProp.numKeys; n++) {
 				if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
-					// this.markerIndex = n
+
 					app.project.timeDisplayType = timeTpye
 					return true
 				}
@@ -654,7 +621,7 @@
 
 		} else {
 			var layerText = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, false)
-			layerText = String(layerText).replace(/\r/gm, "↵")
+			layerText = String(layerText).replace(/\r/gm, newlineMark)
 			var esMarkValue = new MarkerValue(layerText);
 			layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
@@ -689,36 +656,33 @@
 
 				validMarker(sl[t]);
 				with(pal.grp.leftPart.listArea) {
-					add("item", t + 1) //index #
-					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate) // time
-					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(/↵/gm, "\r") //content
+					add("item", t + 1)
+					items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate)
+					items[t].subItems[1].text = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter + sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(reg, "\r")
 				}
 				sl[t].selected = false
 
 			}
 			app.endUndoGroup();
 		}
-		// return sl
-		// ui.layout.layout( true );
-
-
 
 	}
 
-	// if (overlap(sl)) {
-	// 	alert("overlap!check the highlight layer")
-	// }
+
 	var ui = es_buildUI(),
 		comp, sl, slIndex,
-		markerTimeOffset = 1;
+		markerTimeOffset = 1,
+		newlineMark = "↵",
+		reg = new RegExp(newlineMark, "gm");
+
 	refreshButton(ui)
+
 
 	if (ui !== null) {
 		if (ui instanceof Window) {
 			ui.center();
 			ui.show()
 		} else {
-			// ui.layout.resize()(true)
 			ui.layout.layout(true)
 		}
 	}
