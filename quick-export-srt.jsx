@@ -205,7 +205,7 @@
 			}
 
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-				triggerMarker(pal, null, "","", true)
+				triggerMarker(pal, null, "", "", true)
 			}
 			pal.grp.leftPart.buttonArea.resel.onClick = function () {
 				for (var i = 0; i < sl.length; i++) {
@@ -295,7 +295,7 @@
 			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 
 				// pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "b")
-				triggerMarker(pal, null, "b","", false)
+				triggerMarker(pal, null, "b", "", false)
 
 			}
 
@@ -324,22 +324,26 @@
 
 			pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
 
-				triggerMarker(pal, null, "i","", false)
+				triggerMarker(pal, null, "i", "", false)
 
 			}
 
 
 			pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 				// body...
+				var size = prompt("please input the text size", "55")
+				var keyString = " size=" + size
+
+				size!==null?triggerMarker(pal, null, "font", keyString, false):null
 
 			}
 			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 				// body...
 				var color = $.colorPicker()
 				var colorString = color.toString(16).toUpperCase()
-				// alert(colorString)
+					// alert(colorString)
 				var keyString = " color=" + colorString
-				triggerMarker(pal, null, "font",keyString, false)
+				triggerMarker(pal, null, "font", keyString, false)
 
 
 			}
@@ -372,7 +376,7 @@
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
-				triggerMarker(pal, null, "u","", false)
+				triggerMarker(pal, null, "u", "", false)
 					// pal.grp.rightPart.editText.text = 
 
 			}
@@ -381,49 +385,49 @@
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.blButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an1}", null,null, false)
+				triggerMarker(pal, "{\\an1}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.bcButton.onClick = function () {
 
-				triggerMarker(pal, "", null,null, false)
+				triggerMarker(pal, "", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.brButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an3}", null,null, false)
+				triggerMarker(pal, "{\\an3}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mlButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an4}", null,null, false)
+				triggerMarker(pal, "{\\an4}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mcButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an5}", null,null, false)
+				triggerMarker(pal, "{\\an5}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mrButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an6}", null,null, false)
+				triggerMarker(pal, "{\\an6}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ulButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an7}", null,null, false)
+				triggerMarker(pal, "{\\an7}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ucButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an8}", null,null, false)
+				triggerMarker(pal, "{\\an8}", null, null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.urButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an9}", null,null, false)
+				triggerMarker(pal, "{\\an9}", null, null, false)
 
 			}
 
@@ -552,7 +556,7 @@
 
 
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key,arg)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key, arg)
 			} else {
 				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
 			}
