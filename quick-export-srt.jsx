@@ -102,26 +102,26 @@
 								editText:EditText{\
 									text:'',alignment:['fill','top'],minimumSize:[0,35],properties:{multiline:true,readonly:false,}\
 								},\
-								btGroup:Group{orientation:'column',alignment:['fill','fill'],\
-									bbt:Group{orientation:'row',alignment:['fill','top'],\
+								btGroup:Group{orientation:'column',alignment:['fill','fill'],alignChildren:['fill','top'],\
+									bbt:Group{orientation:'row',\
 										bButton:Button{text:'<b>',alignment:['fill','fill']},\
 										bsButton:Button{text:'</b>'},\
 										bbButton:Button{text:'<b> </b>'}\
 									},\
-									ibt:Group{orientation:'row',alignment:['fill','top'],\
+									ibt:Group{orientation:'row',\
 										iButton:Button{text:'<i>',alignment:['fill','fill']},\
 										isButton:Button{text:'</i>'},\
 										iiButton:Button{text:'<i>   </i>'}\
 									},\
-									ubt:Group{orientation:'row',alignment:['fill','top'],\
+									ubt:Group{orientation:'row',\
 										uButton:Button{text:'<u>',alignment:['fill','fill']},\
 										usButton:Button{text:'</u>'},\
 										uuButton:Button{text:'<u> </u>'}\
 									},\
-									fbt:Group{orientation:'row',alignment:['fill','top'],\
-										fsButton:Button{text:'<font size>',alignment:['fill','fill']},\
-										fcButton:Button{text:'<font color>'},\
-										fsButton:Button{text:'</font>'}\
+									fbt:Group{orientation:'row',\
+										fsButton:Button{text:'<font size=##>'},\
+										fcButton:Button{text:'<font color=######>'},\
+										ffButton:Button{text:'</font>'}\
 									},\
 									midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
 										poGroup:Group{orientation:'column',alignment:['left','fill'],\
@@ -170,16 +170,16 @@
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
 				pal.grp.rightPart.editText.text = ""
 					// ui.size = [0,0]
-				// ui.close()
+					// ui.close()
 				refreshButton(pal)
 				fixList(pal.grp.leftPart.listArea)
-				// pal.onResizing = ui.onResize = function () {
+					// pal.onResizing = ui.onResize = function () {
 					// pal.layout.resize()
-				// }
+					// }
 
 				// pal.grp.leftPart.listArea.remove()
 				ui.layout.layout(true)
-				// ui.center();
+					// ui.center();
 
 				// pal.size=[pal.layout.resize()[0],pal.preferredSize[1]]
 				// ui.hide()
@@ -205,7 +205,7 @@
 			}
 
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-				triggerMarker(pal, null, "", true)
+				triggerMarker(pal, null, "","", true)
 			}
 			pal.grp.leftPart.buttonArea.resel.onClick = function () {
 				for (var i = 0; i < sl.length; i++) {
@@ -295,7 +295,7 @@
 			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 
 				// pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "b")
-				triggerMarker(pal, null, "b", false)
+				triggerMarker(pal, null, "b","", false)
 
 			}
 
@@ -307,34 +307,46 @@
 				var cmds = "";
 				cmds += "printf '<i>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
 			}
 			pal.grp.rightPart.btGroup.ibt.isButton.onClick = function () {
 				var cmds = "";
 				cmds += "printf '</i>'|pbcopy";
 				system.callSystem(cmds);
-				// w.txt.addEventListener("click", mouseEventHandler,undefined,undefined,2);
 				pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 
 
 
-				// w.txt.addEventListener("keyup", mouseEventHandler);
 			}
 
 			pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
 
-				// pal.grp.rightPart.editText.text = quoteText(pal.grp.rightPart.editText.text, pal.grp.rightPart.editText.backupSelection, "i")
-				triggerMarker(pal, null, "i", false)
+				triggerMarker(pal, null, "i","", false)
 
 			}
 
 
+			pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
+				// body...
 
+			}
+			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
+				// body...
+				var color = $.colorPicker()
+				var colorString = color.toString(16).toUpperCase()
+				// alert(colorString)
+				var keyString = " color=" + colorString
+				triggerMarker(pal, null, "font",keyString, false)
+
+
+			}
+			pal.grp.rightPart.btGroup.fbt.ffButton.onClick = function () {
+				// body...
+
+			}
 
 			pal.grp.rightPart.btGroup.ubt.uButton.onClick = function () {
 				var cmds = "";
@@ -360,7 +372,7 @@
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
-				triggerMarker(pal, null, "u", false)
+				triggerMarker(pal, null, "u","", false)
 					// pal.grp.rightPart.editText.text = 
 
 			}
@@ -369,49 +381,49 @@
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.blButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an1}", null, false)
+				triggerMarker(pal, "{\\an1}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.bcButton.onClick = function () {
 
-				triggerMarker(pal, "", null, false)
+				triggerMarker(pal, "", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.brButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an3}", null, false)
+				triggerMarker(pal, "{\\an3}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mlButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an4}", null, false)
+				triggerMarker(pal, "{\\an4}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mcButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an5}", null, false)
+				triggerMarker(pal, "{\\an5}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mrButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an6}", null, false)
+				triggerMarker(pal, "{\\an6}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ulButton.onClick = function () {
 
 
-				triggerMarker(pal, "{\\an7}", null, false)
+				triggerMarker(pal, "{\\an7}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ucButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an8}", null, false)
+				triggerMarker(pal, "{\\an8}", null,null, false)
 
 			}
 			pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.urButton.onClick = function () {
 
-				triggerMarker(pal, "{\\an9}", null, false)
+				triggerMarker(pal, "{\\an9}", null,null, false)
 
 			}
 
@@ -528,7 +540,7 @@
 		app.endUndoGroup()
 	}
 
-	function triggerMarker(pal, povar, key, remove) {
+	function triggerMarker(pal, povar, key, arg, remove) {
 		// pal => UI , dont change
 		// povar => string 
 		// key => string
@@ -537,24 +549,10 @@
 
 		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
-			// if (povar == null && key == null) {
-			// 	var noNewlineText = String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵")
-			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter
-			// }
-			// if (povar != null) {
-			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
-			// 	var poValue = povar
 
-
-			// }
-			// if (key != null) {
-
-			// 	var noNewlineText = quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
-			// 	var poValue = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter
-			// }
 
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, "↵"), pal.grp.rightPart.editText.backupSelection, key,arg)
 			} else {
 				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, "↵") : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
 			}
@@ -577,18 +575,12 @@
 	}
 
 
-	// function removeTag (pal) {
-	// 	for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
-	// 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
 
-	// }
-
-
-	function quoteText(origin, textSel, key) {
+	function quoteText(origin, textSel, key, arg) {
 		// return textSel.length != 0 ?
 		if (key !== null) {
-			var quotesel = "<" + key + ">" + textSel + "</" + key + ">"
-			var originsel = "<" + key + ">" + origin + "</" + key + ">"
+			var quotesel = "<" + key + arg + ">" + textSel + "</" + key + ">"
+			var originsel = "<" + key + arg + ">" + origin + "</" + key + ">"
 		} else {
 			var quotesel = textSel
 			var originsel = origin
