@@ -3,18 +3,6 @@
 //v0.01 
 
 
-
-
-// var stringToGoIntoTheRegex = "abc";
-// var regex = new RegExp("#" + stringToGoIntoTheRegex + "#", "g");
-// // at this point, the line above is the same as: var regex = /#abc#/g;
-
-// var input = "Hello this is #abc# some #abc# stuff.";
-// var output = input.replace(regex, "!!");
-// alert(output); // Hello this is !! some !! stuff.
-
-
-
 (function es_subtitle(thisObj) {
 
 	var es_str = {};
@@ -120,8 +108,8 @@
 									},\
 									fbt:Group{orientation:'row',\
 										fsButton:Button{text:'<font size=##>'},\
+										fsValue:EditText{text:'20',characters:'3'},\
 										fcButton:Button{text:'<font color=######>'},\
-										ffButton:Button{text:'</font>'}\
 									},\
 									midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
 										poGroup:Group{orientation:'column',alignment:['left','fill'],\
@@ -324,6 +312,18 @@
 				size !== null ? triggerMarker(pal, null, "font", keyString, false) : null
 
 			}
+
+			pal.grp.rightPart.btGroup.fbt.fsValue.onChange = function () {
+
+				// alert(1)
+				this.text=validNum(this.text)
+
+			}
+
+
+
+
+
 			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 
 				var color = $.colorPicker()
@@ -334,10 +334,7 @@
 
 
 			}
-			pal.grp.rightPart.btGroup.fbt.ffButton.onClick = function () {
 
-
-			}
 
 			pal.grp.rightPart.btGroup.ubt.uButton.onClick = function () {
 				var cmds = "";
@@ -634,6 +631,9 @@
 		control.size = [wh[0], wh[1]];
 	}
 
+	function validNum(inPut) {
+		return (isNaN(inPut) || 0 > inPut) ? 20 : inPut
+	}
 
 	function refreshButton(pal) {
 		comp = app.project.activeItem;
