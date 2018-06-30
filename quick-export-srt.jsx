@@ -106,10 +106,11 @@
 										usButton:Button{text:'</u>'},\
 										uuButton:Button{text:'<u> </u>'}\
 									},\
-									fbt:Group{orientation:'row',\
-										fsButton:Button{text:'<font size=##>'},\
+									fbt:Group{orientation:'row',margins:[0,0,1,0],\
+										fsButton:Button{text:'<font size=20>'},\
 										fsValue:EditText{text:'20',characters:'3'},\
 										fcButton:Button{text:'<font color=######>'},\
+										fcValue:Button{preferredSize:[28,28]}\
 									},\
 									midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
 										poGroup:Group{orientation:'column',alignment:['left','fill'],\
@@ -176,6 +177,7 @@
 
 
 			pal.grp.leftPart.listArea.onChange = function () {
+				pal.grp.rightPart.editText.backupSelection=""
 				var listIndex = this.selection[0].index;
 				comp.time = comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate;
 
@@ -306,7 +308,7 @@
 
 			pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 
-				var size = prompt("please input the text size", "55")
+				var size = pal.grp.rightPart.btGroup.fbt.fsValue.text
 				var keyString = " size=" + size
 
 				size !== null ? triggerMarker(pal, null, "font", keyString, false) : null
@@ -317,6 +319,7 @@
 
 				// alert(1)
 				this.text=validNum(this.text)
+				pal.grp.rightPart.btGroup.fbt.fsButton.text = "<font size="+this.text+">"
 
 			}
 
@@ -326,11 +329,19 @@
 
 			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 
-				var color = $.colorPicker()
-				var colorString = color.toString(16).toUpperCase()
+				
+				
 
-				var keyString = " color=" + colorString
+				var keyString = " color=" + this.parent.fcValue.colorString
 				triggerMarker(pal, null, "font", keyString, false)
+
+
+			}
+
+			pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function  () {
+				var colorSel=$.colorPicker()
+				this.colorString = colorSel.toString(16).toUpperCase()
+				this.parent.fcButton.text="<font color="+this.colorString+">"
 
 
 			}
