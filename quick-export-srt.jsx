@@ -177,7 +177,7 @@
 
 
 			pal.grp.leftPart.listArea.onChange = function () {
-				pal.grp.rightPart.editText.backupSelection=""
+				pal.grp.rightPart.editText.backupSelection = ""
 				var listIndex = this.selection[0].index;
 				comp.time = comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate;
 
@@ -318,8 +318,8 @@
 			pal.grp.rightPart.btGroup.fbt.fsValue.onChange = function () {
 
 				// alert(1)
-				this.text=validNum(this.text)
-				pal.grp.rightPart.btGroup.fbt.fsButton.text = "<font size="+this.text+">"
+				this.text = validNum(this.text)
+				pal.grp.rightPart.btGroup.fbt.fsButton.text = "<font size=" + this.text + ">"
 
 			}
 
@@ -329,8 +329,8 @@
 
 			pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 
-				
-				
+
+
 
 				var keyString = " color=" + this.parent.fcValue.colorString
 				triggerMarker(pal, null, "font", keyString, false)
@@ -338,10 +338,20 @@
 
 			}
 
-			pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function  () {
-				var colorSel=$.colorPicker()
+
+			pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = pal.grp.rightPart.btGroup.fbt.fcValue.graphics.newBrush(pal.grp.rightPart.btGroup.fbt.fcValue.graphics.BrushType.SOLID_COLOR, [1, 0, 1, 1])
+
+			pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
+				// this.graphics.drawOSControl();
+				this.graphics.rectPath(0, 0, this.size[0], this.size[1]);
+				this.graphics.fillPath(this.fillBrush);
+			}
+
+
+			pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function () {
+				var colorSel = $.colorPicker()
 				this.colorString = colorSel.toString(16).toUpperCase()
-				this.parent.fcButton.text="<font color="+this.colorString+">"
+				this.parent.fcButton.text = "<font color=" + this.colorString + ">"
 
 
 			}
