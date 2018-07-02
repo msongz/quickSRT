@@ -109,7 +109,7 @@
 									fbt:Group{orientation:'row',margins:[0,0,1,0],\
 										fsButton:Button{text:'<font size=20>'},\
 										fsValue:EditText{text:'20',characters:'3'},\
-										fcButton:Button{text:'<font color=######>'},\
+										fcButton:Button{text:'<font color=FB02FE>'},\
 										fcValue:Button{preferredSize:[28,28]}\
 									},\
 									midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
@@ -332,13 +332,13 @@
 
 
 
-				var keyString = " color=" + this.parent.fcValue.colorString
+				var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex)
 				triggerMarker(pal, null, "font", keyString, false)
 
 
 			}
 
-
+			pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE"
 			pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = pal.grp.rightPart.btGroup.fbt.fcValue.graphics.newBrush(pal.grp.rightPart.btGroup.fbt.fcValue.graphics.BrushType.SOLID_COLOR, [1, 0, 1, 1])
 
 			pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
@@ -349,11 +349,14 @@
 
 
 			pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function () {
-				var colorSel = $.colorPicker()
-				this.colorString = colorSel.toString(16).toUpperCase()
-				this.parent.fcButton.text = "<font color=" + this.colorString + ">"
+				var colorString = $.colorPicker()
+				this.colorHex = colorString.toString(16).toUpperCase()
+				this.parent.fcButton.text = "<font color=" + fixBlueHex(this.colorHex) + ">"
+
+				this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(colorString))
 
 
+				this.onDraw
 			}
 
 
@@ -644,6 +647,22 @@
 			layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
 		}
+	}
+
+	function hexToRgb(hex) {
+		if (typeof hex === 'string') hex = parseInt(hex, 16);
+		var r = (hex >> 16) & 0xFF;
+		var g = (hex >> 8) & 0xFF;
+		var b = (hex >> 0) & 0xFF;
+		return [r / 255, g / 255, b / 255, 1];
+	};
+
+	function fixBlueHex(num) {
+		var hex = num.toString(16)
+		while (hex.length < 6) {
+			hex = 0 + hex
+		}
+		return hex
 	}
 
 	function fixList(control) {
