@@ -318,9 +318,10 @@
 			pal.grp.rightPart.btGroup.fbt.fsValue.onChange = function () {
 
 				// alert(1)
-				this.text = validNum(this.text)
-				pal.grp.rightPart.btGroup.fbt.fsButton.text = "<font size=" + this.text + ">"
-
+				with(this) {
+					text = validNum(text)
+					parent.fsButton.text = "<font size=" + text + ">"
+				}
 			}
 
 
@@ -343,20 +344,24 @@
 
 			pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
 				// this.graphics.drawOSControl();
-				this.graphics.rectPath(0, 0, this.size[0], this.size[1]);
-				this.graphics.fillPath(this.fillBrush);
+				with(this) {
+					graphics.rectPath(0, 0, size[0], size[1]);
+					graphics.fillPath(fillBrush);
+				}
 			}
 
 
 			pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function () {
 				var colorString = $.colorPicker()
-				this.colorHex = colorString.toString(16).toUpperCase()
-				this.parent.fcButton.text = "<font color=" + fixBlueHex(this.colorHex) + ">"
+				with(this) {
+					colorHex = colorString.toString(16).toUpperCase()
+					parent.fcButton.text = "<font color=" + fixBlueHex(colorHex) + ">"
 
-				this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(colorString))
+					fillBrush = graphics.newBrush(graphics.BrushType.SOLID_COLOR, hexToRgb(colorString))
 
 
-				this.onDraw
+					onDraw
+				}
 			}
 
 
