@@ -152,8 +152,13 @@
 			}
 
 
+			var red = pal.graphics.newPen(pal.graphics.BrushType.SOLID_COLOR, [0, 1, 0], 1);
+			var blue = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [0, 0, 1], 1);
+			var green = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [0, 1, 0], 1);
 
-
+			pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
+			pal.grp.leftPart.listArea.graphics.foregroundColor = red
+				// pal.grp.graphics.backgroundColor= green 
 
 
 			pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
@@ -242,8 +247,11 @@
 			// pal.addEventListener("keydown", function () {
 
 			// 	try {
-			// 		alert(pal.grp.leftPart.listArea.toSource())
-			// 	} catch (e) {}
+			// 		alert(pal.grp.leftPart.listArea.columns.titles)
+			// 			// alert(pal.grp.leftPart.listArea.columns.titles[0]) 
+			// 	} catch (e) {
+			// 		alert(e)
+			// 	}
 			// })
 
 
