@@ -81,6 +81,7 @@
 								buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
 									info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
 									resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
+									lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
 									olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
 									cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
 									rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
@@ -190,8 +191,13 @@
 
 			}
 
+			pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
+				this.text = validNum(this.text,0)
+
+
+			}
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-				triggerMarker(pal, null, "", "", true)
+				triggerMarker(pal, null, "", "", true,pal.grp.leftPart.buttonArea.lineNum.text)
 			}
 			pal.grp.leftPart.buttonArea.resel.onClick = function () {
 				for (var i = 0; i < sl.length; i++) {
@@ -280,7 +286,7 @@
 			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 
 
-				triggerMarker(pal, null, "b", "", false)
+				triggerMarker(pal, null, "b", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
 
 			}
 
@@ -309,7 +315,7 @@
 
 			pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
 
-				triggerMarker(pal, null, "i", "", false)
+				triggerMarker(pal, null, "i", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
 
 			}
 
@@ -319,7 +325,7 @@
 				var size = pal.grp.rightPart.btGroup.fbt.fsValue.text
 				var keyString = " size=" + size
 
-				size !== null ? triggerMarker(pal, null, "font", keyString, false) : null
+				size !== null ? triggerMarker(pal, null, "font", keyString, false,pal.grp.leftPart.buttonArea.lineNum.text) : null
 
 			}
 
@@ -327,7 +333,7 @@
 
 				// alert(1)
 				with(this) {
-					text = validNum(text)
+					text = validNum(text,20)
 					parent.fsButton.text = "<font size=" + text + ">"
 				}
 			}
@@ -342,7 +348,7 @@
 
 
 				var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex)
-				triggerMarker(pal, null, "font", keyString, false)
+				triggerMarker(pal, null, "font", keyString, false,pal.grp.leftPart.buttonArea.lineNum.text)
 
 
 			}
@@ -395,7 +401,7 @@
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
-				triggerMarker(pal, null, "u", "", false)
+				triggerMarker(pal, null, "u", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
 
 
 			}
@@ -548,22 +554,20 @@
 		app.endUndoGroup()
 	}
 
-	function triggerMarker(pal, povar, key, arg, remove) {
+	function triggerMarker(pal, povar, key, arg, remove,lineNum) {
 
 		app.beginUndoGroup("triggerMarker");
 
 		for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
+
 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
 
-
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), pal.grp.rightPart.editText.backupSelection, key, arg)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark),newlineMark, lineNum,pal.grp.rightPart.editText.backupSelection, key, arg)
 			} else {
 				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
 			}
-
 			var poValue = (povar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : povar
-
 
 			var textValue = new MarkerValue(noNewlineText, poValue)
 
@@ -581,19 +585,36 @@
 
 
 
-	function quoteText(origin, textSel, key, arg) {
+	function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 
-		if (key !== null) {
-			var quotesel = "<" + key + arg + ">" + textSel + "</" + key + ">"
-			var originsel = "<" + key + arg + ">" + origin + "</" + key + ">"
+		if (lineNum > 0 && origin.split(splitor)[lineNum-1] !== undefined) {
+
+			var tmp = origin.split(splitor)
+
+			tmp[lineNum - 1] = quote(tmp[lineNum - 1], textSel, key, arg)
+
+			tmp = tmp.join(splitor)
+
+			return tmp
 		} else {
-			var quotesel = textSel
-			var originsel = origin
+			return quote(origin, textSel, key, arg)
 		}
 
-		return textSel != 0 ?
-			origin.replace(textSel, quotesel) :
-			origin.replace(origin, originsel)
+
+		function quote(origin, textSel, key, arg) {
+
+			if (key !== null) {
+				var quotesel = "<" + key + arg + ">" + textSel + "</" + key + ">"
+				var originsel = "<" + key + arg + ">" + origin + "</" + key + ">"
+			} else {
+				var quotesel = textSel
+				var originsel = origin
+			}
+
+			return textSel != 0 ?
+				origin.replace(textSel, quotesel) :
+				origin.replace(origin, originsel)
+		}
 	}
 
 	function removeQuote(text) {
@@ -684,8 +705,8 @@
 		control.size = [wh[0], wh[1]];
 	}
 
-	function validNum(inPut) {
-		return (isNaN(inPut) || 0 > inPut) ? 20 : inPut
+	function validNum(inPut,def) {
+		return (isNaN(inPut) || 0 > inPut) ? def : inPut
 	}
 
 	function refreshButton(pal) {
