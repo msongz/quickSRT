@@ -192,12 +192,12 @@
 			}
 
 			pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
-				this.text = validNum(this.text,0)
+				this.text = validNum(this.text, 0)
 
 
 			}
 			pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-				triggerMarker(pal, null, "", "", true,pal.grp.leftPart.buttonArea.lineNum.text)
+				triggerMarker(pal, null, "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
 			}
 			pal.grp.leftPart.buttonArea.resel.onClick = function () {
 				for (var i = 0; i < sl.length; i++) {
@@ -286,7 +286,7 @@
 			pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 
 
-				triggerMarker(pal, null, "b", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
+				triggerMarker(pal, null, "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 
 			}
 
@@ -315,7 +315,7 @@
 
 			pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
 
-				triggerMarker(pal, null, "i", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
+				triggerMarker(pal, null, "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 
 			}
 
@@ -325,7 +325,7 @@
 				var size = pal.grp.rightPart.btGroup.fbt.fsValue.text
 				var keyString = " size=" + size
 
-				size !== null ? triggerMarker(pal, null, "font", keyString, false,pal.grp.leftPart.buttonArea.lineNum.text) : null
+				size !== null ? triggerMarker(pal, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null
 
 			}
 
@@ -333,7 +333,7 @@
 
 				// alert(1)
 				with(this) {
-					text = validNum(text,20)
+					text = validNum(text, 20)
 					parent.fsButton.text = "<font size=" + text + ">"
 				}
 			}
@@ -348,7 +348,7 @@
 
 
 				var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex)
-				triggerMarker(pal, null, "font", keyString, false,pal.grp.leftPart.buttonArea.lineNum.text)
+				triggerMarker(pal, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text)
 
 
 			}
@@ -401,7 +401,7 @@
 
 			pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 
-				triggerMarker(pal, null, "u", "", false,pal.grp.leftPart.buttonArea.lineNum.text)
+				triggerMarker(pal, null, "u", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 
 
 			}
@@ -554,7 +554,7 @@
 		app.endUndoGroup()
 	}
 
-	function triggerMarker(pal, povar, key, arg, remove,lineNum) {
+	function triggerMarker(pal, povar, key, arg, remove, lineNum) {
 
 		app.beginUndoGroup("triggerMarker");
 
@@ -563,9 +563,9 @@
 			var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
 
 			if (!remove) {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark),newlineMark, lineNum,pal.grp.rightPart.editText.backupSelection, key, arg)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
 			} else {
-				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment)
+				var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment,newlineMark,lineNum)
 			}
 			var poValue = (povar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : povar
 
@@ -587,7 +587,7 @@
 
 	function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 
-		if (lineNum > 0 && origin.split(splitor)[lineNum-1] !== undefined) {
+		if (lineNum > 0 && origin.split(splitor)[lineNum - 1] !== undefined) {
 
 			var tmp = origin.split(splitor)
 
@@ -617,9 +617,19 @@
 		}
 	}
 
-	function removeQuote(text) {
+	function removeQuote(text, splitor, lineNum) {
 		var reg = /(<\/?(\s|\S)*?>)/g
-		return text.replace(reg, "")
+		if (lineNum > 0 && text.split(splitor)[lineNum - 1] !== undefined) {
+
+
+			var dd = text.split(splitor)
+			dd[lineNum - 1] = dd[lineNum - 1].replace(reg, "")
+			dd = dd.join(splitor)
+
+			return dd
+		} else {
+			return text.replace(reg, "")
+		}
 
 	}
 
@@ -705,7 +715,7 @@
 		control.size = [wh[0], wh[1]];
 	}
 
-	function validNum(inPut,def) {
+	function validNum(inPut, def) {
 		return (isNaN(inPut) || 0 > inPut) ? def : inPut
 	}
 
