@@ -118,8 +118,8 @@
 											fcButton:Button{text:'<font color=FB02FE>'},\
 											fcValue:Button{preferredSize:[28,28]}\
 										},\
-										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,20,0,0],\
-											poGroup:Group{orientation:'column',alignment:['left','fill'],\
+										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,10,0,0],\
+											position:Group{orientation:'column',alignment:['left','fill'],\
 												upbt:Group{orientation:'row',alignment:['left','top'],\
 													ulButton:Button{text:'↖',preferredSize:[30,30]},\
 													ucButton:Button{text:'⇡',preferredSize:[30,30]},\
@@ -136,9 +136,11 @@
 													brButton:Button{text:'↘',preferredSize:[30,30]}\
 												}\
 											},\
-											helpTipArea:Group{alignment:['fill','fill'],margins:[0,-8,0,0],\
-												stGroup:Panel{alignment:['fill','fill'],text:'HelpTip',\
-													content:StaticText{text:'',characters:20,justify:'center',alignment:['center','center'],properties:{multiline:true}}\
+											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
+												pos:Group{orientation:'row',alignment:['center','top'],\
+													posButton:Button{text:'{" + String.fromCharCode(92)+String.fromCharCode(92) + "pos( x , y )}'},\
+													posX:EditText{text:'384'},\
+													posY:EditText{text:'244'},\
 													}\
 											}\
 										},\
@@ -150,7 +152,12 @@
 								}\
 							}";
 
-
+/*											helpTipArea:Group{alignment:['fill','fill'],margins:[0,-8,0,0],\
+												stGroup:Panel{alignment:['fill','fill'],text:'HelpTip',\
+													content:StaticText{text:'',characters:20,justify:'center',alignment:['center','center'],properties:{multiline:true}}\
+													}\
+											}\
+*/
 				pal.grp = pal.add(res);
 
 				pal.onResizing = pal.onResize = function () {
@@ -162,7 +169,7 @@
 				var blue = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [0, 0, 1], 1);
 				var green = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [1, 0, 0], 1);
 
-				pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
+				// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
 				pal.grp.leftPart.listArea.graphics.foregroundColor = red
 
 				pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE"
@@ -204,16 +211,16 @@
 
 
 				pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseover', function () {
-					pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
+					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
 				})
 				pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseout', function () {
-					pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
+					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
 				})
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseover', function () {
-					pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "read selected\rlayers marker";
+					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "read selected\rlayers marker";
 				})
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseout', function () {
-					pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
+					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
 				})
 				pal.grp.rightPart.editText.addEventListener('mouseout', function () {
 					this.backupSelection = this.textselection
@@ -356,50 +363,50 @@
 
 // position
 
-				pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.blButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
 
 
 					triggerMarker(pal, "{\\an1}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.bcButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.onClick = function () {
 
 					triggerMarker(pal, "", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.bobt.brButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.onClick = function () {
 
 					triggerMarker(pal, "{\\an3}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mlButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.onClick = function () {
 
 
 					triggerMarker(pal, "{\\an4}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mcButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
 
 					triggerMarker(pal, "{\\an5}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.mdbt.mrButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.onClick = function () {
 
 					triggerMarker(pal, "{\\an6}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ulButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
 
 
 					triggerMarker(pal, "{\\an7}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.ucButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
 
 					triggerMarker(pal, "{\\an8}", null, null, false)
 
 				}
-				pal.grp.rightPart.btGroup.midGroup.poGroup.upbt.urButton.onClick = function () {
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
 
 					triggerMarker(pal, "{\\an9}", null, null, false)
 
@@ -507,9 +514,9 @@
 
 			app.beginUndoGroup("triggerMarker");
 
-			for (var qq = 0; qq < pal.grp.leftPart.listArea.selection.length; qq++) {
+			for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
 
-				var listIndex = pal.grp.leftPart.listArea.selection[qq].index;
+				var listIndex = pal.grp.leftPart.listArea.selection[i].index;
 
 				if (!remove) {
 					var noNewlineText = (key == null && povar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
@@ -522,7 +529,7 @@
 
 				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, textValue)
 
-				pal.grp.leftPart.listArea.selection[qq].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
+				pal.grp.leftPart.listArea.selection[i].subItems[1].text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter + comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 
 				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 			}
@@ -672,7 +679,7 @@
 			comp = app.project.activeItem;
 			sl = comp ? sortLayers(comp.selectedLayers) : [];
 			slIndex = []
-			pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = " \r \r \r \r \r "
+			// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = " \r \r \r \r \r "
 
 			if (!checkTextLayer(sl)) {
 				alert("please select text layer only")
