@@ -58,11 +58,6 @@
 		};
 
 
-
-
-
-
-
 		function es_buildUI(thisObj) {
 			var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {
 				closeOnKey: 'OSCmnd+W',
@@ -136,7 +131,10 @@
 													brButton:Button{text:'↘',preferredSize:[30,30]}\
 												}\
 											},\
-											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
+											extraPo:Group{orientation:'column',alignment:['fill','fill']\
+												direct:Group{orientation:'row',alignment:['fill','top'],\
+													vertical:Checkbox{text:'vertical',alignment:['left','top']}\
+											},\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
 													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}'},\
 													textX:StaticText{text:'x:'},\
@@ -192,7 +190,7 @@
 					this.text = validNum(this.text, 0)
 				}
 				pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
-					triggerMarker(pal, null, null, "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.leftPart.buttonArea.resel.onClick = function () {
 					for (var i = 0; i < sl.length; i++) {
@@ -206,11 +204,6 @@
 				}
 
 				// refresh export button
-
-
-
-
-
 
 				pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseover', function () {
 					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
@@ -253,7 +246,7 @@
 					pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 				}
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
-					triggerMarker(pal, null, null, "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
 
@@ -274,7 +267,6 @@
 				}
 
 
-
 				pal.grp.rightPart.btGroup.ibt.iButton.onClick = function () {
 					var cmds = "";
 					cmds += "printf '<i>'|pbcopy";
@@ -290,7 +282,7 @@
 				}
 
 				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
-					triggerMarker(pal, null, null, "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.rightPart.btGroup.sbt.sButton.onClick = function () {
 					var cmds = "";
@@ -307,14 +299,14 @@
 				}
 
 				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
-					triggerMarker(pal, null, null, "s", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "s", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
 				pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 
 					var size = pal.grp.rightPart.btGroup.fbt.fsValue.text
 					var keyString = " size=" + size
-					size !== null ? triggerMarker(pal, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null
+					size !== null ? triggerMarker(pal, null, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null
 				}
 				pal.grp.rightPart.btGroup.fbt.fsValue.onChange = function () {
 					with(this) {
@@ -324,7 +316,7 @@
 				}
 				pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 					var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex)
-					triggerMarker(pal, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
 					// this.graphics.drawOSControl();
@@ -356,63 +348,87 @@
 				}
 
 				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
-					triggerMarker(pal, null, null, "u", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, "u", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
-
-
-
-
 
 				// position
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
 
-
-					triggerMarker(pal, "{\\an1}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an1}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an3}", "{\\pos(0,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.onClick = function () {
 
-					triggerMarker(pal, "{\\an2}", null, null, null, false)
-
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an2}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an6}", "{\\pos(192,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.onClick = function () {
 
-					triggerMarker(pal, "{\\an3}", null, null, null, false)
-
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an3}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an9}", "{\\pos(384,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.onClick = function () {
 
-
-					triggerMarker(pal, "{\\an4}", null, null, null, false)
-
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an4}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an2}", "{\\pos(0,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
-
-					triggerMarker(pal, "{\\an5}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an5}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an5}", "{\\pos(192,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.onClick = function () {
-
-					triggerMarker(pal, "{\\an6}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an6}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an8}", "{\\pos(384,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
 
-
-					triggerMarker(pal, "{\\an7}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an7}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an1}", "{\\pos(0,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
-
-					triggerMarker(pal, "{\\an8}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an8}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an4}", "{\\pos(192,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
-
-					triggerMarker(pal, "{\\an9}", null, null, null, false)
+					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+						triggerMarker(pal, "{\\an9}", "", "", null, null, false)
+					} else {
+						triggerMarker(pal, "{\\an7}", "{\\pos(384,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
+					}
 
 				}
+
+
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
 
 					triggerMarker(pal, null, "{\\pos(" + pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.text + "," + pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text + ")}", null, null, false)
@@ -517,7 +533,7 @@
 			app.endUndoGroup()
 		}
 
-		function triggerMarker(pal, poVar, posVar, key, arg, remove, lineNum) {
+		function triggerMarker(pal, poVar, posVar, orientVar, key, arg, remove, lineNum) {
 
 			app.beginUndoGroup("triggerMarker");
 
@@ -526,23 +542,26 @@
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index;
 
 				if (!remove) {
-					var markComment = (key == null && poVar == null && posVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
 				} else {
-					var markComment = (key == null && poVar == null && posVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
 				}
 				var chapVar = (poVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : poVar
 
 				var urlVar = (posVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).url : posVar
 
-				var textValue = new MarkerValue(markComment, chapVar, urlVar)
+				var frameTargetVar = (orientVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).frameTarget : orientVar
+
+				var textValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar)
 
 				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, textValue)
 
 				pal.grp.leftPart.listArea.selection[i].subItems[1].text =
 
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter +
-					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r") +
-					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).url
+					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).url +
+					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).frameTarget +
+					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 
 				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 			}
@@ -713,8 +732,8 @@
 						items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate)
 						items[t].subItems[1].text =
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter +
-							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(reg, "\r") +
-							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).url
+							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).url +
+							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(reg, "\r")
 					}
 					sl[t].selected = false
 
