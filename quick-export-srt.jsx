@@ -85,9 +85,9 @@
 								},\
 								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],preferredSize:[100, 100],\
 									editText:EditText{\
-										text:'',alignment:['fill','top'],minimumSize:[0,35],properties:{multiline:true,readonly:false,}\
+										text:'',alignment:['fill','fill'],minimumSize:[0,35],properties:{multiline:true,readonly:false,}\
 									},\
-									btGroup:Group{orientation:'column',alignment:['fill','fill'],alignChildren:['fill','top'],\
+									btGroup:Group{orientation:'column',alignment:['fill','bottom'],alignChildren:['fill','top'],\
 										bbt:Group{orientation:'row',\
 											bButton:Button{text:'<b>',alignment:['fill','fill']},\
 											bsButton:Button{text:'</b>'},\
@@ -108,7 +108,7 @@
 											ssButton:Button{text:'</s>'},\
 											sssButton:Button{text:'<s>  </s>'}\
 										},\
-										fbt:Group{orientation:'row',margins:[0,0,1,0],\
+										fbt:Group{orientation:'row',margins:[0,0,-8,0],\
 											fsButton:Button{text:'<font size=20>'},\
 											fsValue:EditText{text:'20',characters:'3'},\
 											fcButton:Button{text:'<font color=FB02FE>'},\
@@ -136,18 +136,18 @@
 												direct:Group{orientation:'row',alignment:['fill','top'],\
 													vertical:Checkbox{text:'vertical',alignment:['left','top']},\
 												},\
-												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}'},\
+												pos:Group{orientation:'row',alignment:['right','top'],\
+													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}',preferredSize:[101,30]},\
 													textX:StaticText{text:'x:'},\
 													posX:EditText{text:'384'},\
 													textY:StaticText{text:'y:'},\
-													posY:EditText{text:'244'},\
+													posY:EditText{text:'288'},\
 												},\
-												fade:Group{orientation:'row',alignment:['fill','top'],\
+												fade:Group{orientation:'row',alignment:['right','top'],\
 													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad( in , out )}'},\
-													inText:StaticText{text:'in:'},\
+													inText:StaticText{text:'i:'},\
 													fadIn:EditText{text:'300'},\
-													outText:StaticText{text:'out:'},\
+													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300'},\
 												}\
 											}\
@@ -254,7 +254,7 @@
 					pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 				}
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
-					triggerMarker(pal, null, null, null, "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null,null, "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
 
@@ -290,7 +290,7 @@
 				}
 
 				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
-					triggerMarker(pal, null, null, null, "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null,null, "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.rightPart.btGroup.sbt.sButton.onClick = function () {
 					var cmds = "";
@@ -307,14 +307,14 @@
 				}
 
 				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
-					triggerMarker(pal, null, null, null, "s", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null,null, "s", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
 				pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 
 					var size = pal.grp.rightPart.btGroup.fbt.fsValue.text
 					var keyString = " size=" + size
-					size !== null ? triggerMarker(pal, null, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null
+					size !== null ? triggerMarker(pal, null, null, null,null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null
 				}
 				pal.grp.rightPart.btGroup.fbt.fsValue.onChange = function () {
 					with(this) {
@@ -324,7 +324,7 @@
 				}
 				pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 					var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex)
-					triggerMarker(pal, null, null, null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null,null, "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
 					// this.graphics.drawOSControl();
@@ -356,7 +356,7 @@
 				}
 
 				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
-					triggerMarker(pal, null, null, null, "u", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, null, null, null, null,"u", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
 				// position
