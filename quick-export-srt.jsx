@@ -76,6 +76,7 @@
 									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
 										info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
 										resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
+										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
 										olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
 										cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
@@ -131,17 +132,24 @@
 													brButton:Button{text:'↘',preferredSize:[30,30]}\
 												}\
 											},\
-											extraPo:Group{orientation:'column',alignment:['fill','fill']\
+											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												direct:Group{orientation:'row',alignment:['fill','top'],\
-													vertical:Checkbox{text:'vertical',alignment:['left','top']}\
-											},\
+													vertical:Checkbox{text:'vertical',alignment:['left','top']},\
+												},\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
 													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}'},\
 													textX:StaticText{text:'x:'},\
 													posX:EditText{text:'384'},\
 													textY:StaticText{text:'y:'},\
 													posY:EditText{text:'244'},\
-													}\
+												},\
+												fade:Group{orientation:'row',alignment:['fill','top'],\
+													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad( in , out )}'},\
+													inText:StaticText{text:'in:'},\
+													fadIn:EditText{text:'300'},\
+													outText:StaticText{text:'out:'},\
+													fadOut:EditText{text:'300'},\
+												}\
 											}\
 										},\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
@@ -431,7 +439,19 @@
 
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
 
-					triggerMarker(pal, null, "{\\pos(" + pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.text + "," + pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text + ")}", null, null, false)
+					var px = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.text;
+					var py = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text;
+
+
+					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, null, null, false)
+
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
+
+					var fIn = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.text;
+					var fOut = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadOut.text;
+
+					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}", null, null, false)
 
 				}
 
@@ -465,7 +485,7 @@
 			for (var y = 1; y < layers.length; y++) {
 				layers[y].selected = true
 
-				if (layers[y].inPoint < layers[y - 1].outPoint) {
+				if (parseFloat(layers[y].inPoint) < parseFloat(layers[y - 1].outPoint)) {
 					result = true
 					layers[y].selected = false
 				}
@@ -533,7 +553,7 @@
 			app.endUndoGroup()
 		}
 
-		function triggerMarker(pal, poVar, posVar, orientVar, key, arg, remove, lineNum) {
+		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, key, arg, remove, lineNum) {
 
 			app.beginUndoGroup("triggerMarker");
 
@@ -542,17 +562,18 @@
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index;
 
 				if (!remove) {
-					var markComment = (key == null && poVar == null && posVar == null && orientVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
 				} else {
-					var markComment = (key == null && poVar == null && posVar == null && orientVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
 				}
 				var chapVar = (poVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : poVar
 
 				var urlVar = (posVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).url : posVar
 
 				var frameTargetVar = (orientVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).frameTarget : orientVar
+				var cuePointNameVar = (fadeVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).cuePointName : fadeVar
 
-				var textValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar)
+				var textValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar, cuePointNameVar)
 
 				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, textValue)
 
@@ -561,6 +582,7 @@
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).url +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).frameTarget +
+					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).cuePointName +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 
 				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
@@ -621,7 +643,7 @@
 
 		}
 
-		function time2code(frames, fps) {
+		function time2code(frames, fps, precision) {
 
 			var timeTpye = app.project.timeDisplayType
 
@@ -631,7 +653,7 @@
 
 			var timecode = timeToCurrentFormat(frames, fps);
 
-			var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000)
+			var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000 / precision) * precision
 
 			ms = ms < 100 && ms >= 10 ? "0" + ms : ms
 
@@ -729,10 +751,11 @@
 					validMarker(sl[t]);
 					with(pal.grp.leftPart.listArea) {
 						add("item", t + 1)
-						items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate) + " --> " + time2code(sl[t].outPoint, comp.frameRate)
+						items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text)
 						items[t].subItems[1].text =
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).url +
+							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).frameTarget +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(reg, "\r")
 					}
 					sl[t].selected = false
