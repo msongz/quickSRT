@@ -130,12 +130,12 @@
 													blButton:Button{text:'↙',preferredSize:[30,30]},\
 													bcButton:Button{text:'☻',preferredSize:[30,30]},\
 													brButton:Button{text:'↘',preferredSize:[30,30]}\
-												}\
+												},\
+												direct:Group{orientation:'row',alignment:['fill','center'],\
+													vertical:Checkbox{text:'vertical',alignment:['left','fill']},\
+												},\
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
-												direct:Group{orientation:'row',alignment:['fill','top'],\
-													vertical:Checkbox{text:'vertical',alignment:['left','top']},\
-												},\
 												pos:Group{orientation:'row',alignment:['right','top'],\
 													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}',preferredSize:[101,30]},\
 													textX:StaticText{text:'x:'},\
@@ -149,7 +149,15 @@
 													fadIn:EditText{text:'300'},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300'},\
-												}\
+												},\
+												other:Group{orientation:'row',alignment:['right','top'],\
+													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(n)}',preferredSize:[50,30]},\
+													bordN:EditText{text:'2'},\
+													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(n)}',preferredSize:[50,30]},\
+													metriN:EditText{text:'2'},\
+													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(n)}',preferredSize:[50,30]},\
+													blurN:EditText{text:'2'},\
+												},\
 											}\
 										},\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
@@ -363,7 +371,7 @@
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an1}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an3}", "{\\pos(0,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -372,7 +380,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an2}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an6}", "{\\pos(192,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -380,7 +388,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an3}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an9}", "{\\pos(384,288)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -388,14 +396,14 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an4}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an2}", "{\\pos(0,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
 					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an5}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an5}", "{\\pos(192,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -403,7 +411,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an6}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an8}", "{\\pos(384,144)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -412,7 +420,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an7}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an1}", "{\\pos(0,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -420,7 +428,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an8}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an4}", "{\\pos(192,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
@@ -428,7 +436,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.extraPo.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
 						triggerMarker(pal, "{\\an9}", "", "", null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an7}", "{\\pos(384,0)}", "{\\frz-90}{\\fn@*}", null, null, false)
