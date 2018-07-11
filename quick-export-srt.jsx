@@ -131,33 +131,44 @@
 													bcButton:Button{text:'☻',preferredSize:[30,30]},\
 													brButton:Button{text:'↘',preferredSize:[30,30]}\
 												},\
-												direct:Group{orientation:'row',alignment:['fill','center'],\
-													vertical:Checkbox{text:'vertical',alignment:['left','fill']},\
-												},\
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}',preferredSize:[101,30]},\
+													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[101,30]},\
 													textX:StaticText{text:'x:'},\
 													posX:EditText{text:'384'},\
 													textY:StaticText{text:'y:'},\
 													posY:EditText{text:'288'},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','top'],\
-													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad( in , out )}',preferredSize:[101,30]},\
+													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,30]},\
 													inText:StaticText{text:'i:'},\
 													fadIn:EditText{text:'300'},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300'},\
 												},\
-												other:Group{orientation:'row',alignment:['right','top'],\
-													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(n)}',preferredSize:[61,30]},\
-													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(n)}',preferredSize:[50,30]},\
-													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(n)}',preferredSize:[50,30]},\
+												other:Group{orientation:'row',alignment:['fill','top'],\
+													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[61,30]},\
+													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[50,30]},\
+													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[50,30]},\
 													bfbVal:EditText{text:'2',characters:2},\
 												},\
 											}\
 										},\
+										fix:Group{orientation:'row',alignment:['fill','bottom'],\
+												direct:Group{orientation:'row',alignment:['fill','bottom'],\
+													vertical:Checkbox{text:'vertical',alignment:['left','fill']},\
+												},\
+												move:Group{orientation:'row',alignment:['fill','top'],spacing:1,\
+													moveButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[81,30]},\
+													x1:EditText{text:'2',characters:3},\
+													y1:EditText{text:'2',characters:3},\
+													x2:EditText{text:'2',characters:3},\
+													y2:EditText{text:'2',characters:3},\
+													x2:EditText{text:'2',characters:4},\
+													y2:EditText{text:'2',characters:4},\
+												},\
+										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
 											rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
 											epButton:Button{text:'" + es_str.export+"',alignment:['fill','fill']}\
@@ -369,7 +380,7 @@
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an1}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an3}", "{\\pos(0,288)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -378,7 +389,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an2}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an6}", "{\\pos(192,288)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -387,7 +398,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an3}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an9}", "{\\pos(384,288)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -396,7 +407,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an4}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an2}", "{\\pos(0,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -404,7 +415,7 @@
 					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an5}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an5}", "{\\pos(192,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -413,7 +424,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an6}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an8}", "{\\pos(384,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -423,7 +434,7 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
 
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an7}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an1}", "{\\pos(0,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -432,7 +443,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an8}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an4}", "{\\pos(192,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -441,7 +452,7 @@
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
-					if (!pal.grp.rightPart.btGroup.midGroup.position.direct.vertical.value) {
+					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an9}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an7}", "{\\pos(384,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
@@ -460,6 +471,25 @@
 					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, false)
 
 				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.onChange = function () {
+
+					with(this) {
+						text = validNum(text, 384)
+						parent.posButton.text = "{\\pos{" + text + "," + parent.posY.text + ")}"
+					}
+
+
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.onChange = function () {
+
+					with(this) {
+						text = validNum(text, 288)
+						parent.posButton.text = "{\\pos{" + parent.posX.text + "," + text + ")}"
+					}
+
+
+				}
+
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
 
 					var fIn = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.text;
@@ -470,26 +500,34 @@
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.onClick = function () {
 
-					var bordVar = "{\\bord("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+					var bordVar = "{\\bord(" + pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text + ")}"
 
 					triggerMarker(pal, null, null, null, null, [bordVar], null, null, false)
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
 
-					var fspVar = "{\\fsp("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+					var fspVar = "{\\fsp(" + pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text + ")}"
 
-					triggerMarker(pal, null, null, null, null, [,fspVar], null, null, false)
+					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, false)
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
 
-					var blurVar = "{\\be("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+					var blurVar = "{\\be(" + pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text + ")}"
 
-					triggerMarker(pal, null, null, null, null, [,,blurVar], null, null, false)
+					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, false)
 
 				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.onChange = function () {
 
+					with(this) {
+						text = validNum(text, 2)
+						parent.bord.text = "{\\bord(" + text + ")}"
+						parent.metri.text = "{\\fsp(" + text + ")}"
+						parent.blur.text = "{\\be(" + text + ")}"
+					}
+				}
 			}
 			return pal
 		}
