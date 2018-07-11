@@ -79,7 +79,8 @@
 										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
 										olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
-										cleanButton:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
+										killOther:Button{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other'},\
+										killTag:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
 										rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
 									}\
 								},\
@@ -142,7 +143,7 @@
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
 													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,30],alignment:['left','fill']},\
-													inText:StaticText{text:'i:'},\
+													inText:StaticText{text:'i:',alignment:['right','fill']},\
 													fadIn:EditText{text:'300',characters:4},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300',characters:4},\
@@ -151,15 +152,15 @@
 													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[71,30]},\
 													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[61,30]},\
 													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[51,30]},\
-													bfbVal:EditText{text:'2',characters:2},\
+													bfbVal:EditText{text:'2',characters:2,alignment:['right','center']},\
 												},\
 											}\
 										},\
-										fix:Group{orientation:'row',alignment:['fill','bottom'],\
-												direct:Group{orientation:'row',alignment:['fill','bottom'],\
-													vertical:Checkbox{text:'vertical',alignment:['left','fill']},\
+										fix:Group{orientation:'row',alignment:['fill','fill'],\
+												direct:Group{orientation:'row',alignment:['fill','fill'],\
+													vertical:Checkbox{text:'vertical',alignment:['left','center']},\
 												},\
-												move:Group{orientation:'row',alignment:['fill','top'],spacing:2,\
+												move:Group{orientation:'row',alignment:['right','fill'],spacing:3,\
 													moveButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[81,30]},\
 													x1:EditText{text:'384',characters:3},\
 													y1:EditText{text:'144',characters:3},\
@@ -195,9 +196,9 @@
 				var green = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [1, 0, 0], 1);
 
 				// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
-				pal.grp.leftPart.listArea.graphics.foregroundColor = red
+				pal.grp.leftPart.listArea.graphics.foregroundColor = red;
 
-				pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE"
+				pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE";
 				pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = pal.grp.rightPart.btGroup.fbt.fcValue.graphics.newBrush(pal.grp.rightPart.btGroup.fbt.fcValue.graphics.BrushType.SOLID_COLOR, [1, 0, 1, 1])
 
 
@@ -208,7 +209,6 @@
 					var listIndex = this.selection[0].index;
 					comp.time = comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate;
 					pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
-
 				}
 
 				pal.grp.leftPart.buttonArea.preci.onChange = function () {
@@ -217,7 +217,10 @@
 				pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
 					this.text = validNum(this.text, 0, this.text < 0)
 				}
-				pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
+				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
+					triggerMarker(pal, "", "", "", "", ["","","",""], null, null, false, pal.grp.leftPart.buttonArea.lineNum.text)
+				}
+				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.leftPart.buttonArea.resel.onClick = function () {
@@ -233,10 +236,10 @@
 
 				// refresh export button
 
-				pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseover', function () {
+				pal.grp.leftPart.buttonArea.killTag.addEventListener('mouseover', function () {
 					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "batch remove tagsbatch \rremove tagsbatch remove \rtagsbatch \remove \rtags \rremove tagsbatch remove";
 				})
-				pal.grp.leftPart.buttonArea.cleanButton.addEventListener('mouseout', function () {
+				pal.grp.leftPart.buttonArea.killTag.addEventListener('mouseout', function () {
 					// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.text = "default text";
 				})
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.addEventListener('mouseover', function () {
@@ -259,7 +262,6 @@
 				// 	}
 				// })
 
-
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
 					var cmds = "";
 					cmds += "printf '<b>'|pbcopy";
@@ -277,7 +279,6 @@
 					triggerMarker(pal, null, null, null, null, [], "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 
-
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
 					pal.grp.rightPart.editText.text = ""
 					refreshButton(pal)
@@ -288,12 +289,10 @@
 					writeFile(pal.grp.leftPart.listArea.items)
 				}
 
-
 				pal.grp.rightPart.editText.onChanging = function () {
 					triggerMarker(pal, null, null, null, null, [])
 
 				}
-
 
 				pal.grp.rightPart.btGroup.ibt.iButton.onClick = function () {
 					var cmds = "";
@@ -306,7 +305,6 @@
 					cmds += "printf '</i>'|pbcopy";
 					system.callSystem(cmds);
 					pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
-
 				}
 
 				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
@@ -323,7 +321,6 @@
 					cmds += "printf '</s>'|pbcopy";
 					system.callSystem(cmds);
 					pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
-
 				}
 
 				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
@@ -405,7 +402,6 @@
 						triggerMarker(pal, "{\\an3}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an9}", "{\\pos(384,288)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.onClick = function () {
@@ -414,7 +410,6 @@
 						triggerMarker(pal, "{\\an4}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an2}", "{\\pos(0,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
@@ -422,7 +417,6 @@
 						triggerMarker(pal, "{\\an5}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an5}", "{\\pos(192,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
 
 				}
@@ -431,9 +425,7 @@
 						triggerMarker(pal, "{\\an6}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an8}", "{\\pos(384,144)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
 
@@ -441,28 +433,22 @@
 						triggerMarker(pal, "{\\an7}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an1}", "{\\pos(0,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
 					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an8}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an4}", "{\\pos(192,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
 					if (!pal.grp.rightPart.btGroup.fix.direct.vertical.value) {
 						triggerMarker(pal, "{\\an9}", "", "", null, [], null, null, false)
 					} else {
 						triggerMarker(pal, "{\\an7}", "{\\pos(384,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
-
 					}
 				}
-
 
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
 
@@ -470,7 +456,6 @@
 					var py = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text;
 
 					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, false)
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.onChange = function () {
 
@@ -500,7 +485,6 @@
 						parent.fadButton.text = "{\\fad(" + parent.fadIn.text + "," + text + ")}"
 					}
 				}
-
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
 
 					var fIn = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.text;
@@ -514,14 +498,12 @@
 					var bordVar = "{\\bord(" + pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text + ")}"
 
 					triggerMarker(pal, null, null, null, null, [bordVar], null, null, false)
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
 
 					var fspVar = "{\\fsp(" + pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text + ")}"
 
 					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, false)
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
 
@@ -570,14 +552,12 @@
 				}
 				pal.grp.rightPart.btGroup.fix.move.moveIn.onChange = function () {
 
-					this.text = validNum(this.text, 0)
+					this.text = validNum(this.text, 0, this.text < 0)
 				}
 				pal.grp.rightPart.btGroup.fix.move.moveOut.onChange = function () {
 
-					this.text = validNum(this.text, 1000)
+					this.text = validNum(this.text, 1000, this.text < 0)
 				}
-
-
 			}
 			return pal
 		}
@@ -585,12 +565,10 @@
 		function mouseEventHandler() {
 
 			var cmdd = "";
-			cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+				cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
 
 			system.callSystem(cmdd);
-
 			this.removeEventListener("mouseout", mouseEventHandler);
-
 		}
 
 		function sortLayers(layers) {
@@ -611,7 +589,6 @@
 					result = true
 					layers[y].selected = false
 				}
-
 			};
 			try {
 				layers[0].selected = true
@@ -623,12 +600,10 @@
 				};
 			}
 
-
 			return result
 		}
 
 		function writeFile(list) {
-
 
 			var fileObj = File.saveDialog("lalala")
 			fileObj.encoding = "utf-8";
@@ -638,25 +613,20 @@
 				fileObj.write(list[i].text + "\r" + list[i].subItems[0].text + "\r" + list[i].subItems[1].text + "\r\r")
 			};
 
-
 			fileObj.close();
-
-
 			return fileObj;
 		}
 
 		function checkTextLayer(layers) {
 			if (layers.length != 0) {
 
-
 				for (var i = 0; i < layers.length; i++) {
 					if (!(layers[i] instanceof TextLayer)) {
-						return false
+						return false;
 						break;
 					}
 				};
-				return true
-
+				return true;
 			} else {
 				return true;
 			}
@@ -776,9 +746,7 @@
 		function time2code(frames, fps, precision) {
 
 			var timeTpye = app.project.timeDisplayType
-
 			app.project.timeDisplayType = 2012
-
 			frames = frames < 0 ? 0 : frames;
 
 			var timecode = timeToCurrentFormat(frames, fps);
@@ -804,20 +772,16 @@
 			if (markerProp.numKeys != undefined) {
 				for (var n = 1; n <= markerProp.numKeys; n++) {
 					if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
-
 						app.project.timeDisplayType = timeTpye
 						return true
 					}
 				};
 				app.project.timeDisplayType = timeTpye
 				return false
-
 			}
-
 		}
 
 		function validMarker(layer) {
-
 
 			if (checkMarker(layer)) {
 
@@ -825,10 +789,10 @@
 				var comment = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, false);
 				comment = String(comment).replace(/\r/gm, newlineMark);
 				var params = {}
-				params.bord = ""
-				params.fsp = ""
-				params.be = ""
-				params.move = ""
+					params.bord = "";
+					params.fsp = "";
+					params.be = "";
+					params.move = "";
 				var esMarkValue = new MarkerValue(comment, "", "", "", "", params);
 				layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
@@ -858,12 +822,12 @@
 		}
 
 		function validNum(inPut, def, express) {
-            if (!String.prototype.trim) {
-                String.prototype.trim = function () {
-                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-                };
-            }
-			return (inPut.trim()== "" ||isNaN(inPut) || express) ?
+			if (!String.prototype.trim) {
+				String.prototype.trim = function () {
+					return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+				};
+			}
+			return (inPut.trim() == "" || isNaN(inPut) || express) ?
 				parseFloat(def) : parseFloat(inPut)
 		}
 
