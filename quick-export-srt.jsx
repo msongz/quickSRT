@@ -112,7 +112,7 @@
 											fsButton:Button{text:'<font size=20>'},\
 											fsValue:EditText{text:'20',characters:'3'},\
 											fcButton:Button{text:'<font color=FB02FE>'},\
-											fcValue:Button{preferredSize:[28,28]}\
+											fcValue:Button{preferredSize:[58,28]}\
 										},\
 										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,10,0,0],\
 											position:Group{orientation:'column',alignment:['left','fill'],\
@@ -134,23 +134,23 @@
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[101,30]},\
-													textX:StaticText{text:'x:'},\
-													posX:EditText{text:'384'},\
+													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[101,30],alignment:['left','fill']},\
+													textX:StaticText{text:'x:',alignment:['right','center']},\
+													posX:EditText{text:'384',characters:4},\
 													textY:StaticText{text:'y:'},\
-													posY:EditText{text:'288'},\
+													posY:EditText{text:'288',characters:4},\
 												},\
-												fade:Group{orientation:'row',alignment:['fill','top'],\
-													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,30]},\
+												fade:Group{orientation:'row',alignment:['fill','fill'],\
+													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,30],alignment:['left','fill']},\
 													inText:StaticText{text:'i:'},\
-													fadIn:EditText{text:'300'},\
+													fadIn:EditText{text:'300',characters:4},\
 													outText:StaticText{text:'o:'},\
-													fadOut:EditText{text:'300'},\
+													fadOut:EditText{text:'300',characters:4},\
 												},\
-												other:Group{orientation:'row',alignment:['fill','top'],\
-													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[61,30]},\
-													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[50,30]},\
-													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[50,30]},\
+												other:Group{orientation:'row',alignment:['fill','fill'],spacing:8,\
+													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[71,30]},\
+													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[61,30]},\
+													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[51,30]},\
 													bfbVal:EditText{text:'2',characters:2},\
 												},\
 											}\
@@ -159,14 +159,14 @@
 												direct:Group{orientation:'row',alignment:['fill','bottom'],\
 													vertical:Checkbox{text:'vertical',alignment:['left','fill']},\
 												},\
-												move:Group{orientation:'row',alignment:['fill','top'],spacing:1,\
+												move:Group{orientation:'row',alignment:['fill','top'],spacing:2,\
 													moveButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[81,30]},\
-													x1:EditText{text:'2',characters:3},\
-													y1:EditText{text:'2',characters:3},\
-													x2:EditText{text:'2',characters:3},\
-													y2:EditText{text:'2',characters:3},\
-													x2:EditText{text:'2',characters:4},\
-													y2:EditText{text:'2',characters:4},\
+													x1:EditText{text:'384',characters:3},\
+													y1:EditText{text:'144',characters:3},\
+													x2:EditText{text:'-50',characters:3},\
+													y2:EditText{text:'144',characters:3},\
+													moveIn:EditText{text:'0',characters:4},\
+													moveOut:EditText{text:'1000',characters:4},\
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
@@ -211,8 +211,11 @@
 
 				}
 
+				pal.grp.leftPart.buttonArea.preci.onChange = function () {
+					this.text = validNum(this.text, 1, this.text <= 0)
+				}
 				pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
-					this.text = validNum(this.text, 0)
+					this.text = validNum(this.text, 0, this.text < 0)
 				}
 				pal.grp.leftPart.buttonArea.cleanButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
@@ -458,7 +461,6 @@
 						triggerMarker(pal, "{\\an7}", "{\\pos(384,0)}", "{\\frz-90}{\\fn@*}", null, [], null, null, false)
 
 					}
-
 				}
 
 
@@ -467,7 +469,6 @@
 					var px = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.text;
 					var py = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text;
 
-
 					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, false)
 
 				}
@@ -475,19 +476,29 @@
 
 					with(this) {
 						text = validNum(text, 384)
-						parent.posButton.text = "{\\pos{" + text + "," + parent.posY.text + ")}"
+						parent.posButton.text = "{\\pos(" + text + "," + parent.posY.text + ")}"
 					}
-
-
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.onChange = function () {
 
 					with(this) {
 						text = validNum(text, 288)
-						parent.posButton.text = "{\\pos{" + parent.posX.text + "," + text + ")}"
+						parent.posButton.text = "{\\pos(" + parent.posX.text + "," + text + ")}"
 					}
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.onChange = function () {
 
+					with(this) {
+						text = validNum(text, 300, text < 0)
+						parent.fadButton.text = "{\\fad(" + text + "," + parent.fadOut.text + ")}"
+					}
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadOut.onChange = function () {
 
+					with(this) {
+						text = validNum(text, 300, text < 0)
+						parent.fadButton.text = "{\\fad(" + parent.fadIn.text + "," + text + ")}"
+					}
 				}
 
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
@@ -528,6 +539,45 @@
 						parent.blur.text = "{\\be(" + text + ")}"
 					}
 				}
+				pal.grp.rightPart.btGroup.fix.move.moveButton.onClick = function () {
+
+					var x1 = this.parent.x1.text
+					var y1 = this.parent.y1.text
+					var x2 = this.parent.x2.text
+					var y2 = this.parent.y2.text
+					var moveIn = this.parent.moveIn.text
+					var moveOut = this.parent.moveOut.text
+
+					var moveVar = "{\\move(" + x1 + "," + y1 + "," + x2 + "," + y2 + "," + moveIn + "," + moveOut + ")}"
+
+					triggerMarker(pal, null, null, null, null, [, , , moveVar], null, null, false)
+				}
+				pal.grp.rightPart.btGroup.fix.move.x1.onChange = function () {
+
+					this.text = validNum(this.text, 384)
+				}
+				pal.grp.rightPart.btGroup.fix.move.y1.onChange = function () {
+
+					this.text = validNum(this.text, 144)
+				}
+				pal.grp.rightPart.btGroup.fix.move.x2.onChange = function () {
+
+					this.text = validNum(this.text, -50)
+				}
+				pal.grp.rightPart.btGroup.fix.move.y2.onChange = function () {
+
+					this.text = validNum(this.text, -144)
+				}
+				pal.grp.rightPart.btGroup.fix.move.moveIn.onChange = function () {
+
+					this.text = validNum(this.text, 0)
+				}
+				pal.grp.rightPart.btGroup.fix.move.moveOut.onChange = function () {
+
+					this.text = validNum(this.text, 1000)
+				}
+
+
 			}
 			return pal
 		}
@@ -549,7 +599,6 @@
 				return a.inPoint - b.inPoint
 			})
 		}
-
 
 		function checkOverlap(layers) {
 
@@ -577,8 +626,6 @@
 
 			return result
 		}
-
-
 
 		function writeFile(list) {
 
@@ -651,6 +698,7 @@
 				paramsVar.bord = (otherVar[0] == null) ? (comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().bord == undefined ? "" : comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().bord) : otherVar[0]
 				paramsVar.fsp = (otherVar[1] == null) ? (comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().fsp == undefined ? "" : comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().fsp) : otherVar[1]
 				paramsVar.be = (otherVar[2] == null) ? (comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().be == undefined ? "" : comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().be) : otherVar[2]
+				paramsVar.move = (otherVar[3] == null) ? (comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().move == undefined ? "" : comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().move) : otherVar[3]
 
 
 				var markValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar, cuePointNameVar, paramsVar)
@@ -666,6 +714,7 @@
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().bord +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().fsp +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().be +
+					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).getParameters().move +
 					comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
 
 				pal.grp.rightPart.editText.text = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(reg, "\r")
@@ -675,8 +724,6 @@
 			fixList(pal.grp.leftPart.listArea)
 
 		}
-
-
 
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 
@@ -747,9 +794,6 @@
 			return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms
 		}
 
-
-
-
 		function checkMarker(layer) {
 			var timeTpye = app.project.timeDisplayType
 			app.project.timeDisplayType = 2013
@@ -784,6 +828,7 @@
 				params.bord = ""
 				params.fsp = ""
 				params.be = ""
+				params.move = ""
 				var esMarkValue = new MarkerValue(comment, "", "", "", "", params);
 				layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
@@ -812,8 +857,9 @@
 			control.size = [wh[0], wh[1]];
 		}
 
-		function validNum(inPut, def) {
-			return (isNaN(inPut) || 0 > inPut) ? def : parseFloat(inPut)
+		function validNum(inPut, def, express) {
+			return (isNaN(inPut) || express) ?
+				parseFloat(def) : parseFloat(inPut)
 		}
 
 		function refreshButton(pal) {
@@ -836,9 +882,16 @@
 					slIndex.push(sl[t].index)
 
 					validMarker(sl[t]);
+
 					with(pal.grp.leftPart.listArea) {
+
 						add("item", t + 1)
-						items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text)
+
+						items[t].subItems[0].text =
+							time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) +
+							" --> " +
+							time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text)
+
 						items[t].subItems[1].text =
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).chapter +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).url +
@@ -847,6 +900,7 @@
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).getParameters().bord +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).getParameters().fsp +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).getParameters().be +
+							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).getParameters().move +
 							sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, false).comment.replace(reg, "\r")
 					}
 					sl[t].selected = false
@@ -856,7 +910,6 @@
 			}
 
 		}
-
 
 		var ui = es_buildUI(),
 			comp, sl, slIndex,
