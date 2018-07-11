@@ -858,7 +858,12 @@
 		}
 
 		function validNum(inPut, def, express) {
-			return (isNaN(inPut) || express) ?
+            if (!String.prototype.trim) {
+                String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+                };
+            }
+			return (inPut.trim()== "" ||isNaN(inPut) || express) ?
 				parseFloat(def) : parseFloat(inPut)
 		}
 
