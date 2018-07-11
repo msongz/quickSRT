@@ -136,27 +136,25 @@
 												},\
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
-												pos:Group{orientation:'row',alignment:['right','top'],\
+												pos:Group{orientation:'row',alignment:['fill','top'],\
 													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos( x , y )}',preferredSize:[101,30]},\
 													textX:StaticText{text:'x:'},\
 													posX:EditText{text:'384'},\
 													textY:StaticText{text:'y:'},\
 													posY:EditText{text:'288'},\
 												},\
-												fade:Group{orientation:'row',alignment:['right','top'],\
-													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad( in , out )}'},\
+												fade:Group{orientation:'row',alignment:['fill','top'],\
+													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad( in , out )}',preferredSize:[101,30]},\
 													inText:StaticText{text:'i:'},\
 													fadIn:EditText{text:'300'},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300'},\
 												},\
 												other:Group{orientation:'row',alignment:['right','top'],\
-													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(n)}',preferredSize:[50,30]},\
-													bordN:EditText{text:'2'},\
+													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(n)}',preferredSize:[61,30]},\
 													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(n)}',preferredSize:[50,30]},\
-													metriN:EditText{text:'2'},\
 													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(n)}',preferredSize:[50,30]},\
-													blurN:EditText{text:'2'},\
+													bfbVal:EditText{text:'2',characters:2},\
 												},\
 											}\
 										},\
@@ -278,7 +276,7 @@
 
 
 				pal.grp.rightPart.editText.onChanging = function () {
-					triggerMarker(pal,null,null,null,null,[])
+					triggerMarker(pal, null, null, null, null, [])
 
 				}
 
@@ -458,9 +456,8 @@
 					var px = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.text;
 					var py = pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.text;
 
-		// function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum) {
 
-					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [],null, null, false)
+					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, false)
 
 				}
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
@@ -468,7 +465,28 @@
 					var fIn = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.text;
 					var fOut = pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadOut.text;
 
-					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}",[], null, null, false)
+					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}", [], null, null, false)
+
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.onClick = function () {
+
+					var bordVar = "{\\bord("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+
+					triggerMarker(pal, null, null, null, null, [bordVar], null, null, false)
+
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
+
+					var fspVar = "{\\fsp("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+
+					triggerMarker(pal, null, null, null, null, [,fspVar], null, null, false)
+
+				}
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
+
+					var blurVar = "{\\be("+pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.text+")}"
+
+					triggerMarker(pal, null, null, null, null, [,,blurVar], null, null, false)
 
 				}
 
