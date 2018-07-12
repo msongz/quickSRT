@@ -218,7 +218,7 @@
 					this.text = validNum(this.text, 0, this.text < 0)
 				}
 				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
-					triggerMarker(pal, "", "", "", "", ["","","",""], null, null, false, pal.grp.leftPart.buttonArea.lineNum.text)
+					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, false, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
@@ -565,7 +565,7 @@
 		function mouseEventHandler() {
 
 			var cmdd = "";
-				cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+			cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
 
 			system.callSystem(cmdd);
 			this.removeEventListener("mouseout", mouseEventHandler);
@@ -697,7 +697,9 @@
 
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 
-			if (lineNum > 0 && origin.split(splitor)[lineNum - 1] !== undefined) {
+			if (lineNum == 0) {
+				return quote(origin, textSel, key, arg)
+			} else if (lineNum > 0 && origin.split(splitor)[lineNum - 1] !== undefined) {
 
 				var tmp = origin.split(splitor)
 
@@ -706,8 +708,11 @@
 				tmp = tmp.join(splitor)
 
 				return tmp
-			} else {
-				return quote(origin, textSel, key, arg)
+			} else if (origin.split(splitor)[lineNum - 1] == undefined) {
+
+				// return quote(origin, textSel, key, arg)
+				return origin
+
 			}
 
 
@@ -789,10 +794,10 @@
 				var comment = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, false);
 				comment = String(comment).replace(/\r/gm, newlineMark);
 				var params = {}
-					params.bord = "";
-					params.fsp = "";
-					params.be = "";
-					params.move = "";
+				params.bord = "";
+				params.fsp = "";
+				params.be = "";
+				params.move = "";
 				var esMarkValue = new MarkerValue(comment, "", "", "", "", params);
 				layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue);
 
