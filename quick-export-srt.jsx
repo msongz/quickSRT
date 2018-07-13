@@ -59,7 +59,7 @@
 
 
 		function es_buildUI(thisObj) {
-			var pal = (thisObj instanceof Panel) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {
+			var pal = (thisObj instanceof Window) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {
 				closeOnKey: 'OSCmnd+W',
 				resizeable: true
 			});
@@ -263,15 +263,17 @@
 					this.backupSelection = this.textselection
 				});
 
-				// pal.addEventListener("keydown", function () {
+				pal.addEventListener("keydown", function () {
 
-				// 	try {
-				// 		alert(pal.grp.leftPart.listArea.columns.titles)
-				// 			// alert(pal.grp.leftPart.listArea.columns.titles[0]) 
-				// 	} catch (e) {
-				// 		alert(e)
-				// 	}
-				// })
+					try {
+						// alert(pal.grp.leftPart.listArea.columns.titles)
+						fixList(pal.grp.leftPart.listArea)
+
+						// alert(pal.grp.leftPart.listArea.columns.titles[0]) 
+					} catch (e) {
+						alert(e)
+					}
+				})
 
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
 					var cmds = "";
@@ -707,15 +709,20 @@
 		}
 
 		function es_help() {
-			var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],                             \
-        pnl: Panel { type:'tabbedpanel',                                 \
-        aboutTab: Panel { type:'tab', text:'" + "descript" + "',                                 \
-        aboutEt: EditText { text:'" + "qe_str.desContent" + "', preferredSize:[250,100], properties:{multiline:true} }                             },                                 \
-        usageTab: Panel { type:'tab', text:'" + "qe_str.usage" + "',                                 \
-        usageEt: EditText { text:'" + "qe_str.useContent" + "', preferredSize:[250,100], properties:{multiline:true} }                         }                     },                     \
-        btns: Group {orientation:'row', alignment:['fill','bottom'],                         \
-        otherScriptsBtn: Button { text:'" + "qe_str.other" + "', alignment:['left','center'] },                         \
-        okBtn: Button { text:'" + "qe_str.close" + "', alignment:['right','center'] }                 }             }";
+			var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
+							pnl: Panel {type:'tabbedpanel',\
+								aboutTab: Panel { type:'tab', text:'" + "descript" + "',\
+									aboutEt: EditText { text:'" + "qe_str.desContent" + "', preferredSize:[250,100], properties:{multiline:true}}\
+									},\
+							usageTab: Panel { type:'tab', text:'" + "qe_str.usage" + "',\
+								usageEt: EditText { text:'" + "qe_str.useContent" + "', preferredSize:[250,100], properties:{multiline:true}}\
+									}\
+							},\
+							btns: Group {orientation:'row', alignment:['fill','bottom'],\
+								otherScriptsBtn: Button { text:'" + "qe_str.other" + "', alignment:['left','center'] },\
+								okBtn: Button { text:'" + "qe_str.close" + "', alignment:['right','center'] }\
+							}\
+						}";
 			var helpWin = new Window("palette", "qe_str.about");
 			helpWin.gr = helpWin.add(res);
 			helpWin.gr.btns.otherScriptsBtn.onClick = function () {
