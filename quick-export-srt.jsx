@@ -66,7 +66,7 @@
 
 			if (pal !== null) {
 
-				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[450, 400],\
+				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[690, 460],\
 								leftPart:Group{orientation:'column',alignment:['fill','fill'],\
 									listArea:ListBox{\
 										alignment:['fill','fill'],\
@@ -76,6 +76,7 @@
 									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
 										info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
 										resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
+										pickPos:Button{text:'☉',alignment:['left','fill'],preferredSize:[28, 28]},\
 										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
 										olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
@@ -84,9 +85,9 @@
 										rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
 									}\
 								},\
-								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],preferredSize:[100, 100],\
+								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],\
 									editText:EditText{\
-										text:'',alignment:['fill','fill'],minimumSize:[0,35],properties:{multiline:true,readonly:false,}\
+										text:'',alignment:['fill','fill'],properties:{multiline:true,readonly:false,}\
 									},\
 									btGroup:Group{orientation:'column',alignment:['fill','bottom'],alignChildren:['fill','top'],\
 										bbt:Group{orientation:'row',\
@@ -222,6 +223,16 @@
 				}
 				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
+				}
+				pal.grp.leftPart.buttonArea.pickPos.onClick = function () {
+					comp = app.project.activeItem;
+					var currentSel = comp.selectedLayers[0];
+					var posX = Math.round(currentSel.property("transform").property("Position").value[0] / comp.width * 384)
+					var posY = Math.round(currentSel.property("transform").property("Position").value[1] / comp.height * 288)
+					alert([posX, posY])
+				}
+				pal.grp.leftPart.buttonArea.info.onClick = function () {
+					es_help()
 				}
 				pal.grp.leftPart.buttonArea.resel.onClick = function () {
 					for (var i = 0; i < sl.length; i++) {
@@ -694,6 +705,46 @@
 			fixList(pal.grp.leftPart.listArea)
 
 		}
+
+		function es_help() {
+			var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],                             \
+        pnl: Panel { type:'tabbedpanel',                                 \
+        aboutTab: Panel { type:'tab', text:'" + "descript" + "',                                 \
+        aboutEt: EditText { text:'" + "qe_str.desContent" + "', preferredSize:[250,100], properties:{multiline:true} }                             },                                 \
+        usageTab: Panel { type:'tab', text:'" + "qe_str.usage" + "',                                 \
+        usageEt: EditText { text:'" + "qe_str.useContent" + "', preferredSize:[250,100], properties:{multiline:true} }                         }                     },                     \
+        btns: Group {orientation:'row', alignment:['fill','bottom'],                         \
+        otherScriptsBtn: Button { text:'" + "qe_str.other" + "', alignment:['left','center'] },                         \
+        okBtn: Button { text:'" + "qe_str.close" + "', alignment:['right','center'] }                 }             }";
+			var helpWin = new Window("palette", "qe_str.about");
+			helpWin.gr = helpWin.add(res);
+			helpWin.gr.btns.otherScriptsBtn.onClick = function () {
+				var cmd = "";
+				var url = "qe_str.website";
+				if ($.os.indexOf("Win") != -1) {
+					if (File("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe").exists) {
+						cmd += "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe " + url
+					} else if (File("C:/Program Files (x86)/Mozilla Firefox/firefox.exe").exists) {
+						cmd += "C:/Program Files (x86)/Mozilla Firefox/firefox.exe " + url
+					} else {
+						cmd += "C:/Program Files/Internet Explorer/iexplore.exe " + url
+					}
+				} else {
+					cmd += "open " + url
+				}
+				try {
+					system.callSystem(cmd)
+				} catch (e) {
+					alert(e)
+				}
+			};
+			helpWin.gr.btns.okBtn.onClick = function () {
+				helpWin.close()
+			};
+			helpWin.center();
+			helpWin.show()
+		}
+
 
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 
