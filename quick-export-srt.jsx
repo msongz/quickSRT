@@ -51,18 +51,31 @@
 			cn: "关于"
 		};
 		es_str.descript = {
-			en: "this descript",
-			cn: "这是描述"
+			en: "Overview",
+			cn: "概述"
 		};
 		es_str.usage = {
-			en: "this usage",
-			cn: "这是使用"
+			en: "Usage",
+			cn: "使用"
 		};
-		es_str.desContent = {en:"desContent",cn:"描述内容"};
-		es_str.useContent = {en:"useContent",cn:"使用内容"};
-		es_str.other = {en:"other",cn:"其他"};
-		es_str.close = {en:"close",cn:"关闭"};
-		// es_str.version = {en:"",cn:""};
+		es_str.desContent = {
+			en: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\ncontact: songzmeng@gmail.com\\n\\nThis script enable AE to export subtilte(.srt) file. Fully test on macOS 10.13.4, AE 15.0",
+			cn: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\n联系：@微型柠檬\\n\\n这个脚本允许AE导出字幕(.srt)文件. 在 macOS 10.13.4, AE 15.0 上充分测试",
+		};
+		es_str.useContent = {
+			en: "1. select some text layers\\n2. run this script or press “refresh” button\\n3. press “export” button and select the location the file you store.\\n#Note:\\n・Hover your mouse on each control will shows a help tip.",
+			cn: "1. 选择若干文字层\\n2. 运行这个脚本或者按“刷新”按钮\\n3. 按“导出”按钮选择路径保存你的字幕文件\\n#注意:\\n・鼠标在每个控件上停留都会弹出帮助提示",
+		};
+		es_str.other = {
+			en: "other scripts",
+			cn: "其他脚本"
+		};
+		es_str.close = {
+			en: "close",
+			cn: "关闭"
+		};
+		// es_str.ht_ = {en:"",cn:""};
+
 
 
 		for (var i in es_str) {
@@ -97,8 +110,8 @@
 										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
 										olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
-										killOther:Button{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other'},\
 										killTag:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
+										killOther:Button{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other'},\
 										rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
 									}\
 								},\
@@ -208,10 +221,10 @@
 					var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
 							pnl: Panel {type:'tabbedpanel',\
 								aboutTab: Panel { type:'tab', text:'" + es_str.descript + "',\
-									aboutEt: EditText { text:'" + es_str.desContent + "', preferredSize:[250,100], properties:{multiline:true}}\
+									aboutEt: EditText { text:'" + es_str.desContent + "', preferredSize:[280,120], properties:{multiline:true}}\
 									},\
 								usageTab: Panel { type:'tab', text:'" + es_str.usage + "',\
-									usageEt: EditText { text:'" + es_str.useContent + "', preferredSize:[250,100], properties:{multiline:true}}\
+									usageEt: EditText { text:'" + es_str.useContent + "', preferredSize:[280,120], properties:{multiline:true}}\
 									}\
 							},\
 							btns: Group {orientation:'row', alignment:['fill','bottom'],\
@@ -261,7 +274,7 @@
 				// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
 				pal.grp.leftPart.listArea.graphics.foregroundColor = red;
 
-				pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE";
+				//pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE";
 				pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = pal.grp.rightPart.btGroup.fbt.fcValue.graphics.newBrush(pal.grp.rightPart.btGroup.fbt.fcValue.graphics.BrushType.SOLID_COLOR, [1, 0, 1, 1])
 
 
@@ -308,9 +321,9 @@
 					};
 				}
 				pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
-					sl = comp.selectedLayers;
+					var rsl = comp.selectedLayers;
 					pal.grp.leftPart.listArea.removeAll()
-					removeESmarker(sl)
+					removeESmarker(rsl)
 				}
 
 				// refresh export button
@@ -931,8 +944,9 @@
 				alert("overlap!\rcheck the highlight layer")
 
 			} else {
-				pal.grp.rightPart.editText.backupSelection = ""
-				pal.grp.leftPart.listArea.removeAll()
+				pal.grp.rightPart.editText.backupSelection = "";
+				pal.grp.leftPart.listArea.removeAll();
+				pal.grp.leftPart.buttonArea.resel.enabled=(sl.length==0)?false:true
 				app.beginUndoGroup("refresh")
 				for (var t = 0; t < sl.length; t++) {
 
