@@ -46,26 +46,43 @@
 			en: "HelpTip",
 			cn: "帮助"
 		};
-		// es_str.version = {en:"",cn:""};
-		// es_str.version = {en:"",cn:""};
-		// es_str.version = {en:"",cn:""};
+		es_str.about = {
+			en: "About",
+			cn: "关于"
+		};
+		es_str.descript = {
+			en: "this descript",
+			cn: "这是描述"
+		};
+		es_str.usage = {
+			en: "this usage",
+			cn: "这是使用"
+		};
+		es_str.desContent = {en:"desContent",cn:"描述内容"};
+		es_str.useContent = {en:"useContent",cn:"使用内容"};
+		es_str.other = {en:"other",cn:"其他"};
+		es_str.close = {en:"close",cn:"关闭"};
 		// es_str.version = {en:"",cn:""};
 
-		if (true) {
-			for (var i in es_str) {
+
+		for (var i in es_str) {
+
+			"zh_CN" == app.isoLanguage ?
+				es_str[i] = es_str[i]["cn"] :
 				es_str[i] = es_str[i]["en"];
-			};
-		};
+		}
+
 
 
 		function es_buildUI(thisObj) {
-			var pal = (thisObj instanceof Window) ? thisObj : new Window("palette", es_str.title + es_str.version, undefined, {
-				closeOnKey: 'OSCmnd+W',
-				resizeable: true
-			});
+			var pal = (thisObj instanceof Window) ?
+				thisObj :
+				new Window("palette", es_str.title + es_str.version, undefined, {
+					closeOnKey: 'OSCmnd+W',
+					resizeable: true
+				});
 
 			if (pal !== null) {
-
 				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[690, 460],\
 								leftPart:Group{orientation:'column',alignment:['fill','fill'],\
 									listArea:ListBox{\
@@ -187,6 +204,51 @@
 				*/
 				pal.grp = pal.add(res);
 
+				function es_help() {
+					var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
+							pnl: Panel {type:'tabbedpanel',\
+								aboutTab: Panel { type:'tab', text:'" + es_str.descript + "',\
+									aboutEt: EditText { text:'" + es_str.desContent + "', preferredSize:[250,100], properties:{multiline:true}}\
+									},\
+								usageTab: Panel { type:'tab', text:'" + es_str.usage + "',\
+									usageEt: EditText { text:'" + es_str.useContent + "', preferredSize:[250,100], properties:{multiline:true}}\
+									}\
+							},\
+							btns: Group {orientation:'row', alignment:['fill','bottom'],\
+								otherScriptsBtn: Button { text:'" + es_str.other + "', alignment:['left','center'] },\
+								okBtn: Button { text:'" + es_str.close + "', alignment:['right','center'] }\
+							}\
+						}";
+					var helpWin = new Window("palette", es_str.about);
+					helpWin.gr = helpWin.add(res);
+					helpWin.gr.btns.otherScriptsBtn.onClick = function () {
+						var cmd = "";
+						var url = es_str.website;
+						if ($.os.indexOf("Win") != -1) {
+							if (File("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe").exists) {
+								cmd += "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe " + url
+							} else if (File("C:/Program Files (x86)/Mozilla Firefox/firefox.exe").exists) {
+								cmd += "C:/Program Files (x86)/Mozilla Firefox/firefox.exe " + url
+							} else {
+								cmd += "C:/Program Files/Internet Explorer/iexplore.exe " + url
+							}
+						} else {
+							cmd += "open " + url
+						}
+						try {
+							system.callSystem(cmd)
+						} catch (e) {
+							alert(e)
+						}
+					};
+					helpWin.gr.btns.okBtn.onClick = function () {
+						helpWin.close()
+					};
+					helpWin.center();
+					helpWin.show()
+				}
+
+
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize()
 				}
@@ -225,11 +287,17 @@
 					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text)
 				}
 				pal.grp.leftPart.buttonArea.pickPos.onClick = function () {
-					comp = app.project.activeItem;
-					var currentSel = comp.selectedLayers[0];
-					var posX = Math.round(currentSel.property("transform").property("Position").value[0] / comp.width * 384)
-					var posY = Math.round(currentSel.property("transform").property("Position").value[1] / comp.height * 288)
-					alert([posX, posY])
+					curComp = app.project.activeItem;
+					try {
+						var currentSel = curComp.selectedLayers;
+						var posX = Math.round(currentSel[0].property("transform").property("Position").value[0] / curComp.width * 384)
+						var posY = Math.round(currentSel[0].property("transform").property("Position").value[1] / curComp.height * 288)
+					} catch (e) {}
+					if (currentSel.length == 0 || currentSel[0].threeDLayer) {
+						alert("please selecte a 2D layer")
+					} else {
+						alert([posX, posY])
+					}
 				}
 				pal.grp.leftPart.buttonArea.info.onClick = function () {
 					es_help()
@@ -708,49 +776,6 @@
 
 		}
 
-		function es_help() {
-			var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
-							pnl: Panel {type:'tabbedpanel',\
-								aboutTab: Panel { type:'tab', text:'" + "descript" + "',\
-									aboutEt: EditText { text:'" + "qe_str.desContent" + "', preferredSize:[250,100], properties:{multiline:true}}\
-									},\
-							usageTab: Panel { type:'tab', text:'" + "qe_str.usage" + "',\
-								usageEt: EditText { text:'" + "qe_str.useContent" + "', preferredSize:[250,100], properties:{multiline:true}}\
-									}\
-							},\
-							btns: Group {orientation:'row', alignment:['fill','bottom'],\
-								otherScriptsBtn: Button { text:'" + "qe_str.other" + "', alignment:['left','center'] },\
-								okBtn: Button { text:'" + "qe_str.close" + "', alignment:['right','center'] }\
-							}\
-						}";
-			var helpWin = new Window("palette", "qe_str.about");
-			helpWin.gr = helpWin.add(res);
-			helpWin.gr.btns.otherScriptsBtn.onClick = function () {
-				var cmd = "";
-				var url = "qe_str.website";
-				if ($.os.indexOf("Win") != -1) {
-					if (File("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe").exists) {
-						cmd += "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe " + url
-					} else if (File("C:/Program Files (x86)/Mozilla Firefox/firefox.exe").exists) {
-						cmd += "C:/Program Files (x86)/Mozilla Firefox/firefox.exe " + url
-					} else {
-						cmd += "C:/Program Files/Internet Explorer/iexplore.exe " + url
-					}
-				} else {
-					cmd += "open " + url
-				}
-				try {
-					system.callSystem(cmd)
-				} catch (e) {
-					alert(e)
-				}
-			};
-			helpWin.gr.btns.okBtn.onClick = function () {
-				helpWin.close()
-			};
-			helpWin.center();
-			helpWin.show()
-		}
 
 
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
