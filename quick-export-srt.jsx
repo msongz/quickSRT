@@ -997,13 +997,13 @@
 
 		}
 
-		var ui = es_buildUI(),
+		var ui = es_buildUI(thisObj),
 			comp, sl, slIndex,
 			markerTimeOffset = 1,
 			newlineMark = "↵",
 			reg = new RegExp(newlineMark, "gm");
 
-		//refreshButton(ui)
+		refreshButton(ui)
 
 		if (ui !== null) {
 			if (ui instanceof Window) {
