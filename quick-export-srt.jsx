@@ -59,7 +59,7 @@
 			cn: "使用"
 		};
 		es_str.desContent = {
-			en: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\ncontact: songzmeng@gmail.com\\n\\nThis script enable AE to export subtilte(.srt) file. Fully test on macOS 10.13.4, AE 15.0",
+			en: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\ncontact: songzmeng@gmail.com\\n\\nThis script enable AE to export subtilte(.srt) file. Fully test on macOS 10.13.4, AE 15.0\\n\\nMain process is put a marker to the outPoint of each text layer you selected ",
 			cn: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\n联系：@微型柠檬\\n\\n这个脚本允许AE导出字幕(.srt)文件. 在 macOS 10.13.4, AE 15.0 上充分测试",
 		};
 		es_str.useContent = {
@@ -74,6 +74,19 @@
 			en: "close",
 			cn: "关闭"
 		};
+		es_str.er2dlayer = {
+			en: "please selecte a 2D layer",
+			cn: "请选择2D图层"
+		};
+		es_str.srtXY = {
+			en: "(srt system map maximum Height to 384 and maximum Width to 288)",
+			cn: "(srt系统将最大宽高映射为 384 和 288)"
+		};
+		es_str.saveDialog = {
+			en: "selecte the location to store your srt file",
+			cn: "选择你的字幕文件保存路径"
+		};
+		// es_str.ht_ = {en:"",cn:""};
 		// es_str.ht_ = {en:"",cn:""};
 
 
@@ -88,7 +101,7 @@
 
 
 		function es_buildUI(thisObj) {
-			var pal = (thisObj instanceof Window) ?
+			var pal = (thisObj instanceof Panel) ?
 				thisObj :
 				new Window("palette", es_str.title + es_str.version, undefined, {
 					closeOnKey: 'OSCmnd+W',
@@ -215,7 +228,6 @@
 																	}\
 															}\
 				*/
-				pal.grp = pal.add(res);
 
 				function es_help() {
 					var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
@@ -261,7 +273,10 @@
 					helpWin.show()
 				}
 
-
+				pal.grp = pal.add(res);
+				pal.layout.layout(true);
+				pal.grp.minimumSize = pal.grp.size;
+				pal.layout.resize();
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize()
 				}
@@ -274,7 +289,7 @@
 				// pal.grp.rightPart.btGroup.midGroup.helpTipArea.stGroup.content.graphics.foregroundColor = red
 				pal.grp.leftPart.listArea.graphics.foregroundColor = red;
 
-				//pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE";
+				pal.grp.rightPart.btGroup.fbt.fcValue.colorHex = "FB02FE";
 				pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = pal.grp.rightPart.btGroup.fbt.fcValue.graphics.newBrush(pal.grp.rightPart.btGroup.fbt.fcValue.graphics.BrushType.SOLID_COLOR, [1, 0, 1, 1])
 
 
@@ -307,9 +322,9 @@
 						var posY = Math.round(currentSel[0].property("transform").property("Position").value[1] / curComp.height * 288)
 					} catch (e) {}
 					if (currentSel.length == 0 || currentSel[0].threeDLayer) {
-						alert("please selecte a 2D layer")
+						alert(es_str.er2dlayer)
 					} else {
-						alert([posX, posY])
+						alert("x:" + posX + " y:" + posY + "\n" + es_str.srtXY)
 					}
 				}
 				pal.grp.leftPart.buttonArea.info.onClick = function () {
@@ -322,7 +337,7 @@
 				}
 				pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
 					var rsl = comp.selectedLayers;
-					pal.grp.leftPart.listArea.removeAll()
+					//pal.grp.leftPart.listArea.removeAll()
 					removeESmarker(rsl)
 				}
 
@@ -699,7 +714,7 @@
 
 		function writeFile(list) {
 
-			var fileObj = File.saveDialog("lalala")
+			var fileObj = File.saveDialog(es_str.saveDialog)
 			fileObj.encoding = "utf-8";
 			fileObj.open("w");
 
@@ -946,7 +961,7 @@
 			} else {
 				pal.grp.rightPart.editText.backupSelection = "";
 				pal.grp.leftPart.listArea.removeAll();
-				pal.grp.leftPart.buttonArea.resel.enabled=(sl.length==0)?false:true
+				pal.grp.leftPart.buttonArea.resel.enabled = (sl.length == 0) ? false : true
 				app.beginUndoGroup("refresh")
 				for (var t = 0; t < sl.length; t++) {
 
@@ -988,8 +1003,7 @@
 			newlineMark = "↵",
 			reg = new RegExp(newlineMark, "gm");
 
-		refreshButton(ui)
-
+		//refreshButton(ui)
 
 		if (ui !== null) {
 			if (ui instanceof Window) {
