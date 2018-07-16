@@ -762,9 +762,9 @@
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index;
 
 				if (!remove) {
-					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length==0) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : quoteText(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)
 				} else {
-					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar == null) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
+					var markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length==0) ? String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) : removeQuote(comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).comment, newlineMark, lineNum)
 				}
 				var chapVar = (poVar == null) ? comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true).chapter : poVar
 
