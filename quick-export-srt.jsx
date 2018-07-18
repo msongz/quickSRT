@@ -212,7 +212,7 @@
 													x2:EditText{text:'-50',characters:3},\
 													y2:EditText{text:'144',characters:3},\
 													moveIn:EditText{text:'0',characters:4},\
-													moveOut:EditText{text:'1000',characters:4},\
+													moveOut:EditText{text:'3000',characters:4},\
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
@@ -274,6 +274,7 @@
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize();
 				};
+
 				var textGreen = pal.graphics.newPen(pal.graphics.BrushType.SOLID_COLOR, [0, 1, 0], 1);
 				var bgGreen = pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, [0, 1, 0], 1);
 
@@ -288,18 +289,18 @@
 					pal.grp.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).outPoint - markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
 				};
 				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
-					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, false, pal.grp.leftPart.buttonArea.lineNum.text);
+					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, !1, this.parent.lineNum.text);
 				};
 				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "", "", true, pal.grp.leftPart.buttonArea.lineNum.text);
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, this.parent.lineNum.text);
 				};
 				pal.grp.leftPart.buttonArea.pickPos.onClick = function () {
-					curComp = app.project.activeItem;
+					var curComp = app.project.activeItem;
 					try {
 						var curSel = curComp.selectedLayers,
 							posX = Math.round(curSel[0].property("transform").property("Position").value[0] / curComp.width * 384),
 							posY = Math.round(curSel[0].property("transform").property("Position").value[1] / curComp.height * 288);
-					} catch (o) {}
+					} catch (e) {}
 					0 == curSel.length || curSel[0].threeDLayer ?
 						alert(es_str.er2dlayer) :
 						alert("x:" + posX + " y:" + posY + "\n" + es_str.srtXY);
@@ -359,33 +360,27 @@
 					runCommand(pal, "printf '</s>'|pbcopy");
 				};
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "b", "", false, pal.grp.leftPart.buttonArea.lineNum.text);
+					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
-				pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
-					pal.grp.rightPart.editText.text = "";
-					refreshButton(pal);
-					fixList(pal.grp.leftPart.listArea);
+				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "i", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
-				pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
-					writeFile(pal.grp.leftPart.listArea.items);
+				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "s", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
+				};
+				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "u", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
 				pal.grp.rightPart.editText.onChanging = function () {
 					triggerMarker(pal, null, null, null, null, []);
 				};
-				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "i", "", false, pal.grp.leftPart.buttonArea.lineNum.text);
-				};
-				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "s", "", false, pal.grp.leftPart.buttonArea.lineNum.text);
-				};
 				pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
-					var size = pal.grp.rightPart.btGroup.fbt.fsValue.text;
-					var keyString = " size=" + size;
-					size !== null ? triggerMarker(pal, null, null, null, null, [], "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text) : null;
+					var keyString = " size=" + this.parent.fsValue.text;
+					triggerMarker(pal, null, null, null, null, [], "font", keyString, !1, pal.grp.leftPart.buttonArea.lineNum.text)
 				};
 				pal.grp.rightPart.btGroup.fbt.fcButton.onClick = function () {
 					var keyString = " color=" + fixBlueHex(this.parent.fcValue.colorHex);
-					triggerMarker(pal, null, null, null, null, [], "font", keyString, false, pal.grp.leftPart.buttonArea.lineNum.text);
+					triggerMarker(pal, null, null, null, null, [], "font", keyString, !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
 				pal.grp.rightPart.btGroup.fbt.fcValue.onDraw = function () {
 					this.graphics.rectPath(0, 0, this.size[0], this.size[1]);
@@ -396,9 +391,6 @@
 					this.colorHex = colorString.toString(16).toUpperCase();
 					this.parent.fcButton.text = "<font color=" + fixBlueHex(this.colorHex) + ">";
 					this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(colorString));
-				};
-				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "u", "", false, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
@@ -458,15 +450,15 @@
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.onClick = function () {
 					var bordVar = "{\\bord(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [bordVar], null, null, false);
+					triggerMarker(pal, null, null, null, null, [bordVar], null, null, !1);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
 					var fspVar = "{\\fsp(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, false);
+					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, !1);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
 					var blurVar = "{\\be(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, false);
+					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, !1);
 				};
 				pal.grp.rightPart.btGroup.fix.move.moveButton.onClick = function () {
 					var x1 = this.parent.x1.text,
@@ -526,7 +518,15 @@
 					this.text = validNum(this.text, 0, this.text < 0);
 				};
 				pal.grp.rightPart.btGroup.fix.move.moveOut.onChange = function () {
-					this.text = validNum(this.text, 1000, this.text < 0);
+					this.text = validNum(this.text, 3000, this.text < 0);
+				};
+				pal.grp.rightPart.btGroup.rebtGroup.rfButton.onClick = function () {
+					pal.grp.rightPart.editText.text = "";
+					refreshButton(pal);
+					fixList(pal.grp.leftPart.listArea);
+				};
+				pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
+					writeFile(pal.grp.leftPart.listArea.items);
 				};
 			}
 			return pal;
@@ -634,25 +634,6 @@
 			pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 		}
 
-		// function quoteText(origin, splitor, lineNum, textSel, key, arg) {
-		// 	if (lineNum == 0) {
-		// 		return quote(origin, textSel, key, arg);
-		// 	} else if (lineNum > 0 && origin.split(splitor)[lineNum - 1] !== undefined) {
-		// 		var tmp = origin.split(splitor);
-		// 		tmp[lineNum - 1] = quote(tmp[lineNum - 1], textSel, key, arg);
-		// 		tmp = tmp.join(splitor);
-		// 		return tmp;
-		// 	} else if (origin.split(splitor)[lineNum - 1] == undefined) {
-		// 		return origin;
-		// 	}
-
-		// 	function quote(origin, textSel, key, arg) {
-		// 		var quotesel = key !== null ? "<" + key + arg + ">" + textSel + "</" + key + ">" : textSel;
-		// 		var originsel = key !== null ? "<" + key + arg + ">" + origin + "</" + key + ">" : origin;
-		// 		return textSel != 0 ? origin.replace(textSel, quotesel) : origin.replace(origin, originsel);
-		// 	}
-		// }
-
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
 			function u(origin, textSel, key, arg) {
 				var quotesel = null !== key ? "<" + key + arg + ">" + textSel + "</" + key + ">" : textSel,
@@ -667,18 +648,6 @@
 			return void 0 == origin.split(splitor)[lineNum - 1] ? origin : void 0;
 		}
 
-		// function removeQuote(text, splitor, lineNum) {
-		// 	var reg = /(<\/?(\s|\S)*?>)/g;
-		// 	if (lineNum > 0 && text.split(splitor)[lineNum - 1] !== undefined) {
-		// 		var dd = text.split(splitor);
-		// 		dd[lineNum - 1] = dd[lineNum - 1].replace(reg, "");
-		// 		dd = dd.join(splitor);
-		// 		return dd;
-		// 	} else {
-		// 		return text.replace(reg, "");
-		// 	}
-		// }
-
 		function removeQuote(comment, splitor, lineNum) {
 			var reg = /(<\/?(\s|\S)*?>)/g;
 			if (void 0 !== comment.split(splitor)[lineNum - 1]) {
@@ -689,58 +658,27 @@
 		}
 
 		function time2code(frames, fps, precision) {
-			var timeTpye = app.project.timeDisplayType;
+			var timeTpye = app.project.timeDisplayType,
+				t = frames < 0 ? 0 : frames;
 			app.project.timeDisplayType = 2012;
-			frames = frames < 0 ? 0 : frames;
-			var timecode = timeToCurrentFormat(frames, fps);
-			var ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1000 / precision) * precision;
-			ms = ms < 100 && ms >= 10 ? "0" + ms : ms;
-			ms = ms < 10 ? "00" + ms : ms;
+			var timecode = timeToCurrentFormat(t, fps),
+				ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1e3 / precision) * precision;
+			for (ms = ms.toString(); ms.length < 3;) ms = 0 + ms;
 			app.project.timeDisplayType = timeTpye;
 			return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms;
 		}
 
-		// function checkMarker(layer) {
-		// 	var timeTpye = app.project.timeDisplayType;
-		// 	app.project.timeDisplayType = 2013;
-		// 	var markerProp = layer.property("Marker"),
-		// 		esMarkTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset;
-		// 	if (markerProp.numKeys != undefined) {
-		// 		for (var n = 1; n <= markerProp.numKeys; n++) {
-		// 			if (timeToCurrentFormat(markerProp.keyTime(n), comp.frameRate) == esMarkTime) {
-		// 				app.project.timeDisplayType = timeTpye;
-		// 				return true;
-		// 			}
-		// 		}
-		// 		app.project.timeDisplayType = timeTpye;
-		// 		return false;
-		// 	}
-		// }
 		function checkMarker(layer) {
-			var r = app.project.timeDisplayType;
+			var timeType = app.project.timeDisplayType;
 			app.project.timeDisplayType = 2013;
-			var p = layer.property("Marker"),
-				t = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset;
-			if (void 0 != p.numKeys) {
-				for (var a = 1; a <= p.numKeys; a++)
-					if (timeToCurrentFormat(p.keyTime(a), comp.frameRate) == t) return app.project.timeDisplayType = r, !0;
-				return app.project.timeDisplayType = r, !1;
+			var esMarker = layer.property("Marker"),
+				esMarkerTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset;
+			if (void 0 != esMarker.numKeys) {
+				for (var a = 1; a <= esMarker.numKeys; a++)
+					if (timeToCurrentFormat(esMarker.keyTime(a), comp.frameRate) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
+				return app.project.timeDisplayType = timeType, !1;
 			}
 		}
-
-		// function validMarker(layer) {
-		// 	if (!checkMarker(layer)) {
-		// 		var comment = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, false);
-		// 		comment = String(comment).replace(/\r/gm, newlineMark);
-		// 		var params = {};
-		// 		params.bord = "";
-		// 		params.fsp = "";
-		// 		params.be = "";
-		// 		params.move = "";
-		// 		var esMarkValue = new MarkerValue(comment, "", "", "", "", params);
-		// 		layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarkValue)
-		// 	}
-		// }
 
 		function validMarker(layer) {
 			if (!checkMarker(layer)) {
@@ -751,8 +689,8 @@
 					params.fsp =
 					params.be =
 					params.move = "";
-				var t = new MarkerValue(comment, "", "", "", "", params);
-				layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, t)
+				var esMarker = new MarkerValue(comment, "", "", "", "", params);
+				layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarker)
 			}
 		}
 
@@ -763,14 +701,6 @@
 				b = string >> 0 & 255;
 			return [r / 255, g / 255, b / 255, 1];
 		}
-
-		// function fixBlueHex(num) {
-		// 	var hex = num.toString(16)
-		// 	while (hex.length < 6) {
-		// 		hex = 0 + hex
-		// 	}
-		// 	return hex
-		// }
 
 		function fixBlueHex(num) {
 			for (var hex = num.toString(16); hex.length < 6;) hex = 0 + hex;
@@ -783,71 +713,24 @@
 			control.size = [wh[0], wh[1]];
 		}
 
-		// function validNum(inPut, def, express) {
-		// 	if (!String.prototype.trim) {
-		// 		String.prototype.trim = function () {
-		// 			return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-		// 		};
-		// 	}
-		// 	return (inPut.trim() == "" || isNaN(inPut) || express) ? parseFloat(def) : parseFloat(inPut)
-		// }
-
 		function validNum(inPut, def, express) {
 			return String.prototype.trim || (String.prototype.trim = function () {
 				return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
 			}), "" == inPut.trim() || isNaN(inPut) || express ? parseFloat(def) : parseFloat(inPut);
 		}
 
-		// function refreshButton(pal) {
-		// 	comp = app.project.activeItem;
-		// 	sl = comp ? sortLayers(comp.selectedLayers) : [];
-		// 	slIndex = [];
-		// 	if (!checkTextLayer(sl)) {
-		// 		alert(es_str.textOnly);
-		// 	} else if (pal.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) {
-		// 		alert(es_str.overlap);
-		// 	} else {
-		// 		pal.grp.rightPart.editText.backupSelection = "";
-		// 		pal.grp.leftPart.listArea.removeAll();
-		// 		pal.grp.leftPart.buttonArea.resel.enabled = (sl.length == 0) ? false : true;
-		// 		app.beginUndoGroup(es_str.title);
-		// 		for (var t = 0; t < sl.length; t++) {
-		// 			slIndex.push(sl[t].index);
-		// 			validMarker(sl[t]);
-		// 			pal.grp.leftPart.listArea.add("item", t + 1);
-		// 			pal.grp.leftPart.listArea.items[t].subItems[0].text =
-		// 				time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) +
-		// 				" --> " +
-		// 				time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
-		// 			var esMarker = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, true);
-		// 			pal.grp.leftPart.listArea.items[t].subItems[1].text =
-		// 				esMarker.chapter +
-		// 				esMarker.url +
-		// 				esMarker.frameTarget +
-		// 				esMarker.cuePointName +
-		// 				esMarker.getParameters().bord +
-		// 				esMarker.getParameters().fsp +
-		// 				esMarker.getParameters().be +
-		// 				esMarker.getParameters().move +
-		// 				esMarker.comment.replace(reg, "\r");
-		// 			sl[t].selected = false;
-		// 		}
-		// 		app.endUndoGroup();
-		// 	}
-		// }
-		// 
-		function refreshButton(e) {
+		function refreshButton(pal) {
 			if (comp = app.project.activeItem, sl = comp ? sortLayers(comp.selectedLayers) : [], slIndex = [], checkTextLayer(sl))
-				if (e.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) alert(es_str.overlap);
+				if (pal.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) alert(es_str.overlap);
 				else {
-					e.grp.rightPart.editText.backupSelection = "",
-						e.grp.leftPart.listArea.removeAll(),
-						e.grp.leftPart.buttonArea.resel.enabled = 0 == sl.length ? !1 : !0,
+					pal.grp.rightPart.editText.backupSelection = "",
+						pal.grp.leftPart.listArea.removeAll(),
+						pal.grp.leftPart.buttonArea.resel.enabled = 0 == sl.length ? !1 : !0,
 						app.beginUndoGroup(es_str.title);
 					for (var t = 0; t < sl.length; t++) {
-						slIndex.push(sl[t].index), validMarker(sl[t]), e.grp.leftPart.listArea.add("item", t + 1), e.grp.leftPart.listArea.items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, e.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, e.grp.leftPart.buttonArea.preci.text);
+						slIndex.push(sl[t].index), validMarker(sl[t]), pal.grp.leftPart.listArea.add("item", t + 1), pal.grp.leftPart.listArea.items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
 						var r = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, !0);
-						e.grp.leftPart.listArea.items[t].subItems[1].text = r.chapter + r.url + r.frameTarget + r.cuePointName + r.getParameters().bord + r.getParameters().fsp + r.getParameters().be + r.getParameters().move + r.comment.replace(reg, "\r"), sl[t].selected = !1;
+						pal.grp.leftPart.listArea.items[t].subItems[1].text = r.chapter + r.url + r.frameTarget + r.cuePointName + r.getParameters().bord + r.getParameters().fsp + r.getParameters().be + r.getParameters().move + r.comment.replace(reg, "\r"), sl[t].selected = !1;
 					}
 					app.endUndoGroup();
 				}
