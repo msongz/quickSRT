@@ -90,9 +90,209 @@
 				en: "overlap!\rcheck the highlight layer",
 				cn: "重叠！\r请检查选中的图层"
 			},
-			// overlap: {
-			// 	en: "overlap!\rcheck the highlight layer",
-			// 	cn: "重叠！\r请检查选中的图层"
+			epHelp: {
+				en: "export the list as srt file",
+				cn: "将列表导出为srt文件"
+			},
+			rfHelp: {
+				en: "add/read marker of selected text layers\rand send them to list",
+				cn: "添加/读取选择的文字层的marker，并将内容添加到列表"
+			},
+			mvHelp: {
+				en: "make subtitle move for (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
+				cn: "让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效"
+			},
+			posHelp: {
+				en: "set subtitle to a new position\ractive require {\\an}",
+				cn: "设定字幕新的位置\r需要{\\an}才生效"
+			},
+			verticalHelp: {
+				en: "checked will change {\\an} buttons behavior",
+				cn: "勾选后会改变{\\an}按钮的方向"
+			},
+			vertical: {
+				en: "vertical",
+				cn: "纵向"
+			},
+			bordHelp: {
+				en: "set stroke width\ractive require {\\an}",
+				cn: "设置描边宽度\r需要{\\an}才生效"
+			},
+			metriHelp: {
+				en: "set kerning between two words\ractive require {\\an}",
+				cn: "设置字间距\r需要{\\an}才生效"
+			},
+			blurHelp: {
+				en: "set blur\ractive require {\\an}",
+				cn: "设置模糊\r需要{\\an}才生效"
+			},
+			fsHelp: {
+				en: "select words in edit text, and click to set font size",
+				cn: "在编辑区域选择文字，然后点击设定字号"
+			},
+			uuHelp: {
+				en: "333",
+				cn: "333"
+			},
+			sssHelp: {
+				en: "222",
+				cn: "222"
+			},
+			iiHelp: {
+				en: "111",
+				cn: "111"
+			},
+			bbHelp: {
+				en: "bb",
+				cn: "bb"
+			},
+			fcHelp: {
+				en: "fcHelp",
+				cn: "fcHelp"
+			},
+			fadHelp: {
+				en: "fadh",
+				cn: "fadh"
+			},
+			infoHelp: {
+				en: "about",
+				cn: "关于"
+			},
+			reselHelp: {
+				en: "re-select the layers which you refresh last time",
+				cn: "resel"
+			},
+			pickposHelp: {
+				en: "show the coordinate of selected layer in srt system",
+				cn: "pick"
+			},
+			killotherHelp: {
+				en: "remove all the { } tags of selected list items",
+				cn: "ko"
+			},
+			killtagHelp: {
+				en: "remove all the < > tags of selected list items",
+				cn: "kt"
+			},
+			rmmarkHelp: {
+				en: "clear the list\rremove selected layer's srt marker",
+				cn: "rmm"
+			},
+			preciHelp: {
+				en: "timecode(00:00:00,000) precision\r1 is best\r10 is better",
+				cn: "pp"
+			},
+			linenumHelp: {
+				en: "restrict range for < > tags operation\r0 is for all line\r1 is for line 1\r2 is for line 2\rand so on",
+				cn: "ll"
+			},
+			olcheckHelp: {
+				en: "checked for overlap layers detect",
+				cn: "ol"
+			},
+			x1Help: {
+				en: "x1",
+				cn: "x1"
+			},
+			x2Help: {
+				en: "x2",
+				cn: "x2"
+			},
+			y1Help: {
+				en: "y1",
+				cn: "y1"
+			},
+			y2Help: {
+				en: "y2",
+				cn: "y2"
+			},
+			moveinHelp: {
+				en: "t1",
+				cn: "t1"
+			},
+			moveoutHelp: {
+				en: "t2",
+				cn: "t2"
+			},
+			fcvalueHelp: {
+				en: "change color",
+				cn: "改变颜色"
+			},
+			bHelp: {
+				en: "add \"<b>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "bb"
+			},
+			bsHelp: {
+				en: "add \"</b>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "bs"
+			},
+			iHelp: {
+				en: "add \"<i>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "ii"
+			},
+			isHelp: {
+				en: "add \"</i>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "is"
+			},
+			uHelp: {
+				en: "add \"<u>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "uu"
+			},
+			sHelp: {
+				en: "add \"<s>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "s"
+			},
+			ssHelp: {
+				en: "add \"</s>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "ss"
+			},
+			usHelp: {
+				en: "add \"</u>\" to your clipboard\rauto paste when you mouse out of the edit text area",
+				cn: "us"
+			},
+			blHelp: {
+				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left ",
+				cn: "bl"
+			},
+			bcHelp: {
+				en: "place subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom ",
+				cn: "bc"
+			},
+			brHelp: {
+				en: "place subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right",
+				cn: "br"
+			},
+			mlHelp: {
+				en: "place subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left",
+				cn: "ml"
+			},
+			mcHelp: {
+				en: "place subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center",
+				cn: "mc"
+			},
+			mrHelp: {
+				en: "place subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right",
+				cn: "mr"
+			},
+			ulHelp: {
+				en: "place subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left",
+				cn: "ul"
+			},
+			ucHelp: {
+				en: "place subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top",
+				cn: "uc"
+			},
+			urHelp: {
+				en: "place subtitle to upper right corner\rwhile {\\pos} added, it will transfer as anchor point at upper right",
+				cn: "ur"
+			},
+			// Help: {
+			// 	en: "",
+			// 	cn: ""
+			// },
+			// Help: {
+			// 	en: "",
+			// 	cn: ""
 			// },
 			saveDialog: {
 				en: "selecte the location to store your srt file",
@@ -203,7 +403,7 @@
 										},\
 										fix:Group{orientation:'row',alignment:['fill','fill'],\
 												direct:Group{orientation:'row',alignment:['fill','fill'],\
-													vertical:Checkbox{text:'vertical',alignment:['left','center']},\
+													vertical:Checkbox{text:'" + es_str.vertical + "',alignment:['left','center']},\
 												},\
 												move:Group{orientation:'row',alignment:['right','fill'],spacing:3,\
 													moveButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[81,30]},\
@@ -288,11 +488,13 @@
 					comp.time = comp.layer(slIndex[i]).outPoint - markerTimeOffset / comp.frameRate;
 					pal.grp.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).outPoint - markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
 				};
-				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
-					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, !1, this.parent.lineNum.text);
+				pal.grp.leftPart.buttonArea.info.onClick = function () {
+					es_help();
 				};
-				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "", "", !0, this.parent.lineNum.text);
+				pal.grp.leftPart.buttonArea.resel.onClick = function () {
+					for (var i = 0; i < sl.length; i++) {
+						sl[i].selected = !0;
+					}
 				};
 				pal.grp.leftPart.buttonArea.pickPos.onClick = function () {
 					var curComp = app.project.activeItem;
@@ -305,23 +507,29 @@
 						alert(es_str.er2dlayer) :
 						alert("x:" + posX + " y:" + posY + "\n" + es_str.srtXY);
 				};
-				pal.grp.leftPart.buttonArea.info.onClick = function () {
-					es_help();
+				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
+					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, !1, this.parent.lineNum.text);
 				};
-				pal.grp.leftPart.buttonArea.resel.onClick = function () {
-					for (var i = 0; i < sl.length; i++) {
-						sl[i].selected = true;
-					}
+				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, this.parent.lineNum.text);
 				};
 				pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
 					var rsl = comp.selectedLayers;
 					pal.grp.leftPart.listArea.removeAll();
 					removeESmarker(rsl);
 				};
-
+				pal.grp.leftPart.buttonArea.preci.onChange = function () {
+					this.text = validNum(this.text, 1, this.text <= 0);
+				};
+				pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
+					this.text = validNum(this.text, 0, this.text < 0);
+				};
 				pal.grp.rightPart.editText.addEventListener('mouseout', function () {
 					this.backupSelection = this.textselection;
 				});
+				pal.grp.rightPart.editText.onChanging = function () {
+					triggerMarker(pal, null, null, null, null, []);
+				};
 
 				// pal.addEventListener("keydown", function () {
 
@@ -370,9 +578,6 @@
 				};
 				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "u", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
-				};
-				pal.grp.rightPart.editText.onChanging = function () {
-					triggerMarker(pal, null, null, null, null, []);
 				};
 				pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 					var keyString = " size=" + this.parent.fsValue.text;
@@ -470,12 +675,6 @@
 						moveVar = "{\\move(" + x1 + "," + y1 + "," + x2 + "," + y2 + "," + moveIn + "," + moveOut + ")}";
 					triggerMarker(pal, null, null, null, null, [, , , moveVar], null, null, !1)
 				};
-				pal.grp.leftPart.buttonArea.preci.onChange = function () {
-					this.text = validNum(this.text, 1, this.text <= 0);
-				};
-				pal.grp.leftPart.buttonArea.lineNum.onChange = function () {
-					this.text = validNum(this.text, 0, this.text < 0);
-				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.onChange = function () {
 					this.text = validNum(this.text, 2);
 					this.parent.bord.text = "{\\bord(" + this.text + ")}";
@@ -528,14 +727,66 @@
 				pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
 					writeFile(pal.grp.leftPart.listArea.items);
 				};
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.helpTip = es_str.bordHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.helpTip = es_str.metriHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.helpTip = es_str.blurHelp
+				pal.grp.rightPart.btGroup.fix.direct.vertical.helpTip = es_str.verticalHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.helpTip = es_str.posHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.helpTip = es_str.fadHelp
+				pal.grp.rightPart.btGroup.fix.move.moveButton.helpTip = es_str.mvHelp
+				pal.grp.rightPart.btGroup.rebtGroup.rfButton.helpTip = es_str.rfHelp
+				pal.grp.rightPart.btGroup.rebtGroup.epButton.helpTip = es_str.epHelp
+				pal.grp.rightPart.btGroup.fbt.fcButton.helpTip = es_str.fcHelp
+				pal.grp.rightPart.btGroup.bbt.bbButton.helpTip = es_str.bbHelp
+				pal.grp.rightPart.btGroup.ibt.iiButton.helpTip = es_str.iiHelp
+				pal.grp.rightPart.btGroup.sbt.sssButton.helpTip = es_str.sssHelp
+				pal.grp.rightPart.btGroup.ubt.uuButton.helpTip = es_str.uuHelp
+				pal.grp.rightPart.btGroup.fbt.fsButton.helpTip = es_str.fsHelp
+				pal.grp.rightPart.btGroup.fbt.fcValue.helpTip = es_str.fcvalueHelp
+
+				pal.grp.leftPart.buttonArea.info.helpTip = es_str.infoHelp
+				pal.grp.leftPart.buttonArea.resel.helpTip = es_str.reselHelp
+				pal.grp.leftPart.buttonArea.pickPos.helpTip = es_str.pickposHelp
+				pal.grp.leftPart.buttonArea.killOther.helpTip = es_str.killotherHelp
+				pal.grp.leftPart.buttonArea.killTag.helpTip = es_str.killtagHelp
+				pal.grp.leftPart.buttonArea.rmMarker.helpTip = es_str.rmmarkHelp
+				pal.grp.leftPart.buttonArea.preci.helpTip = es_str.preciHelp
+				pal.grp.leftPart.buttonArea.lineNum.helpTip = es_str.linenumHelp
+				pal.grp.leftPart.buttonArea.olCheck.helpTip = es_str.olcheckHelp
+				pal.grp.rightPart.btGroup.fix.move.x1.helpTip = es_str.x1Help
+				pal.grp.rightPart.btGroup.fix.move.y1.helpTip = es_str.y1Help
+				pal.grp.rightPart.btGroup.fix.move.x2.helpTip = es_str.x2Help
+				pal.grp.rightPart.btGroup.fix.move.y2.helpTip = es_str.y2Help
+				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.moveinHelp
+				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.moveoutHelp
+				pal.grp.rightPart.btGroup.bbt.bButton.helpTip = es_str.bHelp
+				pal.grp.rightPart.btGroup.bbt.bsButton.helpTip = es_str.bsHelp
+				pal.grp.rightPart.btGroup.ibt.iButton.helpTip = es_str.iHelp
+				pal.grp.rightPart.btGroup.ibt.isButton.helpTip = es_str.isHelp
+				pal.grp.rightPart.btGroup.ubt.uButton.helpTip = es_str.uHelp
+				pal.grp.rightPart.btGroup.ubt.usButton.helpTip = es_str.usHelp
+				pal.grp.rightPart.btGroup.sbt.sButton.helpTip = es_str.sHelp
+				pal.grp.rightPart.btGroup.sbt.ssButton.helpTip = es_str.ssHelp
+
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.helpTip = es_str.blHelp
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.helpTip = es_str.bcHelp
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.helpTip = es_str.brHelp
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.helpTip = es_str.mlHelp
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.helpTip = es_str.mcHelp
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.helpTip = es_str.mrHelp
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.helpTip = es_str.ulHelp
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.helpTip = es_str.ucHelp
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.helpTip = es_str.urHelp
+
+
 			}
 			return pal;
 		}
 
 		function mouseEventHandler() {
-			var cmdd = "";
-			cmdd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
-			system.callSystem(cmdd);
+			var cmd = "";
+			cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+			system.callSystem(cmd);
 			this.removeEventListener("mouseout", mouseEventHandler);
 		}
 
