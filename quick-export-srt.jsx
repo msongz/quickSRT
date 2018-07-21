@@ -99,7 +99,7 @@
 				cn: "添加/读取选择的文字层的marker，并将内容添加到列表"
 			},
 			mvHelp: {
-				en: "make subtitle move for (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
+				en: "set subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
 				cn: "让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效"
 			},
 			posHelp: {
@@ -123,36 +123,36 @@
 				cn: "设置字间距\r需要{\\an}才生效"
 			},
 			blurHelp: {
-				en: "set blur\ractive require {\\an}",
+				en: "set blur level\ractive require {\\an}",
 				cn: "设置模糊\r需要{\\an}才生效"
 			},
 			fsHelp: {
 				en: "select words in edit text, and click to set font size",
-				cn: "在编辑区域选择文字，然后点击设定字号"
+				cn: "字号\r在编辑区域选择文字，然后点击设定字号"
 			},
 			uuHelp: {
-				en: "333",
-				cn: "333"
+				en: "select words in edit text, and click to set font Underscore style",
+				cn: "下划线\r在编辑区域选中文字，然后点击设定下划线"
 			},
 			sssHelp: {
-				en: "222",
-				cn: "222"
+				en: "select words in edit text, and click to set font Strikethrough style",
+				cn: "删除线\r在编辑区域选中文字，然后点击设定删除线"
 			},
 			iiHelp: {
-				en: "111",
-				cn: "111"
+				en: "select words in edit text, and click to set font Italic style",
+				cn: "斜体\r在编辑区域选中文字，然后点击设定斜体"
 			},
 			bbHelp: {
-				en: "bb",
-				cn: "bb"
+				en: "select words in edit text, and click to set font Bold style",
+				cn: "粗体\r在编辑区域选中文字，然后点击设定粗体"
 			},
 			fcHelp: {
-				en: "fcHelp",
-				cn: "fcHelp"
+				en: "select words in edit text, and click to set font color",
+				cn: "颜色\r在编辑区域选中文字，然后点击设定颜色"
 			},
 			fadHelp: {
-				en: "fadh",
-				cn: "fadh"
+				en: "set subtitle fade-in and fade-out\rin millisecond",
+				cn: "淡入淡出\r设置字幕淡入淡出的时间\r（毫秒）\r需要{\\an}才生效"
 			},
 			infoHelp: {
 				en: "about",
@@ -160,35 +160,35 @@
 			},
 			reselHelp: {
 				en: "re-select the layers which you refresh last time",
-				cn: "resel"
+				cn: "重选上次刷新的图层"
 			},
 			pickposHelp: {
 				en: "show the coordinate of selected layer in srt system",
-				cn: "pick"
+				cn: "显示所选图层在 srt 系统中的坐标"
 			},
 			killotherHelp: {
-				en: "remove all the { } tags of selected list items",
-				cn: "ko"
+				en: "remove restrict range { } tags of selected list items",
+				cn: "清空限制范围内所选项目的所有 { } 标签"
 			},
 			killtagHelp: {
-				en: "remove all the < > tags of selected list items",
-				cn: "kt"
+				en: "remove restrict range < > tags of selected list items",
+				cn: "清空限制范围内所选项目的所有 < > 标签"
 			},
 			rmmarkHelp: {
 				en: "clear the list\rremove selected layer's srt marker",
-				cn: "rmm"
+				cn: "清空列表\r清除选中图层的 srt 标记"
 			},
 			preciHelp: {
-				en: "timecode(00:00:00,000) precision\r1 is best\r10 is better",
-				cn: "pp"
+				en: "timecode (00:00:00,000) precision\r1 is best\r10 is better",
+				cn: "时间码 (00:00:00,000) 的精确度\r1 最高\r10 也不错"
 			},
 			linenumHelp: {
 				en: "restrict range for < > tags operation\r0 is for all line\r1 is for line 1\r2 is for line 2\rand so on",
-				cn: "ll"
+				cn: "限制 < > 标签的操作范围\r0 代表全部有效\r1 代表只操作第 1 行\r2 代表只操作第二行\r如此类推"
 			},
 			olcheckHelp: {
-				en: "checked for overlap layers detect",
-				cn: "ol"
+				en: "checked for overlap layers",
+				cn: "检查重叠的图层"
 			},
 			x1Help: {
 				en: "x1",
@@ -219,72 +219,72 @@
 				cn: "改变颜色"
 			},
 			bHelp: {
-				en: "add \"<b>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "bb"
+				en: "add \"<b>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"<b>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			bsHelp: {
-				en: "add \"</b>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "bs"
+				en: "add \"</b>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"</b>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			iHelp: {
-				en: "add \"<i>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "ii"
+				en: "add \"<i>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"<i>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			isHelp: {
-				en: "add \"</i>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "is"
+				en: "add \"</i>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"</i>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			uHelp: {
-				en: "add \"<u>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "uu"
+				en: "add \"<u>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"<u>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			sHelp: {
-				en: "add \"<s>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "s"
+				en: "add \"<s>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"<s>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			ssHelp: {
-				en: "add \"</s>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "ss"
+				en: "add \"</s>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"</s>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			usHelp: {
-				en: "add \"</u>\" to your clipboard\rauto paste when you mouse out of the edit text area",
-				cn: "us"
+				en: "add \"</u>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
+				cn: "添加 \"</u>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			blHelp: {
 				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left ",
-				cn: "bl"
+				cn: "将字幕放置到左下角\r当{\\pos}标签存在时，它会转换为左下角锚点"
 			},
 			bcHelp: {
 				en: "place subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom ",
-				cn: "bc"
+				cn: "将字幕放置到底部（默认）\r当{\\pos}标签存在时，它会转换为底部锚点"
 			},
 			brHelp: {
 				en: "place subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right",
-				cn: "br"
+				cn: "将字幕放置到右下角\r当{\\pos}标签存在时，它会转换为右下角锚点"
 			},
 			mlHelp: {
 				en: "place subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left",
-				cn: "ml"
+				cn: "将字幕放置到左侧\r当{\\pos}标签存在时，它会转换为左侧锚点"
 			},
 			mcHelp: {
 				en: "place subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center",
-				cn: "mc"
+				cn: "将字幕放置到中央\r当{\\pos}标签存在时，它会转换为中心锚点"
 			},
 			mrHelp: {
 				en: "place subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right",
-				cn: "mr"
+				cn: "将字幕放置到右侧\r当{\\pos}标签存在时，它会转换为右侧锚点"
 			},
 			ulHelp: {
 				en: "place subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left",
-				cn: "ul"
+				cn: "将字幕放置到左上角\r当{\\pos}标签存在时，它会转换为左上角锚点"
 			},
 			ucHelp: {
 				en: "place subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top",
-				cn: "uc"
+				cn: "将字幕放置到顶部\r当{\\pos}标签存在时，它会转换为顶部锚点"
 			},
 			urHelp: {
-				en: "place subtitle to upper right corner\rwhile {\\pos} added, it will transfer as anchor point at upper right",
-				cn: "ur"
+				en: "place subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right",
+				cn: "将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点"
 			},
 			// Help: {
 			// 	en: "",
@@ -300,7 +300,7 @@
 			}
 		};
 
-		for (var i in es_str) "zh_CN" == app.isoLanguage ?
+		for (var i in es_str) "zh_CN" != app.isoLanguage ?
 			es_str[i] = es_str[i].cn :
 			es_str[i] = es_str[i].en;
 
@@ -492,6 +492,11 @@
 					es_help();
 				};
 				pal.grp.leftPart.buttonArea.resel.onClick = function () {
+					var curComp = app.project.activeItem,
+						curSel = curComp.selectedLayers;
+					for (var o = 0; o < curSel.length; o++) {
+						curSel[o].selected = !1;
+					};
 					for (var i = 0; i < sl.length; i++) {
 						sl[i].selected = !0;
 					}
@@ -971,8 +976,8 @@
 		}
 
 		function refreshButton(pal) {
-			if (comp = app.project.activeItem, sl = comp ? sortLayers(comp.selectedLayers) : [], slIndex = [], checkTextLayer(sl))
-				if (pal.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) alert(es_str.overlap);
+			if (comp = app.project.activeItem, osl = sl, sl = comp ? sortLayers(comp.selectedLayers) : [], slIndex = [], checkTextLayer(sl))
+				if (pal.grp.leftPart.buttonArea.olCheck.value && checkOverlap(sl)) sl = osl, alert(es_str.overlap);
 				else {
 					pal.grp.rightPart.editText.backupSelection = "",
 						pal.grp.leftPart.listArea.removeAll(),
@@ -985,10 +990,10 @@
 					}
 					app.endUndoGroup();
 				}
-			else alert(es_str.textOnly);
+			else sl = osl, alert(es_str.textOnly);
 		}
 		var ui = es_buildUI(thisObj),
-			comp, sl, slIndex, markerTimeOffset = 1,
+			comp, sl, osl, slIndex, markerTimeOffset = 1,
 			newlineMark = "↵",
 			reg = new RegExp(newlineMark, "gm");
 
