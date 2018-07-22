@@ -168,11 +168,11 @@
 			},
 			killotherHelp: {
 				en: "remove restrict range { } tags of selected list items",
-				cn: "清空限制范围内所选项目的所有 { } 标签"
+				cn: "清空所选项目在限制范围内的所有 { } 标签"
 			},
 			killtagHelp: {
 				en: "remove restrict range < > tags of selected list items",
-				cn: "清空限制范围内所选项目的所有 < > 标签"
+				cn: "清空所选项目在限制范围内的所有 < > 标签"
 			},
 			rmmarkHelp: {
 				en: "clear the list\rremove selected layer's srt marker",
@@ -184,7 +184,7 @@
 			},
 			linenumHelp: {
 				en: "restrict range for < > tags operation\r0 is for all line\r1 is for line 1\r2 is for line 2\rand so on",
-				cn: "限制 < > 标签的操作范围\r0 代表全部有效\r1 代表只操作第 1 行\r2 代表只操作第二行\r如此类推"
+				cn: "限制 < > 标签的操作范围\r0 代表全部有效\r1 代表只操作第 1 行\r2 代表只操作第 2 行\r如此类推"
 			},
 			olcheckHelp: {
 				en: "checked for overlap layers",
@@ -651,24 +651,26 @@
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
 					var px = this.parent.posX.text,
 						py = this.parent.posY.text;
-					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, []);
+
+					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, !1, null, true);
+
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
 					var fIn = this.parent.fadIn.text,
 						fOut = this.parent.fadOut.text;
-					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}", []);
+					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}", [], null, null, !1, null, true);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.onClick = function () {
 					var bordVar = "{\\bord(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [bordVar], null, null, !1);
+					triggerMarker(pal, null, null, null, null, [bordVar], null, null, !1, null, true);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
 					var fspVar = "{\\fsp(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, !1);
+					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, !1, null, true);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
 					var blurVar = "{\\be(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, !1);
+					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, !1, null, true);
 				};
 				pal.grp.rightPart.btGroup.fix.move.moveButton.onClick = function () {
 					var x1 = this.parent.x1.text,
@@ -678,7 +680,7 @@
 						moveIn = this.parent.moveIn.text,
 						moveOut = this.parent.moveOut.text,
 						moveVar = "{\\move(" + x1 + "," + y1 + "," + x2 + "," + y2 + "," + moveIn + "," + moveOut + ")}";
-					triggerMarker(pal, null, null, null, null, [, , , moveVar], null, null, !1)
+					triggerMarker(pal, null, null, null, null, [, , , moveVar], null, null, !1, null, true)
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bfbVal.onChange = function () {
 					this.text = validNum(this.text, 2);
@@ -836,7 +838,7 @@
 			app.endUndoGroup();
 		}
 
-		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum) {
+		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum, poDef) {
 			app.beginUndoGroup(es_str.title);
 			for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index,
@@ -846,7 +848,7 @@
 					(remove ?
 						removeQuote(esMarker.comment, newlineMark, lineNum) :
 						quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)),
-					chapVar = (poVar == null) ? esMarker.chapter : poVar,
+					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an5}" : esMarker.chapter) : esMarker.chapter) : poVar,
 					urlVar = (posVar == null) ? esMarker.url : posVar,
 					frameTargetVar = (orientVar == null) ? esMarker.frameTarget : orientVar,
 					cuePointNameVar = (fadeVar == null) ? esMarker.cuePointName : fadeVar,
