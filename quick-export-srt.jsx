@@ -76,7 +76,7 @@
 			},
 			er2dlayer: {
 				en: "please selecte a 2D layer",
-				cn: "请选择2D图层"
+				cn: "请选择 2D 图层"
 			},
 			srtXY: {
 				en: "(srt system map maximum Height to 384 and maximum Width to 288)",
@@ -96,15 +96,7 @@
 			},
 			rfHelp: {
 				en: "add/read marker of selected text layers\rand send them to list",
-				cn: "添加/读取选择的文字层的marker，并将内容添加到列表"
-			},
-			mvHelp: {
-				en: "set subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
-				cn: "让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效"
-			},
-			posHelp: {
-				en: "set subtitle to a new position\ractive require {\\an}",
-				cn: "设定字幕新的位置\r需要{\\an}才生效"
+				cn: "添加/读取选择的文字层的marker\r并将内容添加到列表"
 			},
 			verticalHelp: {
 				en: "checked will change {\\an} buttons behavior",
@@ -114,17 +106,29 @@
 				en: "vertical",
 				cn: "纵向"
 			},
+			fadHelp: {
+				en: "set subtitle fade-in and fade-out\rin millisecond",
+				cn: "淡入淡出\r设置字幕淡入淡出的时间（毫秒）\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+			},
+			posHelp: {
+				en: "set subtitle to a new position\ractive require {\\an}",
+				cn: "设定字幕新的位置\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+			},
 			bordHelp: {
 				en: "set stroke width\ractive require {\\an}",
-				cn: "设置描边宽度\r需要{\\an}才生效"
+				cn: "设置描边宽度\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			metriHelp: {
 				en: "set kerning between two words\ractive require {\\an}",
-				cn: "设置字间距\r需要{\\an}才生效"
+				cn: "设置字间距\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			blurHelp: {
 				en: "set blur level\ractive require {\\an}",
-				cn: "设置模糊\r需要{\\an}才生效"
+				cn: "设置模糊\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+			},
+			mvHelp: {
+				en: "set subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
+				cn: "让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			fsHelp: {
 				en: "select words in edit text, and click to set font size",
@@ -149,10 +153,6 @@
 			fcHelp: {
 				en: "select words in edit text, and click to set font color",
 				cn: "颜色\r在编辑区域选中文字，然后点击设定颜色"
-			},
-			fadHelp: {
-				en: "set subtitle fade-in and fade-out\rin millisecond",
-				cn: "淡入淡出\r设置字幕淡入淡出的时间\r（毫秒）\r需要{\\an}才生效"
 			},
 			infoHelp: {
 				en: "about",
@@ -251,40 +251,40 @@
 				cn: "添加 \"</u>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
 			},
 			blHelp: {
-				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left ",
+				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left\rthe existing {\\pos} will be clear after click, please re-apply",
 				cn: "将字幕放置到左下角\r当{\\pos}标签存在时，它会转换为左下角锚点"
 			},
 			bcHelp: {
-				en: "place subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom ",
-				cn: "将字幕放置到底部（默认）\r当{\\pos}标签存在时，它会转换为底部锚点"
+				en: "place subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到底部（默认）\r当{\\pos}标签存在时，它会转换为底部锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			brHelp: {
-				en: "place subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right",
-				cn: "将字幕放置到右下角\r当{\\pos}标签存在时，它会转换为右下角锚点"
+				en: "place subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到右下角\r当{\\pos}标签存在时，它会转换为右下角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			mlHelp: {
-				en: "place subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left",
-				cn: "将字幕放置到左侧\r当{\\pos}标签存在时，它会转换为左侧锚点"
+				en: "place subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到左侧\r当{\\pos}标签存在时，它会转换为左侧锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			mcHelp: {
-				en: "place subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center",
-				cn: "将字幕放置到中央\r当{\\pos}标签存在时，它会转换为中心锚点"
+				en: "place subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到中央\r当{\\pos}标签存在时，它会转换为中心锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			mrHelp: {
-				en: "place subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right",
-				cn: "将字幕放置到右侧\r当{\\pos}标签存在时，它会转换为右侧锚点"
+				en: "place subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到右侧\r当{\\pos}标签存在时，它会转换为右侧锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			ulHelp: {
-				en: "place subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left",
-				cn: "将字幕放置到左上角\r当{\\pos}标签存在时，它会转换为左上角锚点"
+				en: "place subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到左上角\r当{\\pos}标签存在时，它会转换为左上角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			ucHelp: {
-				en: "place subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top",
-				cn: "将字幕放置到顶部\r当{\\pos}标签存在时，它会转换为顶部锚点"
+				en: "place subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到顶部\r当{\\pos}标签存在时，它会转换为顶部锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			urHelp: {
-				en: "place subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right",
-				cn: "将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点"
+				en: "place subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right\rthe existing {\\pos} will be clear after click, please re-apply",
+				cn: "将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
 			// Help: {
 			// 	en: "",
@@ -549,28 +549,28 @@
 				// })
 
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
-					runCommand(pal, "printf '<b>'|pbcopy");
+					runCommand(pal, "'<b>'");
 				};
 				pal.grp.rightPart.btGroup.bbt.bsButton.onClick = function () {
-					runCommand(pal, "printf '</b>'|pbcopy");
+					runCommand(pal, "'</b>'");
 				};
 				pal.grp.rightPart.btGroup.ibt.iButton.onClick = function () {
-					runCommand(pal, "printf '<i>'|pbcopy");
+					runCommand(pal, "'<i>'");
 				};
 				pal.grp.rightPart.btGroup.ibt.isButton.onClick = function () {
-					runCommand(pal, "printf '</i>'|pbcopy");
+					runCommand(pal, "'</i>'");
 				};
 				pal.grp.rightPart.btGroup.ubt.uButton.onClick = function () {
-					runCommand(pal, "printf '<u>'|pbcopy");
+					runCommand(pal, "'<u>'");
 				};
 				pal.grp.rightPart.btGroup.ubt.usButton.onClick = function () {
-					runCommand(pal, "printf '</u>'|pbcopy");
+					runCommand(pal, "'</u>'");
 				};
 				pal.grp.rightPart.btGroup.sbt.sButton.onClick = function () {
-					runCommand(pal, "printf '<s>'|pbcopy");
+					runCommand(pal, "'<s>'");
 				};
 				pal.grp.rightPart.btGroup.sbt.ssButton.onClick = function () {
-					runCommand(pal, "printf '</s>'|pbcopy");
+					runCommand(pal, "'</s>'");
 				};
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
@@ -734,56 +734,56 @@
 				pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
 					writeFile(pal.grp.leftPart.listArea.items);
 				};
-				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.helpTip = es_str.bordHelp
-				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.helpTip = es_str.metriHelp
-				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.helpTip = es_str.blurHelp
-				pal.grp.rightPart.btGroup.fix.direct.vertical.helpTip = es_str.verticalHelp
-				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.helpTip = es_str.posHelp
-				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.helpTip = es_str.fadHelp
-				pal.grp.rightPart.btGroup.fix.move.moveButton.helpTip = es_str.mvHelp
-				pal.grp.rightPart.btGroup.rebtGroup.rfButton.helpTip = es_str.rfHelp
-				pal.grp.rightPart.btGroup.rebtGroup.epButton.helpTip = es_str.epHelp
-				pal.grp.rightPart.btGroup.fbt.fcButton.helpTip = es_str.fcHelp
-				pal.grp.rightPart.btGroup.bbt.bbButton.helpTip = es_str.bbHelp
-				pal.grp.rightPart.btGroup.ibt.iiButton.helpTip = es_str.iiHelp
-				pal.grp.rightPart.btGroup.sbt.sssButton.helpTip = es_str.sssHelp
-				pal.grp.rightPart.btGroup.ubt.uuButton.helpTip = es_str.uuHelp
-				pal.grp.rightPart.btGroup.fbt.fsButton.helpTip = es_str.fsHelp
-				pal.grp.rightPart.btGroup.fbt.fcValue.helpTip = es_str.fcvalueHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.helpTip = es_str.bordHelp;
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.helpTip = es_str.metriHelp;
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.helpTip = es_str.blurHelp;
+				pal.grp.rightPart.btGroup.fix.direct.vertical.helpTip = es_str.verticalHelp;
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.helpTip = es_str.posHelp;
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.helpTip = es_str.fadHelp;
+				pal.grp.rightPart.btGroup.fix.move.moveButton.helpTip = es_str.mvHelp;
+				pal.grp.rightPart.btGroup.rebtGroup.rfButton.helpTip = es_str.rfHelp;
+				pal.grp.rightPart.btGroup.rebtGroup.epButton.helpTip = es_str.epHelp;
+				pal.grp.rightPart.btGroup.fbt.fcButton.helpTip = es_str.fcHelp;
+				pal.grp.rightPart.btGroup.bbt.bbButton.helpTip = es_str.bbHelp;
+				pal.grp.rightPart.btGroup.ibt.iiButton.helpTip = es_str.iiHelp;
+				pal.grp.rightPart.btGroup.sbt.sssButton.helpTip = es_str.sssHelp;
+				pal.grp.rightPart.btGroup.ubt.uuButton.helpTip = es_str.uuHelp;
+				pal.grp.rightPart.btGroup.fbt.fsButton.helpTip = es_str.fsHelp;
+				pal.grp.rightPart.btGroup.fbt.fcValue.helpTip = es_str.fcvalueHelp;
 
-				pal.grp.leftPart.buttonArea.info.helpTip = es_str.infoHelp
-				pal.grp.leftPart.buttonArea.resel.helpTip = es_str.reselHelp
-				pal.grp.leftPart.buttonArea.pickPos.helpTip = es_str.pickposHelp
-				pal.grp.leftPart.buttonArea.killOther.helpTip = es_str.killotherHelp
-				pal.grp.leftPart.buttonArea.killTag.helpTip = es_str.killtagHelp
-				pal.grp.leftPart.buttonArea.rmMarker.helpTip = es_str.rmmarkHelp
-				pal.grp.leftPart.buttonArea.preci.helpTip = es_str.preciHelp
-				pal.grp.leftPart.buttonArea.lineNum.helpTip = es_str.linenumHelp
-				pal.grp.leftPart.buttonArea.olCheck.helpTip = es_str.olcheckHelp
-				pal.grp.rightPart.btGroup.fix.move.x1.helpTip = es_str.x1Help
-				pal.grp.rightPart.btGroup.fix.move.y1.helpTip = es_str.y1Help
-				pal.grp.rightPart.btGroup.fix.move.x2.helpTip = es_str.x2Help
-				pal.grp.rightPart.btGroup.fix.move.y2.helpTip = es_str.y2Help
-				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.moveinHelp
-				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.moveoutHelp
-				pal.grp.rightPart.btGroup.bbt.bButton.helpTip = es_str.bHelp
-				pal.grp.rightPart.btGroup.bbt.bsButton.helpTip = es_str.bsHelp
-				pal.grp.rightPart.btGroup.ibt.iButton.helpTip = es_str.iHelp
-				pal.grp.rightPart.btGroup.ibt.isButton.helpTip = es_str.isHelp
-				pal.grp.rightPart.btGroup.ubt.uButton.helpTip = es_str.uHelp
-				pal.grp.rightPart.btGroup.ubt.usButton.helpTip = es_str.usHelp
-				pal.grp.rightPart.btGroup.sbt.sButton.helpTip = es_str.sHelp
-				pal.grp.rightPart.btGroup.sbt.ssButton.helpTip = es_str.ssHelp
+				pal.grp.leftPart.buttonArea.info.helpTip = es_str.infoHelp;
+				pal.grp.leftPart.buttonArea.resel.helpTip = es_str.reselHelp;
+				pal.grp.leftPart.buttonArea.pickPos.helpTip = es_str.pickposHelp;
+				pal.grp.leftPart.buttonArea.killOther.helpTip = es_str.killotherHelp;
+				pal.grp.leftPart.buttonArea.killTag.helpTip = es_str.killtagHelp;
+				pal.grp.leftPart.buttonArea.rmMarker.helpTip = es_str.rmmarkHelp;
+				pal.grp.leftPart.buttonArea.preci.helpTip = es_str.preciHelp;
+				pal.grp.leftPart.buttonArea.lineNum.helpTip = es_str.linenumHelp;
+				pal.grp.leftPart.buttonArea.olCheck.helpTip = es_str.olcheckHelp;
+				pal.grp.rightPart.btGroup.fix.move.x1.helpTip = es_str.x1Help;
+				pal.grp.rightPart.btGroup.fix.move.y1.helpTip = es_str.y1Help;
+				pal.grp.rightPart.btGroup.fix.move.x2.helpTip = es_str.x2Help;
+				pal.grp.rightPart.btGroup.fix.move.y2.helpTip = es_str.y2Help;
+				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.moveinHelp;
+				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.moveoutHelp;
+				pal.grp.rightPart.btGroup.bbt.bButton.helpTip = es_str.bHelp;
+				pal.grp.rightPart.btGroup.bbt.bsButton.helpTip = es_str.bsHelp;
+				pal.grp.rightPart.btGroup.ibt.iButton.helpTip = es_str.iHelp;
+				pal.grp.rightPart.btGroup.ibt.isButton.helpTip = es_str.isHelp;
+				pal.grp.rightPart.btGroup.ubt.uButton.helpTip = es_str.uHelp;
+				pal.grp.rightPart.btGroup.ubt.usButton.helpTip = es_str.usHelp;
+				pal.grp.rightPart.btGroup.sbt.sButton.helpTip = es_str.sHelp;
+				pal.grp.rightPart.btGroup.sbt.ssButton.helpTip = es_str.ssHelp;
 
-				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.helpTip = es_str.blHelp
-				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.helpTip = es_str.bcHelp
-				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.helpTip = es_str.brHelp
-				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.helpTip = es_str.mlHelp
-				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.helpTip = es_str.mcHelp
-				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.helpTip = es_str.mrHelp
-				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.helpTip = es_str.ulHelp
-				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.helpTip = es_str.ucHelp
-				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.helpTip = es_str.urHelp
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.helpTip = es_str.blHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.helpTip = es_str.bcHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.helpTip = es_str.brHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.helpTip = es_str.mlHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.helpTip = es_str.mcHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.helpTip = es_str.mrHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.helpTip = es_str.ulHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.helpTip = es_str.ucHelp;
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.helpTip = es_str.urHelp;
 
 
 			}
@@ -885,9 +885,12 @@
 			fixList(pal.grp.leftPart.listArea);
 		}
 
-		function runCommand(pal, command) {
+		function runCommand(pal, arg) {
 			var cmds = "";
-			cmds += command;
+			var syscmd = ($.os.indexOf("Win") != -1) ?
+				'cmd.exe /c cmd.exe /c "echo ' + arg + ' | clip"' :
+				"printf " + arg + "|pbcopy"
+			cmds += syscmd;
 			system.callSystem(cmds);
 			pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 		}
