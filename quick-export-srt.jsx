@@ -549,28 +549,28 @@
 				// })
 
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
-					runCommand(pal, "'<b>'");
+					runCommand(pal, "b");
 				};
 				pal.grp.rightPart.btGroup.bbt.bsButton.onClick = function () {
-					runCommand(pal, "'</b>'");
+					runCommand(pal, "/b");
 				};
 				pal.grp.rightPart.btGroup.ibt.iButton.onClick = function () {
-					runCommand(pal, "'<i>'");
+					runCommand(pal, "i");
 				};
 				pal.grp.rightPart.btGroup.ibt.isButton.onClick = function () {
-					runCommand(pal, "'</i>'");
+					runCommand(pal, "/i");
 				};
 				pal.grp.rightPart.btGroup.ubt.uButton.onClick = function () {
-					runCommand(pal, "'<u>'");
+					runCommand(pal, "u");
 				};
 				pal.grp.rightPart.btGroup.ubt.usButton.onClick = function () {
-					runCommand(pal, "'</u>'");
+					runCommand(pal, "/u");
 				};
 				pal.grp.rightPart.btGroup.sbt.sButton.onClick = function () {
-					runCommand(pal, "'<s>'");
+					runCommand(pal, "s");
 				};
 				pal.grp.rightPart.btGroup.sbt.ssButton.onClick = function () {
-					runCommand(pal, "'</s>'");
+					runCommand(pal, "/s");
 				};
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
@@ -793,6 +793,7 @@
 		function mouseEventHandler() {
 			var cmd = "";
 			cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+			// cmd += "cmd.exe /c cmd.exe /c 'powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('\^v')\"";
 			system.callSystem(cmd);
 			this.removeEventListener("mouseout", mouseEventHandler);
 		}
@@ -887,9 +888,11 @@
 
 		function runCommand(pal, arg) {
 			var cmds = "";
+			var sysarg = ($.os.indexOf("Win") != -1) ? "^^^<"+arg+"^^^>" :
+				"<"+arg+">";
 			var syscmd = ($.os.indexOf("Win") != -1) ?
-				'cmd.exe /c cmd.exe /c "echo ' + arg + ' | clip"' :
-				"printf " + arg + "|pbcopy"
+				'cmd.exe /c cmd.exe /c "echo | set /p= '+sysarg + '|clip"' :
+				"printf " + sysarg + "|pbcopy"
 			cmds += syscmd;
 			system.callSystem(cmds);
 			pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
