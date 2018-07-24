@@ -532,8 +532,14 @@
 				pal.grp.rightPart.editText.addEventListener('mouseout', function () {
 					this.backupSelection = this.textselection;
 				});
-				pal.grp.rightPart.editText.onChanging = function () {
-					triggerMarker(pal, null, null, null, null, []);
+				if (-1 != $.os.indexOf("Win")) {
+					pal.grp.rightPart.editText.onChange = function () {
+						triggerMarker(pal, null, null, null, null, []);
+					};
+				} else {
+					pal.grp.rightPart.editText.onChanging = function () {
+						triggerMarker(pal, null, null, null, null, []);
+					};
 				};
 
 				// pal.addEventListener("keydown", function () {
@@ -599,7 +605,7 @@
 				pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function () {
 					var origin = this.colorHex;
 					var colorString = $.colorPicker();
-					this.colorHex = colorString==-1?origin:colorString.toString(16).toUpperCase();
+					this.colorHex = colorString == -1 ? origin : colorString.toString(16).toUpperCase();
 					this.parent.fcButton.text = "<font color=" + fixBlueHex(this.colorHex) + ">";
 					this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(this.colorHex));
 				};
@@ -989,6 +995,21 @@
 			}
 		}
 
+		function canWriteFiles() {
+			if (isSecurityPrefSet()) return true;
+
+			alert("requires access to write files.\n" +
+				"Go to the \"General\" panel of the application preferences and make sure " +
+				"\"Allow Scripts to Write Files and Access Network\" is checked.");
+			app.executeCommand(2359);
+
+			return isSecurityPrefSet();
+
+			function isSecurityPrefSet() {
+				return app.preferences.getPrefAsLong("Main Pref Section", "Pref_SCRIPTING_FILE_NETWORK_SECURITY") === 1;
+			}
+		}
+
 		function hexToRgb(string) {
 			"string" == typeof string && (string = parseInt(string, 16));
 			var r = string >> 16 & 255,
@@ -1031,40 +1052,45 @@
 				}
 			else sl = osl, alert(es_str.textOnly);
 		}
-		var ui = es_buildUI(thisObj),
-			comp, sl, osl, slIndex, markerTimeOffset = 1,
-			newlineMark = "↵",
-			reg = new RegExp(newlineMark, "gm");
 
-		if (-1 != $.os.indexOf("Win")) {
-			if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")).exists) var bat = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat"));
-			else {
-				var bat = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")),
-					batCommand = "powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('^v')\"";
-				writeFile(bat, batCommand)
-			}
-			if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")).exists) var vbs = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs"));
-			else {
-				var vbs = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")),
-					vbsCommand = 'CreateObject("Wscript.Shell").Run "' + bat.fsName + '", 0, True';
-				writeFile(vbs, vbsCommand)
-			}
-			if (File(Folder.temp.toString() + encodeURI("/echoClip.vbs")).exists) var echoVbs = File(Folder.temp.toString() + encodeURI("/echoClip.vbs"));
-			else {
-				var echoVbs = new File(Folder.temp.toString() + encodeURI("/echoClip.vbs")),
-					echoVbsCommand = 'CreateObject("Wscript.Shell").Run "' + File(Folder.temp.toString() + encodeURI("/echoClip.bat")).fsName + '", 0, True';
-				writeFile(echoVbs, echoVbsCommand)
-			}
-		}
 
-		refreshButton(ui);
+		if (canWriteFiles()) {
 
-		if (ui !== null) {
-			if (ui instanceof Window) {
-				ui.center();
-				ui.show();
-			} else {
-				ui.layout.layout(true);
+			var ui = es_buildUI(thisObj),
+				comp, sl, osl, slIndex, markerTimeOffset = 1,
+				newlineMark = "↵",
+				reg = new RegExp(newlineMark, "gm");
+
+			if (-1 != $.os.indexOf("Win")) {
+				if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")).exists) var bat = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat"));
+				else {
+					var bat = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")),
+						batCommand = "powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('^v')\"";
+					writeFile(bat, batCommand)
+				}
+				if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")).exists) var vbs = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs"));
+				else {
+					var vbs = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")),
+						vbsCommand = 'CreateObject("Wscript.Shell").Run "' + bat.fsName + '", 0, True';
+					writeFile(vbs, vbsCommand)
+				}
+				if (File(Folder.temp.toString() + encodeURI("/echoClip.vbs")).exists) var echoVbs = File(Folder.temp.toString() + encodeURI("/echoClip.vbs"));
+				else {
+					var echoVbs = new File(Folder.temp.toString() + encodeURI("/echoClip.vbs")),
+						echoVbsCommand = 'CreateObject("Wscript.Shell").Run "' + File(Folder.temp.toString() + encodeURI("/echoClip.bat")).fsName + '", 0, True';
+					writeFile(echoVbs, echoVbsCommand)
+				}
+			}
+
+			refreshButton(ui);
+
+			if (ui !== null) {
+				if (ui instanceof Window) {
+					ui.center();
+					ui.show();
+				} else {
+					ui.layout.layout(true);
+				}
 			}
 		}
 	})(this)
