@@ -914,7 +914,7 @@
 				"<" + arg + ">";
 			var syscmd = ($.os.indexOf("Win") != -1) ?
 				"echo | set /p= " + sysarg + "|clip" :
-				"printf " + sysarg + "|pbcopy"
+				"printf \"" + sysarg + "\"|pbcopy"
 			cmds += syscmd;
 
 			var echoClip = new File(Folder.temp.toString() + encodeURI("/echoClip.bat"));
@@ -925,7 +925,7 @@
 			} else {
 				system.callSystem(cmds);
 			}
-			pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
+			//pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 		}
 
 		function quoteText(origin, splitor, lineNum, textSel, key, arg) {
