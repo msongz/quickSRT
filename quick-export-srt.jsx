@@ -342,7 +342,7 @@
 										ibt:Group{orientation:'row',\
 											iButton:Button{text:'<i>',alignment:['fill','fill']},\
 											isButton:Button{text:'</i>'},\
-											iiButton:Button{text:'<i>   </i>'}\
+											iiButton:Button{text:'<i>  </i>'}\
 										},\
 										ubt:Group{orientation:'row',\
 											uButton:Button{text:'<u>',alignment:['fill','fill']},\
@@ -732,7 +732,7 @@
 					fixList(pal.grp.leftPart.listArea);
 				};
 				pal.grp.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
-					writeFile(pal.grp.leftPart.listArea.items);
+					writeSrt(pal.grp.leftPart.listArea.items);
 				};
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.helpTip = es_str.bordHelp;
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.helpTip = es_str.metriHelp;
@@ -791,10 +791,18 @@
 		}
 
 		function mouseEventHandler() {
-			var cmd = "";
-			cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
-			// cmd += "cmd.exe /c cmd.exe /c 'powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('\^v')\"";
-			system.callSystem(cmd);
+
+			if ($.os.indexOf("Win") != -1) {
+				vbs.execute();
+				// var cmdcmd ="";
+				// cmdcmd += "cmd.exe /c cmd.exe /c \"powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('^v')\""
+				// system.callSystem(cmdcmd);
+			} else {
+				var cmd = "";
+				cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
+				system.callSystem(cmd);
+			}
+
 			this.removeEventListener("mouseout", mouseEventHandler);
 		}
 
@@ -814,11 +822,25 @@
 			return result;
 		}
 
-		function writeFile(list) {
+		function writeSrt(list) {
 			var srtFile = File.saveDialog(es_str.saveDialog);
 			srtFile.encoding = "utf-8", srtFile.open("w");
 			for (var r = 0; r < list.length; r++) srtFile.write(list[r].text + "\r" + list[r].subItems[0].text + "\r" + list[r].subItems[1].text + "\r\r");
 			return srtFile.close(), srtFile;
+		}
+
+		function writeFile(fileObj, fileContent, encoding) {
+			encoding = encoding || "utf-8";
+			fileObj = (fileObj instanceof File) ? fileObj : new File(fileObj);
+
+			var parentFolder = fileObj.parent;
+			if (!parentFolder.exists && !parentFolder.create())
+				throw new Error("Cannot create file in path " + fileObj.fsName);
+			fileObj.encoding = encoding;
+			fileObj.open("w");
+			fileObj.write(fileContent);
+			fileObj.close();
+			return fileObj;
 		}
 
 		function checkTextLayer(layers) {
@@ -888,13 +910,21 @@
 
 		function runCommand(pal, arg) {
 			var cmds = "";
-			var sysarg = ($.os.indexOf("Win") != -1) ? "^^^<"+arg+"^^^>" :
-				"<"+arg+">";
+			var sysarg = ($.os.indexOf("Win") != -1) ? "^^^<" + arg + "^^^>" :
+				"<" + arg + ">";
 			var syscmd = ($.os.indexOf("Win") != -1) ?
-				'cmd.exe /c cmd.exe /c "echo | set /p= '+sysarg + '|clip"' :
+				"echo | set /p= " + sysarg + "|clip" :
 				"printf " + sysarg + "|pbcopy"
 			cmds += syscmd;
-			system.callSystem(cmds);
+
+			var echoClip = new File(Folder.temp.toString() + encodeURI("/echoClip.bat"));
+			writeFile(echoClip, cmds);
+
+			if ($.os.indexOf("Win") != -1) {
+				echoVbs.execute();
+			} else {
+				system.callSystem(cmds);
+			}
 			pal.grp.rightPart.editText.addEventListener("mouseout", mouseEventHandler);
 		}
 
@@ -1004,6 +1034,27 @@
 			comp, sl, osl, slIndex, markerTimeOffset = 1,
 			newlineMark = "↵",
 			reg = new RegExp(newlineMark, "gm");
+
+		if (-1 != $.os.indexOf("Win")) {
+			if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")).exists) var bat = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat"));
+			else {
+				var bat = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")),
+					batCommand = "powershell -Command \"$wshell = New-Object -ComObject wscript.shell;$wshell.SendKeys('^v')\"";
+				writeFile(bat, batCommand)
+			}
+			if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")).exists) var vbs = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs"));
+			else {
+				var vbs = new File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.vbs")),
+					vbsCommand = 'CreateObject("Wscript.Shell").Run "' + bat.fsName + '", 0, True';
+				writeFile(vbs, vbsCommand)
+			}
+			if (File(Folder.temp.toString() + encodeURI("/echoClip.vbs")).exists) var echoVbs = File(Folder.temp.toString() + encodeURI("/echoClip.vbs"));
+			else {
+				var echoVbs = new File(Folder.temp.toString() + encodeURI("/echoClip.vbs")),
+					echoVbsCommand = 'CreateObject("Wscript.Shell").Run "' + File(Folder.temp.toString() + encodeURI("/echoClip.bat")).fsName + '", 0, True';
+				writeFile(echoVbs, echoVbsCommand)
+			}
+		}
 
 		refreshButton(ui);
 
