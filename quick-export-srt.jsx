@@ -963,10 +963,10 @@
 				t = frames < 0 ? 0 : frames;
 			app.project.timeDisplayType = 2012;
 			var timecode = timeToCurrentFormat(t, fps),
-				ms = Math.floor(timecode.substr(-fps.toString().length) / fps * 1e3 / precision) * precision;
+				ms = Math.floor(timecode.substr(-fps.toFixed().toString().length) / fps * 1e3 / precision) * precision;
 			for (ms = ms.toString(); ms.length < 3;) ms = 0 + ms;
 			app.project.timeDisplayType = timeTpye;
-			return timecode.substr(0, timecode.length - fps.toString().length - 1) + "," + ms;
+			return timecode.substr(0, timecode.length - fps.toFixed().toString().length - 1) + "," + ms;
 		}
 
 		function checkMarker(layer) {
