@@ -358,7 +358,7 @@
 											fsButton:Button{text:'<font size=20>'},\
 											fsValue:EditText{text:'20',characters:'3'},\
 											fcButton:Button{text:'<font color=00FF00>'},\
-											fcValue:Button{preferredSize:[58,28]}\
+											fcValue:Button{}\
 										},\
 										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,10,0,0],\
 											position:Group{orientation:'column',alignment:['left','fill'],\
@@ -597,10 +597,11 @@
 					this.graphics.fillPath(this.fillBrush);
 				};
 				pal.grp.rightPart.btGroup.fbt.fcValue.onClick = function () {
+					var origin = this.colorHex;
 					var colorString = $.colorPicker();
-					this.colorHex = colorString.toString(16).toUpperCase();
+					this.colorHex = colorString==-1?origin:colorString.toString(16).toUpperCase();
 					this.parent.fcButton.text = "<font color=" + fixBlueHex(this.colorHex) + ">";
-					this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(colorString));
+					this.fillBrush = this.graphics.newBrush(this.graphics.BrushType.SOLID_COLOR, hexToRgb(this.colorHex));
 				};
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.onClick = function () {
