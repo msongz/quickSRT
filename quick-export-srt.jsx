@@ -354,7 +354,7 @@
 											ssButton:Button{text:'</s>'},\
 											sssButton:Button{text:'<s>  </s>'}\
 										},\
-										fbt:Group{orientation:'row',margins:[0,0,-8,0],\
+										fbt:Group{orientation:'row',\
 											fsButton:Button{text:'<font size=20>'},\
 											fsValue:EditText{text:'20',characters:'3'},\
 											fcButton:Button{text:'<font color=00FF00>'},\
@@ -380,24 +380,24 @@
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[101,30],alignment:['left','fill']},\
-													textX:StaticText{text:'x:',alignment:['right','center']},\
+													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[101,28]},\
+													textX:StaticText{text:'x:',alignment:['right','fill']},\
 													posX:EditText{text:'384',characters:4},\
 													textY:StaticText{text:'y:'},\
 													posY:EditText{text:'288',characters:4},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
-													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,30],alignment:['left','fill']},\
+													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[101,28]},\
 													inText:StaticText{text:'i:',alignment:['right','fill']},\
 													fadIn:EditText{text:'300',characters:4},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300',characters:4},\
 												},\
-												other:Group{orientation:'row',alignment:['fill','fill'],spacing:8,\
-													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[71,30]},\
-													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[61,30]},\
-													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[51,30]},\
-													bfbVal:EditText{text:'2',characters:2,alignment:['right','center']},\
+												other:Group{orientation:'row',alignment:['fill','fill'],\
+													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}'},\
+													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[61,28]},\
+													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[51,28]},\
+													bfbVal:EditText{text:'2',characters:2,alignment:['fill','center']},\
 												},\
 											}\
 										},\
