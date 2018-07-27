@@ -115,23 +115,23 @@
 				cn: "设定字幕新的位置\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			bordHelp: {
-				en: "set stroke width\ractive require {\\an}",
-				cn: "设置描边宽度\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "stroke\rset stroke width\ractive require {\\an}",
+				cn: "描边\r设置描边宽度\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			metriHelp: {
-				en: "set kerning between two words\ractive require {\\an}",
-				cn: "设置字间距\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "kerning\rset kerning between two words\ractive require {\\an}",
+				cn: "字间距\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			blurHelp: {
-				en: "set blur level\ractive require {\\an}",
-				cn: "设置模糊\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "blur\rset blur level\ractive require {\\an}",
+				cn: "模糊\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			mvHelp: {
-				en: "set subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
-				cn: "让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "move\rset subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
+				cn: "位移\r让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
 			},
 			fsHelp: {
-				en: "select words in edit text, and click to set font size",
+				en: "size\rselect words in edit text, and click to set font size",
 				cn: "字号\r在编辑区域选择文字，然后点击设定字号"
 			},
 			uuHelp: {
@@ -219,36 +219,36 @@
 				cn: "改变颜色"
 			},
 			bHelp: {
-				en: "add \"<b>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"<b>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Bold start\radd \"<b>\" to system clipboard",
+				cn: "粗体开始\r添加 \"<b>\" 到系统剪贴板"
 			},
 			bsHelp: {
-				en: "add \"</b>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"</b>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Bold stop\radd \"</b>\" to system clipboard",
+				cn: "粗体结束\r添加 \"</b>\" 到系统剪贴板"
 			},
 			iHelp: {
-				en: "add \"<i>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"<i>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Italic start\radd \"<i>\" to system clipboard",
+				cn: "斜体开始\r添加 \"<i>\" 到系统剪贴板"
 			},
 			isHelp: {
-				en: "add \"</i>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"</i>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Italic stop\radd \"</i>\" to system clipboard",
+				cn: "斜体结束\r添加 \"</i>\" 到系统剪贴板"
 			},
 			uHelp: {
-				en: "add \"<u>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"<u>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
-			},
-			sHelp: {
-				en: "add \"<s>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"<s>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
-			},
-			ssHelp: {
-				en: "add \"</s>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"</s>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Underscore start\radd \"<u>\" to system clipboard",
+				cn: "下划线开始\r添加 \"<u>\" 到系统剪贴板"
 			},
 			usHelp: {
-				en: "add \"</u>\" to system clipboard\rauto paste on current cursor when you mouse move out of the edit text area",
-				cn: "添加 \"</u>\" 到系统剪贴板\r当你的鼠标离开编辑区时自动在光标处粘贴"
+				en: "Underscore stop\radd \"</u>\" to system clipboard",
+				cn: "下划线结束\r添加 \"</u>\" 到系统剪贴板"
+			},
+			sHelp: {
+				en: "Strikethrough start\radd \"<s>\" to system clipboard",
+				cn: "删除线开始\r添加 \"<s>\" 到系统剪贴板"
+			},
+			ssHelp: {
+				en: "Strikethrough stop\radd \"</s>\" to system clipboard",
+				cn: "删除线结束\r添加 \"</s>\" 到系统剪贴板"
 			},
 			blHelp: {
 				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left\rthe existing {\\pos} will be clear after click, please re-apply",
@@ -286,11 +286,11 @@
 				en: "place subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right\rthe existing {\\pos} will be clear after click, please re-apply",
 				cn: "将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
 			},
-			// Help: {
-			// 	en: "",
-			// 	cn: ""
-			// },
-			// Help: {
+			writePermiss: {
+				en: "please check the \"Allow Scripts to Write Files and Access Network\"",
+				cn: "请勾选\"允许脚本写入文件和访问网络\""
+			},
+			// posyHelp: {
 			// 	en: "",
 			// 	cn: ""
 			// },
@@ -300,7 +300,7 @@
 			}
 		};
 
-		for (var i in es_str) "zh_CN" != app.isoLanguage ?
+		for (var i in es_str) "zh_CN" == app.isoLanguage ?
 			es_str[i] = es_str[i].cn :
 			es_str[i] = es_str[i].en;
 
@@ -545,14 +545,17 @@
 				// pal.addEventListener("keydown", function () {
 
 				// 	try {
-				// 		// alert(pal.grp.leftPart.listArea.columns.titles)
-				// 		fixList(pal.grp.leftPart.listArea)
+				// 		alert(pal.grp.leftPart.listArea.columns.titles)
+				// 		// fixList(pal.grp.leftPart.listArea)
 
 				// 		// alert(pal.grp.leftPart.listArea.columns.titles[0]) 
 				// 	} catch (e) {
 				// 		alert(e)
 				// 	}
 				// })
+				pal.addEventListener("keydown", function (kd) {
+					pressed (kd,this)
+				})
 
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
 					runCommand(pal, "b");
@@ -746,6 +749,8 @@
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.helpTip = es_str.blurHelp;
 				pal.grp.rightPart.btGroup.fix.direct.vertical.helpTip = es_str.verticalHelp;
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.helpTip = es_str.posHelp;
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.helpTip=es_str.srtXY
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.helpTip=es_str.srtXY
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.helpTip = es_str.fadHelp;
 				pal.grp.rightPart.btGroup.fix.move.moveButton.helpTip = es_str.mvHelp;
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.helpTip = es_str.rfHelp;
@@ -774,12 +779,12 @@
 				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.moveinHelp;
 				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.moveoutHelp;
 				pal.grp.rightPart.btGroup.bbt.bButton.helpTip = es_str.bHelp;
-				pal.grp.rightPart.btGroup.bbt.bsButton.helpTip = es_str.bsHelp;
 				pal.grp.rightPart.btGroup.ibt.iButton.helpTip = es_str.iHelp;
-				pal.grp.rightPart.btGroup.ibt.isButton.helpTip = es_str.isHelp;
 				pal.grp.rightPart.btGroup.ubt.uButton.helpTip = es_str.uHelp;
-				pal.grp.rightPart.btGroup.ubt.usButton.helpTip = es_str.usHelp;
 				pal.grp.rightPart.btGroup.sbt.sButton.helpTip = es_str.sHelp;
+				pal.grp.rightPart.btGroup.bbt.bsButton.helpTip = es_str.bsHelp;
+				pal.grp.rightPart.btGroup.ibt.isButton.helpTip = es_str.isHelp;
+				pal.grp.rightPart.btGroup.ubt.usButton.helpTip = es_str.usHelp;
 				pal.grp.rightPart.btGroup.sbt.ssButton.helpTip = es_str.ssHelp;
 
 				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.helpTip = es_str.blHelp;
@@ -832,6 +837,7 @@
 		function writeSrt(list) {
 			var srtFile = File.saveDialog(es_str.saveDialog);
 			srtFile.encoding = "utf-8", srtFile.open("w");
+			srtFile.write("0\r00:00:00,000 --> 00:00:00,000\rsongzmeng srt export"+"\r\r");
 			for (var r = 0; r < list.length; r++) srtFile.write(list[r].text + "\r" + list[r].subItems[0].text + "\r" + list[r].subItems[1].text + "\r\r");
 			return srtFile.close(), srtFile;
 		}
@@ -849,7 +855,14 @@
 			fileObj.close();
 			return fileObj;
 		}
-
+		function pressed (k,pal) {
+			if (k.keyName=="Z" && k.metaKey) {
+				// alert(123)
+				app.executeCommand(16);
+				pal.grp.leftPart.buttonArea.resel.notify("onClick");
+				pal.grp.rightPart.btGroup.rebtGroup.rfButton.notify("onClick");
+			};
+		}
 		function checkTextLayer(layers) {
 			if (0 != layers.length)
 				for (var b = 0; b < layers.length; b++)
@@ -998,9 +1011,7 @@
 		function canWriteFiles() {
 			if (isSecurityPrefSet()) return true;
 
-			alert("requires access to write files.\n" +
-				"Go to the \"General\" panel of the application preferences and make sure " +
-				"\"Allow Scripts to Write Files and Access Network\" is checked.");
+			alert(es_str.writePermiss);
 			app.executeCommand(2359);
 
 			return isSecurityPrefSet();
