@@ -95,8 +95,8 @@
 				cn: "将列表导出为srt文件"
 			},
 			rfHelp: {
-				en: "add/read marker of selected text layers\rand send them to list",
-				cn: "添加/读取选择的文字层的marker\r并将内容添加到列表"
+				en: "add/read marker of selected layers and send them to the list",
+				cn: "添加/读取所选图层的标记，并将内容添加到列表"
 			},
 			verticalHelp: {
 				en: "checked will change {\\an} buttons behavior",
@@ -107,52 +107,52 @@
 				cn: "纵向"
 			},
 			fadHelp: {
-				en: "set subtitle fade-in and fade-out\rin millisecond",
-				cn: "淡入淡出\r设置字幕淡入淡出的时间（毫秒）\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#fade\rset subtitle fade-in and fade-out\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#淡入淡出\r设置字幕淡入淡出的时间\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			posHelp: {
-				en: "set subtitle to a new position\ractive require {\\an}",
-				cn: "设定字幕新的位置\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#position\rset subtitle to a new position\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#位置\r设定字幕新的位置\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			bordHelp: {
-				en: "stroke\rset stroke width\ractive require {\\an}",
-				cn: "描边\r设置描边宽度\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#stroke\rset stroke width\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#描边\r设置描边宽度\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			metriHelp: {
-				en: "kerning\rset kerning between two words\ractive require {\\an}",
-				cn: "字间距\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#kerning\rset kerning between two words\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#字间距\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			blurHelp: {
-				en: "blur\rset blur level\ractive require {\\an}",
-				cn: "模糊\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#blur\rset blur level\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#模糊\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			mvHelp: {
-				en: "move\rset subtitle move from (x1,y1) to (x2,y2)\rduring t2-t1\ractive require {\\an}",
-				cn: "位移\r让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1 毫秒\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an5}"
+				en: "#move(x1,y1,x2,y2,t1,t2)\rset subtitle move from (x1,y1) to (x2,y2) during t2-t1\ractive require {\\an}\rif none of {\\an}, {\\an2} will be added automatically",
+				cn: "#位移\r让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1\r需要{\\an}才生效\r如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			fsHelp: {
-				en: "size\rselect words in edit text, and click to set font size",
-				cn: "字号\r在编辑区域选择文字，然后点击设定字号"
+				en: "#font size\rselect words in edit text, and click to quote",
+				cn: "#字号\r在编辑区域选择文字，然后点击设定字号"
 			},
 			uuHelp: {
-				en: "select words in edit text, and click to set font Underscore style",
-				cn: "下划线\r在编辑区域选中文字，然后点击设定下划线"
+				en: "#underscore\rselect words in edit text, and click to quote",
+				cn: "#下划线\r在编辑区域选中文字，然后点击设定下划线"
 			},
 			sssHelp: {
-				en: "select words in edit text, and click to set font Strikethrough style",
-				cn: "删除线\r在编辑区域选中文字，然后点击设定删除线"
+				en: "#strikethrough\rselect words in edit text, and click to quote",
+				cn: "#删除线\r在编辑区域选中文字，然后点击设定删除线"
 			},
 			iiHelp: {
-				en: "select words in edit text, and click to set font Italic style",
+				en: "#italic\rselect words in edit text, and click to quote",
 				cn: "斜体\r在编辑区域选中文字，然后点击设定斜体"
 			},
 			bbHelp: {
-				en: "select words in edit text, and click to set font Bold style",
+				en: "#bold\rselect words in edit text, and click to quote",
 				cn: "粗体\r在编辑区域选中文字，然后点击设定粗体"
 			},
 			fcHelp: {
-				en: "select words in edit text, and click to set font color",
-				cn: "颜色\r在编辑区域选中文字，然后点击设定颜色"
+				en: "#font color\rselect words in edit text, and click to quote",
+				cn: "#字体颜色\r在编辑区域选中文字，然后点击设定颜色"
 			},
 			infoHelp: {
 				en: "about",
@@ -163,19 +163,19 @@
 				cn: "重选上次刷新的图层"
 			},
 			pickposHelp: {
-				en: "show the coordinate of selected layer in srt system",
+				en: "show the coordinate of selected layer in srt world",
 				cn: "显示所选图层在 srt 系统中的坐标"
 			},
 			killotherHelp: {
-				en: "remove restrict range { } tags of selected list items",
-				cn: "清空所选项目在限制范围内的所有 { } 标签"
+				en: "remove all of { } tags of selected items in the list",
+				cn: "清空所选项目的所有 { } 标签"
 			},
 			killtagHelp: {
-				en: "remove restrict range < > tags of selected list items",
+				en: "remove restrict range of < > tags of selected items in the list",
 				cn: "清空所选项目在限制范围内的所有 < > 标签"
 			},
 			rmmarkHelp: {
-				en: "clear the list\rremove selected layer's srt marker",
+				en: "clear the list\rremove srt marker of selected layers",
 				cn: "清空列表\r清除选中图层的 srt 标记"
 			},
 			preciHelp: {
@@ -187,8 +187,8 @@
 				cn: "限制 < > 标签的操作范围\r0 代表全部有效\r1 代表只操作第 1 行\r2 代表只操作第 2 行\r如此类推"
 			},
 			olcheckHelp: {
-				en: "checked for overlap layers",
-				cn: "检查重叠的图层"
+				en: "check overlap layers when refresh",
+				cn: "刷新时检查重叠图层"
 			},
 			x1Help: {
 				en: "x1",
@@ -215,81 +215,93 @@
 				cn: "t2"
 			},
 			fcvalueHelp: {
-				en: "change color",
-				cn: "改变颜色"
+				en: "change font color",
+				cn: "改变字体颜色"
 			},
 			bHelp: {
-				en: "Bold start\radd \"<b>\" to system clipboard",
-				cn: "粗体开始\r添加 \"<b>\" 到系统剪贴板"
+				en: "#bold start\radd \"<b>\" to system clipboard",
+				cn: "#粗体开始\r添加 \"<b>\" 到系统剪贴板"
 			},
 			bsHelp: {
-				en: "Bold stop\radd \"</b>\" to system clipboard",
-				cn: "粗体结束\r添加 \"</b>\" 到系统剪贴板"
+				en: "#bold stop\radd \"</b>\" to system clipboard",
+				cn: "#粗体结束\r添加 \"</b>\" 到系统剪贴板"
 			},
 			iHelp: {
-				en: "Italic start\radd \"<i>\" to system clipboard",
-				cn: "斜体开始\r添加 \"<i>\" 到系统剪贴板"
+				en: "#italic start\radd \"<i>\" to system clipboard",
+				cn: "#斜体开始\r添加 \"<i>\" 到系统剪贴板"
 			},
 			isHelp: {
-				en: "Italic stop\radd \"</i>\" to system clipboard",
-				cn: "斜体结束\r添加 \"</i>\" 到系统剪贴板"
+				en: "#italic stop\radd \"</i>\" to system clipboard",
+				cn: "#斜体结束\r添加 \"</i>\" 到系统剪贴板"
 			},
 			uHelp: {
-				en: "Underscore start\radd \"<u>\" to system clipboard",
-				cn: "下划线开始\r添加 \"<u>\" 到系统剪贴板"
+				en: "#underscore start\radd \"<u>\" to system clipboard",
+				cn: "#下划线开始\r添加 \"<u>\" 到系统剪贴板"
 			},
 			usHelp: {
-				en: "Underscore stop\radd \"</u>\" to system clipboard",
-				cn: "下划线结束\r添加 \"</u>\" 到系统剪贴板"
+				en: "#underscore stop\radd \"</u>\" to system clipboard",
+				cn: "#下划线结束\r添加 \"</u>\" 到系统剪贴板"
 			},
 			sHelp: {
-				en: "Strikethrough start\radd \"<s>\" to system clipboard",
-				cn: "删除线开始\r添加 \"<s>\" 到系统剪贴板"
+				en: "#strikethrough start\radd \"<s>\" to system clipboard",
+				cn: "#删除线开始\r添加 \"<s>\" 到系统剪贴板"
 			},
 			ssHelp: {
-				en: "Strikethrough stop\radd \"</s>\" to system clipboard",
-				cn: "删除线结束\r添加 \"</s>\" 到系统剪贴板"
+				en: "#strikethrough stop\radd \"</s>\" to system clipboard",
+				cn: "#删除线结束\r添加 \"</s>\" 到系统剪贴板"
 			},
 			blHelp: {
-				en: "place subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到左下角\r当{\\pos}标签存在时，它会转换为左下角锚点"
+				en: "#bottom left\rplace subtitle to bottom left corner\rwhile {\\pos} added, it will transfer as anchor point at bottom left\rthe existing {\\pos} will be wiped",
+				cn: "#左下\r将字幕放置到左下角\r当{\\pos}标签存在时，它会转换为左下角锚点"
 			},
 			bcHelp: {
-				en: "place subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到底部（默认）\r当{\\pos}标签存在时，它会转换为底部锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#bottom\rplace subtitle to bottom (default)\rwhile {\\pos} added, it will transfer as anchor point at bottom\rthe existing {\\pos} will be wiped",
+				cn: "#底部\r将字幕放置到底部（默认）\r当{\\pos}标签存在时，它会转换为底部锚点\r原有的{\\pos}标签会被清除"
 			},
 			brHelp: {
-				en: "place subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到右下角\r当{\\pos}标签存在时，它会转换为右下角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#bottom right\rplace subtitle to bottom right corner\rwhile {\\pos} added, it will transfer as anchor point at bottom right\rthe existing {\\pos} will be wiped",
+				cn: "#右下角\r将字幕放置到右下角\r当{\\pos}标签存在时，它会转换为右下角锚点\r原有的{\\pos}标签会被清除"
 			},
 			mlHelp: {
-				en: "place subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到左侧\r当{\\pos}标签存在时，它会转换为左侧锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#left\rplace subtitle to left\rwhile {\\pos} added, it will transfer as anchor point at left\rthe existing {\\pos} will be wiped",
+				cn: "#左侧\r将字幕放置到左侧\r当{\\pos}标签存在时，它会转换为左侧锚点\r原有的{\\pos}标签会被清除"
 			},
 			mcHelp: {
-				en: "place subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到中央\r当{\\pos}标签存在时，它会转换为中心锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#center\rplace subtitle to center\rwhile {\\pos} added, it will transfer as anchor point at center\rthe existing {\\pos} will be wiped",
+				cn: "#中央\r将字幕放置到中央\r当{\\pos}标签存在时，它会转换为中心锚点\r原有的{\\pos}标签会被清除"
 			},
 			mrHelp: {
-				en: "place subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到右侧\r当{\\pos}标签存在时，它会转换为右侧锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#right\rplace subtitle to right\rwhile {\\pos} added, it will transfer as anchor point at right\rthe existing {\\pos} will be wiped",
+				cn: "#右侧\r将字幕放置到右侧\r当{\\pos}标签存在时，它会转换为右侧锚点\r原有的{\\pos}标签会被清除"
 			},
 			ulHelp: {
-				en: "place subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到左上角\r当{\\pos}标签存在时，它会转换为左上角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#upper left\rplace subtitle to upper left corner\rwhile {\\pos} added, it will transfer as anchor point at upper left\rthe existing {\\pos} will be wiped",
+				cn: "#左上角\r将字幕放置到左上角\r当{\\pos}标签存在时，它会转换为左上角锚点\r原有的{\\pos}标签会被清除"
 			},
 			ucHelp: {
-				en: "place subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到顶部\r当{\\pos}标签存在时，它会转换为顶部锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#top\rplace subtitle to top\rwhile {\\pos} added, it will transfer as anchor point at top\rthe existing {\\pos} will be wiped",
+				cn: "#顶部\r将字幕放置到顶部\r当{\\pos}标签存在时，它会转换为顶部锚点\r原有的{\\pos}标签会被清除"
 			},
 			urHelp: {
-				en: "place subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right\rthe existing {\\pos} will be clear after click, please re-apply",
-				cn: "将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点\r点击后会清除原有的{\\pos}标签，请重新添加"
+				en: "#upper right\rplace subtitle to upper right corner\rwhile {\\pos} existed, it will transfer as anchor point at upper right\rthe existing {\\pos} will be wiped",
+				cn: "#右上角\r将字幕放置到右上角\r当{\\pos}标签存在时，它会转换为右上角锚点\r原有的{\\pos}标签会被清除"
 			},
 			writePermiss: {
 				en: "please check the \"Allow Scripts to Write Files and Access Network\"",
 				cn: "请勾选\"允许脚本写入文件和访问网络\""
 			},
+			msHelp: {
+				en: "millisecond",
+				cn: "毫秒"
+			},
+			// posyHelp: {
+			// 	en: "",
+			// 	cn: ""
+			// },
+			// posyHelp: {
+			// 	en: "",
+			// 	cn: ""
+			// },
 			// posyHelp: {
 			// 	en: "",
 			// 	cn: ""
@@ -319,14 +331,14 @@
 									},\
 									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
 										info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
-										resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
 										pickPos:Button{text:'☉',alignment:['left','fill'],preferredSize:[28, 28]},\
+										rmMarker:Button{text:'⌫',alignment:['left','fill'],preferredSize:[28, 28]}\
 										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
+										olCheck:Checkbox{text:'↹',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
-										olCheck:Checkbox{text:'↹',alignment:['right','bottom']},\
+										resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
 										killTag:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
 										killOther:Button{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other'},\
-										rmMarker:Button{text:'⌫',alignment:['right','fill'],preferredSize:[28, 28]}\
 									}\
 								},\
 								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],\
@@ -380,11 +392,11 @@
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(384,288)}',preferredSize:[120,30]},\
+													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(192,144)}',preferredSize:[120,30]},\
 													textX:StaticText{text:'x:',alignment:['right','fill']},\
-													posX:EditText{text:'384',characters:4},\
+													posX:EditText{text:'192',characters:4},\
 													textY:StaticText{text:'y:'},\
-													posY:EditText{text:'288',characters:4},\
+													posY:EditText{text:'144',characters:4},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
 													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[120,30]},\
@@ -554,7 +566,7 @@
 				// 	}
 				// })
 				pal.addEventListener("keydown", function (kd) {
-					pressed (kd,this)
+					pressed(kd, this)
 				})
 
 				pal.grp.rightPart.btGroup.bbt.bButton.onClick = function () {
@@ -749,8 +761,8 @@
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.helpTip = es_str.blurHelp;
 				pal.grp.rightPart.btGroup.fix.direct.vertical.helpTip = es_str.verticalHelp;
 				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.helpTip = es_str.posHelp;
-				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.helpTip=es_str.srtXY
-				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.helpTip=es_str.srtXY
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posX.helpTip = es_str.srtXY
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posY.helpTip = es_str.srtXY
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.helpTip = es_str.fadHelp;
 				pal.grp.rightPart.btGroup.fix.move.moveButton.helpTip = es_str.mvHelp;
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.helpTip = es_str.rfHelp;
@@ -772,12 +784,12 @@
 				pal.grp.leftPart.buttonArea.preci.helpTip = es_str.preciHelp;
 				pal.grp.leftPart.buttonArea.lineNum.helpTip = es_str.linenumHelp;
 				pal.grp.leftPart.buttonArea.olCheck.helpTip = es_str.olcheckHelp;
-				pal.grp.rightPart.btGroup.fix.move.x1.helpTip = es_str.x1Help;
-				pal.grp.rightPart.btGroup.fix.move.y1.helpTip = es_str.y1Help;
-				pal.grp.rightPart.btGroup.fix.move.x2.helpTip = es_str.x2Help;
-				pal.grp.rightPart.btGroup.fix.move.y2.helpTip = es_str.y2Help;
-				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.moveinHelp;
-				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.moveoutHelp;
+				pal.grp.rightPart.btGroup.fix.move.x1.helpTip = es_str.srtXY;
+				pal.grp.rightPart.btGroup.fix.move.y1.helpTip = es_str.srtXY;
+				pal.grp.rightPart.btGroup.fix.move.x2.helpTip = es_str.srtXY;
+				pal.grp.rightPart.btGroup.fix.move.y2.helpTip = es_str.srtXY;
+				pal.grp.rightPart.btGroup.fix.move.moveIn.helpTip = es_str.msHelp;
+				pal.grp.rightPart.btGroup.fix.move.moveOut.helpTip = es_str.msHelp;
 				pal.grp.rightPart.btGroup.bbt.bButton.helpTip = es_str.bHelp;
 				pal.grp.rightPart.btGroup.ibt.iButton.helpTip = es_str.iHelp;
 				pal.grp.rightPart.btGroup.ubt.uButton.helpTip = es_str.uHelp;
@@ -796,6 +808,9 @@
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.helpTip = es_str.ulHelp;
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.helpTip = es_str.ucHelp;
 				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.helpTip = es_str.urHelp;
+
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.helpTip = es_str.msHelp
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadOut.helpTip = es_str.msHelp
 
 
 			}
@@ -837,7 +852,7 @@
 		function writeSrt(list) {
 			var srtFile = File.saveDialog(es_str.saveDialog);
 			srtFile.encoding = "utf-8", srtFile.open("w");
-			srtFile.write("0\r00:00:00,000 --> 00:00:00,000\rsongzmeng srt export"+"\r\r");
+			srtFile.write("0\r00:00:00,000 --> 00:00:00,000\rsongzmeng srt export" + "\r\r");
 			for (var r = 0; r < list.length; r++) srtFile.write(list[r].text + "\r" + list[r].subItems[0].text + "\r" + list[r].subItems[1].text + "\r\r");
 			return srtFile.close(), srtFile;
 		}
@@ -855,14 +870,16 @@
 			fileObj.close();
 			return fileObj;
 		}
-		function pressed (k,pal) {
-			if (k.keyName=="Z" && k.metaKey) {
+
+		function pressed(k, pal) {
+			if (k.keyName == "Z" && k.metaKey) {
 				// alert(123)
 				app.executeCommand(16);
 				pal.grp.leftPart.buttonArea.resel.notify("onClick");
 				pal.grp.rightPart.btGroup.rebtGroup.rfButton.notify("onClick");
 			};
 		}
+
 		function checkTextLayer(layers) {
 			if (0 != layers.length)
 				for (var b = 0; b < layers.length; b++)
@@ -891,7 +908,7 @@
 					(remove ?
 						removeQuote(esMarker.comment, newlineMark, lineNum) :
 						quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)),
-					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an5}" : esMarker.chapter) : esMarker.chapter) : poVar,
+					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an2}" : esMarker.chapter) : esMarker.chapter) : poVar,
 					urlVar = (posVar == null) ? esMarker.url : posVar,
 					frameTargetVar = (orientVar == null) ? esMarker.frameTarget : orientVar,
 					cuePointNameVar = (fadeVar == null) ? esMarker.cuePointName : fadeVar,
@@ -934,11 +951,12 @@
 				"<" + arg + ">";
 			var syscmd = ($.os.indexOf("Win") != -1) ?
 				"echo | set /p= " + sysarg + "|clip" :
-				"printf \"" + sysarg + "\"|pbcopy"
+				"printf \"" + sysarg + "\"|pbcopy";
 			cmds += syscmd;
-
-			var echoClip = new File(Folder.temp.toString() + encodeURI("/echoClip.bat"));
-			writeFile(echoClip, cmds);
+			if ($.os.indexOf("Win") != -1) {
+				var echoClip = new File(Folder.temp.toString() + encodeURI("/echoClip.bat"));
+				writeFile(echoClip, cmds);
+			}
 
 			if ($.os.indexOf("Win") != -1) {
 				echoVbs.execute();
@@ -1052,7 +1070,7 @@
 				else {
 					pal.grp.rightPart.editText.backupSelection = "",
 						pal.grp.leftPart.listArea.removeAll(),
-						pal.grp.leftPart.buttonArea.resel.enabled = 0 == sl.length ? !1 : !0,
+						//pal.grp.leftPart.buttonArea.resel.enabled = 0 == sl.length ? !1 : !0,
 						app.beginUndoGroup(es_str.title);
 					for (var t = 0; t < sl.length; t++) {
 						slIndex.push(sl[t].index), validMarker(sl[t]), pal.grp.leftPart.listArea.add("item", t + 1), pal.grp.leftPart.listArea.items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
@@ -1062,6 +1080,23 @@
 					app.endUndoGroup();
 				}
 			else sl = osl, alert(es_str.textOnly);
+
+
+
+			// $.sleep(2100)
+			for (var i = 5; i < pal.grp.leftPart.buttonArea.children.length; i++) {
+				pal.grp.leftPart.buttonArea.children[i].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0
+			};
+			for (var x = 0; x < pal.grp.rightPart.btGroup.children.length - 1; x++) {
+				pal.grp.rightPart.btGroup.children[x].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0
+			};
+			pal.grp.rightPart.editText.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
+			pal.grp.rightPart.btGroup.rebtGroup.epButton.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
+
+
+
+
+
 		}
 
 
