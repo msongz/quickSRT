@@ -321,6 +321,37 @@
 				closeOnKey: 'OSCmnd+W',
 				resizeable: true
 			});
+
+			var testimg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1C\x00\x00\x00\x1E\b\x06\x00\x00\x00?\u00C5~\u009F\x00\x00\x01>IDATH\u0089\u00DDV\u00CBvD!\bK\u00EE\u0099\u00FF\u00FFe\u00BA\u00E8h\x11\x03hg\u00D5f3^\x05\u00C2c@\u0081\u00FF\x0E\x02\u0080\u0099\u00F5\u0082d/\u00E4\u00C4\u00A3M\u0092\x00\u0080\u00D7\u0091\u00F6\x0F\x19\u00DF\u00BF\u00DE\x1A\u0083\u00B8\x01\u00B07\u00C1F\u00DC\x12\x062\x15e\u00DCSN\u00AD\u0087*\u00A5M\n}T]\u00AAif3\u00A5\u008F\u0094\u00C8\u00C9\u0088=\u0085l\u00D6#\u00BD\u009A\u00B0!\u009B03\u009F\x19\u009FF\u00B5^\u008D\f\u00C5\u00A4^\x1B\u0091pr\x1E\x0B\u00FD\u00C5\u0086L\u00E9\rY\u00D8\u00DF\"\u008A\u0098\u0084\u00E2\u00AF\u00BF\x18\u00ECz5\u009C\u00CBt\x02\u00BA-\x16\u00E2\u008C(\u00D4\u009A\u00C3)~\u00E77*M\x07\u008E\x1A?!\x19Ne\u00A1\u00CB\u00FD\u00AC\u0086Ut\u0084n\x0F8\u009D\u00B4\u0096\x19a\x07C\u00DF\u00F09\u00A1\u00EA\u00BD\u0093\u0081\u009EzS\u00E8^\u00D5\u00D0\u00A1\u009C\u0097\x15\x06aU\u00FC\u0088lX_\x11\u009E\u00E2\u00CA\u00B8\u00C2\x03|V/\u00A5_\u00DD4W\x11\u00FE\u00D2\u00B1\u00A5\\O8\u0098\u00B6\u00FD\u0095re}\u008Fn\u00F9\u00AE\u00FA\u00F0\u009A\u00F4\u00E4j\u009B\u0084\u00C9\u00840\u0092G\u00C4\u00D5\u00F0\u00F7P5\u008Cwa\u00FA(:\u009C\u00AD\u00DC>\u0082\u0091\u00B1\u00EC\x1EO\u00D1`\u0094\u0097\u0091n5L\u009E\r\x15\u00E2\\\u00DD\u00C8|@\u00B2-\u00DC+\u00EB\u00E6u\x16\x1D\u00FD\u00B8\u00BF\u00FF&\u00BE\x00Pl\u0099<\x19\u00C1\x7F)\x00\x00\x00\x00IEND\u00AEB`\u0082";
+			var tess = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1C\x00\x00\x00\x1E\b\x06\x00\x00\x00?\u00C5~\u009F\x00\x00\x01\x17IDATH\u0089\u00DD\u0096\u00DB\x0E\u0083@\bD\u0099\u00DA\u00FF\u00FF\u00E2\x1A\u00FA\u00D0\u00A0\x14\x19\u0096]\u00D3\u0097Nb\u00A2\u008Dr\u0096[A\u00E4\u00DF\x05\x11\u0091W\u00EF]\u00ED\x1A\u00DDTq\x01\u00E1\u00F3\u00D3\u00B3i\u00C3`\b\u00CF\"\"\u00D8\u00F4|\u00DC\x01\u00DD\x01e\u00E0\x0E\u00D0\u00C32/u\u00C7i\u00D7 \x06\u008D\u00AABZ\u0085\u00D0\u009F\u00BC\f\u00B5\x1D\u00C0B\u00FA \u00EF1#\b\u00B0/\u00B8\x0F!\u00F34\x03V\u00B0T\u00DExv_\x01cq\u00D8=\u0085\u008D\u00A0#`\x05\x1E*\u00F3\u00A8\x02.A2\u00B1pF\u00E0,X\u00DDu(\x03\u00F9\u00D0v\x1B?\x1E\u00C6\u00C4z\u0093\u00F6!\u00CBa\u00E5\x1DdPHU.\x19p\u00A4K(\u00BB2\u00E0\u00D2\u00C7+\u009A\u00CD\u00A1)\u00FB\x13\u009F\x02\u00D2\u00E4'\u00CA\ng\x1A\u00D8\u00D5\u00ED\x1E]-\u009AR\u00AC%~\x06\u00F4\u008A-\u00E2\u0081\u00ED\x19W)z\u00D7\x19O\u00CBP\x16J\u00EFe\x04\u00C6\u00A2h7x\u00B5\u00C7\\\x00\u00C9\u008A\u00C1\u00F6\u0098\u00EC@\u00876UD/\u00BB+\u0086o\u00EC\u0098\u00DB8%\u0090\r\u00DFM\x15\u00E9\u00BA(R\u00EE\u00A5K\u00C5sg/\u009D\u00AE\u00DC\u00CE\u00D4\u00FFo\u00BD\x01>`\u0086C7\u00B4\u00A5\x10\x00\x00\x00\x00IEND\u00AEB`\u0082";
+			var dad = File("/Users/meng/Documents/a.png")
+			var mum = File("/Users/meng/Documents/b.png")
+			var cimg = File("/Users/meng/Documents/c.png")
+			var dimg = File("/Users/meng/Documents/d.png")
+			var eimg = File("/Users/meng/Documents/e.png")
+			var fimg = File("/Users/meng/Documents/f.png")
+			var gimg = File("/Users/meng/Documents/g.png")
+			var himg = File("/Users/meng/Documents/h.png")
+			var iimg = File("/Users/meng/Documents/i.png")
+			var wwmg = File("/Users/meng/Documents/ww.png")
+			var qqmg = File("/Users/meng/Documents/qq.png")
+			var eemg = File("/Users/meng/Documents/ee.png")
+			var aamg = File("/Users/meng/Documents/aa.png")
+			var ddmg = File("/Users/meng/Documents/dd.png")
+			var ssmg = File("/Users/meng/Documents/ss.png")
+			var zzmg = File("/Users/meng/Documents/zz.png")
+			var ccmg = File("/Users/meng/Documents/cc.png")
+			var xxmg = File("/Users/meng/Documents/xx.png")
+			var posmg = File("/Users/meng/Documents/pos.png")
+			var fadmg = File("/Users/meng/Documents/fad.png")
+			var bordmg = File("/Users/meng/Documents/bord.png")
+			var fspmg = File("/Users/meng/Documents/fsp.png")
+			var bemg = File("/Users/meng/Documents/be.png")
+			var movemg = File("/Users/meng/Documents/move.png")
+			var fsmg = File("/Users/meng/Documents/fs.png")
+			var fcmg = File("/Users/meng/Documents/fc.png")
+				// var wwmg = File("/Users/meng/Documents/ww.png")
+
 			if (pal !== null) {
 				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[690, 460],\
 								leftPart:Group{orientation:'column',alignment:['fill','fill'],\
@@ -330,15 +361,15 @@
 										showHeaders:true,multiselect:true}\
 									},\
 									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
-										info:Button{text:'?',alignment:['left','fill'],preferredSize:[28, 28]},\
-										pickPos:Button{text:'☉',alignment:['left','fill'],preferredSize:[28, 28]},\
-										rmMarker:Button{text:'⌫',alignment:['left','fill'],preferredSize:[28, 28]}\
+										info:IconButton{text:'?',alignment:['left','fill'],preferredSize:[28, 28],properties:{style:'toolbutton'}},\
+										pickPos:IconButton{text:'☉',alignment:['left','fill'],preferredSize:[28, 28],properties:{style:'toolbutton'},properties:{style:'toolbutton'}},\
+										rmMarker:IconButton{text:'⌫',alignment:['left','fill'],preferredSize:[28, 28],properties:{style:'toolbutton'}}\
 										preci:EditText{text:'1',characters:'2',alignment:['left','bottom']},\
 										olCheck:Checkbox{text:'↹',alignment:['left','bottom']},\
 										lineNum:EditText{text:'0',characters:'2',alignment:['right','bottom']},\
-										resel:Button{text:'↻',alignment:['left','fill'],preferredSize:[28, 28]},\
-										killTag:Button{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags'},\
-										killOther:Button{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other'},\
+										resel:IconButton{text:'↻',alignment:['left','fill'],preferredSize:[28, 28],properties:{style:'toolbutton'}},\
+										killTag:IconButton{text:'⌧',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove tags',properties:{style:'toolbutton'}},\
+										killOther:IconButton{text:'⒳',alignment:['right','fill'],preferredSize:[28, 28],helpTip:'batch remove other',properties:{style:'toolbutton'}},\
 									}\
 								},\
 								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,20,0,0],\
@@ -347,68 +378,68 @@
 									},\
 									btGroup:Group{orientation:'column',alignment:['fill','bottom'],alignChildren:['fill','top'],\
 										bbt:Group{orientation:'row',\
-											bButton:Button{text:'<b>',alignment:['fill','fill']},\
-											bsButton:Button{text:'</b>'},\
-											bbButton:Button{text:'<b> </b>'}\
+											bButton:IconButton{text:'<b>',alignment:['fill','fill'],properties:{style:'toolbutton'}},\
+											bsButton:IconButton{text:'</b>',properties:{style:'toolbutton'}},\
+											bbButton:IconButton{text:'<b> </b>',properties:{style:'toolbutton'}}\
 										},\
 										ibt:Group{orientation:'row',\
-											iButton:Button{text:'<i>',alignment:['fill','fill']},\
-											isButton:Button{text:'</i>'},\
-											iiButton:Button{text:'<i>  </i>'}\
+											iButton:IconButton{text:'<i>',alignment:['fill','fill'],properties:{style:'toolbutton'}},\
+											isButton:IconButton{text:'</i>',properties:{style:'toolbutton'}},\
+											iiButton:IconButton{text:'<i>  </i>',properties:{style:'toolbutton'}}\
 										},\
 										ubt:Group{orientation:'row',\
-											uButton:Button{text:'<u>',alignment:['fill','fill']},\
-											usButton:Button{text:'</u>'},\
-											uuButton:Button{text:'<u> </u>'}\
+											uButton:IconButton{text:'<u>',alignment:['fill','fill'],properties:{style:'toolbutton'}},\
+											usButton:IconButton{text:'</u>',properties:{style:'toolbutton'}},\
+											uuButton:IconButton{text:'<u> </u>',properties:{style:'toolbutton'}}\
 										},\
 										sbt:Group{orientation:'row',\
-											sButton:Button{text:'<s>',alignment:['fill','fill']},\
-											ssButton:Button{text:'</s>'},\
-											sssButton:Button{text:'<s>  </s>'}\
+											sButton:IconButton{text:'<s>',alignment:['fill','fill'],properties:{style:'toolbutton'}},\
+											ssButton:IconButton{text:'</s>',properties:{style:'toolbutton'}},\
+											sssButton:IconButton{text:'<s>  </s>',properties:{style:'toolbutton'}}\
 										},\
 										fbt:Group{orientation:'row',\
-											fsButton:Button{text:'<font size=20>'},\
+											fsButton:IconButton{text:'<font size=20>',properties:{style:'toolbutton'},preferredSize:[120,30]},\
 											fsValue:EditText{text:'20',characters:'3'},\
-											fcButton:Button{text:'<font color=00FF00>'},\
+											fcButton:IconButton{text:'<font color=00FF00>',properties:{style:'toolbutton'},preferredSize:[130,30]},\
 											fcValue:Button{}\
 										},\
 										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,10,0,0],\
 											position:Group{orientation:'column',alignment:['left','fill'],\
 												upbt:Group{orientation:'row',alignment:['left','top'],\
-													ulButton:Button{text:'↖',preferredSize:[30,30]},\
-													ucButton:Button{text:'⇡',preferredSize:[30,30]},\
-													urButton:Button{text:'↗',preferredSize:[30,30]}\
+													ulButton:IconButton{text:'↖',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													ucButton:IconButton{text:'⇡',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													urButton:IconButton{text:'↗',preferredSize:[30,30],properties:{style:'toolbutton'}}\
 												},\
 												mdbt:Group{orientation:'row',alignment:['left','top'],\
-													mlButton:Button{text:'⇠',preferredSize:[30,30]},\
-													mcButton:Button{text:'●',preferredSize:[30,30]},\
-													mrButton:Button{text:'⇢',preferredSize:[30,30]}\
+													mlButton:IconButton{text:'⇠',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													mcButton:IconButton{text:'●',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													mrButton:IconButton{text:'⇢',preferredSize:[30,30],properties:{style:'toolbutton'}}\
 												},\
 												bobt:Group{orientation:'row',alignment:['left','top'],\
-													blButton:Button{text:'↙',preferredSize:[30,30]},\
-													bcButton:Button{text:'☻',preferredSize:[30,30]},\
-													brButton:Button{text:'↘',preferredSize:[30,30]}\
+													blButton:IconButton{text:'↙',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													bcButton:IconButton{text:'☻',preferredSize:[30,30],properties:{style:'toolbutton'}},\
+													brButton:IconButton{text:'↘',preferredSize:[30,30],properties:{style:'toolbutton'}}\
 												},\
 											},\
 											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
 												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(192,144)}',preferredSize:[120,30]},\
+													posButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(192,144)}',preferredSize:[120,30],properties:{style:'toolbutton'}},\
 													textX:StaticText{text:'x:',alignment:['right','fill']},\
 													posX:EditText{text:'192',characters:4},\
 													textY:StaticText{text:'y:'},\
 													posY:EditText{text:'144',characters:4},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
-													fadButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[120,30]},\
+													fadButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',preferredSize:[120,30],properties:{style:'toolbutton'}},\
 													inText:StaticText{text:'i:',alignment:['right','fill']},\
 													fadIn:EditText{text:'300',characters:4},\
 													outText:StaticText{text:'o:'},\
 													fadOut:EditText{text:'300',characters:4},\
 												},\
 												other:Group{orientation:'row',alignment:['fill','fill'],\
-													bord:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[80,30]},\
-													metri:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[60,30]},\
-													blur:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[50,30]},\
+													bord:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',preferredSize:[80,30],properties:{style:'toolbutton'}},\
+													metri:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fsp(2)}',preferredSize:[60,30],properties:{style:'toolbutton'}},\
+													blur:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',preferredSize:[50,30],properties:{style:'toolbutton'}},\
 													bfbVal:EditText{text:'2',characters:2,alignment:['fill','center']},\
 												},\
 											}\
@@ -418,7 +449,7 @@
 													vertical:Checkbox{text:'" + es_str.vertical + "',alignment:['left','center']},\
 												},\
 												move:Group{orientation:'row',alignment:['right','fill'],spacing:3,\
-													moveButton:Button{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[80,30]},\
+													moveButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',preferredSize:[80,30],properties:{style:'toolbutton'}},\
 													x1:EditText{text:'384',characters:3},\
 													y1:EditText{text:'144',characters:3},\
 													x2:EditText{text:'-50',characters:3},\
@@ -428,8 +459,8 @@
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
-											rfButton:Button{text:'" + es_str.refresh + "',alignment:['fill','fill']},\
-											epButton:Button{text:'" + es_str.xport + "',alignment:['fill','fill']}\
+											rfButton:IconButton{text:'" + es_str.refresh + "',alignment:['fill','fill'],properties:{style:'toolbutton'}},\
+											epButton:IconButton{text:'" + es_str.xport + "',alignment:['fill','fill'],properties:{style:'toolbutton'}}\
 										}\
 									}\
 								}\
@@ -812,7 +843,31 @@
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadIn.helpTip = es_str.msHelp
 				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadOut.helpTip = es_str.msHelp
 
-
+				pal.grp.leftPart.buttonArea.pickPos.image = ScriptUI.newImage(dad)
+				pal.grp.leftPart.buttonArea.rmMarker.image = ScriptUI.newImage(cimg)
+				pal.grp.leftPart.buttonArea.resel.image = ScriptUI.newImage(dimg)
+				pal.grp.leftPart.buttonArea.killTag.image = ScriptUI.newImage(eimg)
+				pal.grp.leftPart.buttonArea.killOther.image = ScriptUI.newImage(fimg)
+				pal.grp.leftPart.buttonArea.info.image = ScriptUI.newImage(gimg)
+				pal.grp.rightPart.btGroup.rebtGroup.rfButton.image = ScriptUI.newImage(himg)
+				pal.grp.rightPart.btGroup.rebtGroup.epButton.image = ScriptUI.newImage(iimg)
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.blButton.image = ScriptUI.newImage(zzmg)
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.bcButton.image = ScriptUI.newImage(ssmg)
+				pal.grp.rightPart.btGroup.midGroup.position.bobt.brButton.image = ScriptUI.newImage(ccmg)
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mlButton.image = ScriptUI.newImage(aamg)
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mcButton.image = ScriptUI.newImage(xxmg)
+				pal.grp.rightPart.btGroup.midGroup.position.mdbt.mrButton.image = ScriptUI.newImage(ddmg)
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ulButton.image = ScriptUI.newImage(qqmg)
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.ucButton.image = ScriptUI.newImage(wwmg)
+				pal.grp.rightPart.btGroup.midGroup.position.upbt.urButton.image = ScriptUI.newImage(eemg)
+				pal.grp.rightPart.btGroup.midGroup.extraPo.pos.posButton.image = ScriptUI.newImage(posmg)
+				pal.grp.rightPart.btGroup.midGroup.extraPo.fade.fadButton.image = ScriptUI.newImage(fadmg)
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.image = ScriptUI.newImage(bordmg)
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.metri.image = ScriptUI.newImage(fspmg)
+				pal.grp.rightPart.btGroup.midGroup.extraPo.other.blur.image = ScriptUI.newImage(bemg)
+				pal.grp.rightPart.btGroup.fix.move.moveButton.image = ScriptUI.newImage(movemg)
+				pal.grp.rightPart.btGroup.fbt.fsButton.image = ScriptUI.newImage(fsmg)
+				pal.grp.rightPart.btGroup.fbt.fcButton.image = ScriptUI.newImage(fcmg)
 			}
 			return pal;
 		}
