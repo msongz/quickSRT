@@ -352,9 +352,16 @@
 			uu1mg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00KAt\x00\x00\x00	pHYs\x00\x00\x00\x00mhú\x00\x00DIDATxí¿oGgS HÄV@¤pENj(ò/P¥@©¢t&]RF¡ v$·4i&))`äØH$øÀÍ²{7»Þ½×ÞÏ>ÃóX'û~xîÛçÞ½ÛÝ¹ÙÉ¼÷®+Þê¬%£±Æ²Oòôf.{õû·O^´ýSvÎùÌe³ùßï=ÜÖòâ¼ë9ïfÝÖôvt[øYª<î×_¸üOïÜÞ·³:ÑØA4FÎhìè6Ý½êoÙç\\k³ÇgV3õ2-ïzìà­8zûu6}åmûæ¢¯ÜýöðïµÓ«¼mÓØA6ÖiÎº¤Ó¥¤°ÃÂT(L¥±°rg¬r[øô±S6| |»hëü Ý»WßHã´rëÀ=?ö,Ún|ÿ·R/ùÎ_±Uá¼ÛpÞ-Wv ÃsF[oat	áW¡0\nS¡0|H[\nE¥BQ©PT*\nE¥BQ©¢âãÛ¿¾³¯­ÁzÇ²u,£r¼aíôj¾ÿïÝLq<`aÐQüüØ³¸7B:æpaÓãñq¸:¨vd×{«ãn¸¨IEU®<¨Õppew¡°áR]	]ï\nu©ýn,Ì»^Ôî¼ëOõö°ã\nE¥BQ©PT*\nE¥BQ©PT*YÔÄv¿M\"{A\x00²%,d	 K\x00YÈ@\x00²%,d	 K YV¶~êVòc]Ö3®{ôó[Õ:¶;tÚöÐmú­ÎûÖÇùMïÖZËnîæ®ð¹J­¤^õóú(Ã6ªVçÝ¢ÆåèK~/µ/¤øæE~Ù{Xåw\rI	ßÆ\bÇó­p^òR\\¿_#ÕZ2³¿°´­ÖÔWïézºZ»5½úÕÁàá,å×ï_¾\x00áúÍÅäïè¸¿Î¾´¨6%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈàx\x00É@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00Yé£ïQêÊèwÌjM[\b>e(m>6a¼±Õ%¯õúíú	æGßµîy@yËxgi0y×åaZ¥Áäceyß>ìÿ5òÃÑ÷7N­ÐÙèû¶''ë0©5üÌ¶B©µ½Ñ'-ëÏ2¦Öx*Ý²ZÕ\"*ó¢4-DÕvÂp2Úõ'Áh¿¹7´£³Ó«4ÑêGu¥ø=_tø$U;¸^LA¤¼>ö$ZÃ'w+µUîJ±JÎVV¿ÔZc¾5½Ö ë3v$¯Bµ³3gÊÎ(Òy­OOì¤ÖÊ\bvw%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00_fXÁ&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\bÐi°²ÇgV³ßÙÉúÇ·éåÇ¶ë²^Þæßï¿\fÏÑU»GÜkXv+¯á5ëÚkê<¶cçÏ\rs35÷§úñôÖr»a®Ý0q9r9Gxx®5ÿ0.^W:ÇÓ¯4ÍØ=ÒkxmÊ\r¼v¨2Tajïbºòh®9ïîrFîÅõV	aJóXÂk°^ÚÊM«~/Õqxmò×ÈÈë,x´0ËkÛ°½x-Tþ\\S[y=°Pí7X¯{¸ö±²ÞýíÅ±W\r\r,¤ëMú8ÜÇÇàêØòãÐVDóvÖF´ ñõÃ\bTþÌ7ÝòÜýKÃûÃßÞ-)mX¬OS[o_u¬F¡àÚË>^øá¡Á;T®;Û¬òþWÁÙ¬mtæµ¶Gè¼û½\fÏ½×ÊÀkç\bdë§n¹¹µo½ó?uÚn8~³~òK?÷èóNÛýãÃïÜÖÛSÞ]{âOýùUô¼ÝÏç¯Vþé£ïxç<æÑÙoÜ?'g÷Oÿ×÷ó¿|ÑiGÍk×ÁptéL X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,èçÜÿî^j§JÇ_\x00\x00\x00\x00IEND®B`",
 			sss1mg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00KAt\x00\x00\x00	pHYs\x00\x00\x00\x00mhú\x00\x00VIDATxí±oÔVÇ; J4¨©@ :dhUUT'3\fù:DªnÐUYÊÌZ)k®HTêRUTj*µÑDK.\bxÕslß³Ïw÷¾É~>'+9ïùëï}í³ýî½yï]W¼ÕYIFa	eçäéÍ\\¶û÷×O^zSö¡«Í¿w¿z!ìåä¼ë9ïºíùh^x¬Ö»wúónÍy·â>ð¾ÏîDa{Q9£°[Xöý%¹lÙEå6²'×3õ2]Z¶:G_wö±¯¶¯_õµ×¯Üü¿ybÃ6íeaæ¬K:ÝJí'\bSAJ«°òb¬6/|{¹(D~Ð?¼ã¢<WA´¾5¾H+ÏÜóCÏâ³êÿï>õñCê_üEgq¹ùdXgtvÑùF~© La*3yI·\n¢RAT*JQ© *D¥r0DÅ÷jó¿ºýZgQÅòÅjÞ¨{µû\x00'Öóëï¢Êã¥üÿç5ï$ßs8ûØûQ¾ºçÖwïôúýfmu\\\r²ûæãnX$n®eV¢Zn®\f\r¶j¥Vp r#[íVåÇ|^®ßv·T\n¢RAT*JQ© *D¥2¢f¶úmÙ{ü³\bf	`\x00f	`\x00f	`\x00f	`\x00f	`\x00f	`\x00f	`@²YÙ£ã7uYÏX÷øõ[iX*íC{¨6õÖEåýÈåü¶wë©Ek¯¨>¿ë¼ÛÒºµx_ÑªÔk´Ø(êÛ/î·i	Z}ÞÌ÷ïÚ´Z')~yO[÷[Ì\nËÑü^.8,6`Â¯2B¿åT<¿?´~Õq1jÚRÿÙwÖÔOïéWÍOlä²Ûó;©?]©Z6`5~çüà§1áùõ«É¿Ñqzi¡\nN0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³¸%@²0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K\x00³0K ½õ½ÐJ]iýnÖ¤¦±EGð)Mióf´	í­¦\\ë[5­qGó¯£uêå#Ú;KÉ»ÚfµhO4kQÍìûmØ£Ê.\n#ÍKÓ&¯¼aÖP	ûaØ8­Î»kÖÖ~(­£LîXâF[²ü>ô2Nkè)$ôÒØnL£U±hß\rE£Fux:Ãh<Û	Æ®UòN:Ú:íè¬{Vý¹~´Qgâ!RªHo\"!Q¥Øêy1D~ÔHù|b'5­Ûó;åû#}+áæ»_ªÖä+OHJ/ôØ¼5z	==\fÌzé\\ëÓ#¯RµÒÂBËÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌÀ,ÌàÇl`{!@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á:\rVöðäzöÏ;¯²þáexùåº¬ù×û/Ã:º*÷ û¶ÝÊ×ðuíkê8¶ÇÏ\rc#5÷çúÍ¡¸¥rÃX»a¨þr0årð°®=5?¦V_Áá!Î×F\rqÞêkølÊ\r|í>Pe¨ÂÐÞÑpå\r[¿;jüÊ0¤ylÂ°±¾/ZvÖhhõÃgFF¾îÙG´ä/þ/ôÍØ´¾CÐÅc+_÷4TÅ\\6º|l9ï&}sÃõ;ëFü5¨zlá«¿úá=mãÿ¨.y¸¦xlùuhkDKÀâ½kR¨ö\"PùÚ¯_LùìÚë«îÎùÁëáïV2,Ö8:-§xl}~ÕI°Z\b[®\\¦üàWG¨ÜòØÜ¶`°¯ïg8XcÊèÌ×+BçÝoåWÝT¾ÏÊÀ×ÎÈ¿é7¿ñÎÿÔi¹áþÍ£c_øÅuZîï}ë¶ß«f¼»ùÄÿãËh½ÜÏg.ÕÞôñ·½ó?TË<8õµûûØBõúü¿}¿ôËçê<h¾v,\x00GXA°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`ÁîqÎý¼µyË®G#§\x00\x00\x00\x00IEND®B`",
 			bb1mg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00KAt\x00\x00\x00	pHYs\x00\x00\x00\x00mhú\x00\x00aIDATxí½oGgS ;\bV@¤HED\'ÔPä_p¥ÒT¸t&nÚEÜºID¤4QD¤¤ R$|FÀD³ìîÍîíÞÍÏÞ×>àyN+û><÷Þs¿=ïÇÍLæ½w}ñFo-Ñ%4}ú0Ooæ²?ûøi×e§Ï\\¶=x÷vuGXÊÅy7pÞ-¸íùè¶pY©=îÖé§ÅíKîïËÛYhl?#g4öò6]?ï«ìS®3ÉÙÝËËÇ[}G¿îÌ_ûØ¾|É×î¿xuôûÖñ\r>¶il?ë5g}Òë«¤°ÂT(L¥µ°æÎXñû`ÒNÙ4ò-á;E[ËU»×Ï·Æ;iåÖ{rèq´#7Úøáso1¤.ùÎ_±Uá¼»ï¼[.~_Êw ÃsF[½oaô	áW¡0\nS¡0üI[\nE¥BQ©PT*\nE¥BQ©¼E5¬U·smO[ñ±êLE×±Úñ­ãùþ¿wG¢cùïO=ÏFHÇÎ<ðáxE|£<?ß­ÓOë\'²g«ãÓ Þ­UÜqÀ"©¨úÁµ¢Z®7\n½ªµ[\nªº4~¶æÝ hw!ÿ9¶íaÇ!J¢R¡¨T(*J¢R¡¨Tf²¨=ý6Ìì1þYYÈ@\x00²%,d	 K\x00YÈ@\x00²%,dYÙ½cWë²qÝßªÖ©ç±ÃIûp=6ç­ë\'ï×Æ_Èo;ñn½´Ô:j];8ä·ß_¼­ÔªHÔÿ0¿¬7{Y´Iµ:ïV²Ê®üj­Ó)¾y/÷o7dõèöA^px|xS¾Æ%(âú¹øzü©ÖzåRVÑÝ¥vD«5õÝ{tøy3]ÝßIýêJÕ#xôVòë7Î¾®_¾ü÷×ÉgµrÂBMd	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²8%@²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@@zï{¡ºÒûÝ³ZºÆÁG½ÙÇz²×ºÑ&ô7¶ZòZ/^k]úr¯í¥Ö]u(ï¥v&ï{éèP~³ìDËR;O5¡çýrÜ÷~µò£Þ÷«Ñ6w#L~òf²c$°)µËB×8J­ÝLXb²¬}5dJ­qkc²ZÕ"Ê¡UÆØ­¨®/Â`ëÁhV~¸G²jvô6¼JkÃ¹aô¢ZW¿ðHHTYlu½"?A¤¼>uZ­á?]±ÚEõ]¨¦_W¿ÔZc¾=¿Ö ;W¡Æh a¤b¬hDÞk}tøyj­ô°`wG\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	ðe60µL X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	½+»{b#û÷íçÙðÍ¶éå3-g.óÅ²Ü®Ëy¿÷,<Y%÷^{×«dÇ×ðõí5uÛ©óç9ÀËIËsÃ¶©¸Û¦äïk7L`\\N¦\\ÎkgÍ?¥ÕkpñbRçØëzäuªãÜkxoÊ\r¼ö¨2Tajïbºò`mFB:CK\bSÇ^ñMô\\D¡òõ©Õ7S÷&¼îËï\bVµ1ßüÂë°Ýx-¦//TÇV^÷-T-ÁZóõµ-3¹ØW7\\{XY7K{»uláÕFDË¿Áý:j¯ü­«-ÿÚhÌy·ÔX{ªm\nTþì/qù+îÆÙÑýáwïV6¬Ö\bÑg©­·¯z	V«PpcÏeoühÏÐà*WËmV\bKyÿàkB½ymì:ï~/·¥ví5¼W^{@ »wì[ÜúÎ;ÿs¯íã7÷~åï|Ñk»|ø½Û~k®ºá­þØ_GÏ{ÎýòÉùÚ}ôÓ5ïüÕcîüÖýsôHuÿüCÿþ¯_öZçËæµï`8NéL X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,èçÜÿ ¤Q¶Z"0\x00\x00\x00\x00IEND®B`',
-			vemg = File("/Users/meng/Documents/vemg.png"),
-			vemg1 = File("/Users/meng/Documents/vemg1.png"),
-			olmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00\x00ïIDATHíVQ \f}]¼Ën°oÄÎ\x00AÄ·êB3lÔhBéë+R±"I\b1èð5|@LÎ\b6ñ±ÆîÅèoLv¸§PFNÏ¬\f²ëÍ«ùSp·ÐØ3ÆþÙBÙPElç^)¡üc&û¶U\rüÃà¹0\bdà´\rÂ]ô\n<m°Kü\x00¾xJÀ×éF#YgUUUk¤j§q#nÄÇ&îrJ>7]4´!ãïé\r8<}¬üø®îq~TÖæ2r°&à*©h¨\x00\x00\x00\x00IEND®B`';
+			vemg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00+IDATH\rí¿kAÇ?O\"ä B®J Ía}ÎÎÃVEk+óÄ\"½élR¤W­Á³ÓCÒYHTT³ä'3;»7»;{¹¸bñsóv~}ß¼yï;#ª/§.ó¨)Vð¥49USÛNû7§F¬^X#/]HÚç'nme%b°!»öeÂ7*]AQI\fú|~mãåë¹}¬:°:ítVÛzÙ`o¾÷±·ßl¥qä^tÄ0ê'Ë±J/RÙ¸kÍêÛD7ýHÞÌàÛHÓ#rßµÌ.£~½Îâ^|çAoV!×òöÕÉM¶á¨T^·\\t«Í¾µ\n°úµõjèâf<6 IG(Ý`Ù-ÆU}ãtTÓWR5Ç¯ð\fhçÆãÛäÔaôÏ|÷ú\x00eÿ%ÆÉ9¬Ùu¤ýÀéµP£ùMAî	r»\nx\"ØÚkÃÍn°k¨<lÅ\\Ü1#À2ð\bÒPx*'~2óþSKv¡^û~Î]Ë+|Yàt§³Ç22ôHo^[]¸i)_¼\rGi­EªôKiÇ&cûÙ'Y6'cNQ¹h~¬¹¦ ¯éüðö¹éËöUé¢è[À\\³®iXQôqiÍªÃÏæãU(U¿(8Oùä¿½å?Wÿ~ñ{$àÌ\x00\x00\x00\x00IEND®B`",
+			vemg1 = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00|IDATHíVOhÓPÿ½Õ¤s´uc;u¥\r6]vP\\Aô¨vÕVd9n]rÐyqxAPOUð$;\bÁ  VA2Úv¶{ò$¼¤ipøÇûòÞ÷?ßûÞcsx@æ9\r¢[8zàC«,È³$O³µé(¥9Pi/,«LUfi¾xyß®[\\3?ø2U1\"\behZ$:åàÓ´Fþ0kóóÔ³7J-sm·_GoCÑd]µõ'¿®;Rû8´ä©ê\bö{÷LQ'âÀÌoä8;!4àD?n¦ô øõÜ+ôÃ8«ÏaslRSÆøöMÊ]@òpênÛÆ}ð|Çr»EX.\fßÎí\\µhr©Êh;áXÙ>¼_uxÂn¤ïñÉ­[L¥ñ5£,ß\x00°Ä5ÓÛ|Ú°ªÊÑåÍÎ1Ó)Ý^Ëvûõ¼³f¬n±o£ï2Õd9*ì©Y\\3v{GèWIÍWZì¯t\\\næ?r7¤÷ÂÖs\x00ºÈ{Lk;ÛqËëciXò/ØõX¡Îóy¹f®E2LHU²h×Â`·*â KbÀG\x00Ñ\r7¤:¾L¼hÖ½q¢V E©JvEt]âOßÄAOcù´ËtãdáÒò3/¾¨|íÀÍCc©\nµÇó$oÏÝ¦6i+ë\n¢S¢G§ªÛ ðñÃ~y¼0hoM3UÙ\x00°Ì5óµÈ)âdmð=7E\f924/®qÍ¤cDWÅ{éTQDiraèi=Q¹ÂxÚS?\x00ÌØÎ´à¯þ7\x00ð_>>9Û¼2p\x00\x00\x00\x00IEND®B`",
+			ii1mg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00KAt\x00\x00\x00	pHYs\x00\x00\x00\x00mhú\x00\x00QIDATxí?lÜTÇATIJªµjU\f @(K;0!V&*	±µLÍÑ,m·J@ÊÚ±U!ÊP$hªFKÕö¡çÚ¾gïü¾É5ú|\"+¹;çùçÏ}Ïñ<¿Ì{ïúâ¹ÞZ¢1Kh,{g#Ooæ²'ß{ëá¸_Ê^sÕ¼ÙÝoV/O@99ïwnsv+z.|-ÕæûõÍÅkîUïËçù8ÑØN4FÎhìÙm,ûötÞr³ÜFvûØjæ²ÅjóÏ[m£Í¯;q××6ÛÎûÚëç.\r^;ºÊfÆv²±^sÖ'½®%í&¦Ba*­c.> ½'uï\föomVíF{5â´rïÀ=Øw?Þ+¨~þæcï1¤Náà¯¶WáÝe»ùdXf´wÑûF~\nS¡0\nSÊ\rìTÚ¢¨T(*J¢R¡¨T(*JåÙ(ªq~`¹zþËÛÚlË¸æ&Ë¨oX;ºÿ{7W8[½ö`ßýø¼tÎáÄ]ÎWm¬µW\\.§º©Cïç:¿1RýÞ-MÊþsî+Å£µ×O;÷Ñ÷Ï5UI)Öjä¬Mã\fJ|­§ù½õ÷\\Ê¥Ì\fÚÎöpà\nE¥BQ©PT*\nE¥BQ©PT*SYÔÔ^~F¦öÿ4,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@@²¬ìÎÉóºlÑ¸îÉË·ªµóâz¸h.°ËÆ¡S@qñ>ºØ¾R¿¸ßváÝzj©u±ÑS½V¯[¿©ÔªHZýew6¾æ¾[ÒºjuÞ-²ZëM­µ»¢«H>­ÏßìÿÓB(8ÌV å ó/SñøTü8GªµÑe¦¨µVoøhµ¦¾{÷<nKWë¼³[]®­Hè\\¬D.&<¾~r¸RáñóÉÿ£ãþ<þÈ¢V.X\b°ë ,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00ç³H\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈHï}/ôRWz¿[`VkR×ØâFð-µÃ×Õn´	ý­¦¼Ös=ï?,j­Õ«ÖºÝå¡WûÁè±Ô¼ïiBò0^âz\\¯Ú¼SÖ$QQ²VÏí°q¢¢:õöÖû~ÒÂ'ÉÚ\ra]µF7ÀØÖ;¾´`´ËÚá»$ÜÃ«W©U-b®YÄvo¯2îáfÇo1NX¹qo«··Û«´14Vtadþ	*­CäGw)wÞ£VëæìVñûW#YÑ~øñK­59æÅÂ²îØ2o%'ºH¸SHq¡¬è\"½×zïÀãÔZéa!Àá\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈ@\x00²%,d	 K\x00YÈàÙÀ>`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	Lè5XÙíc«Ù¿/=Îû·ºÏ\\v0sÙræ²ðsÇ¼y½ò(,ÃJÆ´{\rëà5rÖé·òÞ³¾½¦cÛ9~n¼t¸©y03hÛGÅd¬Ý0T9r9FxXÖ¿S«×à\"8iâüjät¬ßÜkxoÊ\r¼ö¨2TahïÆpåÃ_+¦3rCÇöxÀ&z\r.ÆXË¯k]~Ã{¿GF^wtÅ+v6±0ÿØv¼ðD>Ï¤úµòº+¡z`íõpm×k±eªÿWüZxµÑñgpV|¯¬¹?â×òÏ¡­	K\\qó@åK¿p~8åO×^_r×O_?{·¤´a°Ë÷ºüZï_õ¬V¡à1G.OñÆ\f\r¶P¹öXn[°BXÊ×g4XÚèÍë#BçÝ\"@ë²×ð^xí}\x00ìÎn~í+ïüO½¶ÎßÜ9ü¿õI¯íþþú×nóÅêCkþÈGË=å~~ûtíÞøñ²wþ»j[Ç¿t«^ýoà~ù´×:5¯}ÀqI¬ X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`	L X`Á\b@°À&,0`Aÿ8çþ?\raÁ\x00\x00\x00\x00IEND®B`",
+			olmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00\x00ïIDATHíVQ \f}]¼Ën°oÄÎ\x00AÄ·êB3lÔhBéë+R±"I\b1èð5|@LÎ\b6ñ±ÆîÅèoLv¸§PFNÏ¬\f²ëÍ«ùSp·ÐØ3ÆþÙBÙPElç^)¡üc&û¶U\rüÃà¹0\bdà´\rÂ]ô\n<m°Kü\x00¾xJÀ×éF#YgUUUk¤j§q#nÄÇ&îrJ>7]4´!ãïé\r8<}¬üø®îq~TÖæ2r°&à*©h¨\x00\x00\x00\x00IEND®B`',
+			nwve = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00^IDATHíV¿KAþÞqÍ	\')B¢Á`â6mrÿ"ü	wvé*¤LÐ"EîHâh£	91?ÀÆ¼ðvöfwof÷,	üÝ¹73ïÇ|ïÍ\x00\f[ËÌ\fyÔk9ÚQ/ëò:B /<ö~FZcD~4	ä´;bG\r¯E5öï~lk¶ÍÀ¨ÅÕ\\¢4ìÆØe¯«ÏÕiÆb!¿Ç^/ôÓÂD½J8¹4Ê¦AI.¥X6ÖO	Ý\bWãðD;,R8`´Ë²aÛN÷ÃO>¦m]~Þ§¯wTûiò,ð*~;gøÜé5ÿËÉ&%Ãè9¿ÀÐö3¨àíwóXÆbÍ>yÇÛÚïþ1H]/âÝÀ¦î]½¿ÞËnfçðèåúÐ¤÷Tªß8Ícwt)q2}&Éu«òIB	åö#âºÞzë%J\f\'(¸ã51ô*=çðB×É5OÂÕ²«Éí+:YUÏF¹bxæ$U¥ºJÆI^`pLF¡8"J%¥ï5Õ±ÑçucøëI|SN\nâ?x|rq\\ü¢K¿ôµËÀöàHlæ ËðqÍá#»ÛÐp¯KÜßºÍ`7\\üö\\Bl?¼Ò!A²à?S¼;ZJ»\x00\\Ñ*.\bd-X={4y¸%×ÊSF«´e#\r?|r¹iÉe¹ÆÒx\\õÑ´PîµI÷c|r×¬¾Vüw\x00à7 ïÝëÊB2\x00\x00\x00\x00IEND®B`',
+			bxmg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1E\x00\x00\x00\x1E\b\x06\x00\x00\x01L7\u009E4\x00\x00\x00\tpHYs\x00\x00\x01\x1B\x00\x00\x01\x1B\x01\u008D\u00F7N\u00E5\x00\x00\x02\u0092IDATH\u0089\u00EDVKkSA\x14\u00FEN\n}!6B\u00A5\u00A5\u0082H\x11\u00BB*\u00DE\u0085?@\u00C1}W]\u00DBU\x17\u00FD\x03\u00E9\u00D2\u008D\u0090\u009D\u00DDv\u00D3\u00EE\u00B3P\u00C8\u00D6\u0082?A\u00BB\u0092\u00AE\u0084l\u00A4\x06\x12\u00F0\u0091\u00B61\u00E6\u00C8\u0099\u00CC\u00CC=s\x1F\u00B9\u0097\u00C4*\u0082s\u0099\u00DC;g\u00CE\u00E3;\u008F9\x13bf\u00E8Q\u0091oz\u00BD\u00C3\u00B4\u0081\u00D1\u008E\u00E1x\u00C0\u008CG]\x06\u00E30%\u0092\u00D6A &P5&\u00B5W\u00F7\u00F0\u00FD\u00C6\x00\u008C\u009Ap\x17\u00EBH\u008E\u008A\u00E7\u00B4\u00D8\b\x14\x11\u00A8\u00E6\u00F9D\u0083\u009E`\u00F3\u00D4\x1C\u00AD\u00D0\u00C4X\u0086J\u00EE\u008E\x0F\u009A\x03%\x00?\u00DD\u00FD\x19\x00\x03#2A\u00DC?f\x07n\u00F4\u0096\u009F\u00ADw\u008C\u00B3\u00CD\u0081a8_kZ\u00E4\u00D6\u008D\u00CB\u00F9\u00CB\f\u00B7xr\u00B4\u0085\u0081(t\u00D5k\x1A\u00E59R\u00EB*}[\x1A\u00E6J+'\"\u00BCz\u00C6\u00C6cy\u00BB\u00EF\u00FDc6{\u008C]\x17\u00A2XF/\u00A4\u00A0$l\"\u00E4\u008A\u00F3|\u00ADi\u0095\u00D7l\u0094\x1A`\u00D4\x03a\\,\\\x19\u0081\u00B3\u00CD\u0081\u00A7Ie\n\u00CDVh\u009C\x1C\u00F3<M\u0095V\u00DE\x04c;N\x1E\x1A\u00A5\u00CAn\u00DC\u00F8}\u00A9\u00FA;\u00C2\u00F4\u00F9N\u0093~\u00CC\u00F5\u00F4&uo\u00B7\u0084\u009E+m#y\u00E0\u00F3\u00DB\u009F\u00ED\x19Zg\u00B9\u00E5s\u00DD^9\u00CA\u00CAB:\u00CF2\u00E5q\u00DF\x17\x0BW*\u00B7\u00BBZ\u00D8\u00C3\u00E6\u00F9\u00DE\x1CN\x17\u00FBf\u00B1a3p\u00BA\u00D87\u00F4x\u00DC\u00CA\u008F\u00F6pf&X\u00B7\u00EE\u0087k`\u009D@o\x02\u009F\u0083R\x14\x1F;\u00CB\u00EF}\fl\u00B9Z\u00D8\u009D\u00B8A\u00B0j0rz\u00F4Ap\u0087D\u00A6|\u008F\u0084\u00EA)a\u00AF\u00C0\n\x06\u00A7\u00AC\u00BD\u00BA\u00A7\u00DB\u00A9\x16.]\u009E\u00D2(\u00BC\u00AB\u00D2&\u00FF\u00DD\u00DA\u009E\n\u00F64c*\u00D4\u00D7b\u0098@\x07\u00BA\u00FD\u00E7\u00F0T\t\u00F4|\"\u00CB\u00A9\u00D3-\u0097\u00E3\u00D7\u009BCS\u00D0re\u00F4g{R\u00B7\u0089\u00FB\u00B1j:\u0085\u00EC\u00CBa\u0090\u008B5Q\u00D7\u00C5}<T\x18\u0099n\u00E2\u00EE(7c\x00\u008F\u00BDA\u00BD/\u00A7Q\u00E4\x12\x00K\x1B.\x04 \x06\n\f\u00EA\x13\u00AB\u00FF\f\u00952\u00EC7\u00BF,\u00D5M\u00D8\u009F|\f\r\u00CA\u00FC\u00F0P\x1A\u00D5\u00DB\f\u00D0\u0093\x1B\u00F6\x7F\x17\u00937\u00FC\u00C9\x16\u00A7h\u0089\u00FC&\f'\u009F\u00C3\u00BC\x1C\u00EFd\x1AT\u00CAsA\tO{\u00E5(a\u00B8a\u00F5v\x14m=\u00D3c\u009F\u00DF\x17/\u00C7V\u00AB\x07 y\u0096w\u00DC\u0099S\u00A1Nx\u009DmX\x01\u00B8W\u00AE:C\u00BE\u008CPko}\u00A8\u00AF\u00ADe\x12H\u00EE\u00E0m\x00]\x00'\f\u00EE\x06\u00FB\u00FF{\u00F5\x1F\x19\x00~\x01\u008B\x0E&1\u00B1\u00D9\u00F2\u00E6\x00\x00\x00\x00IEND\u00AEB`\u0082",
+			uxmg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1E\x00\x00\x00\x1E\b\x06\x00\x00\x01L7\u009E4\x00\x00\x00\tpHYs\x00\x00\x01\x1B\x00\x00\x01\x1B\x01\u008D\u00F7N\u00E5\x00\x00\x02|IDATH\u0089\u00EDV\u00BBOSQ\x18\u00FF}%)\u008F\x18)\x06\x02\u00D1\u00C40\x18\u009D\bw\u00F0\x0F\u00D0\u00C4\u009D\u0089\x19&\x06\u00FE\x01\x18]L\u00D8d\u00ED\x02\u00BB\x1AMX5\u00F1OP'\u00C3@L\u00BA\x18m\u00D2\x12\u0094K[k?\u00F3\u009D\u009Es\u00EE9\u00F7Y{A\x16\u00CF\u00CD\u00E9y}\u00EFg\u0089\u0099\u00E1\u008E\u008A\u00EC\u00E9\u00CD&\u00D3\x03\f_\x14\u00C4}f<l\u00B3\u00EC\x13(I\x1A\x04b\x02\u00D5\u00A2\u00AB\u00E6\u00D26\u00CEo\u00F4\u00C1\u00A8\u008FF#>*\x16R\u00CBF\u00A0\u00C0\u0083\x11\n\u00EE\x04\u00AB\u00AF\x0E\u00C6V*\u00CF\u00F8\u00C8\x05\u00A8d\u00BEX\u00A3i\u00A1\u0094\u0080_\u00EF\u00FE\u00F6\x04\x03#PF\u00DC=d_H\u00F9Y\u00FB\u00C08^\u00E9+\u0080o\u00B7\u008F\u00B4\u00E4\x1A\u00A23\u00D5IQ\u008B\u00C7\u0097\u00B6\u00D0\x10\u0085\u00AAZJC?\x07\u00CE\u00B9F?g\x07\u0099\u00D8\u008E\x12\x01^o\u00B0\u00D2XV\u00B3\u00DF=\x14\u00E5\u0082\u00B8/\u00AD\u00A9\u00ECA\x02J\u00CC&H:8\u00C5t\u009A\u00F8\u00BA\t\u00B4h5\u0088\x17\u00D3]\u0085p\u00BC\u00D2\u00B7w\x12\u0099r\u00A7#th\u00F9\u00A1\u00A9\x13\u009C\u00F3&\x18s\u00DA?'\x06\u00B9\u0094\u00B5/\u00CFU\u00D7\u0083L\u00DF\u00EF\x1C\u00D1\u00AF\u00C9\u00D0}\u00A4\u00F6BC\u00EE3\u00B1\u00B5%\u00F7\u00AD\x7F{\u00D5P\u00DD\u00B5\u00E6\x1B\u00D6\u00D7\u00CD\u00C5\u0083\u00DC \u00B1~\u0096)\u009F\u00D9_Lw\u00B3\\\u00E8Y\u009B:3]\u00AC\u0086U{\u00F1i\u00A6\u00C7S\u00E1d\u00A1\u00CEj\f&&\u00BCs\u00E3\u009E=\x13\u00A8N\u00A0'\x04zA\u00A0=\u00AB\u00B3\x17\u008A\u00A2ck\u00FE\u00A3\u00B5\u0081\x0EW\x1D];Q\u0081`\u00A7\u00C0H\u00F6\u00B8\u0089`\u0092D\u00A6\u00EC\u00B3\u0090-\x01\u008D\u00E8eYsi\u00DB\u00E1\u00FC6\x15y\u0084\u00C4hi\u00C4\u00D6\u00A5$\u00C6\u00F5\u00C5v)\u00B1\u00CB\u008CRR_\tc\x02\u00ED'\u00DAp\x12\u00A6F\u00A0\u00A7cqN\u0084\u00D1\u00E9\u00ADW\u00F8qs\u00A0\x02ZZF\u00AF\x1A\u00C6\u00DB\x05\x185U)\u00E4]\u0092A\x1Ak,\u00AE\u008B\u00C3\u00D5'\x18\u00A8jbz\u0094\u0099\u0091\x00\u008F,C\u00F7]\u00B2Q\u00F02\u00FAY!\u00E3B\x01\u0084AI\u0086\u00B9\u008C\u00ED\u00E3\u00D9\u00EC\u009E2\u00FB\u00E3/>C\u0099\u009FW\u00A5P\u00BD\u00FF[\u0086\u00F9\x1A\u009B\u00BF\u008B\u00F1\x0E\u00FFn\u008D\x13w1\u00FF\u009A\x06n\u008A\u009DS\u00BBl\u00DDJ\u00F3\u00F1f*C\u0087x\u00A6P\x02\u00D3\\<\x18\u008B\u00B1\u00E7\u00DFg\u00CFs\u00A3\u00D5\n ~\u00965\u00AA\u00CC\u00E31v\x04X\x1E\u00B1\u008A/\u00C7\u00CE;.\u00A3\u00F8g\u00E0\u00AE\u00ACd\x12h]\u00D5\t\u00F0K\x02\u00CD\x01\u0090\u00D9fp\x1B\u00FFk\u00F5?\x1B\x00\u00FE\x00\u00DA\u00F2d\u00BD\u00A8\u009D\x14\u00EB\x00\x00\x00\x00IEND\u00AEB`\u0082",
+			sxmg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1E\x00\x00\x00\x1E\b\x06\x00\x00\x01L7\u009E4\x00\x00\x00\tpHYs\x00\x00\x01\x1B\x00\x00\x01\x1B\x01\u008D\u00F7N\u00E5\x00\x00\x02\u0082IDATH\u0089\u00DDV;K\\A\x14>gWL\x04\u0089\x1B0(\x06\u0082\x04\u00D1Jr\u008B\u00FC\u0080\x04\u00B6\u00B7J\x1D+\x0B\u00FF\u0080\u00966\u0082]lm\u00B4\u00B7H`\u00DB\r\u00F8\x13L\x17,B`\u009B`\x16VH\u00E2\u00FA\u00C8fO\u00F8fgfg\u00E6\u00DE\u00B9w\u00F1\x1A\x123\u00C3\u00EC\u009D\u00D7y\x7F\u00E7\u00CC\u00B2\u0088\u0090\u00DB*\u0098\u00F3\u00BBU\u00E1%\x1A\u009C\u00A8\x1B\u008B\"\u00F4\u00FCLH\u00A8\u0099\"I\u00F3`ba\u00E2\u00DAp\u00AB=\u00BBN\u00E7\u0093=\x12\u00DA\u00C3\u00EDb\x1Ea\u00AB\u00D8\u009BZ7&N\u00D4\u009Ax\u00CD\u00EA\u00E9\x0E\x12\u00D5\u009B\u00A4\u0096\x192\u00C3\u0096{\u00A1\x12=\u00B1N\u00D3J)\x05\u00BF<\u00F9eO\u00B52\u0089r\u00E2\u00E6\u0081\u00E8u}\u00F0\u00C5\u00CF\u00CA\u00B1\u00D0\u00C9rO]8\u009Dk\x18\u008D\x07\u0087\u0097\u00F7/3\u00CC\u00FAtsm\x0B\x1DQh\u00AA\u00E54\u0088s\u00E2\u00ACk\u00FCc\u00AA\x1F\u00A5v\u008CH\u00E8\u00EDkQ\x16\u00E3k\u00E6\u009B\x070.\tci\u00BDa\x17\x00\x14\u00DC\x06\"\x03\u00CE\u00D3\u00B9\u0086f\u00BE\u00A1\u00BD$\x06pC\u00C2\u008B\u0089+Ep\u00B2\u00DC\u00B3{@&\u00F6\u00CE'{\u009AA\u00D3\u0090\u00A7$\x17\r\x12Z3\u00D1\x1D\tvy\u00ED\u00F6B\u00F5w\u0088\u00F9\u00EB\u00E3\x06\u00FF\u00BC\u00D7u\x0F\u00F9\u00ECQ\x0B\u00FBQj\u00ED\u00C5]\x1B\u00DF\u00EB\u00F1\u00AE\u00DA\u00EBL\u00B7l\u00AC\u00DB3\u00FB\u00B9 \u00B1q\u00C6@7\u00F3\u008B\u0089\u00ABX\b\u00FD\u0085\u00CB \u0083P\u00A3\u00CC\u00C6y\u00CC\u00B3\u00A1_\u00ADz\u00EB\u00D6B\u0095\x16\u00B5\u00FD\u00C4nL\u00D9\u00DA\u00ECA\x116v\u00A6?X\x1Fh\u00B8:\u00B8\u00DE\u00F0\u00D4V\x19\u0085\u00ECq\x13\u00C1$\t\x06\u00E6Bu\x12\u00EA\x18\\\u00FB\x0E\x03\x03M\u00E8eY{v=\u0090\u009C&\x1E!)\x1E\"1\u00DC\u00BD;\u008A\u00EDRj\u0097i\u00A5\u00B4\u00FE#\u0082\u0099x\u00D7-\u00FF\u0091;5&\u00DE\u00BA\u0091\u00E4\x14\u008C\u00F08~\x7F\u00D0W\u0080\u00C6\u0093q=\u00DE\r\u009F\x0B\x12\u00AA\u00A9J\u0081s$\x03\x1E\u00D6\x00\u00D7\u00C5p\u00F5\x19&\u00AA\x18\u00987\u00CA\u008C\u00A1\x02/\u00AC@\u00F7\x1C\u00D9\b\u00BA\u00C8{V(\u00B8P\x01\b()p\u00A4L\u00A6oS;\u00CA\u00ED/?\u00FB\x021>>C\u00A1:\u008A(\u00DEt\u00CB\u0086\u00EE\u0087\u00C5\x16\u009B\u00BF\u008B\u00E1\x0B\u00FF~ER{A|!\u00C0\x11\u00B6\u00A3\u00F7\u00EAn\u00AD\u00CE\u008A\u00F1j\u00A6@\u0087yT)\u00DCi\u00CF\u00ECk!Y}/\u00D7b\x1B\u00DF\u00ED7\u00B9h\u00B5\n \u00CE\u00F8\x0E+3\u00FEq\u00BCB\u0091\u008DU\u00EA\u00DC\x18\u0093\u00D0\u00FC\u0088U|>X\x1FfX\u008B\u00F7\u00E5\u00E9\u00ADU\u00FA2\u00ED\u00DF+\u0099\u00FF\u00A7`\"\u00FA\r\u00A9\u00D8q\u00BF\u00D5A\u00F5y\x00\x00\x00\x00IEND\u00AEB`\u0082",
+			ixmg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\x1E\x00\x00\x00\x1E\b\x06\x00\x00\x01L7\u009E4\x00\x00\x00\tpHYs\x00\x00\x01\x1B\x00\x00\x01\x1B\x01\u008D\u00F7N\u00E5\x00\x00\x02dIDATH\u0089\u00EDW\u00CDJ[A\x14>'\x01[\u00A1\u00D4X,J\u0084\"\"\u00BA\u0092\u00DEE\x1F\u00A0\u0082{\x1FA\u00D7y\x01\u00B3\u00ECFpW\u00B7\u00BA\u00D0\u00BD-\nY\x17\u00FA\buW\u00B2\x12\u00B2)\x1A0\u00C5\u009F\x18\u00D34\u00A7|\u0093\u0099\u00C9\u00CC\u00FD\u00C9\u00BD\x1Ac)t\u00C2\u00E4\u00DE\u00993\u00DF\u00F9?g\x12\x16\x11rG\x0E\u00EF|\u00BC!\u00BCD=\u008A:\u00B1(B\u00EF\x1ABB\x12\u0081Dy0\u00B10q\u00A1\u00BFU\u009F)\u00D1\u00CD\u008B\x0ENb\u00A6\u00F3\b\u008F\u009C=\u00A9uc\u00E2@\u00AD\u0089%\u0096\x03\bP\u00D7>\u00D3D\f<\u0090K\u00A4X\u00A7i\u00A5\u0094\u0082?\u00DE\u00FC\u00B6T\u00C5V(PN,\x1F\u0088^\u00EF\u00F6\u009E\u00F8Z\u00FB&T]\u00EE\u00A8\x03g\u00C5\n\tm\u00F6\u0089\u00AD\u00E7-\u00E36\u008D\u00DC\u008CuafmS\x1D\u0091j\u00AA\u00E5\u00D4\u008Bs\u00E0\u00AC\x0B|=\u00D1MD;F\x04t\u00B4.\u00CAb<\u00CD{\u00F9\x009\x16\u0084\u008D\u00B5\u00DE\u00B0\x0B$\x14\u00DC\x06\u0090I\u00CE\u00B3b\u00C5\x01\u00AE\x1A\x1F{`\u00BA\x1D\u00BFS\u0080\u00EA\u00B2\u00CDFd\u00A6\u00DA\u00D3\x19\n\u00A9\u00A4H1\u0092\u00D3f\x18<\u0094\u00B7\x1F/T\x7F\x07\u00CC\u00E7\u00B3\x15\u00FE\u00F5\u00AC\u00E9\x12\u00B9\u00F1\u00BA\u0086\u00FDD\u00B4\u00F6\u00E2\u008E\u008Do{\u00AC\u00A9\u00F6.\u00A6j6\u00D6\u00F5\u00E9\u00FD\u00B8HD\u00E3\u008C\u0089\u008Fy\u00BF\x1D\u00BF\u008B\u00CB\u00AEh\u0086\u00B9\fB@\r\u00C6\u00E7\u00D0\u00AC}ow\u00F3yo][\u00C8\u0087\u00AC\u00DC#\u00A2O\u009E\u00CD^*\u00C2\u00C6\u008B\u00A9\x13\u00EB\x037]{\u0092\u00FD\u00DCV\x15\u0085\u00EAq\n\u00C1\x16\tf}\u00A6\u0094\b\u00B6\f\u009C\n\u00B2\f4p 8cax\u00E0\x7F4\u00B7\u0087R{\u00981\u0094\u00D6#\x11\u00CC\u00C4;n\u00FBO8S`\u00E2\x0F\x0F\u0092\x1CI\u00A1\u009F\u00AF>\u00D3\u00D5\u00CB\u00AEJh\\\x19\u00ED\u00B1\u00A6{]\u00E84+\u00A8N\x01:\u008A\x01\x17k(\u00AF\u00D3S\u00D5g\x18\u00A8f`\u00EE(3\u00FB\n\u00BC\u00B7\x02]:\u00AA\x11\u00B8\u0090\u0082\u0099\x05\u00A7*\x00\x01\x19\x05\u0092\u00D0\u00B6.@\u00AF\b3U2]Nl+\u00B7\u00AF\u009C\u00FA\x021\u00BF\u00BFE\u00A3\u00FA:\u00A0\u00EA'\u00D1&\u00F5\u009C\u00CFf\u00B1\u00FE\u00B9\x18\u00B9\u00E1\u00BF\u00ACId/!\u00BE\u00E6\x1E\u00CEd1\tm\u00C4\nt\u0098'*\u00853\u00CEut/\u00C1^|\u00B7>\x0E\u00CCV\u00AB\x00\u00E2\u008C\u00A7\u00D3\u0099\x1F$\u00D8\x01\u00CEe\u00EC\u00E0\u00B1\u00E7\u00D2\x04\u008F\u00B4e2\u00F1\u00BC~\u00C5\u00FF\u0093\u0086G\u00FB\u00DF\u00AB\u009Fd\x10\u00D1\x1F\u00E3J}\u009E\u009C\u00C1\u00FF\u00F9\x00\x00\x00\x00IEND\u00AEB`\u0082";
+
 		var bgGreen = [0, 1, 0];
 		var disableGreen = [0, 0.46, 0.03];
 
@@ -408,14 +415,14 @@
 			// var ii1mg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00\u0096\x00\x00\x00\u0096\b\x06\x00\x00\x01K\x06At\x00\x00\x00\tpHYs\x00\x00\x05\u0089\x00\x00\x05\u0089\x01mh\u009D\u00FA\x00\x00\x07QIDATx\u009C\u00ED\u009D?l\u00DCT\x1C\u00C7\u009FATI\u0091J\u00AA\x06\u00B5jU\u0086\f \u0084@\u0091(\x0BK;0!V&\x06*\u0086\u008A\t\u00B1\u00B5L\u00CD\u0098\x11\u00D1\u0085,m\u00B7J\x1D@\u00CA\u00DA\x05\u00B1U\x02\u0089\x05!\u0090\u00CAP$h\u00AA\u0092F\x14\u009AK\u00D5\u00F6\u00A1\u00E7\u00DA\u00BEg\u009F\u00EF\u00FC\u00BE\u008D\x7F\u00C95\u00FA|\"+\u00B9;\u00E7\u00F9\u00E7\u00CF}\u00CF\u00F1\u009F<\u00BF\u00CC{\u00EF\u00FA\u00E2\u00B9\u00DEZ\u00A21\x1AKh,{g#Oo\u00E6\u00B2'\u00DF\x7F{\u00EB\u00E1\u00B8_\u00CA^s\u00D5\u00BC\u00D9\u00DD\u0097oV/\u0084O@99\u00EF\x16\u009Dw\x0Bnsv+z.|-\u00D5\u00E6\u00FB\u00F5\u00CD\u0087\u00C5k\x0B\u00EEU\u00EF\u00CB\u00E7\u00F98\u00D1\u00D8N4F\u00CEh\u00EC\u00D9m,\u00FB\u00F6t\u0095\u00DEr\u00B3\u00DCFv\u00FB\u00D8j\u00E6\u00B2\u00C5j\u00F3\x1E\u00CF[m\u008A\u00A3\u00CD\u00AF;q\u00D7\u00D76\u00DB\x17\u00CE\u00FB\u00DA\u00EB\u00E7.\r\x7F^;\u00BA\u00CAf\u009B\u00C6v\u00B2\u00B1^s\u00D6'\u00BD\u00AE%\u0085\u00ED&\x14\u00A6Ba*\u00AD\u0085\u0095\x07c.> \x0B\x7F\u00BD'\x1C\u0094u\u0091\u00EF\x01\f\u00F6o\u0095mV\u00EDF{\x105\u00E2\u0083\u00B4r\u00EF\u00C0=\u00D8w?\u00DE+\u00A8~\u00FE\u00E6c\x1F\u00EF1\u00A4N\u00E1\u00E0\u00AF\u00B6W\u00E1\u00DD\x0Fe\u00BB\u00F9\x01dXf\u00B4w\u00D1\u00FB\x1EF\u009F\x10~\x15\nS\u00A10\x15\nS\u0099\u00CA\r\u00ECT\u00DA\u00A2\u00A8T(*\x15\u008AJ\u0085\u00A2R\u00A1\u00A8T(*\x15\u008AJ\u00E5\u00D9(\u00AAq~`\u00B9z\u00FE\u008B\u00CB\u00DB\u00DA\x1Bl\u009C\u00CB\u00B8\u00E6&\u009D\u00CB\u00A8\u009DoX;\u00BA\u009A\x1F\u00FF{7W\u009C\x0F8[\u00BD\u00F6`\u00DF\u00FD\u00F8\u00BC\u0081t\u00CE\u00E1\u00C4]\x1F\u00CEW\x14m\x1E\u00AC\u00B5\x1B\u0096W\\\u0090.\u00A7\u00BA\u00A9\u008DC\u00EF\u00E7\u0085:\u00BF1R\u00FD\x0B\x0F\u00DE-M\u00CA\u009A\u00FE\u0099s\u00EE\u0083+\u009B\u00C5\u00A3\x1B\u00B5\u00D7\u0096O;\u00F7\u00D1\u00F7\u00CF\u008F5U\u009DI)\u00D6j\u00E4\u00ACM\u00E3\fJ|\u00AD\u00A7\u00F9\u00BD\u00F5\u00F7\u009F\\\u00CA\x1F\u009E\u00A5\x19\u00CC\f\u00DA\u00CE\u00F6p\u00E0\u0090\nE\u00A5BQ\u00A9PT*\x14\u0095\nE\u00A5BQ\u00A9PT*SY\u00D4\u00D4^~\u009BF\u00A6\u00F6\x1C\u00FF4\u0082,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096@\u00B2\u00AC\u00EC\u00CE\u0091\u008B\u00C9\u00F3\u00BAl\u00D1\u00B8\u00EE\u00C9\u00CB\u00B7\u00AA\u00B5\u00F3\u00E2z\u00B8h\x1F.\u00B0\u0087\u00CB\u00C6\u00A1S@q\u00F1>\u00BA\u00D8\u00BER\u009B\u00BF\u00B8\u0090\u00DFv\u00E1\u00DDzj\u00A9u\u00B1\u00D1S\u00BDV\u00AF[\u009F\u00BF\u00A9\u00D4\u00AAHZ\x1C\u00FDew6\u00BE\u00E6\u00BE[\u00D2\u00BAju\u00DE-\x17\u00B2Z\u00EBM\u00AD\u00B5\u00BB\u0090\u00A2\u00ABH>\u00AD\u00CF\u00DF\u00EC\u0092\u0095\u00FF\u00D3B(8\u00CC\x1FV\u00A0\u00E5\u009F \x1A\u00F3/\u0095S\u00F1\u00F8T\u00FC8\u009EG\u00AA\u00B5\u00D1e\u00A6\u00A8\u00B5Vo\u00F8\u0094h\u00B5\u00A6\u00BE{\u00F7\x0E<nKW\u00EB\u00BC\u009B\u00B3[]\x0B\u00AE\u00ADH\u00E8\x11\\\u00ACD.&<\u00BE~r\u00B8R\u00E1\u00F1\u0085\u00F3\u00C9\u00FF\u00A3\u00E3\u00FE<\u00FE\u00C8\u00A2V.X\b\u00B0\u00EB \u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00E7\u00B3\x04H\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12H\u00EF}/\u00F4RWz\u00BF[`VkR\u00D7\u00D8\u00E2F\u00F0-\x1D\u00B5\u00C3\u00D7\u00D5\u0091n\u00B4\t\u00FD\u008D\u00AD\u00A6\u00BC\u00D6s\u0097\u009A=\u00EF?,j\u00AD\u00D5\u00AB\u00D6\u00BA\u00DD\x0E\u00E5\u00A1W\u00FB\u00C1\u00E8\u00B1\u00D4\u0099\u00BC\u00EFiB\u0087\u00F20^\u00E2z\\\u00AF\u00DA\u0099\u00BCS\u00D6$QQ\u00B2V\x1A\u00CF\u00ED\u008A\u00B0q\u00A2\u00A2:\u0097\u009B\u00F5\u00F6\u00D6\u00FB~\u00D2\u00C2'\u00C9\u00DA\ra]\u00B5F7\u00C0\u00D8\u00D6\u009B;\u00BE\u0080\u00B4\u009B`\u00B4\u00CB\u00DA\u00E1\u00BB\u0086$\u00DC\x04\u00C3\u008F\u00ABW\u00A9U-b\u00AEY\u00C4vo\u00AF2\u00EE\u0086\x17\u00E1f\x18\u008D\u00C7\x13o\u00821NX\u00B9qo\u00AB\u00B7\u00B7\u00DB\u00AB\u00B4\x161\u0098\x194Vtad\x03\x1F\u00FE\x12\t\u0089*\u008B\u00AD\x1E\x17C\u00E4Gw\x10)\x1Fw\u00DE\x04\u00A3V\u00EB\u00E6\u00ECV\u00F1\u00FBW#Y\x0B\u00D1\x06~\u00F8\u00F1K\u00AD59\u00E6\u00C5\u00C2\x13\u0092\u00B2\x18\u00EE\u00D8\u00912o%'\u00BA\x1BH\u00B8SHq\x07\u0091\u00A1\u00AC\u00E8\u008E\"\u00BD\u00D7z\u00EF\u00C0\u00E3\u00D4Z\u00E9a!\u00C0\u00E1\u008E\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12@\u0096\x00\u00B2\x04\u0090%\u0080,\x01d\t K\x00Y\x02\u00C8\x12\u00E0\u009F\u00D9\u00C0\x04>\u0085`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL\u00E85X\u00D9\u00EDc\u00AB\u00D9\u00BF/=\u00CE\x06\u00FB\u00B7\u00BA\u0086\u0097\u00CF\\v0s\u00D9r\u00E6\u00B2\u0095\u00F0s\u00C7\u00BC\u008By\u009B\x7F\u00BD\u00F2(,\u00C3J\u00C6\u00B4\u0092{\r\u00EB\u009E\u00E05r\u00D6\u00E9\u00B7\u00F2\x1A\u00DE\u00B3\u00BE\u00BD\u00A6\u008Ec\u00DB9~n\x18\x03\u00BC\x1Ct\u00B8\x1C\u00A9y03h\x1B\u008A\u00DB\x0FG\u00C5\x1F\x19\u009A\x7Fd\u00AC\u00DD0T\x7F9\u0098r9FxX\u00D6\x0E\u008F\u009A\u00BF\x1BS\u00AB\u00D7\u00E0\"8i\x1F\u00E2\u00FCj\u00E4t\u00AC\u00DF\u00DCkxo\u00CA\u0081\u009F\r\u00BC\u00F6\x1F\u00A82Tah\u00EF\u00C6p\u00E5\u008D\u0095\x0B\u00C3\u0082_+\u00A63\x13\x07r\x0EC\u009A\u00C7\x12\u00F6x\u00C0&z\r.\u00C6\x7FX\u00CB\u00AFk]~\u00C3{\u0093\u00BFGF^wt\u00C5\x1B+v6\x12\u00B1\u00920\u00FF\u009E\x0F\u00D8v\u00BC\u0086\u00F0D>\u00CF\u00A4\u00FA\u00B5\u00F2\u00BA+\u00A1z\u009A`\u00ED\u00F5pm\u00D7k\u00B1e\u00AA\u0086\u00FFW\u00FCZx\u00B5\x11\u00D1\u00F1gp\x1AV|\u00AF\x05\u00AC\u00B9?\u0095\u00E2\u00D7\u00F2\u00CF\u00A1\u00AD\u0088\t\x01K\\q\u00F3@\u00E5K\u00BFp~8\u00E5O\u00D7^_r\u00D7O\x0E_\x0F?{\u00B7\u00A4\u00B4a\x1D\u00B0\u0086\u00CB\u00F7\u00BA\u00FCZ\u00EF_\u00F5\x12\u00ACV\x11\u00A1\u00E01G.O\u00F1\u00C6\x0F\u008F\f\r\u00B6P\u00B9\u00F6Xn[\u00B0BX\u00CA\u00D7\u009F\x04g4X\x13\u00DA\u00E8\u00CD\u00EB\u0098#B\u00E7\u00DD\u008D\"@\u00EB\u00B2\u00D7\u00F0^\x19x\u00ED}\x00\u0081\u00EC\u00CE\u0091\u008Bn~\u00ED+\u00EF\u00FCO\u00BD\u00B6\x1B\u00CE\u00DF\u00DC9\u00FC\u0099\u009F\u00BF\u00F5I\u00AF\u00ED\u00FE\u00FE\u00FA\u00D7n\u00F3\u00C5\u0099\u00EA\u0089Ck\x1B\u00FE\u00C8\x1F\u009FG\u00CB=\u00E5~~\u00FBt\u00ED\u0097\u00DE\u00F8\u00F1\u00B2w\u00FE\u00BBj\u009E[\u00C7\u00BFt\x7F\x1F\u009E\u00AB^\u009F\u00FDo\u00E0\x17~\u00F9\u00B4\u00D7:\u009F5\u00AF}\x07\x0B\u00C0qI\x07\u00AC X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`\u0081\t\x04\x0BL X`\x02\u00C1\x02\x13\b\x16\u0098@\u00B0\u00C0\x04\u0082\x05&\x10,0\u0081`A\u00FF8\u00E7\u00FE\x07\u0089\x13?\x16\u0095\ra\u00C1\x00\x00\x00\x00IEND\u00AEB`\u0082";
 
 			if (pal !== null) {
-				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[600, 480],margins:-14,\
+				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[580, 350],margins:-14,\
 								leftPart:Group{orientation:'column',alignment:['fill','fill'],spacing:3,\
 									listArea:ListBox{\
 										alignment:['fill','fill'],\
 										properties:{numberOfColumns:3,columnTitles:['#', '" + es_str.time + "', '" + es_str.content + "'],\
 										showHeaders:true,multiselect:true}\
 									},\
-									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],\
+									buttonArea:Group{orientation:'row',alignment:['fill','bottom'],spacing:2,\
 										info:IconButton{text:'?',alignment:['left','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'}},\
@@ -443,61 +450,73 @@
 											properties:{style:'toolbutton'}},\
 									}\
 								},\
-								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[-20,20,0,0],\
+								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[-20,20,0,0],spacing:0,\
 									editText:EditText{\
 										text:'',alignment:['fill','fill'],\
 										properties:{multiline:true,scrolling:false,borderless:false},\
 									},\
-									btGroup:Group{orientation:'column',alignment:['fill','bottom'],alignChildren:['fill','top'],\
-										bbt:Group{orientation:'row',\
-											bButton:IconButton{text:'<b>',alignment:['fill','fill'],\
-											properties:{style:'toolbutton'}},\
+									btGroup:Group{orientation:'column',alignment:['right','bottom'],spacing:0,\
+										bbt:Group{orientation:'row',spacing:0,alignment:['fill','fill'],\
+											bButton:IconButton{text:'<b>',\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											bsButton:IconButton{text:'</b>',\
-											properties:{style:'toolbutton'}},\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											bbButton:IconButton{text:'<b> </b>',\
-											properties:{style:'toolbutton'},\
-												preferredSize:[120,30]}\
+												properties:{style:'toolbutton'},\
+												preferredSize:[140,30]},\
+											bbxButton:IconButton{text:'<b> </b>',\
+												properties:{style:'toolbutton'},\
+												preferredSize:[75,30]},\
 										},\
-										ibt:Group{orientation:'row',\
-											iButton:IconButton{text:'<i>',alignment:['fill','fill'],\
-											properties:{style:'toolbutton'}},\
+										ibt:Group{orientation:'row',spacing:0,alignment:['left','fill']\
+											iButton:IconButton{text:'<i>',\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											isButton:IconButton{text:'</i>',\
-											properties:{style:'toolbutton'}},\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											iiButton:IconButton{text:'<i>  </i>',\
-											properties:{style:'toolbutton'},\
-												preferredSize:[120,30]}\
+												properties:{style:'toolbutton'},\
+												preferredSize:[140,30]}\
+											iixButton:IconButton{text:'<i>  </i>',\
+												properties:{style:'toolbutton'},\
+												preferredSize:[75,30]}\
 										},\
-										ubt:Group{orientation:'row',\
-											uButton:IconButton{text:'<u>',alignment:['fill','fill'],\
-											properties:{style:'toolbutton'}},\
+										ubt:Group{orientation:'row',spacing:0,alignment:['left','fill']\
+											uButton:IconButton{text:'<u>',\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											usButton:IconButton{text:'</u>',\
-											properties:{style:'toolbutton'}},\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											uuButton:IconButton{text:'<u> </u>',\
-											properties:{style:'toolbutton'},\
-												preferredSize:[120,30]}\
+												properties:{style:'toolbutton'},\
+												preferredSize:[140,30]}\
+											uuxButton:IconButton{text:'<u> </u>',\
+												properties:{style:'toolbutton'},\
+												preferredSize:[75,30]}\
 										},\
-										sbt:Group{orientation:'row',\
-											sButton:IconButton{text:'<s>',alignment:['fill','fill'],\
-											properties:{style:'toolbutton'}},\
+										sbt:Group{orientation:'row',spacing:0,alignment:['left','fill']\
+											sButton:IconButton{text:'<s>',\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											ssButton:IconButton{text:'</s>',\
-											properties:{style:'toolbutton'}},\
+												properties:{style:'toolbutton'},preferredSize:[60,30]},\
 											sssButton:IconButton{text:'<s>  </s>',\
-											properties:{style:'toolbutton'},\
-												preferredSize:[120,30]}\
+												properties:{style:'toolbutton'},\
+												preferredSize:[140,30]}\
+											ssxButton:IconButton{text:'<s>  </s>',\
+												properties:{style:'toolbutton'},\
+												preferredSize:[75,30]}\
 										},\
-										fbt:Group{orientation:'row',\
+										fbt:Group{orientation:'row',alignment:['fill','fill'],spacing:0,\
 											fsButton:IconButton{text:'<font size=20>',\
-											properties:{style:'toolbutton'},\
-												preferredSize:[90,30]},\
+												properties:{style:'toolbutton'},\
+												preferredSize:[100,30]},\
 											fsValue:EditText{text:'20',characters:'3'},\
 											fcButton:IconButton{text:'<font color=00FF00>',\
-											properties:{style:'toolbutton'},\
+												properties:{style:'toolbutton'},\
 												preferredSize:[100,30]},\
-											fcValue:Button{}\
+											fcValue:Button{alignment:['fill','fill']}\
 										},\
-										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:[0,10,0,0],\
-											position:Group{orientation:'column',alignment:['left','fill'],\
-												upbt:Group{orientation:'row',alignment:['left','top'],\
+										midGroup:Group{orientation:'row',alignment:['fill','fill'],margins:0,\
+											position:Group{orientation:'column',alignment:['left','fill'],spacing:0,\
+												upbt:Group{orientation:'row',alignment:['left','top'],spacing:0,\
 													ulButton:IconButton{text:'↖',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'}},\
@@ -508,7 +527,7 @@
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'}}\
 												},\
-												mdbt:Group{orientation:'row',alignment:['left','top'],\
+												mdbt:Group{orientation:'row',alignment:['left','top'],spacing:0,\
 													mlButton:IconButton{text:'⇠',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'}},\
@@ -519,7 +538,7 @@
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'}}\
 												},\
-												bobt:Group{orientation:'row',alignment:['left','top'],\
+												bobt:Group{orientation:'row',alignment:['left','top'],spacing:0,\
 													blButton:IconButton{text:'↙',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'}},\
@@ -531,24 +550,24 @@
 														properties:{style:'toolbutton'}}\
 												},\
 											},\
-											extraPo:Group{orientation:'column',alignment:['fill','fill'],\
-												pos:Group{orientation:'row',alignment:['fill','top'],\
-													posButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "pos(192,144)}',\
+											extraPo:Group{orientation:'column',alignment:['fill','fill'],spacing:0,\
+												pos:Group{orientation:'row',alignment:['fill','fill'],\
+													posButton:IconButton{text:'',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
-													textX:StaticText{text:'x:',alignment:['right','fill']},\
-													posX:EditText{text:'192',characters:4},\
+													textX:StaticText{text:'x:'},\
+													posX:EditText{text:'192',alignment:['fill','center']},\
 													textY:StaticText{text:'y:'},\
-													posY:EditText{text:'144',characters:4},\
+													posY:EditText{text:'144',alignment:['fill','center']},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
 													fadButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "fad(300,300)}',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
-													inText:StaticText{text:'i:',alignment:['right','fill']},\
-													fadIn:EditText{text:'300',characters:4},\
-													outText:StaticText{text:'o:'},\
-													fadOut:EditText{text:'300',characters:4},\
+													inText:StaticText{text:'in:'},\
+													fadIn:EditText{text:'300',alignment:['fill','center']},\
+													outText:StaticText{text:'out:'},\
+													fadOut:EditText{text:'300',alignment:['fill','center']},\
 												},\
 												other:Group{orientation:'row',alignment:['fill','fill'],\
 													bord:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "bord(2)}',\
@@ -560,14 +579,14 @@
 													blur:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "be(2)}',\
 														preferredSize:[40,30],\
 														properties:{style:'toolbutton'}},\
-													bfbVal:EditText{text:'2',characters:2,alignment:['fill','center']},\
+													bfbVal:EditText{text:'2',alignment:['fill','center']},\
 												},\
 											}\
 										},\
-										fix:Group{orientation:'row',alignment:['fill','fill'],\
-												direct:Group{orientation:'row',alignment:['fill','fill'],spacing:0,\
-													verticalImg:Image{preferredSize:[30,30]},\
-													vertical:Checkbox{text:'',alignment:['left','bottom']},\
+										fix:Group{orientation:'row',alignment:['fill','fill'],margins:0,\
+												direct: Group {orientation:'row',alignment:['fill','fill'],spacing:2,\
+													customImageViewer: Custom { type:'customView', alignment:['left','fill'],preferredSize:[35,30]},\
+													vertical: Checkbox {text:'',alignment:['left','bottom']},\
 												},\
 												move:Group{orientation:'row',alignment:['right','fill'],spacing:3,\
 													moveButton:IconButton{text:'{" + String.fromCharCode(92) + String.fromCharCode(92) + "move(...)}',\
@@ -581,7 +600,7 @@
 													moveOut:EditText{text:'3000',characters:4},\
 												},\
 										}\
-										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],\
+										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],spacing:0,\
 											rfButton:IconButton{text:'" + es_str.refresh + "',alignment:['fill','fill'],\
 												properties:{style:'toolbutton'}},\
 											epButton:IconButton{text:'" + es_str.xport + "',alignment:['fill','fill'],\
@@ -637,7 +656,7 @@
 				};
 				pal.grp = pal.add(res);
 				pal.layout.layout(true);
-				pal.grp.minimumSize = pal.grp.size;
+				// pal.grp.minimumSize = pal.grp.size;
 				pal.layout.resize();
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize();
@@ -687,7 +706,7 @@
 					triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, !1, this.parent.lineNum.text);
 				};
 				pal.grp.leftPart.buttonArea.killTag.onClick = function () {
-					triggerMarker(pal, null, null, null, null, [], "", "", !0, this.parent.lineNum.text);
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, this.parent.lineNum.text,null,/(<\/?(\s|\S)*?>)/g);
 				};
 				pal.grp.leftPart.buttonArea.rmMarker.onClick = function () {
 					var rsl = comp.selectedLayers;
@@ -762,14 +781,26 @@
 				pal.grp.rightPart.btGroup.bbt.bbButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
+				pal.grp.rightPart.btGroup.bbt.bbxButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, pal.grp.leftPart.buttonArea.lineNum.text,null,/(<\/?(b)*?>)/g);
+				};
 				pal.grp.rightPart.btGroup.ibt.iiButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "i", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
+				};
+				pal.grp.rightPart.btGroup.ibt.iixButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, pal.grp.leftPart.buttonArea.lineNum.text,null,/(<\/?(i)*?>)/g);
 				};
 				pal.grp.rightPart.btGroup.sbt.sssButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "s", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
 				};
+				pal.grp.rightPart.btGroup.sbt.ssxButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, pal.grp.leftPart.buttonArea.lineNum.text,null,/(<\/?(s)*?>)/g);
+				};
 				pal.grp.rightPart.btGroup.ubt.uuButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "u", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
+				};
+				pal.grp.rightPart.btGroup.ubt.uuxButton.onClick = function () {
+					triggerMarker(pal, null, null, null, null, [], "", "", !0, pal.grp.leftPart.buttonArea.lineNum.text,null,/(<\/?(u)*?>)/g);
 				};
 				pal.grp.rightPart.btGroup.fbt.fsButton.onClick = function () {
 					var keyString = " size=" + this.parent.fsValue.text;
@@ -923,7 +954,8 @@
 					writeSrt(pal.grp.leftPart.listArea.items);
 				};
 				pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(olmg);
-				pal.grp.rightPart.btGroup.fix.direct.verticalImg.image = ScriptUI.newImage(vemg);
+				// pal.grp.rightPart.btGroup.fix.direct.verticalImg.image = ScriptUI.newImage(vemg);
+				pal.grp.rightPart.btGroup.fix.direct.customImageViewer.image = ScriptUI.newImage(nwve);
 
 
 				pal.grp.rightPart.btGroup.midGroup.extraPo.other.bord.helpTip = es_str.bordHelp;
@@ -1010,15 +1042,19 @@
 				pal.grp.rightPart.btGroup.bbt.bButton.image = ScriptUI.newImage(b1mg)
 				pal.grp.rightPart.btGroup.bbt.bsButton.image = ScriptUI.newImage(bs1mg)
 				pal.grp.rightPart.btGroup.bbt.bbButton.image = ScriptUI.newImage(bb1mg)
+				pal.grp.rightPart.btGroup.bbt.bbxButton.image = ScriptUI.newImage(bxmg)
 				pal.grp.rightPart.btGroup.sbt.sButton.image = ScriptUI.newImage(s1mg)
 				pal.grp.rightPart.btGroup.sbt.ssButton.image = ScriptUI.newImage(ss1mg)
+				pal.grp.rightPart.btGroup.sbt.ssxButton.image = ScriptUI.newImage(sxmg)
 				pal.grp.rightPart.btGroup.sbt.sssButton.image = ScriptUI.newImage(sss1mg)
 				pal.grp.rightPart.btGroup.ibt.iButton.image = ScriptUI.newImage(i1mg)
 				pal.grp.rightPart.btGroup.ibt.isButton.image = ScriptUI.newImage(is1mg)
 				pal.grp.rightPart.btGroup.ibt.iiButton.image = ScriptUI.newImage(ii1mg)
+				pal.grp.rightPart.btGroup.ibt.iixButton.image = ScriptUI.newImage(ixmg)
 				pal.grp.rightPart.btGroup.ubt.uButton.image = ScriptUI.newImage(u1mg)
 				pal.grp.rightPart.btGroup.ubt.usButton.image = ScriptUI.newImage(us1mg)
 				pal.grp.rightPart.btGroup.ubt.uuButton.image = ScriptUI.newImage(uu1mg)
+				pal.grp.rightPart.btGroup.ubt.uuxButton.image = ScriptUI.newImage(uxmg)
 			}
 			return pal;
 		}
@@ -1116,7 +1152,7 @@
 			app.endUndoGroup();
 		}
 
-		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum, poDef) {
+		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum, poDef,rmReg) {
 			app.beginUndoGroup(es_str.title);
 			for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index,
@@ -1124,7 +1160,7 @@
 					markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length == 0) ?
 					String(pal.grp.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
 					(remove ?
-						removeQuote(esMarker.comment, newlineMark, lineNum) :
+						removeQuote(esMarker.comment, newlineMark, lineNum , rmReg) :
 						quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.rightPart.editText.backupSelection, key, arg)),
 					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an2}" : esMarker.chapter) : esMarker.chapter) : poVar,
 					urlVar = (posVar == null) ? esMarker.url : posVar,
@@ -1198,8 +1234,8 @@
 			return void 0 == origin.split(splitor)[lineNum - 1] ? origin : void 0;
 		}
 
-		function removeQuote(comment, splitor, lineNum) {
-			var reg = /(<\/?(\s|\S)*?>)/g;
+		function removeQuote(comment, splitor, lineNum , reg) {
+			// var reg = /(<\/?(\s|\S)*?>)/g;
 			if (void 0 !== comment.split(splitor)[lineNum - 1]) {
 				var tmpArray = comment.split(splitor);
 				return tmpArray[lineNum - 1] = tmpArray[lineNum - 1].replace(reg, ""), tmpArray = tmpArray.join(splitor);
@@ -1311,18 +1347,16 @@
 				pal.grp.leftPart.buttonArea.children[i].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0
 			};
 			for (var x = 0; x < pal.grp.rightPart.btGroup.children.length - 1; x++) {
-				pal.grp.rightPart.btGroup.children[x].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0
+				pal.grp.rightPart.btGroup.children[x].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
+				pal.grp.rightPart.btGroup.fbt.fcValue.notify("onDraw");
 				pal.grp.rightPart.btGroup.fbt.fcValue.fillBrush = 0 == pal.grp.leftPart.listArea.items.length ? pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, disableGreen, 1) : pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, bgGreen, 1);
-				pal.grp.rightPart.btGroup.fix.direct.verticalImg.image = 0 == pal.grp.leftPart.listArea.items.length ? ScriptUI.newImage(vemg1) : ScriptUI.newImage(vemg);
-				pal.grp.rightPart.btGroup.fbt.fcValue.notify("onDraw")
+
 			};
 			pal.grp.rightPart.editText.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
 			pal.grp.rightPart.btGroup.rebtGroup.epButton.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
-			// var vemg = File("/Users/meng/Documents/vemg.png"),
-			// 	vemg1 = File("/Users/meng/Documents/vemg1.png");
-
-
-
+			// var vemg = ScriptUI.newImage(vemg),
+			// 	vemg1 = ScriptUI.newImage(vemg1);
+			// pal.grp.rightPart.btGroup.fix.direct.verticalImg.image = 0 == pal.grp.leftPart.listArea.items.length ? ScriptUI.newImage(vemg1) : ScriptUI.newImage(vemg);
 		}
 
 
@@ -1359,7 +1393,6 @@
 			if (ui.grp.leftPart.listArea.items.length == 0) {
 				ui.grp.leftPart.buttonArea.pickPos.enabled = !1;
 				ui.grp.leftPart.buttonArea.rmMarker.enabled = !1;
-
 			}
 
 			if (ui !== null) {
