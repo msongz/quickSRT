@@ -523,18 +523,18 @@
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
 													textX:StaticText{text:'x:'},\
-													posX:EditText{text:'192',alignment:['fill','fill']},\
+													posX:EditText{text:'192',alignment:['fill','center']},\
 													textY:StaticText{text:'y:'},\
-													posY:EditText{text:'144',alignment:['fill','fill']},\
+													posY:EditText{text:'144',alignment:['fill','center']},\
 												},\
 												fade:Group{orientation:'row',alignment:['fill','fill'],\
 													fadButton:IconButton{text:'',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
 													inText:StaticText{text:'in:'},\
-													fadIn:EditText{text:'300',characters:4,alignment:['fill','fill']},\
+													fadIn:EditText{text:'300',characters:2,alignment:['fill','center']},\
 													outText:StaticText{text:'out:'},\
-													fadOut:EditText{text:'300',characters:4,alignment:['fill','fill']},\
+													fadOut:EditText{text:'300',characters:2,alignment:['fill','center']},\
 												},\
 												other:Group{orientation:'row',alignment:['fill','fill'],spacing:0,\
 													bord:IconButton{text:'',\
@@ -546,11 +546,11 @@
 													blur:IconButton{text:'',\
 														preferredSize:[40,30],\
 														properties:{style:'toolbutton'}},\
-													bfbVal:EditText{text:'2',alignment:['fill','fill']},\
+													bfbVal:EditText{text:'2',alignment:['fill','center']},\
 												},\
 											}\
 										},\
-										fix:Group{orientation:'row',alignment:['left','fill'],margins:0,\
+										fix:Group{orientation:'row',alignment:['right','fill'],margins:0,\
 												direct: Group {orientation:'row',alignment:['fill','fill'],spacing:0,\
 													customImageViewer: Custom { type:'customView', alignment:['left','fill'],preferredSize:[35,30]},\
 													vertical: Checkbox {text:'',alignment:['left','bottom']},\
@@ -559,12 +559,12 @@
 													moveButton:IconButton{text:'',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
-													x1:EditText{text:'384',characters:3},\
-													y1:EditText{text:'144',characters:3},\
-													x2:EditText{text:'-50',characters:3},\
-													y2:EditText{text:'144',characters:3},\
-													moveIn:EditText{text:'0',characters:4},\
-													moveOut:EditText{text:'3000',characters:4},\
+													x1:EditText{text:'384',characters:2},\
+													y1:EditText{text:'144',characters:2},\
+													x2:EditText{text:'-50',characters:2},\
+													y2:EditText{text:'144',characters:2},\
+													moveIn:EditText{text:'0',characters:3},\
+													moveOut:EditText{text:'3000',characters:3},\
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],spacing:0,\
