@@ -362,8 +362,8 @@
 			sxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00¨IDATHíV¿o1þX¸¢J@RÅ\x00(þº§Kg:1tbþHÝQºuèÀ5ý@a- : JQHÓ$RÒ>ß±ïÎ¶øí÷¾÷ÓV\"»8WoïÔm+zÇ-¬o	ç©#iªWê;\bªØ»3`g<ÉV0;ß\b±©^iÛ!bÑ?ûChrÌdËÝPð®£ESÇNÕIeà\x00ÃáÕ5mÄZSb !Hþ¬o	^>½CäK±:ú¥Ö\fi£iªNýb/ÅÊÏÝ¨M-kÍPcÆE§<ÍnqÛ6c*ËÉUm6L­õ¸ï8$Ú[èA¤}º1\fínúfJrÞ 4ëðÍ±Â.¯«þÎaUU_®×íE~«¯×Ö¼§ÿ.	æêv0W×Âaù:3HÉ [ül¢­Sø\\èX[§ð½ö9ChVRj©sø5:ß¥cÃHA5$N¢ØÝbßÄ4;áGs+®7¦n\r¬[³ûvraO3à8¼òÂ\nMI)442­/X±ëÑ/Å¶¥ë@.ãßí©`OÓ¦Bý[+¨ùq°\nL$9Ý¨ê\fyú,¼6¢ØLíc¥h_<ÕÀS-|#)tU3³+®*\x00ÞY©=Ö)?H°Y\x00vk)ÐsæÜ¨Ví`Jcñ£Â÷À]|¥¿_KåÛÇ÷K\x00î3ó¼Èn®?Û7<ýWÄøÖgwoþ'v¡K^æþçD@¾Z³ûÌëbHg`\b63ÒÇ\n\f\x00`ñC*ú£g¶²Ê|î3å¤À=|+=JÐS¿óÞ«gÕÔ\f]:°þ×ê?Ö\x00ü\x00ò¬úÀÞÅ\x00\x00\x00\x00IEND®B`",
 			ixmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00IDATHíV¿OSAÿ\\!&-Ö0ô0q/£;±ÕÀÍÀ Cg&ã`kYL01\" ´M^ùïõîÞÝ{÷úJ+¯¹¾{wßï÷óý}Oìáµ8|HU\"¼|K P%.Cts=g2kSòLC¹þX7ÑÍíÊwPO)PTO²©C	2'ÆiÊaâ²p-®fÐv{RªI'V´RÛ'ÿ±gß½ IÀzx¡Íª§3TÛTG¤j$õ²Ýtß01b++kÚù@»ì®Ëz¸VuPnc&'¥uþLûØa6HìoBQNÖ÷¾-õ5ªv{\f9mF'òöïÕßaeñã~Ã>äwqºPKävâû¸E8^lÈ½ãÅLV¬Ý¼Æt²ßM¶µóy²+aZ£®Köôû´ë~ÀyÏ]NE¬Ü°ïØ,¥v²=È?V_­#È&·3ÊÓU<ÿpGJûxï+7j¼p¹ÀÄiéM¢·MIÍ96^Í4µ÷}È7-\fùÍíÔdL¤õ­\x00åQpÙBeY!¯^®\r+7:îs×²p'täTuA«Rî º«X\nð£á5ïµó[c;éS`¿B^@ëµØTèáHóÂ¦t§nFö</ðü4¤êïrTse4uí'ÇÝVB}úâ«ïá,Nä¯³ù#e3äû TÇÅ7,F,~ñfÿ-Æõ( ¿6ÎßjË+jÙ\"PË9ûß«ÿÈ\x00ð\niN\fÌ¨\\\x00\x00\x00\x00IEND®B`",
 			fxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00´IDATHíV?oS1¿KRBÚD¨H¡T1À\nJù\x00|tdk§\fØÊ b#l²¶b@J×vA*ê?%%iDJzè.¶ßó{öKÕPYñ³Ïwçß6%Å}Ü}<Ä0Dðò=ÅÄm`?3°F \b;@PaíÉ6¢2ËÛÄ±a?³\fâ+yõOÚÓgTRÞ\fOsçx6;\föÎf\nU±Ü Pp*bFöã\n+Zògokâv£\bÄÄ­Kt?f]çÃ%&G¼Ërc¼c®nv¨á^zCë[ä/ÒÅyT¨ª¹F)Ð×íñ&ÈKã\bxìÇ½^d â9©¹<OöïKÕßYE<¼SOò7ß®zW[ù]j,Ôeì`¡.ÂMåÚ[$&Ïl Þ7ÕÖÍ})´Ð#ü¤3c³#Êt®£Æm´S£õ9[¶JÐìY¼÷ÒSÓüãðUßæÜR*¤UxþùºXûrë»XþtwæN\x00¶\x00ï¼h#Ùß³Ð<»±cÐ{ÜôÉ	#¶ø­í©ÂF¦úJ#àâE\f0\\Ê³£rB^½_ª6czÌ¹sa&[øËÕvº*F4hV	ÀwVLû<ÖÍ¾½cëdºØ*Óaè<Oûp¡\fíÜkSQ¸µsÜ¾:RUUø×ÔzÎâkßëµ5(ýDhçÇ+5BcY:X¯®C³ªÝt)¬ðB¿ó{@°(dÈ9£ ÞÄR#É;^óBmå7p7<ûfíxÓÆv^:tèð[éEB½¯2ð¾ê¶\b¨åÔùÏÕD\x00àªÅ¦v©\x00\x00\x00\x00IEND®B`";
-		var bgGreen = [0, 1, 0];
-		var disableGreen = [0, 0.46, 0.03];
+		var bgGreen = [0, 1, 0],
+			disableGreen = [0, 0.46, 0.03];
 
 		for (var i in es_str) "zh_CN" == app.isoLanguage ?
 			es_str[i] = es_str[i].cn :
@@ -413,7 +413,7 @@
 								},\
 								RPparent:Group{orientation:'stack',alignment:['right','fill'],margins:[-20,2,0,0],\
 									statusText:StaticText{alignment:['right','top'],\
-										text:'',characters:'9'},\
+										text:'',characters:'7'},\
 								rightPart:Group{orientation:'column',alignment:['right','fill'],margins:[0,18,0,0],spacing:0,\
 									editText:EditText{\
 										text:'',alignment:['fill','fill'],\
@@ -472,11 +472,11 @@
 											fsButton:IconButton{text:'<font size=20>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[100,30]},\
-											fsValue:EditText{text:'20',characters:'3'},\
+											fsValue:EditText{text:'20',characters:'2'},\
 											fcButton:IconButton{text:'<font color=00FF00>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[100,30]},\
-											fcValue:Button{preferredSize:[35,30]},\
+											fcValue:Button{preferredSize:[40,30]},\
 											fxButton:IconButton{alignment:['fill','fill'],\
 												properties:{style:'toolbutton'},\
 												preferredSize:[30,30]},\
@@ -559,12 +559,12 @@
 													moveButton:IconButton{text:'',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
-													x1:EditText{text:'384',characters:3},\
-													y1:EditText{text:'144',characters:3},\
-													x2:EditText{text:'-50',characters:3},\
-													y2:EditText{text:'144',characters:3},\
-													moveIn:EditText{text:'0',characters:4},\
-													moveOut:EditText{text:'3000',characters:4},\
+													x1:EditText{text:'384',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + "},\
+													y1:EditText{text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + "},\
+													x2:EditText{text:'-50',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + "},\
+													y2:EditText{text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + "},\
+													moveIn:EditText{text:'0',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + "},\
+													moveOut:EditText{text:'3000',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + "},\
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],spacing:0,\
@@ -694,18 +694,15 @@
 				// 	if(k.keyName==="Enter")triggerMarker(pal, null, null, null, null, [])
 				// 	fixList(pal.grp.leftPart.listArea)
 				// });
-				// if (-1 != $.os.indexOf("Win")) {
-				// 	pal.grp.RPparent.rightPart.editText.onChange = function () {
-				// 		triggerMarker(pal, null, null, null, null, []);
-				// 	};
-				// } else {
-				pal.grp.RPparent.rightPart.editText.onChange = function () {
-					triggerMarker(pal, null, null, null, null, []);
+				if (-1 != $.os.indexOf("Win")) {
+					pal.grp.RPparent.rightPart.editText.onChange = function () {
+						triggerMarker(pal, null, null, null, null, []);
+					}
+				} else {
+					pal.grp.RPparent.rightPart.editText.onChanging = function () {
+						triggerMarker(pal, null, null, null, null, []);
+					}
 				};
-				pal.grp.RPparent.rightPart.editText.onChanging = function () {
-					triggerMarker(pal, null, null, null, null, []);
-				};
-				// };
 
 				// pal.addEventListener("keydown", function () {
 
@@ -940,7 +937,6 @@
 					writeSrt(pal.grp.leftPart.listArea.items);
 				};
 				pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(olmg);
-				// pal.grp.RPparent.rightPart.btGroup.fix.direct.verticalImg.image = ScriptUI.newImage(vemg);
 				pal.grp.RPparent.rightPart.btGroup.fix.direct.customImageViewer.image = ScriptUI.newImage(nwve);
 
 
