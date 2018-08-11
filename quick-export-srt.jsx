@@ -550,21 +550,21 @@
 												},\
 											}\
 										},\
-										fix:Group{orientation:'row',alignment:['right','fill'],margins:0,\
+										fix:Group{orientation:'row',alignment:['fill','fill'],margins:0,\
 												direct: Group {orientation:'row',alignment:['fill','fill'],spacing:0,\
 													customImageViewer: Custom { type:'customView', alignment:['left','fill'],preferredSize:[35,30]},\
 													vertical: Checkbox {text:'',alignment:['left','bottom']},\
 												},\
-												move:Group{orientation:'row',alignment:['fill','fill'],spacing:0,\
+												move:Group{orientation:'row',alignment:['right','fill'],spacing:0,\
 													moveButton:IconButton{text:'',\
 														preferredSize:[60,30],\
 														properties:{style:'toolbutton'}},\
-													x1:EditText{text:'384',characters:2},\
-													y1:EditText{text:'144',characters:2},\
-													x2:EditText{text:'-50',characters:2},\
-													y2:EditText{text:'144',characters:2},\
-													moveIn:EditText{text:'0',characters:3},\
-													moveOut:EditText{text:'3000',characters:3},\
+													x1:EditText{text:'384',characters:3},\
+													y1:EditText{text:'144',characters:3},\
+													x2:EditText{text:'-50',characters:3},\
+													y2:EditText{text:'144',characters:3},\
+													moveIn:EditText{text:'0',characters:4},\
+													moveOut:EditText{text:'3000',characters:4},\
 												},\
 										}\
 										rebtGroup:Group{orientation:'row',alignment:['fill','bottom'],spacing:0,\
