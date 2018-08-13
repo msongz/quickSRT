@@ -433,7 +433,7 @@
 								},\
 								RPparent: Group {orientation:'stack',alignment:['right','fill'],margins:[-20,2,0,0],\
 									statusText: StaticText {alignment:['right','top'],\
-										text:'',characters:" + (($.os.indexOf("Win") != -1) ? "7" : "9") + "},\
+										text:'',characters:" + (($.os.indexOf("Win") != -1) ? "8" : "9") + "},\
 								rightPart: Group {orientation:'column',alignment:['right','fill'],margins:[0,18,0,0],spacing:0,\
 									editText: EditText {\
 										text:'',alignment:['fill','fill'],\
