@@ -420,7 +420,7 @@
 			});
 
 			if (pal !== null) {
-				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[580, 360],margins:-14,\
+				var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[550, 370],margins:-14,\
 								leftPart: Group {orientation:'column',alignment:['fill','fill'],spacing:3,\
 									listArea:ListBox{\
 										alignment:['fill','fill'],\
@@ -739,7 +739,7 @@
 				};
 				pal.grp = pal.add(res);
 				pal.layout.layout(true);
-				// pal.grp.minimumSize = pal.grp.size;
+				pal.grp.minimumSize = pal.grp.size;
 				pal.layout.resize();
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize();
