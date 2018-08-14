@@ -359,14 +359,14 @@
 			es_str[i] = es_str[i].cn :
 			es_str[i] = es_str[i].en;
 
-		var pimg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00àIDATHíVA \fÜ8=ê;øÿs|Ý\x00u AmkkgXa$!L\x00\r\rA´I®VµÕH©Òóïó¨# É\bB0uÃIw:IÛòN#	/}¶eS&qÜ@\b§,ãRCFPÜPX;{·¡À=ëÄ£¬q~VrÜÆ4'¬ÉK1y»_-\x00`ð4Ïàí·!kS/ÐÊé/*§8Ä³ú]ÛGÏêTÆâ\x00ã\"XöEJæê$Ý§Ã<éþUlø®\x00ô³ÿÞ$64üOÈg|_Úé\x00\x00\x00\x00IEND®B`",
-			cimg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÆIDATHíÕË0\fÐÝLj	MîÓ«Ù2Æ?ûx\fÒCÆ`æ×Cså!÷F ßL¡\x00ñHÝZnG±hÃ@kªp@çÚ6ègá,Ú	wá*Ú7»ZR'H_WÝÕ§Qà3ù¦ã4\"ð°Ø¿Sî 6ök=ÇüMöjk<ZwSÉçezÅQÃýd^·v^¦ÒÍc_ç 8Ø]ÂÞpØ\r6NQwgþ#opéQ\n6'\x00\x00\x00\x00IEND®B`",
-			dimg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÜIDATHíAÃ \f×UßRþÿ^³=¤@\fôP1C"`Ø`óïÈå\rÁGÆ®LoµK¸é×õÔ¼V8Êx±¼FùÐjZ¡­X:õ Å\x00A»m=¸F\bD!ûÆ§±Äýð¢¦@1{ÅçÔÒfÈû)¨ôj,`Ø!×ÌöSôhÉ¥tY+Jbb"^í»n«k¹íÏäþ$c¡lõ=q	ý6þ­ÎRëÆòÏRÀõãàºÓ­äºÄY*i½Ùü/è¤dú\'\bøH\x00\x00\x00\x00IEND®B`',
-			eimg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ \fD7F.¡§÷xõ©vìO§q:VûØ ´ÀgQ-w Hçx¯Q·Èìª0 Çr^L·ÂKdA)vN9ßâØ¨î¼ÜÌù<+¬à\b´r/\\ ÖI¡ÉY£ôT0t5lR%È¥J½§t¥éXÒ6ø(àìã¨`¨OB|G¡F¸ÈîíãæO8<·g`Þ­ó®j	<êj{ÚötÒ\x00Ò¾ðø}×û&¢åæª-¾cÒv\\z?¯NHðEµÚì;ì;ÑèZÒB/çàÿ>\fÜ;6Køop¿ÆCø[èd]qæø\x00:þÒkùL\x00\x00\x00\x00IEND®B`",
-			fimg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ0\bDÁñzÞÿ8=Þ?Ú²B2ív#&¼l)Ñ¥ÿa>B7kEä;Pw>­gõ{Ùy%.4	ynÕ<h$ÜlCu0Bg¶U`,»É&xX3m$Îë8¸@óñ°4ïI^qÖe½?«SbW¨,?êåW\\ÌÔ1i4¯bv\rS»w/®Ý[éæ°FºLÍÃcÜ_÷6ÝdtàÛI\rÙz\rÀ$÷¶mÌ+kD±â;nu¨`%|ÅwhWtFçÂb\\³ÆÝ#<¼X\bFèà3}éôYÙûÍâJ°\x00\x00\x00\x00IEND®B`",
-			gimg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00èIDATHíÑ0\fC¥^wavnºG¦Q?&8nsüD_Ø~Xè\x00`h¨h)´SÕZ\x00@Gß-à/èT` 6xyEBÁ×ÉÅÙvp\f\rméõ\nØlu";@#nð"&[Ú>²÷YÁ5jÓ¶\x00pkmØIÚÂnO|¤æg¬h9ÊÄJ¨ÝáÊ¡k,PÀiõÖ÷m@-ÛºÀ§÷Ó¥!lz&Sl\nR»¿z-5|\x00#nTkþ|&­)NåOõÁqwð?äÇe`hèJ½3\bK¼cß\x00\x00\x00\x00IEND®B`',
-			himg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÚIDATHíKÃ \fDgªÞ¥÷?NNã.Ò*$xlÄX`ØÚZ$zfö8DóÎE÷.²Ç¼sÏ~ÐÏ û \x00DP½\"XÚÍ²ä§¡¸Op¿àC.:Ï£# c»BÆÁ\rôùk>Njî9I¿cá=A«Bü{<yÍu:¢q:æJ'× \b 2Wëê,²ÅÍåÁËS®ñÞ®ò¤ÓÍ5qÙMOûâäF.\\(Jõ<ü²ÆYëðê«ç;±|mm­Õ·òU/}mB\x00\x00\x00\x00IEND®B`",
-			iimg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00IDATHíK \fD§Æ³èm¼?§7~ÈGÁ¸ ÏÜ´/)cRÀèÇi;Y÷\f<õ'!b³8ÁQçß5¦j_Kµ<BRÜ¨yøX¥?qùï)M\x00JÃX.ÞÖ¤\\a£Î7´Q_±Qøoñ]¸üôäR¬y¼ûT¿M®úå\bÄ÷fËÝDË¹8Ý±J_^Ø+ºZ\x00\x00\x00\x00IEND®B`",
+		var pkmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00àIDATHíVA \fÜ8=ê;øÿs|Ý\x00u AmkkgXa$!L\x00\r\rA´I®VµÕH©Òóïó¨# É\bB0uÃIw:IÛòN#	/}¶eS&qÜ@\b§,ãRCFPÜPX;{·¡À=ëÄ£¬q~VrÜÆ4'¬ÉK1y»_-\x00`ð4Ïàí·!kS/ÐÊé/*§8Ä³ú]ÛGÏêTÆâ\x00ã\"XöEJæê$Ý§Ã<éþUlø®\x00ô³ÿÞ$64üOÈg|_Úé\x00\x00\x00\x00IEND®B`",
+			rmmkmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÆIDATHíÕË0\fÐÝLj	MîÓ«Ù2Æ?ûx\fÒCÆ`æ×Cså!÷F ßL¡\x00ñHÝZnG±hÃ@kªp@çÚ6ègá,Ú	wá*Ú7»ZR'H_WÝÕ§Qà3ù¦ã4\"ð°Ø¿Sî 6ök=ÇüMöjk<ZwSÉçezÅQÃýd^·v^¦ÒÍc_ç 8Ø]ÂÞpØ\r6NQwgþ#opéQ\n6'\x00\x00\x00\x00IEND®B`",
+			rslmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÜIDATHíAÃ \f×UßRþÿ^³=¤@\fôP1C"`Ø`óïÈå\rÁGÆ®LoµK¸é×õÔ¼V8Êx±¼FùÐjZ¡­X:õ Å\x00A»m=¸F\bD!ûÆ§±Äýð¢¦@1{ÅçÔÒfÈû)¨ôj,`Ø!×ÌöSôhÉ¥tY+Jbb"^í»n«k¹íÏäþ$c¡lõ=q	ý6þ­ÎRëÆòÏRÀõãàºÓ­äºÄY*i½Ùü/è¤dú\'\bøH\x00\x00\x00\x00IEND®B`',
+			ktgmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ \fD7F.¡§÷xõ©vìO§q:VûØ ´ÀgQ-w Hçx¯Q·Èìª0 Çr^L·ÂKdA)vN9ßâØ¨î¼ÜÌù<+¬à\b´r/\\ ÖI¡ÉY£ôT0t5lR%È¥J½§t¥éXÒ6ø(àìã¨`¨OB|G¡F¸ÈîíãæO8<·g`Þ­ó®j	<êj{ÚötÒ\x00Ò¾ðø}×û&¢åæª-¾cÒv\\z?¯NHðEµÚì;ì;ÑèZÒB/çàÿ>\fÜ;6Køop¿ÆCø[èd]qæø\x00:þÒkùL\x00\x00\x00\x00IEND®B`",
+			kotmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ0\bDÁñzÞÿ8=Þ?Ú²B2ív#&¼l)Ñ¥ÿa>B7kEä;Pw>­gõ{Ùy%.4	ynÕ<h$ÜlCu0Bg¶U`,»É&xX3m$Îë8¸@óñ°4ïI^qÖe½?«SbW¨,?êåW\\ÌÔ1i4¯bv\rS»w/®Ý[éæ°FºLÍÃcÜ_÷6ÝdtàÛI\rÙz\rÀ$÷¶mÌ+kD±â;nu¨`%|ÅwhWtFçÂb\\³ÆÝ#<¼X\bFèà3}éôYÙûÍâJ°\x00\x00\x00\x00IEND®B`",
+			infomg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00èIDATHíÑ0\fC¥^wavnºG¦Q?&8nsüD_Ø~Xè\x00`h¨h)´SÕZ\x00@Gß-à/èT` 6xyEBÁ×ÉÅÙvp\f\rméõ\nØlu";@#nð"&[Ú>²÷YÁ5jÓ¶\x00pkmØIÚÂnO|¤æg¬h9ÊÄJ¨ÝáÊ¡k,PÀiõÖ÷m@-ÛºÀ§÷Ó¥!lz&Sl\nR»¿z-5|\x00#nTkþ|&­)NåOõÁqwð?äÇe`hèJ½3\bK¼cß\x00\x00\x00\x00IEND®B`',
+			rfmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÚIDATHíKÃ \fDgªÞ¥÷?NNã.Ò*$xlÄX`ØÚZ$zfö8DóÎE÷.²Ç¼sÏ~ÐÏ û \x00DP½\"XÚÍ²ä§¡¸Op¿àC.:Ï£# c»BÆÁ\rôùk>Njî9I¿cá=A«Bü{<yÍu:¢q:æJ'× \b 2Wëê,²ÅÍåÁËS®ñÞ®ò¤ÓÍ5qÙMOûâäF.\\(Jõ<ü²ÆYëðê«ç;±|mm­Õ·òU/}mB\x00\x00\x00\x00IEND®B`",
+			epmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00IDATHíK \fD§Æ³èm¼?§7~ÈGÁ¸ ÏÜ´/)cRÀèÇi;Y÷\f<õ'!b³8ÁQçß5¦j_Kµ<BRÜ¨yøX¥?qùï)M\x00JÃX.ÞÖ¤\\a£Î7´Q_±Qøoñ]¸üôäR¬y¼ûT¿M®úå\bÄ÷fËÝDË¹8Ý±J_^Ø+ºZ\x00\x00\x00\x00IEND®B`",
 			wwmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00TIDATHí±jÂP¿[\nV\\"tê,íàê¾}\x00ÁÝÅGÐwð\r|\x00qtª»sqT\nPuR§Ó![½ÉMÒØ¡ägIþüß=$\'¹ë¿K\f"r£zd¤½®Ñfðy!XìÊ[vå-¥õtj5«jy­Ä¼VbUí¥Ê0IÓ­Í¾x¤13a_<"ØI;N^:c-áQü¶¥3¾*ÁEê¸¾üÃ½øóþ~÷\rªß\ràÙYWÚ\bÐ a]ig\nF°æ$Ü\b»C0^&Å§`d¦n¸gêBáP;^æÏ`Ï|ØÑÞ¼:\x00E5NÇ\n¾gÐñï1(NÇìéìÔ&FEgßÆàþ\bP(í£ñEæÁßtÍ\'%`a^Ó"Òý2Pþ3%ÞsÅ§ßî¹råJ«/gX"ixû\x00\x00\x00\x00IEND®B`',
 
 			qqmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00L74\x00\x00\x00	pHYs\x00\x00\x00\x00÷Nå\x00\x00+IDATHíV;KAþV¨D\b\"ZJH!jBlcg#h)½v6Úê?°²Õ)Ó)6J\nâ#ÍíyÍí%'\nâsÌÍ{v¾=ADp®þ-Ò |)AcxÁ§ÒÄÍ\f¤	â½§¦Uñ1¼«Ëd»é0 l9¶à$¼ÅjÈâ]\ntiª3bkÄíÈë­\n(é!QV¼/³ýOçtuÈ¯ùÚsb[¨&WéFk,1UÛÒSbÓ­íëÑæ6Ùeax$ì/JØ%ëcT÷\\ÊLo±WN«,ìé!Q;%ÀVY»Ý¬Þ8)Rµ¿¯U¿§Ì¤%mWU_zë<Ä8Ìª· ÌvÁõçf¤àÛ +ùÚ¯ì.XêjÙÚLïÆ	tÕ\r·ÄiïÃÆ-ÀmË¹«Ð×v1Æ]jGîmBV*hREÄ­gÆ6ðÒ[5UCbäÁø½½)ì(+RÔË±<wã$^ûê¢{ÑXúñjqöbþ¸so²\bLÙýwâ>UP@²'P1T\baZ8è4©£Ídó |;d j\\Ù0[9ÆëÆ§ø\fÖ d[-$½'*)_NDm#eAV:sôP);ÐÀåç³RóÒc#«\x00B8ü6Ç®\x00B8TôÕ?³\x00|Z¾M±¤9\x00\x00\x00\x00IEND®B`",
@@ -403,7 +403,7 @@
 			ii1mg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00<qâ\x00\x00IDATxíÚ]r¢@ÐÛ³YÁ¼ìYÁ<Î\n´²iÈOàsEÅ¢¦ýÒÀ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00àkKs7È9OtrR¤È1Þ¶Fºbq¯±ßGò\bÎ)?æ5"åØçÄ]9Þ§¿ßÄX¦éòS¤ª\\:ýléì_9ö9âå%¡í[ïó@NýìâÙ&×­öÄÙnéìKaäØwöÿ§ÀÇ®½>""\r|ðÒ[ÓmîK´ÃÕ>_ï¯½á«]\nS¤E´y÷©&Ûó¤mÉôþÂÊ\x00Ê«e×\f·,CñÚô÷é	Ï\\gÆ)»³ÖY©Tí¦Þ6±*(gyµãôÊ2æûL®ºIu,«ÎÎ5Ùnéò53#"=õäz¢LÕX¥è ³ÉM5Vÿ(Fê[k¬µ¾ÖÏÙ_,È´³})lÕ^S5Öuc5×j¬Yläú((ðì1PnÒfÀâL{ê«¥VÍtÉÄÀ¾Ö®êª³Ï\bGWùÜwr¯iLÙ®éÒ+ÅûëiçmMùÏÂ^ÇCyIUû[£ÍÙ®p¹þyîjåLoùV8DszÞõnµL)ZW ëùfbß\rÅµÚT\rç¾þÔ¥Åûå·ÃemQö#~i?qtÖ¤s$_Ý(ì¹©Û×¦;Þ6#cè®ªÊ´¯¾*ãÊöâC16©þÃ³Â±Søax£T{ômr¦zp£NeWí¦®õú:fÝ§_E|ÌSY&û/ÅíóOªb0Ó¸UíeG¿õëÀs>ýüf`}{¹êÿW®î¿fi=¸x@0Õ¦¦ciw»­3k«¯Åâ§ë;ü«â¾Wo¦+À-ûÌô©¯\r\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00À½ü\\æ¿ÚR\x00\x00\x00\x00IEND®B`',
 
 			olmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00iIDATHíÑ»\rÀ0\bÐ;)»dÿq4NÀ6RÒD÷KþÆüÓYwï!cÌQî>7³-¯}¥îqÍÂâ;­uÇ\b$UU/æ}Ûs¾ý\rÕÇ\böSÿ º\x00°'8¸-F\x00\x00\x00\x00IEND®B`",
-			nwve = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00¶IDATHíÝ\rÃ \fï\"vaîÿÚÆ}	â×@T©ª?H!pB Ø@¡Áì©â\x00\x00~Ñ;LÔË;7qÅ[AÑ·RÄIXÏ6Ø2¾bxÄü¾xFrGÙX3nff÷÷Àý¼S0®ýÅv2ã¯áæKô*2Î\r+¯8P/ï@©*Y{?Õ½ÖÒÛ­6¹Ôc)AÄqÏMRîÿÎ\rÃ0å/À'YprÌ»\x00\x00\x00\x00IEND®B`",
+			vtmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00¶IDATHíÝ\rÃ \fï\"vaîÿÚÆ}	â×@T©ª?H!pB Ø@¡Áì©â\x00\x00~Ñ;LÔË;7qÅ[AÑ·RÄIXÏ6Ø2¾bxÄü¾xFrGÙX3nff÷÷Àý¼S0®ýÅv2ã¯áæKô*2Î\r+¯8P/ï@©*Y{?Õ½ÖÒÛ­6¹Ôc)AÄqÏMRîÿÎ\rÃ0å/À'YprÌ»\x00\x00\x00\x00IEND®B`",
 			bxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x003IDATHíMN!\fºP`L<r\n¯ gõ\bÁgpåî©`Â¥?+Ã;!$Ó¡eÚKKÿMÒ½yP\x004 ª¨HèZv@IÈËX49vyNcB]Äªº;ÝY\rmíSÀqÿ±rî´·ÐÚ.OÉ¾»£VTÆæqÍ¦<`«,Á¡þï$ÜL.>J`\nò!æqö¸à)xpF¹]û;vÀföÖZYþ#ð!t^oB;ìBlèZ¯ÀÍ|X2^©õ]kÞó|¼\rÁ¦ó*{ì®Û<qÍMÉìÖEbèsçt¦?¸9UQÖÚTjæ%V·LéJ-7àÒ\x00SºÈ°¿Ów\rò¼5ãñ7NL}UºI¦p_\x00\x00\x00\x00IEND®B`",
 			uxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ôIDATHí] \f7=L¹M{VÃi¶6@PûÔag|ÐÕ|ülXZú7yò$\x00\b	$û¡ç30ùâÞ{Q$âyÒw¹&dfLò(z(öihë05cû2Qmá-Tûò*õ¸`³ÔÙ|rV¢TèÉ%á](Pöwîk\bï@%aÚOÁUà¼v»\fvÓ«ÕiµCA[¹H\bÕòZ­®Ou'Ú¨äö±DÛTG-3jµÉSË»ÅÕ\"ÿ2Ø¤¹i6Ù?ÿ;Ý\nWqýÚ×kÂe çuj¯nëýL°¯.?!\x00\x00\x00\x00IEND®B`",
 			sxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHí]Â \f7Fn£gõ8f}ÀvB\bþ<9ì6m>»-°µõowåJ\x00\x00+ )þÁ¨Î:IºD7MQØ×ÅºÜÛoAnbgÓSUpL¦¡¶>ýÍDßÔÂ-T×åÖúñÝVÔ`ñ%Ø	³¨\b8KÃP ï\"<4×>JÁ2t\b^+ÃEqûºWkµSI¬ÂH\nÕ2QkM¥{ ¤q\ns¬ Á,T:wuYÔüöÝ¹c5QV70¾þ»ä96Õ³-Üéç_'uÆÒAÍæj ÇbRûØ\\ò¾ü0Ékkkë+=_´±BÚ¹{\x00\x00\x00\x00IEND®B`",
@@ -431,39 +431,39 @@
 										info: IconButton {text:'?',alignment:['left','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'}\
-											helpTip:'"+es_str.infoHelp+"'\
+											helpTip:'" + es_str.infoHelp + "'\
 										},\
-										preci: EditText {text:'1',characters:2,alignment:['left','fill'],helpTip:'"+es_str.preciHelp+"'},\
+										preci: EditText {text:'1',characters:2,alignment:['left','fill'],helpTip:'" + es_str.preciHelp + "'},\
 										olGroup: Group {alignment:['left','bottom'],orientation:'stack',margins:0,\
 											olImage:Image{alignment:['center','fill'],size:[28, 28]}\
-											olCheck:Checkbox{margins:0,alignment:['center','right'],helpTip:'"+es_str.olcheckHelp+"'},\
+											olCheck:Checkbox{margins:0,alignment:['center','right'],helpTip:'" + es_str.olcheckHelp + "'},\
 										},\
 										pickPos: IconButton {text:'☉',alignment:['left','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'},\
-											helpTip:'"+es_str.pickposHelp+"'\
+											helpTip:'" + es_str.pickposHelp + "'\
 										},\
 										rmMarker: IconButton {text:'⌫',alignment:['left','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'},\
-											helpTip:'"+es_str.rmmarkHelp+"'\
+											helpTip:'" + es_str.rmmarkHelp + "'\
 										},\
 										\
-										lineNum: EditText {text:'0',characters:2,alignment:['right','fill'],helpTip:'"+es_str.linenumHelp+"'},\
+										lineNum: EditText {text:'0',characters:2,alignment:['right','fill'],helpTip:'" + es_str.linenumHelp + "'},\
 										killTag: IconButton {text:'⌧',alignment:['right','fill'],\
 											preferredSize:[28, 28],helpTip:'batch remove tags',\
 											properties:{style:'toolbutton'},\
-											helpTip:'"+es_str.killtagHelp+"'\
+											helpTip:'" + es_str.killtagHelp + "'\
 										},\
 										killOther: IconButton {text:'⒳',alignment:['right','fill'],\
 											preferredSize:[28, 28],helpTip:'batch remove other',\
 											properties:{style:'toolbutton'},\
-											helpTip:'"+es_str.killotherHelp+"'\
+											helpTip:'" + es_str.killotherHelp + "'\
 										},\
 										resel: IconButton {text:'↻',alignment:['right','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'},\
-											helpTip:'"+es_str.reselHelp+"'\
+											helpTip:'" + es_str.reselHelp + "'\
 										},\
 									}\
 								},\
@@ -480,11 +480,11 @@
 											bButton: IconButton {text:'<b>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[60,30],\
-												helpTip:'"+es_str.bHelp+"'\
+												helpTip:'" + es_str.bHelp + "'\
 											},\
 											bsButton: IconButton {text:'</b>',\
 												properties:{style:'toolbutton'},preferredSize:[60,30],\
-												helpTip:'"+es_str.bsHelp+"'\
+												helpTip:'" + es_str.bsHelp + "'\
 											},\
 											bbButton: IconButton {text:'<b> </b>',\
 												properties:{style:'toolbutton'},\
@@ -498,9 +498,9 @@
 										},\
 										ibt: Group {orientation:'row',spacing:2,alignment:['fill','fill']\
 											iButton: IconButton {text:'<i>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.iHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.iHelp + "'},\
 											isButton: IconButton {text:'</i>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.isHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.isHelp + "'},\
 											iiButton: IconButton {text:'<i>  </i>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[140,30],\
@@ -513,24 +513,24 @@
 										},\
 										ubt: Group {orientation:'row',spacing:2,alignment:['fill','fill']\
 											uButton: IconButton {text:'<u>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.uHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.uHelp + "'},\
 											usButton: IconButton {text:'</u>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.usHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.usHelp + "'},\
 											uuButton: IconButton {text:'<u> </u>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[140,30],\
-												helpTip:'"+es_str.uuHelp+"'\
+												helpTip:'" + es_str.uuHelp + "'\
 											}\
 											uuxButton: IconButton {text:'<u> </u>',alignment:['fill','fill'],\
 												properties:{style:'toolbutton'},\
-												helpTip:'"+es_str.xuHelp+"'\
+												helpTip:'" + es_str.xuHelp + "'\
 												}\
 										},\
 										sbt: Group {orientation:'row',spacing:2,alignment:['fill','fill']\
 											sButton: IconButton {text:'<s>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.sHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.sHelp + "'},\
 											ssButton: IconButton {text:'</s>',\
-												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'"+es_str.ssHelp+"'},\
+												properties:{style:'toolbutton'},preferredSize:[60,30],helpTip:'" + es_str.ssHelp + "'},\
 											sssButton: IconButton {text:'<s>  </s>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[140,30],\
@@ -545,7 +545,7 @@
 											fsButton: IconButton {text:'<font size=20>',\
 												properties:{style:'toolbutton'},\
 												preferredSize:[100,30],\
-												helpTip:'"+es_str.fsHelp+"'\
+												helpTip:'" + es_str.fsHelp + "'\
 											},\
 											fsValue: EditText {text:'20',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + "},\
 											fcButton: IconButton {text:'<font color=00FF00>',\
@@ -553,10 +553,10 @@
 												preferredSize:[100,30],\
 												helpTip:'" + es_str.fcHelp + "'\
 											},\
-											fcValue: IconButton {preferredSize:[30,30],helpTip:'"+es_str.fcvalueHelp+"'},\
+											fcValue: IconButton {preferredSize:[30,30],helpTip:'" + es_str.fcvalueHelp + "'},\
 											fxButton: IconButton {alignment:['fill','fill'],\
 												properties:{style:'toolbutton'},\
-												helpTip:'"+es_str.xfHelp+"'\
+												helpTip:'" + es_str.xfHelp + "'\
 												},\
 										},\
 										midGroup: Group {orientation:'row',alignment:['fill','fill'],margins:0,\
@@ -565,51 +565,51 @@
 													ulButton: IconButton {text:'↖',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.ulHelp+"'\
+														helpTip:'" + es_str.ulHelp + "'\
 													},\
 													ucButton: IconButton {text:'⇡',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.ucHelp+"'\
+														helpTip:'" + es_str.ucHelp + "'\
 													},\
 													urButton: IconButton {text:'↗',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.urHelp+"'\
+														helpTip:'" + es_str.urHelp + "'\
 													}\
 												},\
 												mdbt: Group {orientation:'row',alignment:['left','top'],spacing:0,\
 													mlButton: IconButton {text:'⇠',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.mlHelp+"'\
+														helpTip:'" + es_str.mlHelp + "'\
 													},\
 													mcButton: IconButton {text:'●',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.mcHelp+"'\
+														helpTip:'" + es_str.mcHelp + "'\
 													},\
 													mrButton: IconButton {text:'⇢',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.mrHelp+"'\
+														helpTip:'" + es_str.mrHelp + "'\
 													}\
 												},\
 												bobt: Group {orientation:'row',alignment:['left','top'],spacing:0,\
 													blButton: IconButton {text:'↙',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.blHelp+"'\
+														helpTip:'" + es_str.blHelp + "'\
 													},\
 													bcButton: IconButton {text:'☻',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.bcHelp+"'\
+														helpTip:'" + es_str.bcHelp + "'\
 													},\
 													brButton: IconButton {text:'↘',\
 														preferredSize:[30,30],\
 														properties:{style:'toolbutton'},\
-														helpTip:'"+es_str.brHelp+"'\
+														helpTip:'" + es_str.brHelp + "'\
 													}\
 												},\
 											},\
@@ -621,9 +621,9 @@
 														helpTip:'" + es_str.posHelp + "'\
 													},\
 													textX: StaticText {text:'x:',characters:2},\
-													posX: EditText {text:'192',alignment:['fill','center'],helpTip:'"+es_str.srtXY+"'},\
+													posX: EditText {text:'192',alignment:['fill','center'],helpTip:'" + es_str.srtXY + "'},\
 													textY: StaticText {text:'y:',characters:2},\
-													posY: EditText {text:'144',alignment:['fill','center'],helpTip:'"+es_str.srtXY+"'},\
+													posY: EditText {text:'144',alignment:['fill','center'],helpTip:'" + es_str.srtXY + "'},\
 												},\
 												fade: Group {orientation:'row',alignment:['fill','fill'],\
 													fadButton: IconButton {text:'',\
@@ -632,9 +632,9 @@
 														helpTip:'" + es_str.fadHelp + "'\
 													},\
 													inText: StaticText {text:'in:'},\
-													fadIn: EditText {text:'300',alignment:['fill','center'],helpTip:'"+es_str.msHelp+"'},\
+													fadIn: EditText {text:'300',alignment:['fill','center'],helpTip:'" + es_str.msHelp + "'},\
 													outText: StaticText {text:'out:'},\
-													fadOut: EditText {text:'300',alignment:['fill','center'],helpTip:'"+es_str.msHelp+"'},\
+													fadOut: EditText {text:'300',alignment:['fill','center'],helpTip:'" + es_str.msHelp + "'},\
 												},\
 												other: Group {orientation:'row',alignment:['fill','fill'],spacing:7,\
 													bord: IconButton {text:'',\
@@ -667,12 +667,12 @@
 														properties:{style:'toolbutton'}\
 														helpTip:'" + es_str.mvHelp + "'\
 													},\
-													x1: EditText {text:'384',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'"+es_str.x1Help()+"'},\
-													y1: EditText {text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'"+es_str.y1Help()+"'},\
-													x2: EditText {text:'-50',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'"+es_str.x2Help()+"'},\
-													y2: EditText {text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'"+es_str.y2Help()+"'},\
-													moveIn: EditText {text:'0',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + ",helpTip:'"+es_str.moveinHelp()+"'},\
-													moveOut: EditText {text:'3000',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + ",helpTip:'"+es_str.moveoutHelp()+"'},\
+													x1: EditText {text:'384',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'" + es_str.x1Help() + "'},\
+													y1: EditText {text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'" + es_str.y1Help() + "'},\
+													x2: EditText {text:'-50',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'" + es_str.x2Help() + "'},\
+													y2: EditText {text:'144',characters:" + (($.os.indexOf("Win") != -1) ? "2" : "3") + ",helpTip:'" + es_str.y2Help() + "'},\
+													moveIn: EditText {text:'0',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + ",helpTip:'" + es_str.moveinHelp() + "'},\
+													moveOut: EditText {text:'3000',characters:" + (($.os.indexOf("Win") != -1) ? "3" : "4") + ",helpTip:'" + es_str.moveoutHelp() + "'},\
 												},\
 										}\
 										rebtGroup: Group {orientation:'row',alignment:['fill','bottom'],spacing:0,\
@@ -817,46 +817,29 @@
 				pal.addEventListener("keydown", function (kd) {
 					pressed(kd, this)
 				})
-
 				pal.grp.RPparent.rightPart.btGroup.bbt.bButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("b");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"b",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.bbt.bsButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("/b");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"/b",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ibt.iButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("i");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"i",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ibt.isButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("/i");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"/i",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ubt.uButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("u");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"u",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ubt.usButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("/u");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"/u",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.sbt.sButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("s");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"s",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.sbt.ssButton.onClick = function () {
-					pal.grp.RPparent.statusText.text = this.text + " " + es_str.copied;
-					runCommand("/s");
-					showText(pal, this.text + " " + es_str.copied, 1000, 1)
+					tagButton(pal,"/s",this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.bbt.bbButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
@@ -1038,16 +1021,16 @@
 					};
 				};
 				pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(olmg);
-				pal.grp.RPparent.rightPart.btGroup.fix.direct.customImageViewer.image = ScriptUI.newImage(nwve);
+				pal.grp.RPparent.rightPart.btGroup.fix.direct.customImageViewer.image = ScriptUI.newImage(vtmg);
 
-				pal.grp.leftPart.buttonArea.pickPos.image = ScriptUI.newImage(pimg)
-				pal.grp.leftPart.buttonArea.rmMarker.image = ScriptUI.newImage(cimg)
-				pal.grp.leftPart.buttonArea.resel.image = ScriptUI.newImage(dimg)
-				pal.grp.leftPart.buttonArea.killTag.image = ScriptUI.newImage(eimg)
-				pal.grp.leftPart.buttonArea.killOther.image = ScriptUI.newImage(fimg)
-				pal.grp.leftPart.buttonArea.info.image = ScriptUI.newImage(gimg)
-				pal.grp.RPparent.rightPart.btGroup.rebtGroup.rfButton.image = ScriptUI.newImage(himg)
-				pal.grp.RPparent.rightPart.btGroup.rebtGroup.epButton.image = ScriptUI.newImage(iimg)
+				pal.grp.leftPart.buttonArea.pickPos.image = ScriptUI.newImage(pkmg)
+				pal.grp.leftPart.buttonArea.rmMarker.image = ScriptUI.newImage(rmmkmg)
+				pal.grp.leftPart.buttonArea.resel.image = ScriptUI.newImage(rslmg)
+				pal.grp.leftPart.buttonArea.killTag.image = ScriptUI.newImage(ktgmg)
+				pal.grp.leftPart.buttonArea.killOther.image = ScriptUI.newImage(kotmg)
+				pal.grp.leftPart.buttonArea.info.image = ScriptUI.newImage(infomg)
+				pal.grp.RPparent.rightPart.btGroup.rebtGroup.rfButton.image = ScriptUI.newImage(rfmg)
+				pal.grp.RPparent.rightPart.btGroup.rebtGroup.epButton.image = ScriptUI.newImage(epmg)
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.bobt.blButton.image = ScriptUI.newImage(zzmg)
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.bobt.bcButton.image = ScriptUI.newImage(ssmg)
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.bobt.brButton.image = ScriptUI.newImage(ccmg)
@@ -1304,6 +1287,12 @@
 					if (timeToCurrentFormat(esMarker.keyTime(a), comp.frameRate) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
 				return app.project.timeDisplayType = timeType, !1;
 			}
+		}
+
+		function tagButton(control,copyString,controlText) {
+			control.grp.RPparent.statusText.text = controlText + " " + es_str.copied;
+			runCommand(copyString);
+			showText(control, controlText + " " + es_str.copied, 1000, 1)
 		}
 
 		function validMarker(layer) {
