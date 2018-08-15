@@ -72,7 +72,7 @@
 			},
 			srtXY: {
 				en: "(in srt system, maximum width map to 384 and maximum height map to 288)",
-				cn: "(srt系统中，将最大宽高映射为 384 和 288)"
+				cn: "(srt 坐标中，将最大宽高映射为 384 和 288)"
 			},
 			er2dlayer: {
 				en: "(⇀‸↼‶)\rplease select only one 2D layer",
@@ -168,7 +168,7 @@
 			},
 			pickposHelp: {
 				en: "show the coordinate of selected layer in srt world",
-				cn: "显示所选图层在 srt 系统中的坐标"
+				cn: "显示所选图层在 srt 世界中的坐标"
 			},
 			killotherHelp: {
 				en: "remove all of { } tags of selected items in the list",
@@ -183,8 +183,8 @@
 				cn: "清空列表\\n清除选中图层的 srt 标记"
 			},
 			preciHelp: {
-				en: "timecode (00:00:00,000) precision\\n1 is best\\n10 is better",
-				cn: "时间码 (00:00:00,000) 的精确度\\n1 最高\\n10 也不错"
+				en: "timecode (00:00:00,000) precision\\nbest 1 <----> 10 better",
+				cn: "时间码 (00:00:00,000) 的精确度\\n最高 1 <----> 10 也不错"
 			},
 			linenumHelp: {
 				en: "restrict range for < > tags operation\\n0 is for line all\\n1 is for line 1\\n2 is for line 2\\nand so on",
@@ -364,7 +364,7 @@
 			rslmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÜIDATHíAÃ \f×UßRþÿ^³=¤@\fôP1C"`Ø`óïÈå\rÁGÆ®LoµK¸é×õÔ¼V8Êx±¼FùÐjZ¡­X:õ Å\x00A»m=¸F\bD!ûÆ§±Äýð¢¦@1{ÅçÔÒfÈû)¨ôj,`Ø!×ÌöSôhÉ¥tY+Jbb"^í»n«k¹íÏäþ$c¡lõ=q	ý6þ­ÎRëÆòÏRÀõãàºÓ­äºÄY*i½Ùü/è¤dú\'\bøH\x00\x00\x00\x00IEND®B`',
 			ktgmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ \fD7F.¡§÷xõ©vìO§q:VûØ ´ÀgQ-w Hçx¯Q·Èìª0 Çr^L·ÂKdA)vN9ßâØ¨î¼ÜÌù<+¬à\b´r/\\ ÖI¡ÉY£ôT0t5lR%È¥J½§t¥éXÒ6ø(àìã¨`¨OB|G¡F¸ÈîíãæO8<·g`Þ­ó®j	<êj{ÚötÒ\x00Ò¾ðø}×û&¢åæª-¾cÒv\\z?¯NHðEµÚì;ì;ÑèZÒB/çàÿ>\fÜ;6Køop¿ÆCø[èd]qæø\x00:þÒkùL\x00\x00\x00\x00IEND®B`",
 			kotmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ0\bDÁñzÞÿ8=Þ?Ú²B2ív#&¼l)Ñ¥ÿa>B7kEä;Pw>­gõ{Ùy%.4	ynÕ<h$ÜlCu0Bg¶U`,»É&xX3m$Îë8¸@óñ°4ïI^qÖe½?«SbW¨,?êåW\\ÌÔ1i4¯bv\rS»w/®Ý[éæ°FºLÍÃcÜ_÷6ÝdtàÛI\rÙz\rÀ$÷¶mÌ+kD±â;nu¨`%|ÅwhWtFçÂb\\³ÆÝ#<¼X\bFèà3}éôYÙûÍâJ°\x00\x00\x00\x00IEND®B`",
-			infomg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00èIDATHíÑ0\fC¥^wavnºG¦Q?&8nsüD_Ø~Xè\x00`h¨h)´SÕZ\x00@Gß-à/èT` 6xyEBÁ×ÉÅÙvp\f\rméõ\nØlu";@#nð"&[Ú>²÷YÁ5jÓ¶\x00pkmØIÚÂnO|¤æg¬h9ÊÄJ¨ÝáÊ¡k,PÀiõÖ÷m@-ÛºÀ§÷Ó¥!lz&Sl\nR»¿z-5|\x00#nTkþ|&­)NåOõÁqwð?äÇe`hèJ½3\bK¼cß\x00\x00\x00\x00IEND®B`',
+			infomg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÛIDATHíÁ\rÂ0wð!_PBJ :¢4¾ùQ,Ç!ÒÙq<?±|ã½D6Ðh4~ÎY6´úØ¼fZå.\fcz+úÅi)MåNõÁ-N¥ã¤ëª\"¥Æu&ÏàX(ì3åÅÈIL\x00D'Î¤-.Ç,¥-÷·:Mö]ê¶&Þ$­#6N¹Ü»¦ÖLÿ(vÆ¾EÅ@\x00=^\fÃx°UGÒ8 <£Ëá!in/1Kz/KZý.X³],èà½ºÕØH£ñÿ|\x00   ièüy\x00\x00\x00\x00IEND®B`",
 			rfmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÚIDATHíKÃ \fDgªÞ¥÷?NNã.Ò*$xlÄX`ØÚZ$zfö8DóÎE÷.²Ç¼sÏ~ÐÏ û \x00DP½\"XÚÍ²ä§¡¸Op¿àC.:Ï£# c»BÆÁ\rôùk>Njî9I¿cá=A«Bü{<yÍu:¢q:æJ'× \b 2Wëê,²ÅÍåÁËS®ñÞ®ò¤ÓÍ5qÙMOûâäF.\\(Jõ<ü²ÆYëðê«ç;±|mm­Õ·òU/}mB\x00\x00\x00\x00IEND®B`",
 			epmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00IDATHíK \fD§Æ³èm¼?§7~ÈGÁ¸ ÏÜ´/)cRÀèÇi;Y÷\f<õ'!b³8ÁQçß5¦j_Kµ<BRÜ¨yøX¥?qùï)M\x00JÃX.ÞÖ¤\\a£Î7´Q_±Qøoñ]¸üôäR¬y¼ûT¿M®úå\bÄ÷fËÝDË¹8Ý±J_^Ø+ºZ\x00\x00\x00\x00IEND®B`",
 			wwmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00TIDATHí±jÂP¿[\nV\\"tê,íàê¾}\x00ÁÝÅGÐwð\r|\x00qtª»sqT\nPuR§Ó![½ÉMÒØ¡ägIþüß=$\'¹ë¿K\f"r£zd¤½®Ñfðy!XìÊ[vå-¥õtj5«jy­Ä¼VbUí¥Ê0IÓ­Í¾x¤13a_<"ØI;N^:c-áQü¶¥3¾*ÁEê¸¾üÃ½øóþ~÷\rªß\ràÙYWÚ\bÐ a]ig\nF°æ$Ü\b»C0^&Å§`d¦n¸gêBáP;^æÏ`Ï|ØÑÞ¼:\x00E5NÇ\n¾gÐñï1(NÇìéìÔ&FEgßÆàþ\bP(í£ñEæÁßtÍ\'%`a^Ó"Òý2Pþ3%ÞsÅ§ßî¹råJ«/gX"ixû\x00\x00\x00\x00IEND®B`',
@@ -408,7 +408,8 @@
 			uxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ôIDATHí] \f7=L¹M{VÃi¶6@PûÔag|ÐÕ|ülXZú7yò$\x00\b	$û¡ç30ùâÞ{Q$âyÒw¹&dfLò(z(öihë05cû2Qmá-Tûò*õ¸`³ÔÙ|rV¢TèÉ%á](Pöwîk\bï@%aÚOÁUà¼v»\fvÓ«ÕiµCA[¹H\bÕòZ­®Ou'Ú¨äö±DÛTG-3jµÉSË»ÅÕ\"ÿ2Ø¤¹i6Ù?ÿ;Ý\nWqýÚ×kÂe çuj¯nëýL°¯.?!\x00\x00\x00\x00IEND®B`",
 			sxmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHí]Â \f7Fn£gõ8f}ÀvB\bþ<9ì6m>»-°µõowåJ\x00\x00+ )þÁ¨Î:IºD7MQØ×ÅºÜÛoAnbgÓSUpL¦¡¶>ýÍDßÔÂ-T×åÖúñÝVÔ`ñ%Ø	³¨\b8KÃP ï\"<4×>JÁ2t\b^+ÃEqûºWkµSI¬ÂH\nÕ2QkM¥{ ¤q\ns¬ Á,T:wuYÔüöÝ¹c5QV70¾þ»ä96Õ³-Üéç_'uÆÒAÍæj ÇbRûØ\\ò¾ü0Ékkkë+=_´±BÚ¹{\x00\x00\x00\x00IEND®B`",
 			ixmg = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00òIDATHíQ!\fD§Fn£gÕÛpñ°VZ aýXÊÎ£Ð²ÀÖÖ¿IÌÈ\x00\x00f@ $(ì^¹9y«)yÆåZÌRH¦² f¦¡m¼q2¶#Ä«io¡:.âÇÛl¶  ;OÎN4j#°¤1¼ÊùáÓªva´ÿÓX¨_ÚOÝª>z+¨¤2wUÉØícÕV{\f:ð­õ±L,\b¶U=kQ«o-ì«fñ·Á¦éÅW+ûk§·«Dóª·Ò(w/{wkkë§z\x00±Ì³¬Æú5\x00\x00\x00\x00IEND®B`",
-			fxmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00þIDATHíÝ\rÃ \fï:LÙ¦µã0ÍõP9Æü¨R¥ªâ$^rÄMì\x00lmýØ<¹\x00 \f 2µ/F¾rÂs6Ö H*Áó¢Ï£¬5©Hz}+µ2õ~TÜ>®A=ÜC­ÏG§çÜµ "É§à$\\R8RfÃ»P |ßExØ\\CxÊeh¼7\rÛÇà°{­:£VEPu-§Ð	¼»îñÐh«2ç\rv3¦D]=Ñ¨ñðÕê\\spÜT4óW5c72=ßt¶M\bú·q Ãæ*NpËÔÄÈÃµ¹­_>ÐÖÖÖOëe=³ceãþ\x00\x00\x00\x00IEND®B`';
+			fxmg = 'PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00þIDATHíÝ\rÃ \fï:LÙ¦µã0ÍõP9Æü¨R¥ªâ$^rÄMì\x00lmýØ<¹\x00 \f 2µ/F¾rÂs6Ö H*Áó¢Ï£¬5©Hz}+µ2õ~TÜ>®A=ÜC­ÏG§çÜµ "É§à$\\R8RfÃ»P |ßExØ\\CxÊeh¼7\rÛÇà°{­:£VEPu-§Ð	¼»îñÐh«2ç\rv3¦D]=Ñ¨ñðÕê\\spÜT4óW5c72=ßt¶M\bú·q Ãæ*NpËÔÄÈÃµ¹­_>ÐÖÖÖOëe=³ceãþ\x00\x00\x00\x00IEND®B`',
+            logomg = "\u0089PNG\r\n\x1A\n\x00\x00\x00\rIHDR\x00\x00\x00P\x00\x00\x00P\b\x06\x00\x00\x01\u00F9\x16\u00C2;\x00\x00\x00\tpHYs\x00\x00\x02\u00F3\x00\x00\x02\u00F3\x01\u00D2\u00E9\n*\x00\x00\b\u0088IDATx\u009C\u00ED\u009C_h\x14G\x18\u00C0\u00BF\u0089ILR0\u0089\x04l\r\u00D6(6\u00AB\u00A04B\x15\u00EBK\u00D4B\u00FF \u00A2\u00A2\u00D2\u00A7\u00D6\u00F4O\u00A4X\u00B0\n\x05\x0B}0\u0082\u0085\u00B4\u00F5A|\u00E8C\u009B\u00D4\x04A,\u00D4\x1AA\x10Kk\u00CE\u0087R\u00B1\x0F&h\u00A9\x07\x05c\u0083\u0094\x14Ir\u00B6xI\u0094N\u00F9\u00F6v\u00EEfwgvgvwr\u00B9z?9\u00E2\u00ED\u00CD\u00CE}\u00F7\u00CD\u00DF\u00EF\u00CF,\u00A1\u0094\u0082\n\x15J\u00A5\x00\u00A0\u0092\u00FD\u0087XP\u00A8:Mr\x7F\u00B7\u00DC\x01\u00B8\u00D7\u0092\u00FB\x1C\u00BF\u00DAU\u0088/\u0088X\u00B9\u008F|_M\u00D3@(\u00D0B\u00C9==Y\u00BC\x06\u00F6\u008Fi\u00A5\u0094{\u00A5\u0080r\u00FFZ)\u0092\u00AFq\u0098\u00AB\u00B4\u009D}\x1D\x0F+\u00F8|\u00D8\u00AF\u00D6V\u00CFQ\u00EEZ\u008A\u00A6!E\x00\u00BA\u00ECw\u00B6\x06(\x18j\x19a\u00AB \u00DC\u00AF\u00AF\u00F0\u00B5\n\x0FwS\u00A5\u00F73l\x15\u0082\u008D\u00C3\u00DEc\u00AB\u0088d$@ZD\u0095\u008B;\x05\u0093\u00D5\u00A2\u0085\x1A\x03e\u00E4\bV\u008F\u00E7\u00C7\u00F0\u00AD\u0082_\u00D5E\u0080\u00B4\x01\u00C0\x0E\u009F\u008CI\u00E2S#\u00B1\u00A0\x01\x00&d\u00A2\u00F2\u00C3HD^B\u00D5\u0086t\u00B1n\x02\u00E0A\u0083\u00EBREhe\x00\u00FD\u00AE!\u00C9\u00F3K\u00A3\u00FD\u00C6\x1E\u00B6\u00CE+\u00B4\u00D3\u00D24t\u0080\u00D3\u00A3\u0084\x05\u00D6\u00A7\\oY\u00C7A\u00A5\u00DC\t\u00AB\\\u00F8\u00D3\u00B9\u00CE\x05\\\u00BF\u00E9\x03\u0080\u00AB\x00p7\u00B0B~\u00EE@\u00FD\x05\u00CC%\u00ED\u00CEki\u00A8\u0094\f\u00D4\u00DF\u00C55c\u00DE\u00CB\u00F2\u00B1\"B\u00D2\u00DA\u00BC~\x13\u00EF\u00D8\u0089W\u00A8<\u00D7\x15\u00ADB\u00D1X\u00C6.\u00B4\u00D7u\u00915\u00C6\u00D0\u0086Qx\u00FD\u00E7%\u00B2\u00CA\u00B0?\u00F2cy\x12\x00\u00EA\u0085%%\x1DZT!?\u0096\u00C5\u0095\u00C9\u0090t\u00A1x:\u00DC\u00D3\u0093\u00F5^\"\u00D0J\u0087\u0082V][/@\u00FCzex\u00C62\u00B17\x04\x01\u0095\x15\n\x12q9\u00C9\u00E4\u0090\x18X\u00E12Ye\u00D8X\u00B8$\x10 )\u00D5/\u00AC\u00A0i\x18\t)3\x01\x16m\u0087\u00DE\x0F\u00A7|\u009F\u00E0\x14\u00E6\x15BiMax\u00BB\u008A\u00D3\x17]:$\x16\u00B4\x11\x0BR\u00CE\x04\x1B\u00CC\u00EA\u00E9\u00AC\u00B72/\u00A8\u00C3\x06n\u0082\r\u00E6Qum\u00FE\u00F3W\u00CE=\u0094U\u00A8\u00CE\u00F2\u00DB\u00F7\u00F2eO\u00EE\u00AE\u008B_\u00E1\u00A5U\u00CD\u00AE\u00F7\u0082\u00E1\u00A7^\u00E1\u00B63[U\u008A\u00E1H\u00C1%\u00B4CV\x007E\u0085\u00C2\u00A4KX\x06h\u00A1\u00CC\u009C_S\u0092&\u00F1\u00B9\u00E1\u0089\x13\u00D0\u00B7\u00862\u0088ew\u00CCS\u00CA5\u00C9\u00B6\u00B8\u008C\x1F\u00B7\u008F\u00C1\u00FE\u0081E:\u00C2\u00B9\u00D6dN\u00B0h\u009D2L@\u009E\x1D7\x00~kS\x120\u00DF\u00C4\u00C4\u0082\u00AE\u00C8\u00C2\u00E92\u00B0V\u00F9\x07\u00B1M\b\x1AVGfE8\x1E\x05!\u0099\x06\u00CFG\u00FC\u008A\u00B5yk\x07(sV\u00EC\u00D4\u00AAa\u00D5\u0090\u00FD\u0087\u00B7\u009A\u00D8\x0BbN3Wi\x1A\u0086\u00BC\x17)\u00D0\x01\u00ADZv}\x1Dh\x131\x01\u00C3\u00D7v?\u00ED\u00CEHwA\u0080\x1C\u00D4\u00AA\u00E5\u00D8\u00C9@\x1BKoG\u00A3\x02\x1Aj\x0B&\u00D5\u00CA\u00FE]?\x01/L\u00DA\u00961\u00BF+\u00E2\u00C97\u00B1S\u00E0Bl\x01\u0099izy\u0097p\u00C3\u0093\u00E7Ac\u0086\t\x17\u0084p-\x16\x1A<Q8\u00D6\u0099\u0085==\u00B5\u00BE;%v\u008D\u00E8\x1B\u0098\u0089\u00BC\t\x00\x06c\x0B$B\u00C3\u00F0\x12\u00DD^\u009C\u00B5Xc\u00D51+\u00E0\x15\u00A9\u00CD\u0093\x13Ra0\u0099\x13\x10Gss\u0088\r\u0085e\u00DE9\u00EE7\u00A08\u0092\u00EE\u00838yc]rcU\u00C4\u0083\u00C6\f]0\u00DE \u00FA\u00A8\u00BC\u00A3\u008EKY\u0083q)\x0B\x18\u0097\u00B2\u0080q\u0091\u009A\u009D\fgSz00 xz\u00B3/6\x01\u008F\u00AA\u00B3p\u00F2\u00E8\x14|\u00F9Q\u00E8\u0096J\x04\u00DB<H\u00A7\x19b\u00D9\u00BE>\u00B5\u0088\u0082H@\u00AF\u00B0\x1B\u00C7j\u00BD! \x15\x01\u00FDa>\x0B:\u009C\u00DD\u00B5z\u00B8#\u008C\u00AA\u0099Z{\u00DD\x1Dl\x19\u00D7\u00BD\u00D5% \u00B1\u00E0\u0084\u00967A\u0097\u00C5w\x17\u00C2\u00AD\u00F9>\u00F7\u00B6\u0092\u0080\u00E8\x1C\x05\u0080\x0F\u008C\t\u00C7\u00B0\u00B5\u00B90\u00A3Z\u009C\u00D7\u00E0\rcByY0Q\x1F\u00D8g9\u0098gA\u00E8\u00994\n\x0E,U\x01\u008B\u00E2\u00F6@\u00C26\u00B4\tM\u00D4\u00CB\u00E8\u00FAA\u009C\x12\u00D6j\u00DF\u00D9\u00F3\x1As\u00A3_\x15\u00B9=\u0090Jg7\x1D\t\u00BE\"\nv\u009C\u0089h\u00ED\u00A4\u0097\u00DFn\x0E+\x12G\u00832\u008BH\u00CFy\x14Bd\x01eQ%m\u00E7\u0091\u0082\u0080\u00E1=U\u00803o\u00FA @\u00A41\u008DH\x02*\u00C4\u00D7d\u00C8\u00E6\u00CDDW\u00A2X\u00A3\u00D8\u00898\u00DAi/\u00A89\u00AD\x01\u0082\f\u00BCy/\u00AC\b\x13Pm\u00D6\x14s\u00DE\u00DE\\X\u00F4\x14|\u00DCs_\u00EB\u00CE\u00C3\u00FD\u00A1\u00A3X-\u00F2\u00AE\u008B\u008A\u00EF\x05\u00B7`\u00AB\u00A7\u0099\u00E7+o\u00F0{\u00E1\u00FD\u0083\u00EA\u009B\u00B50$\u00D1U\x17\x05\u00E1\x02\u00F1\u00F6\u00C1H\u00BB_!\u00C7\u00BB\u00E5;\u0096\u00CF>\x0F\u00F4\u00C7\u00F0\u0088\x029\u00FE\u00CC\u00AB\u00A8\u0088\u009A\u00FA\u00F2\u00AEq8\u00F0\u00EDB\u00CFUi\x133\u00E7\u0091h\u00EF\x13\x1E\u00E3\x0E\u00C3+\u00E0\u00CC\u00FC)X3U#\u00B8K* 3\u009A\u00E2\x0B#\u00E2\u00FA&\u00B7\u00ADR=]c\u00EF`\x02r\u00DF\u00BC\u00CC\u00BE\u00D9\x19\u00E4\u00D4\x14`V\u00C0\u0095\u00BE8O\u008EO\u00DEU\u009E/\u00CD\n(s\u00F1\u00EE\u00EEmR\u00AD\u00A2x\u009E\u0085\u009B5JS\u008D9\x01\u00C3l\x0E\x1C0\n\u0086\u0093\x19\x01\x17\u00DF\x1DW\u00B2\u00DA\x14\f'\x13\x02f`\u00B0\u00C5;\x11\u00CB\u00F9b\u0087/\x01\u00D3\u00A4\u0080\u009B\u009D5]}.y\u00E9B`\x1E\u0083(\u00F1\\\x07\u009CG&1Q\u009D\u00BF\u0087\x02\x1D!@\u00D4\u00EB\u00BC\u00B8\u00E6\x1F\u0080\u009B\u00C2\u008F\u00CAN\u00F4\u00B8\u0094\u00E3$\u00FFw\u00E6|\x0B\u00CFu\u00CA\n\u008CIY\u00811)+0&\u00A1a\u00BA(8\x1Ee\u00DCq1\u00F7!\u00FF\x7F/-\u00F9\u0080\u00967\u009A\u00F6\u00D7\u00E21\u00C8\u00D6M\u00C1DS\x05\u00DC\\\u00F7/\\\u00DB\u00B2\u00D4N\u00DA\u00D4\u00B0XM\u00E0:\u00E4\x10u\x15v\u00E2\u009F\u00E8\x15\u00DC\u009E\u0098\u008Ca\u00E1H\x19\x7F.\u00B9\x0Fg\u00F6\u00CF\u0083\u00B3\u00EF5\u00EA\u0084*\u00A3\x12I\u0081\u008E3\u00BAO\u00E5\x04id\u00A2*\u00D0\x0B:\x1D\u00FB\x0E\u00CD\u00C0\u00F1\u00EEd\x1C\u009D\x1E\u00B4\u008E\u00CF`h\u00D6\u0089\x1B\u00DF0\u00AA\u00BC$\u00C1Hj\u00E7\u00A7\u00F5\u00B6W\r\u00C3\u00BE\u00AB$\u00AE\u0097\x04\u0090*\u0090\x0B\u00B8\u009B\x0F\x1D\u009B\x04\u0095\u0089\u00F9\u00E4\u0086\x14)T \u00B1l+\u00D7\\B@1`\u008A<\u00BDY/@\x12\u00827\u0093\u00A2\u00C1\t\u0092\u0094\u00C6P\u008D\u00C2\u00FAT\u0093N\u00A2D\x18\u00DE\x1E8\u0094X\u0084i.\u0083\u0089\x1C\u0082\u00A3\u00CCQ\u00E0\x1F4q\"\u00D1\x04#}20\u00EF\u00F1\u00EF\x00\u00B0bV\x1A\u00F1\u00B9[\u008B`_\u00F7\u0084'\u009D,\u00E3t\"e\u0092?\u00FF\u00A0\x0E\n\u00BBIt\n\u0085A\u0080\u00E0\u0086|\u00C0\u00A8B\u00DD\u00A1Ni\u008CK\x06K5\u008A\u009C\u008B\x12\u0091~\u00F4\r\x07)\x0Fr\u00AE\u00D9\x14\x05\u008A;\u00E3~c\u0092\u00C4\u00DCw\x16\u00C3\x16\u00CE\u00B0'K\u00A8B\u0081&\u009A9\u00E2\u00E2\u00E5\u00EF\u0082\u009F+\x11B1\x14\u00A8=\x1C\t\x10s\u00F6\u00D9\u00E3*Q\u00B8Z\x19[\u0081\u00DE\u00A8\u0086i\u009C\x13R:$\u009A\\\u00E5\u00E2\u00CA6\u00AD\u00E3\u00AF^\u00F8\x1Ex\u00C8\u0088\u0080b\u00F6:)J\u0081C\x13O\f:\u00A9Kf\u00F2\x13\u00D0\u00DBs=\u00DE\u00F4\u00EFr&\x10\u00CBn\u00E9\u00E4\u00BC+Q\u00C0\x07\x19\u00EC\u00EC\u00AF\u0083\u00ADg\x1BU\u00D2Ec\u00F1\u00FEy\u0080\x1F\\OW\u00D2^\u0085E9<)c-\x1E\u0085\u00EA\u00E9)\u00E8}U)\x10\u00AF\u00C5W\u00873\x02oM\u00B4m\f\u008FS\u00C1l\x0E\u00E7`f\u00E6\u00D7\u00C0\x1B\u0083\u00B9\u00FDZP\u00E6\u0097\x0Eb\u00E5E\"\u00E8\\\x06\u00AE|\u00A99g\x17c\u008F\u00FC\u00E9\u00E9\x1A\u00E5\u00C3\u00CA^\u0082\x1FE\x10\u00BF\x072h\u00DA\u00CE9hsr\x07\u0087e\u00E5f\x1D\u00EC\u0091\x1B\u00C7\u00B2\u00DA\u009EgL\u00FF\u00C3^\u00AC\u00F0\x1C\x07\x1DT\x1E\u00A7f+\u00D2\u00F1\u00C2\u00BE\u00E5\u0098`\u00C5\x05\x1F\u00C1\u00D3yiTKq\u00FE\u00DC\u00C9D\u00E0\u009D\t\u00E6\x0E\u008B\u009B`h\u00C3\x12\u00BB\x17\u0086\r\u00E5?V\u00CC3)Fi\u00875o+\fGt\u00ED_hK\u00D4\u0089\u00CA\u00F3d\u00C4\u0085W\x0E\u00E7\u009C\u00A8Q\x17\u009E\x00JW\u0081U3Y\u00AD\u00BD!:Q\u00F1\x00d\u00C2q\u0091\u00D2U\u00E0\u0081#\u00CA\x19\u00FF.0.\"x\u00FE`TJS\u0081m\u00D7Fa_w\u00F4\u00A3\x19\u00C7:ku\u00B2\u00C9\u0083(=\x05\u00EE\u00EE\u00BD\x0F\u00DF\u00BC(}\u0080\u00A7F=M\u0090z6\u00B6\x12\u008D\u00E4\u00C6\x18\u00A1\u00F2\u00D1C\u00F8\u00BE\u00B5\x0E\u009AG\u0094\u00D3\u00FCCyf\u00B4\u00C9\u008E\x17k\u009E^\u00E7)\u0085\x1E\u0088\u008F\u0081j\u00A4\u00BFV=\x05\u00CD#\u00C9\u00BB\u00F6\u00D9\u00E9\u00FA\u0088\u00CE\u008A\u00B9\u00D6\x03\u0087\x1D\u00FB\u00BBO\u00F2\u00C8\u00B3\x0E\u00C7;\u009D\u00BC\u00CB\r\u00F3r\u00CE\u00BD\u00DD\x00\u00D0\u00ABu[9G:&\u00E5\x04\u00CB\u0098\u0094\x15\x18\u0093\u00B2\x02\u00E3\x00\x00\u00FF\x01\u0092\x15\b.\u0081 \u00F6v\x00\x00\x00\x00IEND\u00AEB`\u0082";
 		var bgGreen = [0, 1, 0],
 			disableGreen = [0, 0.46, 0.03];
 
@@ -692,6 +693,7 @@
 
 				var es_help = function () {
 					var res = "group {orientation:'column', alignment:['fill','fill'], alignChildren:['fill','fill'],\
+                            logo: Image{alignment:['center','fill'],size:[80, 80]},\
 							pnl: Panel {type:'tabbedpanel',\
 								aboutTab: Panel { type:'tab', text:'" + es_str.descript + "',\
 									aboutEt: EditText { text:'" + es_str.desContent + "',\
@@ -734,6 +736,7 @@
 					helpWin.gr.btns.okBtn.onClick = function () {
 						helpWin.close();
 					};
+                    helpWin.gr.logo.image = ScriptUI.newImage(logomg)
 					helpWin.center();
 					helpWin.show();
 				};
@@ -744,8 +747,6 @@
 				pal.onResizing = pal.onResize = function () {
 					this.layout.resize();
 				};
-
-
 
 				pal.grp.leftPart.listArea.graphics.foregroundColor = pal.graphics.newPen(pal.graphics.BrushType.SOLID_COLOR, bgGreen, 1);
 				pal.grp.RPparent.rightPart.btGroup.fbt.fcValue.colorHex = "00FF00";
@@ -813,33 +814,32 @@
 						triggerMarker(pal, null, null, null, null, []);
 					}
 				};
-
 				pal.addEventListener("keydown", function (kd) {
 					pressed(kd, this)
 				})
 				pal.grp.RPparent.rightPart.btGroup.bbt.bButton.onClick = function () {
-					tagButton(pal,"b",this.text)
+					tagButton(pal, "b", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.bbt.bsButton.onClick = function () {
-					tagButton(pal,"/b",this.text)
+					tagButton(pal, "/b", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ibt.iButton.onClick = function () {
-					tagButton(pal,"i",this.text)
+					tagButton(pal, "i", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ibt.isButton.onClick = function () {
-					tagButton(pal,"/i",this.text)
+					tagButton(pal, "/i", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ubt.uButton.onClick = function () {
-					tagButton(pal,"u",this.text)
+					tagButton(pal, "u", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.ubt.usButton.onClick = function () {
-					tagButton(pal,"/u",this.text)
+					tagButton(pal, "/u", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.sbt.sButton.onClick = function () {
-					tagButton(pal,"s",this.text)
+					tagButton(pal, "s", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.sbt.ssButton.onClick = function () {
-					tagButton(pal,"/s",this.text)
+					tagButton(pal, "/s", this.text)
 				};
 				pal.grp.RPparent.rightPart.btGroup.bbt.bbButton.onClick = function () {
 					triggerMarker(pal, null, null, null, null, [], "b", "", !1, pal.grp.leftPart.buttonArea.lineNum.text);
@@ -935,9 +935,7 @@
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
 					var px = this.parent.posX.text,
 						py = this.parent.posY.text;
-
 					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, !1, null, true);
-
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
 					var fIn = this.parent.fadIn.text,
@@ -1022,7 +1020,6 @@
 				};
 				pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(olmg);
 				pal.grp.RPparent.rightPart.btGroup.fix.direct.customImageViewer.image = ScriptUI.newImage(vtmg);
-
 				pal.grp.leftPart.buttonArea.pickPos.image = ScriptUI.newImage(pkmg)
 				pal.grp.leftPart.buttonArea.rmMarker.image = ScriptUI.newImage(rmmkmg)
 				pal.grp.leftPart.buttonArea.resel.image = ScriptUI.newImage(rslmg)
@@ -1065,14 +1062,11 @@
 				pal.grp.RPparent.rightPart.btGroup.ubt.usButton.image = ScriptUI.newImage(us1mg)
 				pal.grp.RPparent.rightPart.btGroup.ubt.uuButton.image = ScriptUI.newImage(uu1mg)
 				pal.grp.RPparent.rightPart.btGroup.ubt.uuxButton.image = ScriptUI.newImage(uxmg)
-
-
 			}
 			return pal;
 		}
 
 		function mouseEventHandler() {
-
 			if ($.os.indexOf("Win") != -1) {
 				vbs.execute();
 			} else {
@@ -1080,7 +1074,6 @@
 				cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
 				system.callSystem(cmd);
 			}
-
 			this.removeEventListener("mouseout", mouseEventHandler);
 		}
 
@@ -1103,7 +1096,7 @@
 		function writeSrt(list) {
 			var srtFile = File.saveDialog(es_str.saveDialog);
 			srtFile.encoding = "utf-8", srtFile.open("w");
-			srtFile.write("0\r00:00:00,000 --> 00:00:00,000\rsongzmeng srt export" + "\r\r");
+			srtFile.write("0\r00:00:00,000 --> 00:00:00,000\rquick export srt " + es_str.version + " by songzmeng" + "\r\r");
 			for (var r = 0; r < list.length; r++) srtFile.write(list[r].text + "\r" + list[r].subItems[0].text + "\r" + list[r].subItems[1].text + "\r\r");
 			return srtFile.close(), srtFile;
 		}
@@ -1111,7 +1104,6 @@
 		function writeFile(fileObj, fileContent, encoding) {
 			encoding = encoding || "utf-8";
 			fileObj = (fileObj instanceof File) ? fileObj : new File(fileObj);
-
 			var parentFolder = fileObj.parent;
 			if (!parentFolder.exists && !parentFolder.create())
 				throw new Error("Cannot create file in path " + fileObj.fsName);
@@ -1124,7 +1116,6 @@
 
 		function pressed(k, pal) {
 			if (k.keyName == "Z" && k.metaKey) {
-				// alert(123)
 				app.executeCommand(16);
 				pal.grp.leftPart.buttonArea.resel.notify("onClick");
 				pal.grp.RPparent.rightPart.btGroup.rebtGroup.rfButton.notify("onClick");
@@ -1132,10 +1123,8 @@
 		}
 
 		function checkTextLayer(layers) {
-
 			if (0 == layers.length) {
 				alert(es_str.noLayer)
-
 				return !1;
 			} else {
 				for (var b = 0; b < layers.length; b++) {
@@ -1146,7 +1135,6 @@
 				}
 				return !0;
 			}
-
 		}
 
 		function removeESmarker(layers) {
@@ -1210,7 +1198,6 @@
 		function showText(pal, argument, time, count) {
 			var xx = 0;
 			var ccr = app.scheduleTask("checkStatus()", time, true);
-
 			checkStatus = function () {
 				if (xx < count) {
 					// alert(xx);
@@ -1236,7 +1223,6 @@
 				var echoClip = new File(Folder.temp.toString() + encodeURI("/echoClip.bat"));
 				writeFile(echoClip, cmds);
 			}
-
 			if ($.os.indexOf("Win") != -1) {
 				echoVbs.execute();
 			} else {
@@ -1289,7 +1275,7 @@
 			}
 		}
 
-		function tagButton(control,copyString,controlText) {
+		function tagButton(control, copyString, controlText) {
 			control.grp.RPparent.statusText.text = controlText + " " + es_str.copied;
 			runCommand(copyString);
 			showText(control, controlText + " " + es_str.copied, 1000, 1)
@@ -1311,10 +1297,8 @@
 
 		function canWriteFiles() {
 			if (isSecurityPrefSet()) return true;
-
 			alert(es_str.writePermiss);
 			app.executeCommand(2359);
-
 			return isSecurityPrefSet();
 
 			function isSecurityPrefSet() {
@@ -1349,7 +1333,6 @@
 
 		function refreshButton(pal) {
 			if (comp = app.project.activeItem, osl = sl, sl = comp ? sortLayers(comp.selectedLayers) : [], checkTextLayer(sl))
-
 				if (pal.grp.leftPart.buttonArea.olGroup.olCheck.value && checkOverlap(sl)) sl = osl, alert(es_str.overlap);
 				else {
 					pal.grp.RPparent.rightPart.editText.backupSelection = "",
@@ -1364,13 +1347,8 @@
 					app.endUndoGroup();
 				}
 			else sl = osl;
-
-
-
-			// $.sleep(2100)
 			pal.grp.leftPart.buttonArea.pickPos.enabled = !0;
 			pal.grp.leftPart.buttonArea.rmMarker.enabled = !0;
-
 			for (var i = 5; i < pal.grp.leftPart.buttonArea.children.length; i++) {
 				pal.grp.leftPart.buttonArea.children[i].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0
 			};
@@ -1378,20 +1356,16 @@
 				pal.grp.RPparent.rightPart.btGroup.children[x].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
 				pal.grp.RPparent.rightPart.btGroup.fbt.fcValue.notify("onDraw");
 				pal.grp.RPparent.rightPart.btGroup.fbt.fcValue.fillBrush = 0 == pal.grp.leftPart.listArea.items.length ? pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, disableGreen, 1) : pal.graphics.newBrush(pal.graphics.BrushType.SOLID_COLOR, bgGreen, 1);
-
 			};
 			pal.grp.RPparent.rightPart.editText.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
 			pal.grp.RPparent.rightPart.btGroup.rebtGroup.epButton.enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
 		}
 
-
 		if (canWriteFiles()) {
-
 			var ui = es_buildUI(thisObj),
 				comp, sl, osl, slIndex, markerTimeOffset = 1,
 				newlineMark = "↵",
 				reg = new RegExp(newlineMark, "gm");
-
 			if (-1 != $.os.indexOf("Win")) {
 				if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")).exists) var bat = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat"));
 				else {
@@ -1414,7 +1388,6 @@
 			}
 
 			refreshButton(ui);
-
 
 			if (ui.grp.leftPart.listArea.items.length == 0) {
 				ui.grp.leftPart.buttonArea.pickPos.enabled = !1;
