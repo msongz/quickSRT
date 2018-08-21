@@ -55,12 +55,12 @@
 				cn: "使用"
 			},
 			desContent: {
-				en: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\ncontact: songzmeng@gmail.com\\n\\nThis script enable AE to export subtilte(.srt) file. Fully test on macOS 10.13.4, AE 15.0\\n\\nMain process is put a marker to the outPoint of each text layer you selected ",
-				cn: "Copyright (c) 1987-2018 songz meng\\nAll rights reserved.\\n联系：@微型柠檬\\n\\n这个脚本允许AE导出字幕(.srt)文件. 在 macOS 10.13.4, AE 15.0 上充分测试"
+				en: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\nThis script enables AE to export .srt file for videos displaying subtitle, and recommended using iina/potplayer on macOS/Windows to play videos.\\n\\nThe main process is when you click the refresh button, the script will read the values from the marker at the end of each selected text layers. If not found, it will read the source text and create one. After that, you can click the export button to output srt file for further usage.\\n\\nIf you have any question, please contact songzmeng@gmail.com",
+				cn: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\n此脚本使AE能够导出视频字幕的 srt 文件，并建议在macOS / Windows上使用iina / potplayer播放视频。\\n\\n当您单击刷新按钮时，脚本将从每个选定文本图层末尾的标记读取值。\\n如果未找到，它将读取源文本并创建一个。\\n之后，您可以单击导出按钮输出srt文件以供进一步使用。\\n\\n如果您有任何疑问，请联系@微型柠檬"
 			},
 			useContent: {
-				en: "1. select some text layers\\n2. run this script or press “refresh” button\\n3. press “export” button and select the location the file you store.\\n#Note:\\n・Hover your mouse on each control will shows a help tip.",
-				cn: "1. 选中若干文字图层\\n2. 运行这个脚本或者按“刷新”按钮\\n3. 按“导出”按钮选择路径保存你的字幕文件\\n#注意:\\n・鼠标在每个控件上停留都会弹出帮助提示"
+				en: "Each control will show a help tip while your mouse over it.\\n\\n1. select some text layers\\n2. run this script or press “refresh” button\\n3. press “export” button and select the location the file you store.\\n\\n• <> tags could be applied multiple times.\\n• {} tags could be override each time.\\n\\nsupport:\\n\\n• bold/italic/underscore/strikethough style\\n• position/fade/stroke/kerning/blur style\\n• font size/color\\n• move\\n• vertical",
+				cn: "当鼠标悬停在每个控件上时，都会显示帮助提示。\\n\\n1. 选择一些文本图层\\n2. 运行此脚本或按“刷新”按钮\\n3. 按“导出”按钮并选择您存储的文件的位置。\\n\\n• <>标签可以在每一行上多次应用。\\n• {}标记可以在每一行上被其自己覆盖。\\n\\n支持\\n\\n• 粗体/斜体/下划线/删除线样式\\n• 位置/淡入淡出/笔划/字距调整/模糊样式\\n• 字体大小/颜色\\n• 移动\\n• 纵向"
 			},
 			other: {
 				en: "other scripts",
@@ -355,7 +355,7 @@
 				cn: "选择保存路径"
 			}
 		};
-		for (var i in es_str) "zh_CN" == app.isoLanguage ?
+		for (var i in es_str) "zh_CN" != app.isoLanguage ?
 			es_str[i] = es_str[i].cn :
 			es_str[i] = es_str[i].en;
 
