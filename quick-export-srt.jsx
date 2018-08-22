@@ -55,12 +55,12 @@
 				cn: "使用"
 			},
 			desContent: {
-				en: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\nThis script enables AE to export .srt file for videos displaying subtitle, and recommended using iina/potplayer on macOS/Windows to play videos.\\n\\nThe main process is when you click the refresh button, the script will read the values from the marker at the end of each selected text layers. If not found, it will read the source text and create one. After that, you can click the export button to output srt file for further usage.\\n\\nIf you have any question, please contact songzmeng@gmail.com",
-				cn: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\n此脚本使AE能够导出视频字幕的 srt 文件，并建议在macOS / Windows上使用iina / potplayer播放视频。\\n\\n当您单击刷新按钮时，脚本将从每个选定文本图层末尾的标记读取值。\\n如果未找到，它将读取源文本并创建一个。\\n之后，您可以单击导出按钮输出srt文件以供进一步使用。\\n\\n如果您有任何疑问，请联系@微型柠檬"
+				en: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\nThis script enables AE to export .srt file for videos displaying subtitle, and recommended using iina/potplayer on macOS/Windows to play videos.\\n\\nThe main process is when you click the refresh button, the script will read the values from the marker at the end of each selected text layers. If not found, it will read the source text and create one. After that, you can click the export button to output srt file for further usage.\\n\\nThere are some different behaviores between macOS and Windows:\\n\\n• Edit area on macOS will dynamic changes list item, but on Windows will not changes unless deactivate it\\n• List item on macOS will display a \" \"(spacebar) represent the \"↵\"(enter), but Windows will display nothing\\n\\nIf you have any question, please contact songzmeng@gmail.com",
+				cn: "Copyright © 1987 - 2018 Songz Meng\\nAll Rights Reserved.\\n\\n此脚本使AE能够导出视频字幕的 srt 文件，并建议在 macOS / Windows 上使用 iina / potplayer 播放视频。\\n\\n当您单击刷新按钮时，脚本将从每个选定文本图层末尾的标记读取值。\\n如果未找到，它将读取源文本并创建一个。\\n之后，您可以单击导出按钮输出 srt 文件以供进一步使用。\\n\\nmacOS 和 Windows 之间存在一些不同的行为：\\n\\n• macOS 上的编辑区域将动态更改列表项，但在 Windows 上将不会更改，除非取消激活状态\\n• macOS 上的列表项将显示\" \"(空格键)代表\"↵\"(换行)，但 Windows 将不显示任何内容\\n\\n如果您有任何疑问，请联系 @微型柠檬"
 			},
 			useContent: {
 				en: "Each control will show a help tip while your mouse over it.\\n\\n1. select some text layers\\n2. run this script or press “refresh” button\\n3. press “export” button and select the location the file you store.\\n\\n• <> tags could be applied multiple times.\\n• {} tags could be override each time.\\n\\nsupport:\\n\\n• bold/italic/underscore/strikethough style\\n• position/fade/stroke/kerning/blur style\\n• font size/color\\n• move\\n• vertical",
-				cn: "当鼠标悬停在每个控件上时，都会显示帮助提示。\\n\\n1. 选择一些文本图层\\n2. 运行此脚本或按“刷新”按钮\\n3. 按“导出”按钮并选择您存储的文件的位置。\\n\\n• <>标签可以在每一行上多次应用。\\n• {}标记可以在每一行上被其自己覆盖。\\n\\n支持\\n\\n• 粗体/斜体/下划线/删除线样式\\n• 位置/淡入淡出/笔划/字距调整/模糊样式\\n• 字体大小/颜色\\n• 移动\\n• 纵向"
+				cn: "当鼠标悬停在每个控件上时，都会显示帮助提示。\\n\\n1. 选择一些文本图层\\n2. 运行此脚本或按“刷新”按钮\\n3. 按“导出”按钮并选择您存储的文件的位置。\\n\\n• <>标签可以在每一行上多次应用。\\n• { }标签可以在每一行上被其自己覆盖。\\n\\n支持\\n\\n• 粗体/斜体/下划线/删除线样式\\n• 位置/淡入淡出/笔划/字距调整/模糊样式\\n• 字体大小/颜色\\n• 移动\\n• 纵向"
 			},
 			other: {
 				en: "other scripts",
@@ -135,28 +135,28 @@
 				cn: "位移\\n让字幕从(x1,y1)到(x2,y2)运动，历经 t2-t1\\n需要{\\an}才生效\\n如果没有{\\an}，脚本会自动添加{\\an2}"
 			},
 			fsHelp: {
-				en: "font size\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole line",
-				cn: "字号\\n在编辑区域选中文字，然后点击设定字号"
+				en: "font size\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole line",
+				cn: "字号\\n在编辑区域高亮文字，然后点击设定字号\\n如果没有高亮，则以整句设定"
 			},
 			uuHelp: {
-				en: "underscore\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole sentence",
-				cn: "下划线\\n在编辑区域选中文字，然后点击设定下划线"
+				en: "underscore\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole sentence",
+				cn: "下划线\\n在编辑区域高亮文字，然后点击设定下划线\\n如果没有高亮，则以整句设定"
 			},
 			sssHelp: {
-				en: "strikethrough\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole sentence",
-				cn: "删除线\\n在编辑区域选中文字，然后点击设定删除线"
+				en: "strikethrough\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole sentence",
+				cn: "删除线\\n在编辑区域高亮文字，然后点击设定删除线\\n如果没有高亮，则以整句设定"
 			},
 			iiHelp: {
-				en: "italic\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole sentence",
-				cn: "斜体\\n在编辑区域选中文字，然后点击设定斜体"
+				en: "italic\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole sentence",
+				cn: "斜体\\n在编辑区域高亮文字，然后点击设定斜体\\n如果没有高亮，则以整句设定"
 			},
 			bbHelp: {
-				en: "bold\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole sentence",
-				cn: "粗体\\n在编辑区域选中文字，然后点击设定粗体"
+				en: "bold\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole sentence",
+				cn: "粗体\\n在编辑区域高亮文字，然后点击设定粗体\\n如果没有高亮，则以整句设定"
 			},
 			fcHelp: {
-				en: "font color\\nselect words in edit text, and click to quote\\nif no words are being selected, it will quote the whole sentence",
-				cn: "字体颜色\\n在编辑区域选中文字，然后点击设定颜色"
+				en: "font color\\nhighlight words in edit text, and click to quote\\nif no words are being highlighted, it will quote the whole sentence",
+				cn: "字体颜色\\n在编辑区域高亮文字，然后点击设定颜色\\n如果没有高亮，则以整句设定"
 			},
 			infoHelp: {
 				en: "about",
@@ -355,7 +355,7 @@
 				cn: "选择保存路径"
 			}
 		};
-		for (var i in es_str) "zh_CN" != app.isoLanguage ?
+		for (var i in es_str) "zh_CN" == app.isoLanguage ?
 			es_str[i] = es_str[i].cn :
 			es_str[i] = es_str[i].en;
 
@@ -800,7 +800,7 @@
 
 					alert(1 != curSel.length || curSel[0].threeDLayer ?
 						es_str.er2dlayer :
-						"x:" + posX + " y:" + posY + "\n" + es_str.srtXY);
+						"x:" + posX + " y:" + posY);
 
 				};
 				pal.grp.leftPart.buttonArea.killOther.onClick = function () {
