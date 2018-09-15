@@ -346,6 +346,14 @@
 				en: "remove all <font> </font> tags",
 				cn: "清除所有 <font> </font> 标签"
 			},
+			rwHelp: {
+				en: "write srt subtitles to the corresponding text layer",
+				cn: "将 srt 字幕写入对应的文字层"
+			},
+			selListItem: {
+				en: "please select some list items",
+				cn: "请在列表里选择项目"
+			},
 			// posyHelp: {
 			// 	en: "",
 			// 	cn: ""
@@ -473,7 +481,7 @@
 										rewrite: IconButton {text:'↻',alignment:['right','fill'],\
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'},\
-											helpTip:'" + "" + "'\
+											helpTip:'" + es_str.rwHelp + "'\
 										},\
 									}\
 								},\
@@ -793,11 +801,14 @@
 					var listSel = pal.grp.leftPart.listArea.selection
 
 					if (null == listSel) {
-						alert("selecte some list item")
+						alert(es_str.selListItem)
 					} else {
+						app.beginUndoGroup(es_str.title)
 						for (var l = 0; l < listSel.length; l++) {
-							comp.layer(slIndex[listSel[l].index]).text.sourceText.setValue(listSel[l].subItems[1].text)
+							comp.layer(slIndex[listSel[l].index]).text.sourceText.setValue(listSel[l].subItems[1].text.replace(/([<{]\/?(\s|\S)*?[>}])/g,""))
+							comp.layer(slIndex[listSel[l].index]).text.sourceText.expressionEnabled = !1;
 						};
+						app.endUndoGroup()
 					}
 				}
 				pal.grp.leftPart.buttonArea.resel.onClick = function () {
