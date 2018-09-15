@@ -347,12 +347,12 @@
 				cn: "清除所有 <font> </font> 标签"
 			},
 			rwHelp: {
-				en: "write srt subtitles to the corresponding text layer",
-				cn: "将 srt 字幕写入对应的文字层"
+				en: "write srt subtitles to the corresponding text layer\\n(source text expression will be disabled)",
+				cn: "将 srt 字幕写入对应的文字层\\n(源文字表达式会被禁用)"
 			},
 			selListItem: {
-				en: "please select some list items",
-				cn: "请在列表里选择项目"
+				en: "(⇀‸↼‶)\rplease select some list items",
+				cn: "(⇀‸↼‶)\r请在列表里选择项目"
 			},
 			// posyHelp: {
 			// 	en: "",
@@ -805,7 +805,7 @@
 					} else {
 						app.beginUndoGroup(es_str.title)
 						for (var l = 0; l < listSel.length; l++) {
-							comp.layer(slIndex[listSel[l].index]).text.sourceText.setValue(listSel[l].subItems[1].text.replace(/([<{]\/?(\s|\S)*?[>}])/g,""))
+							comp.layer(slIndex[listSel[l].index]).text.sourceText.setValue(listSel[l].subItems[1].text.replace(/([<{]\/?(\s|\S)*?[>}])/g, ""))
 							comp.layer(slIndex[listSel[l].index]).text.sourceText.expressionEnabled = !1;
 						};
 						app.endUndoGroup()
@@ -1242,50 +1242,54 @@
 		}
 
 		function triggerMarker(pal, poVar, posVar, orientVar, fadeVar, otherVar, key, arg, remove, lineNum, poDef, rmReg) {
-			app.beginUndoGroup(es_str.title);
-			for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
-				var listIndex = pal.grp.leftPart.listArea.selection[i].index,
-					esMarker = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true),
-					markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length == 0) ?
-					String(pal.grp.RPparent.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
-					(remove ?
-						removeQuote(esMarker.comment, newlineMark, lineNum, rmReg) :
-						quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.RPparent.rightPart.editText.backupSelection, key, arg)),
-					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an2}" : esMarker.chapter) : esMarker.chapter) : poVar,
-					urlVar = (posVar == null) ? esMarker.url : posVar,
-					frameTargetVar = (orientVar == null) ? esMarker.frameTarget : orientVar,
-					cuePointNameVar = (fadeVar == null) ? esMarker.cuePointName : fadeVar,
-					paramsVar = {};
-				paramsVar.bord = (otherVar[0] == null) ?
-					(esMarker.getParameters().bord == void 0 ? "" : esMarker.getParameters().bord) :
-					otherVar[0];
-				paramsVar.fsp = (otherVar[1] == null) ?
-					(esMarker.getParameters().fsp == void 0 ? "" : esMarker.getParameters().fsp) :
-					otherVar[1];
-				paramsVar.be = (otherVar[2] == null) ?
-					(esMarker.getParameters().be == void 0 ? "" : esMarker.getParameters().be) :
-					otherVar[2];
-				paramsVar.move = (otherVar[3] == null) ?
-					(esMarker.getParameters().move == void 0 ? "" : esMarker.getParameters().move) :
-					otherVar[3];
-				var markValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar, cuePointNameVar, paramsVar);
-				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, markValue);
-				//re assign cause setValueAtTime()
-				var esMarker2 = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true);
-				pal.grp.leftPart.listArea.selection[i].subItems[1].text =
-					esMarker2.chapter +
-					esMarker2.url +
-					esMarker2.frameTarget +
-					esMarker2.cuePointName +
-					esMarker2.getParameters().bord +
-					esMarker2.getParameters().fsp +
-					esMarker2.getParameters().be +
-					esMarker2.getParameters().move +
-					esMarker2.comment.replace(reg, "\r");
-				pal.grp.RPparent.rightPart.editText.text = esMarker2.comment.replace(reg, "\r");
+			if (null == pal.grp.leftPart.listArea.selection) {
+				alert(es_str.selListItem)
+			} else {
+				app.beginUndoGroup(es_str.title);
+				for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
+					var listIndex = pal.grp.leftPart.listArea.selection[i].index,
+						esMarker = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true),
+						markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length == 0) ?
+						String(pal.grp.RPparent.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
+						(remove ?
+							removeQuote(esMarker.comment, newlineMark, lineNum, rmReg) :
+							quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.RPparent.rightPart.editText.backupSelection, key, arg)),
+						chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an2}" : esMarker.chapter) : esMarker.chapter) : poVar,
+						urlVar = (posVar == null) ? esMarker.url : posVar,
+						frameTargetVar = (orientVar == null) ? esMarker.frameTarget : orientVar,
+						cuePointNameVar = (fadeVar == null) ? esMarker.cuePointName : fadeVar,
+						paramsVar = {};
+					paramsVar.bord = (otherVar[0] == null) ?
+						(esMarker.getParameters().bord == void 0 ? "" : esMarker.getParameters().bord) :
+						otherVar[0];
+					paramsVar.fsp = (otherVar[1] == null) ?
+						(esMarker.getParameters().fsp == void 0 ? "" : esMarker.getParameters().fsp) :
+						otherVar[1];
+					paramsVar.be = (otherVar[2] == null) ?
+						(esMarker.getParameters().be == void 0 ? "" : esMarker.getParameters().be) :
+						otherVar[2];
+					paramsVar.move = (otherVar[3] == null) ?
+						(esMarker.getParameters().move == void 0 ? "" : esMarker.getParameters().move) :
+						otherVar[3];
+					var markValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar, cuePointNameVar, paramsVar);
+					comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, markValue);
+					//re assign cause setValueAtTime()
+					var esMarker2 = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true);
+					pal.grp.leftPart.listArea.selection[i].subItems[1].text =
+						esMarker2.chapter +
+						esMarker2.url +
+						esMarker2.frameTarget +
+						esMarker2.cuePointName +
+						esMarker2.getParameters().bord +
+						esMarker2.getParameters().fsp +
+						esMarker2.getParameters().be +
+						esMarker2.getParameters().move +
+						esMarker2.comment.replace(reg, "\r");
+					pal.grp.RPparent.rightPart.editText.text = esMarker2.comment.replace(reg, "\r");
+				}
+				app.endUndoGroup();
+				fixList(pal.grp.leftPart.listArea);
 			}
-			app.endUndoGroup();
-			fixList(pal.grp.leftPart.listArea);
 		}
 
 		function showText(pal, argument, time, count) {
