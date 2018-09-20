@@ -354,6 +354,10 @@
 				en: "(⇀‸↼‶)\rplease select some list items",
 				cn: "(⇀‸↼‶)\r请在列表里选择项目"
 			},
+			noOutput: {
+				en: "(⇀‸↼‶)\rlist is empty",
+				cn: "(⇀‸↼‶)\r列表是空的"
+			},
 			// posyHelp: {
 			// 	en: "",
 			// 	cn: ""
@@ -954,41 +958,34 @@
 					posFinal(pal, "{\\an2}", "{\\an4}", "{\\pos(0,144)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.mdbt.mcButton.onClick = function () {
-					posFinal(pal, "{\\an5}", "{\\an5}", "{\\pos(192,144)}");					
+					posFinal(pal, "{\\an5}", "{\\an5}", "{\\pos(192,144)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.mdbt.mrButton.onClick = function () {
-					posFinal(pal, "{\\an8}", "{\\an6}", "{\\pos(384,144)}");					
+					posFinal(pal, "{\\an8}", "{\\an6}", "{\\pos(384,144)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.upbt.ulButton.onClick = function () {
-					posFinal(pal, "{\\an1}", "{\\an7}", "{\\pos(0,0)}");					
+					posFinal(pal, "{\\an1}", "{\\an7}", "{\\pos(0,0)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.upbt.ucButton.onClick = function () {
 					posFinal(pal, "{\\an4}", "{\\an8}", "{\\pos(192,0)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.position.upbt.urButton.onClick = function () {
-					posFinal(pal, "{\\an7}", "{\\an9}", "{\\pos(384,0)}");					
+					posFinal(pal, "{\\an7}", "{\\an9}", "{\\pos(384,0)}");
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.pos.posButton.onClick = function () {
-					var px = this.parent.posX.text,
-						py = this.parent.posY.text;
-					triggerMarker(pal, null, "{\\pos(" + px + "," + py + ")}", null, null, [], null, null, !1, null, true);
+					triggerMarker(pal, null, "{\\pos(" + this.parent.posX.text + "," + this.parent.posY.text + ")}", null, null, [], null, null, !1, null, true);
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.fade.fadButton.onClick = function () {
-					var fIn = this.parent.fadIn.text,
-						fOut = this.parent.fadOut.text;
-					triggerMarker(pal, null, null, null, "{\\fad(" + fIn + "," + fOut + ")}", [], null, null, !1, null, true);
+					triggerMarker(pal, null, null, null, "{\\fad(" + this.parent.fadIn.text + "," + this.parent.fadOut.text + ")}", [], null, null, !1, null, true);
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.other.bord.onClick = function () {
-					var bordVar = "{\\bord(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [bordVar], null, null, !1, null, true);
+					triggerMarker(pal, null, null, null, null, ["{\\bord(" + this.parent.bfbVal.text + ")}"], null, null, !1, null, true);
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.other.metri.onClick = function () {
-					var fspVar = "{\\fsp(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, fspVar], null, null, !1, null, true);
+					triggerMarker(pal, null, null, null, null, [, "{\\fsp(" + this.parent.bfbVal.text + ")}"], null, null, !1, null, true);
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.other.blur.onClick = function () {
-					var blurVar = "{\\be(" + this.parent.bfbVal.text + ")}";
-					triggerMarker(pal, null, null, null, null, [, , blurVar], null, null, !1, null, true);
+					triggerMarker(pal, null, null, null, null, [, , "{\\be(" + this.parent.bfbVal.text + ")}"], null, null, !1, null, true);
 				};
 				pal.grp.RPparent.rightPart.btGroup.fix.move.moveButton.onClick = function () {
 					var x1 = this.parent.x1.text,
@@ -1002,11 +999,11 @@
 				};
 				pal.grp.RPparent.rightPart.btGroup.midGroup.extraPo.other.bfbVal.onChange = function () {
 					this.text = validNum(this.text, 2);
-					
+
 				};
 				pal.grp.RPparent.rightPart.btGroup.fbt.fsValue.onChange = function () {
 					this.text = validNum(this.text, 20, this.text < 0);
-					
+
 				};
 				pal.grp.RPparent.rightPart.btGroup.fbt.fsValue.addEventListener("keydown", function (k) {
 					numStep(k, this)
@@ -1080,8 +1077,10 @@
 					fixList(pal.grp.leftPart.listArea);
 				};
 				pal.grp.RPparent.rightPart.btGroup.rebtGroup.epButton.onClick = function () {
-					if (pal.grp.leftPart.listArea.items.length == 0) {} else {
-						writeSrt(pal.grp.leftPart.listArea.items)
+					if (pal.grp.leftPart.listArea.items.length == 0) {
+						alert(es_str.noOutput);
+					} else {
+						writeSrt(pal.grp.leftPart.listArea.items);
 					};
 				};
 				pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(overlapIMG);
