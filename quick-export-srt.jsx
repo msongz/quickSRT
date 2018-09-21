@@ -347,8 +347,8 @@
 			cn: "清除所有 <font> </font> 标签"
 		},
 		rwHelp: {
-			en: "write srt subtitles to the corresponding text layer\\n(source text expression will be disabled)",
-			cn: "将 srt 字幕写入对应的文字层\\n(源文字表达式会被禁用)"
+			en: "write srt subtitles to the corresponding text layer\\n<> & {} tags would be ignored\\nsource text expression will be disabled",
+			cn: "将 srt 字幕写入对应的文字层\\n<> 和 {} 标签会被忽略\\n源文字表达式会被禁用"
 		},
 		selListItem: {
 			en: "(⇀‸↼‶)\rplease select some list items",
@@ -1222,10 +1222,10 @@
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index,
 					esMarker = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true),
 					markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length == 0) ?
-						String(pal.grp.RPparent.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
-						(remove ?
-							removeQuote(esMarker.comment, newlineMark, lineNum, rmReg) :
-							quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.RPparent.rightPart.editText.backupSelection, key, arg)),
+					String(pal.grp.RPparent.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
+					(remove ?
+						removeQuote(esMarker.comment, newlineMark, lineNum, rmReg) :
+						quoteText(esMarker.comment.replace(/\n|\r/gm, newlineMark), newlineMark, lineNum, pal.grp.RPparent.rightPart.editText.backupSelection, key, arg)),
 					chapVar = (poVar == null) ? (poDef ? (esMarker.chapter == "" ? "{\\an2}" : esMarker.chapter) : esMarker.chapter) : poVar,
 					urlVar = (posVar == null) ? esMarker.url : posVar,
 					frameTargetVar = (orientVar == null) ? esMarker.frameTarget : orientVar,
@@ -1422,9 +1422,9 @@
 			if (pal.grp.leftPart.buttonArea.olGroup.olCheck.value && checkOverlap(sl)) sl = osl, alert(es_str.overlap);
 			else {
 				pal.grp.RPparent.rightPart.editText.backupSelection = "",
-				slIndex = [],
-				pal.grp.leftPart.listArea.removeAll(),
-				app.beginUndoGroup(es_str.title);
+					slIndex = [],
+					pal.grp.leftPart.listArea.removeAll(),
+					app.beginUndoGroup(es_str.title);
 				for (var t = 0; t < sl.length; t++) {
 					slIndex.push(sl[t].index), validMarker(sl[t]), pal.grp.leftPart.listArea.add("item", t + 1), pal.grp.leftPart.listArea.items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
 					var r = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, !0);
