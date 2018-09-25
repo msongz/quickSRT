@@ -170,6 +170,10 @@
 			en: "show the coordinate of selected layer in srt world",
 			cn: "显示所选图层在 srt 世界中的坐标"
 		},
+		guessFontsizeHelp: {
+			en: "show the size of selected layer in srt world",
+			cn: "显示所选图层在 srt 世界中的大小"
+		},
 		killotherHelp: {
 			en: "remove all of { } tags of selected items in the list",
 			cn: "清空所选项目的所有 { } 标签"
@@ -372,6 +376,7 @@
 		es_str[i] = es_str[i].en;
 
 	var pickposIMG = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00àIDATHíVA \fÜ8=ê;øÿs|Ý\x00u AmkkgXa$!L\x00\r\rA´I®VµÕH©Òóïó¨# É\bB0uÃIw:IÛòN#	/}¶eS&qÜ@\b§,ãRCFPÜPX;{·¡À=ëÄ£¬q~VrÜÆ4'¬ÉK1y»_-\x00`ð4Ïàí·!kS/ÐÊé/*§8Ä³ú]ÛGÏêTÆâ\x00ã\"XöEJæê$Ý§Ã<éþUlø®\x00ô³ÿÞ$64üOÈg|_Úé\x00\x00\x00\x00IEND®B`",
+		guessFontIMG = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00¸IDATHíQÄ \bDg6{Þÿ8=ÍôÃ4qÙÂ*4Ýø>@@`±ø7èî\b ^K¼ÃSsñîûÛJ,<I$'\f\x00>Õ'8ó¾!I[ÄßêÚÔÛ\"nm'k'»îu_w;F¬êY»!ûÆ'QVÂ\rS©Ædá§C£KíÛYÖ~¿­ª4@HèL±®ðÑ7\x00efw¿ðUµ{ßgëªÛ`l8cÚ,à\x00 ï*þä\x00\x00\x00\x00IEND®B`",
 		removeMarkIMG = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÆIDATHíÕË0\fÐÝLj	MîÓ«Ù2Æ?ûx\fÒCÆ`æ×Cså!÷F ßL¡\x00ñHÝZnG±hÃ@kªp@çÚ6ègá,Ú	wá*Ú7»ZR'H_WÝÕ§Qà3ù¦ã4\"ð°Ø¿Sî 6ök=ÇüMöjk<ZwSÉçezÅQÃýd^·v^¦ÒÍc_ç 8Ø]ÂÞpØ\r6NQwgþ#opéQ\n6'\x00\x00\x00\x00IEND®B`",
 		reselIMG = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00\x00ÜIDATHíAÃ \f×UßRþÿ^³=¤@\fôP1C\"`Ø`óïÈå\rÁGÆ®LoµK¸é×õÔ¼V8Êx±¼FùÐjZ¡­X:õ Å\x00A»m=¸F\bD!ûÆ§±Äýð¢¦@1{ÅçÔÒfÈû)¨ôj,`Ø!×ÌöSôhÉ¥tY+Jbb\"^í»n«k¹íÏäþ$c¡lõ=q	ý6þ­ÎRëÆòÏRÀõãàºÓ­äºÄY*i½Ùü/è¤dú'\bøH\x00\x00\x00\x00IEND®B`",
 		killtagIMG = "PNG\r\n\n\x00\x00\x00\rIHDR\x00\x00\x00\x00\x00\x00\b\x00\x00\x00;0®¢\x00\x00IDATHíQÂ \fD7F.¡§÷xõ©vìO§q:VûØ ´ÀgQ-w Hçx¯Q·Èìª0 Çr^L·ÂKdA)vN9ßâØ¨î¼ÜÌù<+¬à\b´r/\\ ÖI¡ÉY£ôT0t5lR%È¥J½§t¥éXÒ6ø(àìã¨`¨OB|G¡F¸ÈîíãæO8<·g`Þ­ó®j	<êj{ÚötÒ\x00Ò¾ðø}×û&¢åæª-¾cÒv\\z?¯NHðEµÚì;ì;ÑèZÒB/çàÿ>\fÜ;6Køop¿ÆCø[èd]qæø\x00:þÒkùL\x00\x00\x00\x00IEND®B`",
@@ -436,7 +441,7 @@
 		});
 
 		if (pal !== null) {
-			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[600, 370],margins:-14,\
+			var res = "group{orientation:'row',alignment:['fill','fill'],minimumSize:[630, 370],margins:-14,\
 								leftPart: Group {orientation:'column',alignment:['fill','fill'],spacing:3,\
 									listArea:ListBox{\
 										alignment:['fill','fill'],\
@@ -458,6 +463,11 @@
 											preferredSize:[28, 28],\
 											properties:{style:'toolbutton'},\
 											helpTip:'" + es_str.pickposHelp + "'\
+										},\
+										guessFontsize: IconButton {text:'☉',alignment:['left','fill'],\
+											preferredSize:[28, 28],\
+											properties:{style:'toolbutton'},\
+											helpTip:'" + es_str.guessFontsizeHelp + "'\
 										},\
 										rmMarker: IconButton {text:'⌫',alignment:['left','fill'],\
 											preferredSize:[28, 28],\
@@ -836,6 +846,16 @@
 					es_str.er2dlayer :
 					"x:" + posX + " y:" + posY);
 			};
+			pal.grp.leftPart.buttonArea.guessFontsize.onClick = function () {
+				var curComp = app.project.activeItem;
+				try {
+					var curSel = curComp.selectedLayers
+				} catch (e) {}
+
+				alert(1 != curSel.length ?
+					es_str.er2dlayer :
+					guessFontsize(curSel[0]));
+			};
 			pal.grp.leftPart.buttonArea.killOther.onClick = function () {
 				triggerMarker(pal, "", "", "", "", ["", "", "", ""], null, null, !1, this.parent.lineNum.text);
 			};
@@ -1084,6 +1104,7 @@
 			};
 			pal.grp.leftPart.buttonArea.olGroup.olImage.image = ScriptUI.newImage(overlapIMG);
 			pal.grp.leftPart.buttonArea.pickPos.image = ScriptUI.newImage(pickposIMG);
+			pal.grp.leftPart.buttonArea.guessFontsize.image = ScriptUI.newImage(guessFontIMG);
 			pal.grp.leftPart.buttonArea.rmMarker.image = ScriptUI.newImage(removeMarkIMG);
 			pal.grp.leftPart.buttonArea.resel.image = ScriptUI.newImage(reselIMG);
 			pal.grp.leftPart.buttonArea.killTag.image = ScriptUI.newImage(killtagIMG);
@@ -1156,6 +1177,12 @@
 		if (result)
 			for (a = 0; a < layers.length; a++) layers[a].selected = !layers[a].selected;
 		return result;
+	}
+
+	function guessFontsize(layer) {
+		var textsize = layer.property("Source Text").value.fontSize,
+			layerscale = Math.max(layer.transform.scale.value[0], layer.transform.scale.value[1]);
+		return Math.round(textsize / 1296 * layerscale / 100 * 500)
 	}
 
 	function writeSrt(list) {
@@ -1434,8 +1461,9 @@
 			}
 		else sl = osl;
 		pal.grp.leftPart.buttonArea.pickPos.enabled = !0;
+		pal.grp.leftPart.buttonArea.guessFontsize.enabled = !0;
 		pal.grp.leftPart.buttonArea.rmMarker.enabled = !0;
-		for (var i = 5; i < pal.grp.leftPart.buttonArea.children.length; i++) {
+		for (var i = 6; i < pal.grp.leftPart.buttonArea.children.length; i++) {
 			pal.grp.leftPart.buttonArea.children[i].enabled = 0 == pal.grp.leftPart.listArea.items.length ? !1 : !0;
 		}
 		for (var x = 0; x < pal.grp.RPparent.rightPart.btGroup.children.length - 1; x++) {
@@ -1483,6 +1511,7 @@
 
 		if (ui.grp.leftPart.listArea.items.length == 0) {
 			ui.grp.leftPart.buttonArea.pickPos.enabled = !1;
+			ui.grp.leftPart.buttonArea.guessFontsize.enabled = !1;
 			ui.grp.leftPart.buttonArea.rmMarker.enabled = !1;
 		}
 
