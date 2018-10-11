@@ -803,8 +803,8 @@
 			pal.grp.leftPart.listArea.onChange = function () {
 				pal.grp.RPparent.rightPart.editText.backupSelection = "";
 				var i = this.selection[0].index;
-				comp.time = comp.layer(slIndex[i]).outPoint - markerTimeOffset / comp.frameRate;
-				pal.grp.RPparent.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).outPoint - markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
+				comp.time = comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate;
+				pal.grp.RPparent.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
 			};
 			pal.grp.leftPart.buttonArea.info.onClick = function () {
 				es_help();
@@ -1233,7 +1233,7 @@
 		app.beginUndoGroup(es_str.title);
 		for (var i = 0; i < layers.length; i++) {
 			if (checkMarker(layers[i])) {
-				var markerIndex = layers[i].property("Marker").nearestKeyIndex(layers[i].outPoint - markerTimeOffset / comp.frameRate);
+				var markerIndex = layers[i].property("Marker").nearestKeyIndex(layers[i].inPoint + markerTimeOffset / comp.frameRate);
 				layers[i].property("Marker").removeKey(markerIndex);
 			}
 		}
@@ -1247,7 +1247,7 @@
 			app.beginUndoGroup(es_str.title);
 			for (var i = 0; i < pal.grp.leftPart.listArea.selection.length; i++) {
 				var listIndex = pal.grp.leftPart.listArea.selection[i].index,
-					esMarker = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true),
+					esMarker = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).inPoint + markerTimeOffset / comp.frameRate, true),
 					markComment = (key == null && poVar == null && posVar == null && orientVar == null && fadeVar == null && otherVar.length == 0) ?
 					String(pal.grp.RPparent.rightPart.editText.text).replace(/\n|\r/gm, newlineMark) :
 					(remove ?
@@ -1271,9 +1271,9 @@
 					(esMarker.getParameters().move == void 0 ? "" : esMarker.getParameters().move) :
 					otherVar[3];
 				var markValue = new MarkerValue(markComment, chapVar, urlVar, frameTargetVar, cuePointNameVar, paramsVar);
-				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, markValue);
+				comp.layer(slIndex[listIndex]).property("Marker").setValueAtTime(comp.layer(slIndex[listIndex]).inPoint + markerTimeOffset / comp.frameRate, markValue);
 				//re assign cause setValueAtTime()
-				var esMarker2 = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).outPoint - markerTimeOffset / comp.frameRate, true);
+				var esMarker2 = comp.layer(slIndex[listIndex]).property("Marker").valueAtTime(comp.layer(slIndex[listIndex]).inPoint + markerTimeOffset / comp.frameRate, true);
 				pal.grp.leftPart.listArea.selection[i].subItems[1].text =
 					esMarker2.chapter +
 					esMarker2.url +
@@ -1369,10 +1369,10 @@
 		var timeType = app.project.timeDisplayType;
 		app.project.timeDisplayType = 2013;
 		var esMarker = layer.property("Marker"),
-			esMarkerTime = timeToCurrentFormat(layer.outPoint, comp.frameRate) - markerTimeOffset;
+			esMarkerTime = layer.inPoint + markerTimeOffset / comp.frameRate;
 		if (void 0 != esMarker.numKeys) {
 			for (var a = 1; a <= esMarker.numKeys; a++)
-				if (timeToCurrentFormat(esMarker.keyTime(a), comp.frameRate) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
+				if (esMarker.keyTime(a) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
 			return app.project.timeDisplayType = timeType, !1;
 		}
 	}
@@ -1385,7 +1385,7 @@
 
 	function validMarker(layer) {
 		if (!checkMarker(layer)) {
-			var comment = layer.property("Source Text").valueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, !1);
+			var comment = layer.property("Source Text").valueAtTime(layer.inPoint + markerTimeOffset / comp.frameRate, !1);
 			comment = String(comment).replace(/\comment/gm, newlineMark);
 			var params = {};
 			params.bord =
@@ -1393,7 +1393,7 @@
 				params.be =
 				params.move = "";
 			var esMarker = new MarkerValue(comment, "", "", "", "", params);
-			layer.property("Marker").setValueAtTime(layer.outPoint - markerTimeOffset / comp.frameRate, esMarker);
+			layer.property("Marker").setValueAtTime(layer.inPoint + markerTimeOffset / comp.frameRate, esMarker);
 		}
 	}
 
@@ -1453,9 +1453,29 @@
 					pal.grp.leftPart.listArea.removeAll(),
 					app.beginUndoGroup(es_str.title);
 				for (var t = 0; t < sl.length; t++) {
-					slIndex.push(sl[t].index), validMarker(sl[t]), pal.grp.leftPart.listArea.add("item", t + 1), pal.grp.leftPart.listArea.items[t].subItems[0].text = time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) + " --> " + time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
-					var r = sl[t].property("Marker").valueAtTime(sl[t].outPoint - markerTimeOffset / comp.frameRate, !0);
-					pal.grp.leftPart.listArea.items[t].subItems[1].text = r.chapter + r.url + r.frameTarget + r.cuePointName + r.getParameters().bord + r.getParameters().fsp + r.getParameters().be + r.getParameters().move + r.comment.replace(reg, "\r"), sl[t].selected = !1;
+					slIndex.push(sl[t].index),
+						validMarker(sl[t]),
+						pal.grp.leftPart.listArea.add("item", t + 1),
+
+						pal.grp.leftPart.listArea.items[t].subItems[0].text =
+						time2code(sl[t].inPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text) +
+						" --> " +
+						time2code(sl[t].outPoint, comp.frameRate, pal.grp.leftPart.buttonArea.preci.text);
+
+					var r = sl[t].property("Marker").valueAtTime(sl[t].inPoint + markerTimeOffset / comp.frameRate, !0);
+
+					pal.grp.leftPart.listArea.items[t].subItems[1].text =
+						r.chapter +
+						r.url +
+						r.frameTarget +
+						r.cuePointName +
+						r.getParameters().bord +
+						r.getParameters().fsp +
+						r.getParameters().be +
+						r.getParameters().move +
+						r.comment.replace(reg, "\r");
+
+					sl[t].selected = !1;
 				}
 				app.endUndoGroup();
 			}
@@ -1486,6 +1506,7 @@
 			echoVbs,
 			echoVbsCommand,
 			reg = new RegExp(newlineMark, "gm");
+
 		if (-1 != $.os.indexOf("Win")) {
 			if (File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat")).exists) bat = File(Folder.temp.toString() + encodeURI("/es-win-ctrl-v.bat"));
 			else {
