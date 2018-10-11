@@ -1181,8 +1181,12 @@
 
 	function guessFontsize(layer) {
 		var textsize = layer.property("Source Text").value.fontSize,
+			comp = app.project.activeItem,
+			compFactor = comp.height <= comp.width ? comp.height : comp.width,
+			hdFactor = comp.height <= comp.width ? 1080 : 1920,
 			layerscale = Math.max(layer.transform.scale.value[0], layer.transform.scale.value[1]);
-		return Math.round(textsize / 1296 * layerscale / 100 * 500)
+
+		return Math.round(textsize / 1296 * layerscale / 100 * 460 * hdFactor / compFactor)
 	}
 
 	function writeSrt(list) {
