@@ -1373,10 +1373,11 @@
 		var timeType = app.project.timeDisplayType;
 		app.project.timeDisplayType = 2013;
 		var esMarker = layer.property("Marker"),
-			esMarkerTime = layer.inPoint + markerTimeOffset / comp.frameRate;
+		// 0010+1 = 00101, 0010-1 = 9
+			esMarkerTime = Number(timeToCurrentFormat(layer.inPoint, comp.frameRate)) + markerTimeOffset;
 		if (void 0 != esMarker.numKeys) {
 			for (var a = 1; a <= esMarker.numKeys; a++)
-				if (esMarker.keyTime(a) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
+				if (timeToCurrentFormat(esMarker.keyTime(a), comp.frameRate) == esMarkerTime) return app.project.timeDisplayType = timeType, !0;
 			return app.project.timeDisplayType = timeType, !1;
 		}
 	}
