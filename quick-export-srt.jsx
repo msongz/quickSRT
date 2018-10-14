@@ -1,6 +1,6 @@
-//songz meng
-//export srt 
+//quick export srt.jsx
 //v1.0
+//by songz meng
 
 
 (function es_subtitle(thisObj) {
@@ -27,8 +27,8 @@
 			cn: "https://github.com/msongz"
 		},
 		mail: {
-			en: "songzmeng@gmail.com",
-			cn: "msongz@qq.com"
+			en: "me@songz.design",
+			cn: "me@songz.design"
 		},
 		time: {
 			en: "time",
@@ -852,8 +852,8 @@
 					var curSel = curComp.selectedLayers
 				} catch (e) {}
 
-				alert(1 != curSel.length ?
-					es_str.er2dlayer :
+				alert((1 != curSel.length || !(curSel[0] instanceof TextLayer)) ?
+					es_str.noLayer :
 					guessFontsize(curSel[0]));
 			};
 			pal.grp.leftPart.buttonArea.killOther.onClick = function () {
@@ -1151,17 +1151,6 @@
 		}
 		return pal;
 	}
-
-	// function mouseEventHandler() {
-	// 	if ($.os.indexOf("Win") != -1) {
-	// 		vbs.execute();
-	// 	} else {
-	// 		var cmd = "";
-	// 		cmd += "osascript -e \'tell application \"System Events\" to keystroke \"v\" using {command down}\'";
-	// 		system.callSystem(cmd);
-	// 	}
-	// 	this.removeEventListener("mouseout", mouseEventHandler);
-	// }
 
 	function sortLayers(layers) {
 		return layers.sort(function (a, b) {
