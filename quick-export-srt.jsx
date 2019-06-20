@@ -1,5 +1,5 @@
 //quick export srt.jsx
-//v1.0
+//v1.01
 //by songz meng
 
 
@@ -11,8 +11,8 @@
 			cn: "快捷导出字幕"
 		},
 		version: {
-			en: " v1.0",
-			cn: " v1.0"
+			en: " v1.01",
+			cn: " v1.01"
 		},
 		xport: {
 			en: "export",
@@ -801,10 +801,12 @@
 			pal.grp.RPparent.statusText.graphics.foregroundColor = pal.graphics.newPen(pal.graphics.BrushType.SOLID_COLOR, bgGreen, 1);
 
 			pal.grp.leftPart.listArea.onChange = function () {
-				pal.grp.RPparent.rightPart.editText.backupSelection = "";
-				var i = this.selection[0].index;
-				comp.time = comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate;
-				pal.grp.RPparent.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
+				try {
+					pal.grp.RPparent.rightPart.editText.backupSelection = "";
+					var i = this.selection[0].index;
+					comp.time = comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate < 0 ? 0 : comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate;
+					pal.grp.RPparent.rightPart.editText.text = comp.layer(slIndex[i]).property("Marker").valueAtTime(comp.layer(slIndex[i]).inPoint + markerTimeOffset / comp.frameRate, !0).comment.replace(reg, "\r");
+				} catch (e) {}
 			};
 			pal.grp.leftPart.buttonArea.info.onClick = function () {
 				es_help();
@@ -1153,6 +1155,7 @@
 	}
 
 	function sortLayers(layers) {
+		layers = layers || new Array();
 		return layers.sort(function (a, b) {
 			return a.inPoint - b.inPoint;
 		});
@@ -1362,7 +1365,7 @@
 		var timeType = app.project.timeDisplayType;
 		app.project.timeDisplayType = 2013;
 		var esMarker = layer.property("Marker"),
-		// 0010+1 = 00101, 0010-1 = 9
+			// 0010+1 = 00101, 0010-1 = 9
 			esMarkerTime = Number(timeToCurrentFormat(layer.inPoint, comp.frameRate)) + markerTimeOffset;
 		if (void 0 != esMarker.numKeys) {
 			for (var a = 1; a <= esMarker.numKeys; a++)

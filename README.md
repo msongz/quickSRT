@@ -56,6 +56,7 @@ potplayer (Windows) `fully test on 1.7`
  
 ### Change log
 ---
+- 1.01 support ae 16.1.2 `2019/06/20`
 - 1.0  initial release `2018/10/15`
 
 ### Future updates
