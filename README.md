@@ -4,7 +4,7 @@
 
 export srt file from After Effects
 
-![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw95v03wo4g30o20iuhas.gif)
+![](https://tva2.sinaimg.com/large/006tNbRwgy1fw95v03wo4g30o20iuhas.gif)
 
 ### Description
 ---
